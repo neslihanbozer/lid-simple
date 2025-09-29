@@ -16,9 +16,19 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    if (password.length < 6) {
+    // Şifre validasyonu: en az 8 karakter ve özel karakter
+    if (password.length < 8) {
       return NextResponse.json(
-        { message: 'Şifre en az 6 karakter olmalıdır' },
+        { message: 'Şifre en az 8 karakter olmalıdır' },
+        { status: 400 }
+      )
+    }
+
+    // Özel karakter kontrolü
+    const specialChars = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/
+    if (!specialChars.test(password)) {
+      return NextResponse.json(
+        { message: 'Şifre en az bir özel karakter içermelidir (!@#$%^&* vb.)' },
         { status: 400 }
       )
     }
@@ -54,9 +64,28 @@ export async function POST(request: NextRequest) {
     )
   } catch (error) {
     console.error('Registration error:', error)
+    
+    // Prisma hatalarını özel olarak yönet
+    if (error instanceof Error) {
+      if (error.message.includes('DATABASE_URL')) {
+        return NextResponse.json(
+          { message: 'Veritabanı bağlantı hatası. Lütfen daha sonra tekrar deneyin.' },
+          { status: 500 }
+        )
+      }
+      if (error.message.includes('unique constraint')) {
+        return NextResponse.json(
+          { message: 'Bu email adresi zaten kullanılıyor' },
+          { status: 400 }
+        )
+      }
+    }
+    
     return NextResponse.json(
-      { message: 'Sunucu hatası' },
+      { message: 'Kayıt sırasında bir hata oluştu. Lütfen tekrar deneyin.' },
       { status: 500 }
     )
+  } finally {
+    await prisma.$disconnect()
   }
 }

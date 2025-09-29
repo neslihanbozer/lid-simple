@@ -1,15 +1,18 @@
-// 300 soru veritabanı - Almanya'da yaşam hakkında
+// 300 soru veritabanı - Almanya'da yaşam hakkında (Tüm sorular premium)
 export const questions = [
   // Geschichte (Tarih) - 75 soru
   {
     id: 1,
     question: "Welche Farbe hat die deutsche Flagge?",
+    questionTr: "Alman bayrağının rengi nedir?",
     options: ["Rot, Weiß, Grün", "Schwarz, Rot, Gold", "Blau, Weiß, Rot", "Grün, Weiß, Rot"],
+    optionsTr: ["Kırmızı, Beyaz, Yeşil", "Siyah, Kırmızı, Altın", "Mavi, Beyaz, Kırmızı", "Yeşil, Beyaz, Kırmızı"],
     correctAnswer: 1,
     explanation: "Die deutsche Flagge hat die Farben Schwarz, Rot und Gold (Gelb).",
+    explanationTr: "Alman bayrağı Siyah, Kırmızı ve Altın (Sarı) renklerine sahiptir.",
     category: "Geschichte",
     difficulty: "easy",
-    isPremium: false
+    isPremium: true
   },
   {
     id: 2,

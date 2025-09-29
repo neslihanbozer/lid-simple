@@ -27,7 +27,7 @@ export default function SignIn() {
       if (result?.error) {
         setError('Geçersiz email veya şifre')
       } else {
-        router.push('/dashboard')
+        router.push('/')
       }
     } catch (error) {
       setError('Bir hata oluştu')

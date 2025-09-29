@@ -14,18 +14,8 @@ export default function Pricing() {
       return
     }
 
-    setLoading(true)
-    try {
-      const response = await fetch('/api/create-checkout-session', {
-        method: 'POST',
-      })
-      const { url } = await response.json()
-      window.location.href = url
-    } catch (error) {
-      console.error('Subscription error:', error)
-    } finally {
-      setLoading(false)
-    }
+    // Ödeme sayfasına yönlendir
+    window.location.href = '/payment'
   }
 
   return (
@@ -86,7 +76,7 @@ export default function Pricing() {
             
             <div className="text-center">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Premium</h2>
-              <div className="text-4xl font-bold text-blue-600 mb-2">€9.99</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">€5.99</div>
               <p className="text-gray-600 mb-8">aylık</p>
             </div>
             

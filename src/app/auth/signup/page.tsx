@@ -18,6 +18,21 @@ export default function SignUp() {
     setLoading(true)
     setError('')
 
+    // Şifre validasyonu
+    if (password.length < 8) {
+      setError('Şifre en az 8 karakter olmalıdır')
+      setLoading(false)
+      return
+    }
+
+    // Özel karakter kontrolü
+    const specialChars = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/
+    if (!specialChars.test(password)) {
+      setError('Şifre en az bir özel karakter içermelidir (!@#$%^&* vb.)')
+      setLoading(false)
+      return
+    }
+
     if (password !== confirmPassword) {
       setError('Şifreler eşleşmiyor')
       setLoading(false)
@@ -99,10 +114,13 @@ export default function SignUp() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              minLength={6}
+              minLength={8}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="••••••••"
+              placeholder="En az 8 karakter + özel karakter"
             />
+            <p className="text-xs text-gray-500 mt-1">
+              Şifre en az 8 karakter olmalı ve özel karakter (!@#$%^&* vb.) içermelidir
+            </p>
           </div>
 
           <div>
