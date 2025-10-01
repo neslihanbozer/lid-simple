@@ -1,26 +1,60 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
+import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 
 export default function Pricing() {
   const { data: session } = useSession()
   const [loading, setLoading] = useState(false)
+  const [showCancelMessage, setShowCancelMessage] = useState(false)
+  const searchParams = useSearchParams()
 
-  const handleSubscribe = async () => {
-    if (!session) {
-      window.location.href = '/auth/signin'
-      return
+  useEffect(() => {
+    if (searchParams.get('canceled') === 'true') {
+      setShowCancelMessage(true)
+      // 5 saniye sonra mesajı gizle
+      setTimeout(() => setShowCancelMessage(false), 5000)
     }
+  }, [searchParams])
 
-    // Ödeme sayfasına yönlendir
-    window.location.href = '/payment'
-  }
+          const handleSubscribe = async () => {
+            if (!session) {
+              window.location.href = '/auth/signin'
+              return
+            }
+            try {
+              const res = await fetch('/api/create-checkout-session', {
+                method: 'POST'
+              })
+              if (!res.ok) throw new Error('Checkout başlatılamadı')
+              const data = await res.json()
+              if (data.url) {
+                window.location.href = data.url
+              }
+            } catch (err) {
+              console.error(err)
+              // Fallback: local payment page
+              window.location.href = '/payment'
+            }
+          }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4">
       <div className="max-w-4xl mx-auto">
+        {/* Cancel Message */}
+        {showCancelMessage && (
+          <div className="mb-6 bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded-lg">
+            <div className="flex items-center">
+              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+              </svg>
+              Ödeme iptal edildi. Tekrar denemek ister misiniz?
+            </div>
+          </div>
+        )}
+
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">
             Fiyatlandırma
