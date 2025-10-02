@@ -1,0 +1,99 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - button "🌍 Dil Seçimi 🇩🇪" [ref=e4] [cursor=pointer]:
+    - generic [ref=e5] [cursor=pointer]: 🌍 Dil Seçimi
+    - generic [ref=e6] [cursor=pointer]: 🇩🇪
+  - alert [ref=e7]
+  - generic [ref=e8]:
+    - banner [ref=e9]:
+      - generic [ref=e11]:
+        - generic [ref=e13]:
+          - generic [ref=e15]: ★
+          - generic [ref=e16]: Leben in Deutschland Quiz
+        - navigation [ref=e17]:
+          - link "Home" [ref=e18]:
+            - /url: /
+          - link "Premium Features" [ref=e19]:
+            - /url: /pricing
+          - generic [ref=e20]:
+            - link "Log in" [ref=e21]:
+              - /url: /auth/signin
+            - link "Sign up" [ref=e22]:
+              - /url: /auth/signup
+    - main [ref=e23]:
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - heading "Leben In Deutschland Test" [level=1] [ref=e26]
+          - paragraph [ref=e27]: Your comprehensive guide to living in Germany, preparing you for the official integration test.
+          - generic [ref=e28]:
+            - generic [ref=e29]: "Language:"
+            - generic [ref=e30]:
+              - button "EN" [ref=e31] [cursor=pointer]
+              - button "DE" [ref=e32] [cursor=pointer]
+          - generic [ref=e33]:
+            - link "Start Premium Quiz" [ref=e34]:
+              - /url: /quiz
+              - button "Start Premium Quiz" [ref=e35] [cursor=pointer]
+            - link "Test Premium Features" [ref=e36]:
+              - /url: /premium-dashboard
+              - button "Test Premium Features" [ref=e37] [cursor=pointer]
+        - img "Brandenburg Gate illuminated at night, Berlin" [ref=e40]
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - heading "Start Quiz" [level=3] [ref=e45]
+          - paragraph [ref=e46]: Premium membership required to access all quizzes.
+          - link "Start Quiz" [ref=e47]:
+            - /url: /quiz
+            - button "Start Quiz" [ref=e48] [cursor=pointer]
+        - generic [ref=e49]:
+          - generic [ref=e51]: ⭐
+          - heading "Premium Features" [level=3] [ref=e52]
+          - generic [ref=e53]:
+            - generic [ref=e54]:
+              - generic [ref=e55]: ✓
+              - generic [ref=e56]: 300+ practice questions
+            - generic [ref=e57]:
+              - generic [ref=e58]: ✓
+              - generic [ref=e59]: Multi-language support (EN/DE)
+            - generic [ref=e60]:
+              - generic [ref=e61]: ✓
+              - generic [ref=e62]: Detailed explanations
+            - generic [ref=e63]:
+              - generic [ref=e64]: ✓
+              - generic [ref=e65]: Detailed progress tracking
+            - generic [ref=e66]:
+              - generic [ref=e67]: ✓
+              - generic [ref=e68]: Extensive Dashboard features
+          - generic [ref=e69]:
+            - link "Go Premium - €5.99/month" [ref=e70]:
+              - /url: /payment
+              - button "Go Premium - €5.99/month" [ref=e71] [cursor=pointer]
+            - link "Test Premium Features" [ref=e72]:
+              - /url: /premium-dashboard
+              - button "Test Premium Features" [ref=e73] [cursor=pointer]
+    - contentinfo [ref=e74]:
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - link "Resources" [ref=e78]:
+            - /url: /resources
+          - link "Legal" [ref=e79]:
+            - /url: /legal
+        - generic [ref=e80]:
+          - link "Facebook" [ref=e81]:
+            - /url: "#"
+            - generic [ref=e82]: Facebook
+          - link "Twitter" [ref=e84]:
+            - /url: "#"
+            - generic [ref=e85]: Twitter
+          - link "Instagram" [ref=e87]:
+            - /url: "#"
+            - generic [ref=e88]: Instagram
+          - link "LinkedIn" [ref=e90]:
+            - /url: "#"
+            - generic [ref=e91]: LinkedIn
+          - link "Email" [ref=e93]:
+            - /url: "#"
+            - generic [ref=e94]: Email
+```

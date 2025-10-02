@@ -1,0 +1,120 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - button "🌍 Dil Seçimi 🇩🇪" [ref=e4] [cursor=pointer]:
+    - generic [ref=e5] [cursor=pointer]: 🌍 Dil Seçimi
+    - generic [ref=e6] [cursor=pointer]: 🇩🇪
+  - generic [ref=e7]:
+    - banner [ref=e8]:
+      - generic [ref=e10]:
+        - generic [ref=e12]:
+          - generic [ref=e14]: ★
+          - generic [ref=e15]: logo
+        - navigation [ref=e16]:
+          - link "Home" [ref=e17] [cursor=pointer]:
+            - /url: /
+          - link "Premium Features" [ref=e18] [cursor=pointer]:
+            - /url: /pricing
+          - generic [ref=e19]:
+            - link "Anmelden" [ref=e20] [cursor=pointer]:
+              - /url: /auth/signin
+            - link "Registrieren" [ref=e21] [cursor=pointer]:
+              - /url: /auth/signup
+    - main [ref=e22]:
+      - generic [ref=e24]:
+        - button "EN" [ref=e25] [cursor=pointer]
+        - button "DE" [active] [ref=e26] [cursor=pointer]
+      - generic [ref=e27]:
+        - heading "Premium-Mitgliedschaft - €5.99/Monat" [level=1] [ref=e28]
+        - paragraph [ref=e29]: Geben Sie Ihre Kreditkarteninformationen ein
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - generic [ref=e32]:
+            - generic [ref=e33]:
+              - generic [ref=e34]: Name auf der Karte
+              - textbox "Vollständiger Name" [ref=e35]: Test User
+            - generic [ref=e36]:
+              - generic [ref=e37]: Kartennummer
+              - textbox "4242424242424242" [ref=e38]
+            - generic [ref=e39]:
+              - generic [ref=e40]:
+                - generic [ref=e41]: Ablaufdatum
+                - textbox "12/25" [ref=e42]
+              - generic [ref=e43]:
+                - generic [ref=e44]: CVC
+                - textbox "123" [ref=e45]
+            - button "€5.99 bezahlen und Premium werden" [ref=e46] [cursor=pointer]
+          - link "← Zur Preisgestaltung zurück" [ref=e48] [cursor=pointer]:
+            - /url: /pricing
+        - generic [ref=e49]:
+          - heading "Test-Karten" [level=3] [ref=e50]
+          - generic [ref=e51]:
+            - generic [ref=e53] [cursor=pointer]:
+              - generic [ref=e54] [cursor=pointer]:
+                - heading "✅ Erfolgreiche Karte" [level=4] [ref=e55] [cursor=pointer]
+                - paragraph [ref=e56] [cursor=pointer]: Zahlung wird erfolgreich sein
+              - generic [ref=e57] [cursor=pointer]:
+                - generic [ref=e58] [cursor=pointer]: "4242424242424242"
+                - generic [ref=e59] [cursor=pointer]: 12/25
+            - generic [ref=e61] [cursor=pointer]:
+              - generic [ref=e62] [cursor=pointer]:
+                - heading "❌ Abgelehnte Karte" [level=4] [ref=e63] [cursor=pointer]
+                - paragraph [ref=e64] [cursor=pointer]: Zahlung wird abgelehnt
+              - generic [ref=e65] [cursor=pointer]:
+                - generic [ref=e66] [cursor=pointer]: "4000000000000002"
+                - generic [ref=e67] [cursor=pointer]: 12/25
+            - generic [ref=e69] [cursor=pointer]:
+              - generic [ref=e70] [cursor=pointer]:
+                - heading "💰 Unzureichende Mittel" [level=4] [ref=e71] [cursor=pointer]
+                - paragraph [ref=e72] [cursor=pointer]: Unzureichende Mittel Fehler
+              - generic [ref=e73] [cursor=pointer]:
+                - generic [ref=e74] [cursor=pointer]: "4000000000009995"
+                - generic [ref=e75] [cursor=pointer]: 12/25
+            - generic [ref=e77] [cursor=pointer]:
+              - generic [ref=e78] [cursor=pointer]:
+                - heading "⏰ Abgelaufene Karte" [level=4] [ref=e79] [cursor=pointer]
+                - paragraph [ref=e80] [cursor=pointer]: Karte abgelaufen Fehler
+              - generic [ref=e81] [cursor=pointer]:
+                - generic [ref=e82] [cursor=pointer]: "4000000000000069"
+                - generic [ref=e83] [cursor=pointer]: 12/20
+          - generic [ref=e84]:
+            - heading "Test-Kreditkarteninformationen:" [level=4] [ref=e85]
+            - generic [ref=e86]:
+              - generic [ref=e87]:
+                - strong [ref=e88]: "Kartennummer:"
+                - text: "4242424242424242"
+              - generic [ref=e89]:
+                - strong [ref=e90]: "Ablauf:"
+                - text: 12/25
+              - generic [ref=e91]:
+                - strong [ref=e92]: "CVC:"
+                - text: "123"
+              - generic [ref=e93]:
+                - strong [ref=e94]: "Name:"
+                - text: Test User
+    - contentinfo [ref=e95]:
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - link "Resources" [ref=e99] [cursor=pointer]:
+            - /url: /resources
+          - link "Legal" [ref=e100] [cursor=pointer]:
+            - /url: /legal
+        - generic [ref=e101]:
+          - link "Facebook" [ref=e102] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e103] [cursor=pointer]: Facebook
+          - link "Twitter" [ref=e105] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e106] [cursor=pointer]: Twitter
+          - link "Instagram" [ref=e108] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e109] [cursor=pointer]: Instagram
+          - link "LinkedIn" [ref=e111] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e112] [cursor=pointer]: LinkedIn
+          - link "Email" [ref=e114] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e115] [cursor=pointer]: Email
+  - alert [ref=e117]
+```

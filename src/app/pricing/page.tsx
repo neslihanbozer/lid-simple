@@ -108,6 +108,30 @@ export default function Pricing() {
               </span>
             </div>
             
+            {/* Study Image */}
+            <div className="mb-6">
+              <div className="w-full h-48 rounded-lg overflow-hidden shadow-lg">
+                <img
+                  src="/Study.jpg"
+                  alt="Study and Learning"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    // Fallback to gradient background if image fails to load
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.parentElement!.innerHTML = `
+                      <div class="w-full h-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center">
+                        <div class="text-center text-white">
+                          <div class="text-6xl mb-4 drop-shadow-2xl">📚</div>
+                          <div class="text-2xl font-bold mb-2 drop-shadow-lg">Study & Learn</div>
+                          <div class="text-sm opacity-90 drop-shadow-md">Premium Learning Experience</div>
+                        </div>
+                      </div>
+                    `;
+                  }}
+                />
+              </div>
+            </div>
+            
             <div className="text-center">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Premium</h2>
               <div className="text-4xl font-bold text-blue-600 mb-2">€5.99</div>

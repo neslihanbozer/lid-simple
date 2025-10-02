@@ -2,288 +2,345 @@
 
 import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+
+// Import translations
+import enTranslations from '../../../locales/en/common.json'
+import deTranslations from '../../../locales/de/common.json'
+
+// Question categories data
+const questionCategories = [
+  { id: 1, name: 'Politics', icon: '🏛️', questions: 50, color: 'blue' },
+  { id: 2, name: 'Law', icon: '⚖️', questions: 40, color: 'purple' },
+  { id: 3, name: 'Culture', icon: '🎭', questions: 35, color: 'pink' },
+  { id: 4, name: 'Economy', icon: '💰', questions: 30, color: 'green' },
+  { id: 5, name: 'Education', icon: '📚', questions: 25, color: 'yellow' },
+  { id: 6, name: 'Society', icon: '👥', questions: 45, color: 'indigo' },
+  { id: 7, name: 'History', icon: '📜', questions: 40, color: 'red' },
+  { id: 8, name: 'Integration', icon: '🤝', questions: 30, color: 'teal' }
+]
+
+// AI Topic Explanations
+const aiTopics = [
+  { name: 'German History', color: 'bg-red-100 text-red-800 border-red-200' },
+  { name: 'German Politics', color: 'bg-blue-100 text-blue-800 border-blue-200' },
+  { name: 'Integration', color: 'bg-green-100 text-green-800 border-green-200' },
+  { name: 'Values', color: 'bg-purple-100 text-purple-800 border-purple-200' }
+]
 
 export default function PremiumDashboard() {
   const { data: session } = useSession()
-  const router = useRouter()
-  const [selectedLanguage, setSelectedLanguage] = useState('de')
-  const [selectedState, setSelectedState] = useState('all')
-  const [aiExplanation, setAiExplanation] = useState('')
+  const [language, setLanguage] = useState('en')
+  const [translations, setTranslations] = useState(enTranslations)
+  const [mounted, setMounted] = useState(false)
 
-  const languages = [
-    { code: 'de', name: 'Deutsch', flag: '🇩🇪', isDefault: true },
-    { code: 'de-tr', name: 'Deutsch + Türkçe', flag: '🇩🇪🇹🇷' },
-    { code: 'de-en', name: 'Deutsch + English', flag: '🇩🇪🇺🇸' },
-    { code: 'de-fr', name: 'Deutsch + Français', flag: '🇩🇪🇫🇷' },
-    { code: 'de-es', name: 'Deutsch + Español', flag: '🇩🇪🇪🇸' },
-    { code: 'de-ar', name: 'Deutsch + العربية', flag: '🇩🇪🇸🇦' }
-  ]
+  useEffect(() => {
+    setMounted(true)
+    setTranslations(language === 'en' ? enTranslations : deTranslations)
+  }, [language])
 
-  const states = [
-    { code: 'all', name: 'Tüm Eyaletler' },
-    { code: 'bayern', name: 'Bayern' },
-    { code: 'baden-wuerttemberg', name: 'Baden-Württemberg' },
-    { code: 'north-rhine-westphalia', name: 'Nordrhein-Westfalen' },
-    { code: 'hesse', name: 'Hessen' },
-    { code: 'saxony', name: 'Sachsen' },
-    { code: 'rhineland-palatinate', name: 'Rheinland-Pfalz' },
-    { code: 'berlin', name: 'Berlin' },
-    { code: 'schleswig-holstein', name: 'Schleswig-Holstein' },
-    { code: 'brandenburg', name: 'Brandenburg' },
-    { code: 'saxony-anhalt', name: 'Sachsen-Anhalt' },
-    { code: 'thuringia', name: 'Thüringen' },
-    { code: 'hamburg', name: 'Hamburg' },
-    { code: 'mecklenburg-vorpommern', name: 'Mecklenburg-Vorpommern' },
-    { code: 'bremen', name: 'Bremen' },
-    { code: 'saarland', name: 'Saarland' }
-  ]
-
-  const questionCategories = [
-    { id: 'history', name: 'Tarih', count: 50, icon: '📚' },
-    { id: 'politics', name: 'Politika', count: 45, icon: '🏛️' },
-    { id: 'society', name: 'Toplum', count: 40, icon: '👥' },
-    { id: 'integration', name: 'Entegrasyon', count: 35, icon: '🤝' },
-    { id: 'law', name: 'Hukuk', count: 30, icon: '⚖️' },
-    { id: 'culture', name: 'Kültür', count: 25, icon: '🎭' },
-    { id: 'economy', name: 'Ekonomi', count: 20, icon: '💰' },
-    { id: 'education', name: 'Eğitim', count: 15, icon: '🎓' }
-  ]
-
-  const getAiExplanation = async (topic: string) => {
-    try {
-      const response = await fetch('/api/explain-question', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topic, language: selectedLanguage })
-      })
-      
-      if (response.ok) {
-        const data = await response.json()
-        setAiExplanation(data.explanation)
-      }
-    } catch (error) {
-      console.error('AI explanation error:', error)
-    }
+  if (!mounted) {
+    return (
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="animate-pulse">
+            <div className="h-8 bg-gray-200 rounded w-1/4 mb-4"></div>
+            <div className="h-4 bg-gray-200 rounded w-1/2 mb-8"></div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[...Array(8)].map((_, i) => (
+                <div key={i} className="h-32 bg-gray-200 rounded-lg"></div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    )
   }
 
-  // Session kontrolü kaldırıldı - test için
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="bg-white rounded-lg shadow-xl p-6 mb-8">
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <header className="bg-white shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-6">
+            <div className="flex items-center">
+              <div className="flex items-center">
+                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm font-bold">★</span>
+                </div>
+                <span className="ml-2 text-xl font-bold text-gray-800">logo</span>
+              </div>
+            </div>
+            <nav className="hidden md:flex space-x-8">
+              <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">Home</Link>
+              <Link href="/pricing" className="text-gray-700 hover:text-blue-600 font-medium">Premium Features</Link>
+              <Link href="/dashboard" className="text-blue-600 font-medium">Dashboard</Link>
+              <div className="flex space-x-4">
+                <Link href="/auth/signin" className="text-gray-700 hover:text-blue-600 font-medium">Login</Link>
+                <Link href="/auth/signup" className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium">Sign up</Link>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Welcome Banner */}
+        <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-8 mb-8 text-white">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-gray-800 mb-2">
-                🎉 Premium Dashboard
-              </h1>
-              <p className="text-gray-600">
-                Hoş geldin! Artık 300+ soruya ve tüm premium özelliklere erişimin var.
+              <div className="flex items-center mb-4">
+                <h1 className="text-3xl font-bold mr-4">
+                  {language === 'en' ? 'Premium Dashboard' : 'Premium-Dashboard'}
+                </h1>
+                <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold">
+                  PREMIUM
+                </span>
+              </div>
+              <p className="text-xl opacity-90">
+                {language === 'en' 
+                  ? `Welcome Back, ${session?.user?.name || 'User'}! You now have access to over 300+ questions and all premium features.`
+                  : `Willkommen zurück, ${session?.user?.name || 'Benutzer'}! Sie haben jetzt Zugang zu über 300+ Fragen und allen Premium-Funktionen.`
+                }
               </p>
             </div>
-            <div className="bg-yellow-500 text-white px-4 py-2 rounded-full font-bold">
-              PREMIUM
+            <div className="hidden lg:block">
+              <div className="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                <span className="text-4xl">🎯</span>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Language & State Selection */}
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">🌍 Dil Seçimi</h3>
-            <p className="text-sm text-gray-600 mb-4">
-              Almanca + diğer dil kombinasyonları ile öğrenin
-            </p>
-            <div className="grid grid-cols-1 gap-3">
-              {languages.map((lang) => (
-                <button
-                  key={lang.code}
-                  onClick={() => setSelectedLanguage(lang.code)}
-                  className={`p-4 rounded-lg border-2 transition-all ${
-                    selectedLanguage === lang.code
-                      ? 'border-blue-500 bg-blue-50 text-blue-800'
-                      : 'border-gray-200 hover:border-gray-300'
-                  } ${lang.isDefault ? 'ring-2 ring-yellow-300' : ''}`}
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="text-2xl">{lang.flag}</div>
-                    <div>
-                      <div className="font-medium">{lang.name}</div>
-                      {lang.isDefault && (
-                        <div className="text-xs text-yellow-600 font-bold">⭐ Varsayılan</div>
-                      )}
-                    </div>
-                  </div>
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">🗺️ Eyalet Seçimi</h3>
-            <select
-              value={selectedState}
-              onChange={(e) => setSelectedState(e.target.value)}
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              {states.map((state) => (
-                <option key={state.code} value={state.code}>
-                  {state.name}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
-
-        {/* Question Categories */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-          <div className="flex items-center justify-between mb-6">
-            <h3 className="text-xl font-bold text-gray-800">📚 Soru Kategorileri (300+ Soru)</h3>
-            <Link
-              href="/all-questions"
-              className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded text-sm"
-            >
-              📖 Tüm Soruları Gör
-            </Link>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {questionCategories.map((category) => (
-              <Link
-                key={category.id}
-                href={`/quiz?category=${category.id}&language=${selectedLanguage}&state=${selectedState}`}
-                className="bg-gradient-to-br from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 rounded-lg p-4 border-2 border-transparent hover:border-blue-300 transition-all group"
+        {/* Language Selection */}
+        <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">
+            {language === 'en' ? 'Language Selection' : 'Sprachauswahl'}
+          </h2>
+          <p className="text-gray-600 mb-6">
+            {language === 'en' 
+              ? 'Learn German with other language combinations'
+              : 'Lernen Sie Deutsch mit anderen Sprachkombinationen'
+            }
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {[
+              { flag: '🇩🇪', name: 'German', default: true },
+              { flag: '🇹🇷', name: 'German + Turkish' },
+              { flag: '🇬🇧', name: 'German + English' },
+              { flag: '🇫🇷', name: 'German + French' },
+              { flag: '🇪🇸', name: 'German + Spanish' },
+              { flag: '🇸🇦', name: 'German + Arabic' }
+            ].map((lang, index) => (
+              <button
+                key={index}
+                className={`p-4 rounded-xl border-2 transition-all hover:shadow-md ${
+                  index === 0 
+                    ? 'border-blue-500 bg-blue-50' 
+                    : 'border-gray-200 hover:border-blue-300'
+                }`}
               >
-                <div className="text-3xl mb-2">{category.icon}</div>
-                <div className="font-semibold text-gray-800 mb-1">{category.name}</div>
-                <div className="text-sm text-gray-600">{category.count} soru</div>
-                <div className="text-xs text-blue-600 mt-2 group-hover:text-blue-800">
-                  Başla →
-                </div>
-              </Link>
+                <div className="text-2xl mb-2">{lang.flag}</div>
+                <div className="text-sm font-medium text-gray-700">{lang.name}</div>
+                {lang.default && (
+                  <div className="text-xs text-blue-600 font-semibold mt-1">Default</div>
+                )}
+              </button>
             ))}
           </div>
         </div>
 
-        {/* AI Explanation */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-          <h3 className="text-xl font-bold text-gray-800 mb-4">🤖 AI ile Konu Açıklaması</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <div className="space-y-3">
-                <button
-                  onClick={() => getAiExplanation('Almanya Tarihi')}
-                  className="w-full p-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors"
-                >
-                  📚 Almanya Tarihi
-                </button>
-                <button
-                  onClick={() => getAiExplanation('Alman Siyaseti')}
-                  className="w-full p-3 bg-green-500 hover:bg-green-600 text-white rounded-lg transition-colors"
-                >
-                  🏛️ Alman Siyaseti
-                </button>
-                <button
-                  onClick={() => getAiExplanation('Toplumsal Değerler')}
-                  className="w-full p-3 bg-purple-500 hover:bg-purple-600 text-white rounded-lg transition-colors"
-                >
-                  👥 Toplumsal Değerler
-                </button>
-                <button
-                  onClick={() => getAiExplanation('Entegrasyon Süreci')}
-                  className="w-full p-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg transition-colors"
-                >
-                  🤝 Entegrasyon Süreci
+        {/* State Selection */}
+        <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">
+            {language === 'en' ? 'State Selection' : 'Bundesland-Auswahl'}
+          </h2>
+          <select className="w-full md:w-64 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            <option>{language === 'en' ? 'All States' : 'Alle Bundesländer'}</option>
+            <option>Baden-Württemberg</option>
+            <option>Bayern</option>
+            <option>Berlin</option>
+            <option>Brandenburg</option>
+            <option>Bremen</option>
+            <option>Hamburg</option>
+            <option>Hessen</option>
+            <option>Mecklenburg-Vorpommern</option>
+            <option>Niedersachsen</option>
+            <option>Nordrhein-Westfalen</option>
+            <option>Rheinland-Pfalz</option>
+            <option>Saarland</option>
+            <option>Sachsen</option>
+            <option>Sachsen-Anhalt</option>
+            <option>Schleswig-Holstein</option>
+            <option>Thüringen</option>
+          </select>
+        </div>
+
+        {/* Question Categories */}
+        <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-xl font-bold text-gray-900">
+              {language === 'en' ? 'Question Categories (300+ Questions)' : 'Fragenkategorien (300+ Fragen)'}
+            </h2>
+            <button className="text-blue-600 hover:text-blue-700 font-medium">
+              {language === 'en' ? 'View All Questions' : 'Alle Fragen anzeigen'}
+            </button>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {questionCategories.map((category) => (
+              <div
+                key={category.id}
+                className={`bg-gradient-to-br from-${category.color}-50 to-${category.color}-100 rounded-xl p-6 hover:shadow-lg transition-all cursor-pointer group`}
+              >
+                <div className="text-3xl mb-3">{category.icon}</div>
+                <h3 className="font-bold text-gray-900 mb-2">{category.name}</h3>
+                <p className="text-sm text-gray-600 mb-4">{category.questions} questions</p>
+                <button className="w-full bg-white hover:bg-gray-50 text-gray-700 py-2 px-4 rounded-lg font-medium transition-colors group-hover:shadow-md">
+                  {language === 'en' ? 'Start Quiz' : 'Quiz starten'}
                 </button>
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
+
+        {/* AI Topic Explanations */}
+        <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">
+            {language === 'en' ? 'AI Topic Explanations' : 'KI-Themen-Erklärungen'}
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
             <div>
-              {aiExplanation ? (
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <h4 className="font-semibold text-gray-800 mb-2">AI Açıklaması:</h4>
-                  <p className="text-gray-700">{aiExplanation}</p>
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">
+                {language === 'en' ? 'Choose a topic to get detailed explanations' : 'Wählen Sie ein Thema für detaillierte Erklärungen'}
+              </h3>
+              <div className="space-y-3">
+                {aiTopics.map((topic, index) => (
+                  <button
+                    key={index}
+                    className={`w-full p-4 rounded-xl border-2 text-left transition-all hover:shadow-md ${topic.color}`}
+                  >
+                    <div className="font-medium">{topic.name}</div>
+                    <div className="text-sm opacity-75 mt-1">
+                      {language === 'en' ? 'Get AI-powered explanations' : 'KI-gestützte Erklärungen erhalten'}
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="text-center">
+                <div className="w-32 h-32 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center mb-4">
+                  <span className="text-4xl">📖</span>
                 </div>
-              ) : (
-                <div className="bg-gray-50 rounded-lg p-4 text-center text-gray-500">
-                  <div className="text-4xl mb-2">🤖</div>
-                  <p>Bir konu seçin, AI size detaylı açıklama yapacak!</p>
-                </div>
-              )}
+                <p className="text-gray-600">
+                  {language === 'en' 
+                    ? 'Choose a topic above to get a detailed further explanation!'
+                    : 'Wählen Sie oben ein Thema für eine detaillierte weitere Erklärung!'
+                  }
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Premium Features */}
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <div className="text-4xl mb-4">📊</div>
-            <h3 className="text-lg font-bold text-gray-800 mb-2">İlerleme Takibi</h3>
-            <p className="text-gray-600 text-sm mb-4">
-              Hangi konularda ne kadar ilerlediğinizi görün
+        {/* Additional Tools */}
+        <div className="grid md:grid-cols-3 gap-6">
+          <Link href="/progress" className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all group">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
+                <span className="text-2xl">📊</span>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900">
+                {language === 'en' ? 'Progress Tracking' : 'Fortschrittsverfolgung'}
+              </h3>
+            </div>
+            <p className="text-gray-600 mb-4">
+              {language === 'en' 
+                ? 'Monitor your learning progress and track improvements'
+                : 'Überwachen Sie Ihren Lernfortschritt und verfolgen Sie Verbesserungen'
+              }
             </p>
-            <Link
-              href="/progress"
-              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded text-sm"
-            >
-              İlerlemeyi Gör
-            </Link>
-          </div>
+            <div className="text-blue-600 font-medium group-hover:text-blue-700">
+              {language === 'en' ? 'View Progress →' : 'Fortschritt anzeigen →'}
+            </div>
+          </Link>
 
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <div className="text-4xl mb-4">👥</div>
-            <h3 className="text-lg font-bold text-gray-800 mb-2">Gruplu Çalışma</h3>
-            <p className="text-gray-600 text-sm mb-4">
-              Arkadaşlarınızla birlikte çalışın
+          <Link href="/groups" className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all group">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mr-4">
+                <span className="text-2xl">👥</span>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900">
+                {language === 'en' ? 'Group Study' : 'Gruppenstudium'}
+              </h3>
+            </div>
+            <p className="text-gray-600 mb-4">
+              {language === 'en' 
+                ? 'Study together with friends and track group progress'
+                : 'Studieren Sie mit Freunden und verfolgen Sie den Gruppenfortschritt'
+              }
             </p>
-            <Link
-              href="/groups"
-              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded text-sm"
-            >
-              Gruplara Katıl
-            </Link>
-          </div>
+            <div className="text-green-600 font-medium group-hover:text-green-700">
+              {language === 'en' ? 'Join Groups →' : 'Gruppen beitreten →'}
+            </div>
+          </Link>
 
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <div className="text-4xl mb-4">❌</div>
-            <h3 className="text-lg font-bold text-gray-800 mb-2">Yanlış Cevaplar</h3>
-            <p className="text-gray-600 text-sm mb-4">
-              Yanlış cevapladığınız soruları gözden geçirin
+          <Link href="/wrong-answers" className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all group">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mr-4">
+                <span className="text-2xl">❌</span>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900">
+                {language === 'en' ? 'Wrong Answers Review' : 'Falsche Antworten überprüfen'}
+              </h3>
+            </div>
+            <p className="text-gray-600 mb-4">
+              {language === 'en' 
+                ? 'Review and learn from your incorrect answers'
+                : 'Überprüfen und lernen Sie aus Ihren falschen Antworten'
+              }
             </p>
-            <Link
-              href="/wrong-answers"
-              className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded text-sm"
-            >
-              Yanlış Cevaplar
-            </Link>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <div className="text-4xl mb-4">📊</div>
-            <h3 className="text-lg font-bold text-gray-800 mb-2">Soru Durum Takibi</h3>
-            <p className="text-gray-600 text-sm mb-4">
-              Yanlış sorularınızın durumunu takip edin
-            </p>
-            <Link
-              href="/question-status"
-              className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded text-sm"
-            >
-              Durum Takibi
-            </Link>
-          </div>
-        </div>
-
-        {/* Navigation */}
-        <div className="text-center">
-          <Link
-            href="/"
-            className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-          >
-            ← Ana Sayfaya Dön
+            <div className="text-red-600 font-medium group-hover:text-red-700">
+              {language === 'en' ? 'Review Answers →' : 'Antworten überprüfen →'}
+            </div>
           </Link>
         </div>
-      </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-white border-t mt-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex space-x-6 mb-4 md:mb-0">
+              <Link href="/resources" className="text-gray-600 hover:text-blue-600">Resources</Link>
+              <Link href="/legal" className="text-gray-600 hover:text-blue-600">Legal</Link>
+            </div>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 hover:text-blue-600">
+                <span className="sr-only">Facebook</span>
+                <div className="w-6 h-6 bg-gray-400 rounded"></div>
+              </a>
+              <a href="#" className="text-gray-400 hover:text-blue-600">
+                <span className="sr-only">Twitter</span>
+                <div className="w-6 h-6 bg-gray-400 rounded"></div>
+              </a>
+              <a href="#" className="text-gray-400 hover:text-blue-600">
+                <span className="sr-only">Instagram</span>
+                <div className="w-6 h-6 bg-gray-400 rounded"></div>
+              </a>
+              <a href="#" className="text-gray-400 hover:text-blue-600">
+                <span className="sr-only">LinkedIn</span>
+                <div className="w-6 h-6 bg-gray-400 rounded"></div>
+              </a>
+              <a href="#" className="text-gray-400 hover:text-blue-600">
+                <span className="sr-only">Email</span>
+                <div className="w-6 h-6 bg-gray-400 rounded"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }

@@ -1,0 +1,109 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - button "🌍 Dil Seçimi 🇩🇪" [ref=e4] [cursor=pointer]:
+    - generic [ref=e5] [cursor=pointer]: 🌍 Dil Seçimi
+    - generic [ref=e6] [cursor=pointer]: 🇩🇪
+  - generic [ref=e7]:
+    - banner [ref=e8]:
+      - generic [ref=e12]:
+        - generic [ref=e14]: ★
+        - generic [ref=e15]: logo
+    - main [ref=e16]:
+      - generic [ref=e18]:
+        - button "EN" [ref=e19] [cursor=pointer]
+        - button "DE" [ref=e20] [cursor=pointer]
+      - generic [ref=e21]:
+        - heading "Premium Membership - €5.99/month" [level=1] [ref=e22]
+        - paragraph [ref=e23]: Enter your credit card information
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - generic [ref=e26]:
+            - generic [ref=e27]:
+              - generic [ref=e28]: Name on Card
+              - textbox "Full Name" [ref=e29]: Test User
+            - generic [ref=e30]:
+              - generic [ref=e31]: Card Number
+              - textbox "4242424242424242" [ref=e32]
+            - generic [ref=e33]:
+              - generic [ref=e34]:
+                - generic [ref=e35]: Expiry Date
+                - textbox "12/25" [ref=e36]
+              - generic [ref=e37]:
+                - generic [ref=e38]: CVC
+                - textbox "123" [ref=e39]
+            - button "Pay €5.99 and Become Premium" [ref=e40] [cursor=pointer]
+          - link "← Back to Pricing" [ref=e42]:
+            - /url: /pricing
+        - generic [ref=e43]:
+          - heading "Test Cards" [level=3] [ref=e44]
+          - generic [ref=e45]:
+            - generic [ref=e47] [cursor=pointer]:
+              - generic [ref=e48] [cursor=pointer]:
+                - heading "✅ Success Card" [level=4] [ref=e49] [cursor=pointer]
+                - paragraph [ref=e50] [cursor=pointer]: Payment will be successful
+              - generic [ref=e51] [cursor=pointer]:
+                - generic [ref=e52] [cursor=pointer]: "4242424242424242"
+                - generic [ref=e53] [cursor=pointer]: 12/25
+            - generic [ref=e55] [cursor=pointer]:
+              - generic [ref=e56] [cursor=pointer]:
+                - heading "❌ Decline Card" [level=4] [ref=e57] [cursor=pointer]
+                - paragraph [ref=e58] [cursor=pointer]: Payment will be declined
+              - generic [ref=e59] [cursor=pointer]:
+                - generic [ref=e60] [cursor=pointer]: "4000000000000002"
+                - generic [ref=e61] [cursor=pointer]: 12/25
+            - generic [ref=e63] [cursor=pointer]:
+              - generic [ref=e64] [cursor=pointer]:
+                - heading "💰 Insufficient Funds" [level=4] [ref=e65] [cursor=pointer]
+                - paragraph [ref=e66] [cursor=pointer]: Insufficient funds error
+              - generic [ref=e67] [cursor=pointer]:
+                - generic [ref=e68] [cursor=pointer]: "4000000000009995"
+                - generic [ref=e69] [cursor=pointer]: 12/25
+            - generic [ref=e71] [cursor=pointer]:
+              - generic [ref=e72] [cursor=pointer]:
+                - heading "⏰ Expired Card" [level=4] [ref=e73] [cursor=pointer]
+                - paragraph [ref=e74] [cursor=pointer]: Card expired error
+              - generic [ref=e75] [cursor=pointer]:
+                - generic [ref=e76] [cursor=pointer]: "4000000000000069"
+                - generic [ref=e77] [cursor=pointer]: 12/20
+          - generic [ref=e78]:
+            - heading "Test Credit Card Information:" [level=4] [ref=e79]
+            - generic [ref=e80]:
+              - generic [ref=e81]:
+                - strong [ref=e82]: "Card Number:"
+                - text: "4242424242424242"
+              - generic [ref=e83]:
+                - strong [ref=e84]: "Expiry:"
+                - text: 12/25
+              - generic [ref=e85]:
+                - strong [ref=e86]: "CVC:"
+                - text: "123"
+              - generic [ref=e87]:
+                - strong [ref=e88]: "Name:"
+                - text: Test User
+    - contentinfo [ref=e89]:
+      - generic [ref=e91]:
+        - generic [ref=e92]:
+          - link "Resources" [ref=e93]:
+            - /url: /resources
+          - link "Legal" [ref=e94]:
+            - /url: /legal
+        - generic [ref=e95]:
+          - link "Facebook" [ref=e96]:
+            - /url: "#"
+            - generic [ref=e97]: Facebook
+          - link "Twitter" [ref=e99]:
+            - /url: "#"
+            - generic [ref=e100]: Twitter
+          - link "Instagram" [ref=e102]:
+            - /url: "#"
+            - generic [ref=e103]: Instagram
+          - link "LinkedIn" [ref=e105]:
+            - /url: "#"
+            - generic [ref=e106]: LinkedIn
+          - link "Email" [ref=e108]:
+            - /url: "#"
+            - generic [ref=e109]: Email
+  - alert [ref=e111]
+```

@@ -25,3 +25,10 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/* Responsive card styles */
+.card {
+  min-width: 260px;
+  flex: 1 1 300px;
+  box-sizing: border-box;
+}

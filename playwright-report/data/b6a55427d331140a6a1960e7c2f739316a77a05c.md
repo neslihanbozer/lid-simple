@@ -1,0 +1,75 @@
+# Page snapshot
+
+```yaml
+- dialog "Unhandled Runtime Error" [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - navigation [ref=e7]:
+          - button "previous" [disabled] [ref=e8]:
+            - img "previous" [ref=e9]
+          - button "next" [disabled] [ref=e11]:
+            - img "next" [ref=e12]
+          - generic [ref=e14]:
+            - generic [ref=e15]: "1"
+            - text: of
+            - generic [ref=e16]: "1"
+            - text: unhandled error
+          - generic [ref=e17]:
+            - generic "An outdated version detected (latest is 15.5.4), upgrade is highly recommended!" [ref=e19]: Next.js (14.0.0) is outdated
+            - link "(learn more)" [ref=e20] [cursor=pointer]:
+              - /url: https://nextjs.org/docs/messages/version-staleness
+        - button "Close" [ref=e21] [cursor=pointer]:
+          - img [ref=e23] [cursor=pointer]
+      - heading "Unhandled Runtime Error" [level=1] [ref=e26]
+      - paragraph [ref=e27]: "ReferenceError: isDeTr is not defined"
+    - generic [ref=e28]:
+      - heading "Source" [level=2] [ref=e29]
+      - generic [ref=e30]:
+        - link "src\\app\\quiz\\page.tsx (239:13) @ isDeTr" [ref=e32] [cursor=pointer]:
+          - generic [ref=e33] [cursor=pointer]: src\app\quiz\page.tsx (239:13) @ isDeTr
+          - img [ref=e34] [cursor=pointer]
+        - generic [ref=e38]:
+          - generic [ref=e40]: 237 |
+          - generic [ref=e42]: <
+          - generic [ref=e43]: div
+          - generic [ref=e44]: className
+          - generic [ref=e45]: =
+          - generic [ref=e46]: "\"mb-6\""
+          - generic [ref=e47]: ">"
+          - generic [ref=e49]: 238 |
+          - generic [ref=e51]: <
+          - generic [ref=e52]: h2
+          - generic [ref=e53]: className
+          - generic [ref=e54]: =
+          - generic [ref=e55]: "\"text-xl font-semibold text-gray-800 mb-6\""
+          - generic [ref=e56]: ">"
+          - generic [ref=e57]: ">"
+          - generic [ref=e58]: 239 |
+          - generic [ref=e59]: "{isDeTr"
+          - generic [ref=e60]: "&&"
+          - generic [ref=e61]: currentQ
+          - generic [ref=e62]: .
+          - generic [ref=e63]: questionTr
+          - generic [ref=e64]: "?"
+          - generic [ref=e65]: currentQ
+          - generic [ref=e66]: .
+          - generic [ref=e67]: questionTr
+          - generic [ref=e68]: ":"
+          - generic [ref=e69]: currentQ
+          - generic [ref=e70]: .
+          - generic [ref=e71]: "question}"
+          - generic [ref=e73]: "|"
+          - generic [ref=e75]: ^
+          - generic [ref=e77]: 240 |
+          - generic [ref=e79]: <
+          - generic [ref=e80]: /
+          - generic [ref=e81]: h2
+          - generic [ref=e82]: ">"
+          - generic [ref=e84]: 241 |
+          - generic [ref=e87]: 242 |
+          - generic [ref=e88]: "{"
+          - generic [ref=e89]: /* Çift dil gösterimi */
+          - generic [ref=e90]: "}"
+      - button "Show collapsed frames" [ref=e91] [cursor=pointer]
+```
