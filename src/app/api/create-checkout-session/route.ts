@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
               name: 'Premium Membership - 3 Months',
               description: 'Access to all premium features for 3 months',
             },
-            unit_amount: 1799, // €17.99 in cents
+            unit_amount: 599, // €5.99 in cents
           },
           quantity: 1,
         },

@@ -7,7 +7,7 @@ import { questions } from '@/lib/questions'
 
 // German translations
 const germanTranslations = {
-  quizTitle: 'Leben in Deutschland Quiz',
+  quizTitle: 'Leben in Deutschland Test',
   freeQuiz: 'Kostenloses Quiz',
   freeQuizInfo: 'Sie lösen gerade 50 kostenlose Fragen. Für mehr Fragen werden Sie Premium!',
   question: 'Frage',
@@ -28,7 +28,7 @@ const germanTranslations = {
   premiumFeatures3: '✅ Fortschrittsverfolgung',
   premiumFeatures4: '✅ Gruppenarbeit',
   tryAgain: 'Erneut versuchen',
-  goPremium: '💳 Premium werden - €17.99 (3 Monate)',
+  goPremium: '💳 Premium werden - €5.99 (3 Monate)',
   backToHome: '← Zurück zur Startseite',
   loading: 'Lädt...'
 }

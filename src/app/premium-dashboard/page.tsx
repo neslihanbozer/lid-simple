@@ -396,22 +396,38 @@ export default function PremiumDashboard() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
+        {/* Header */}
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
               <div className="flex items-center">
-                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">★</span>
-                </div>
-                <span className="ml-2 text-xl font-bold text-gray-800">Leben in Deutschland Quiz</span>
+                <img 
+                  src="/logo/lid_logo.png" 
+                  alt="Leben in Deutschland Test Logo" 
+                  className="w-28 h-28 object-contain"
+                  onError={(e) => {
+                    // Fallback to star icon if logo fails to load
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.parentElement!.innerHTML = `
+                      <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                        <span class="text-white text-sm font-bold">★</span>
+                      </div>
+                    `;
+                  }}
+                />
+                <span className="ml-2 text-xl font-bold text-gray-800">Leben in Deutschland Test</span>
               </div>
             </div>
-            <nav className="hidden md:flex space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">Home</Link>
-              <Link href="/pricing" className="text-gray-700 hover:text-blue-600 font-medium">Premium Features</Link>
-              <Link href="/dashboard" className="text-blue-600 font-medium">Dashboard</Link>
+            <nav className="hidden md:flex items-center space-x-6">
+              <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">
+                {language === 'en' ? 'Home' : 'Startseite'}
+              </Link>
+              <Link href="/dashboard" className="text-blue-600 font-medium">
+                {language === 'en' ? 'Dashboard' : 'Dashboard'}
+              </Link>
+              
+              
               <div className="flex space-x-4">
                 <Link href="/auth/signin" className="text-gray-700 hover:text-blue-600 font-medium">Login</Link>
                 <Link href="/auth/signup" className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium">Sign up</Link>
@@ -430,7 +446,7 @@ export default function PremiumDashboard() {
               <div className="flex items-center mb-4">
                 <h1 className="text-3xl font-bold mr-4">
                   {language === 'en' ? 'Premium Dashboard' : 'Premium-Dashboard'}
-                </h1>
+              </h1>
                 <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold">
                   PREMIUM
                 </span>
@@ -451,30 +467,102 @@ export default function PremiumDashboard() {
         </div>
 
 
-        {/* State Selection */}
-        <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">
-            {language === 'en' ? 'State Selection' : 'Bundesland-Auswahl'}
-          </h2>
-          <select className="w-full md:w-64 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-            <option>{language === 'en' ? 'All States' : 'Alle Bundesländer'}</option>
-            <option>Baden-Württemberg</option>
-            <option>Bayern</option>
-            <option>Berlin</option>
-            <option>Brandenburg</option>
-            <option>Bremen</option>
-            <option>Hamburg</option>
-            <option>Hessen</option>
-            <option>Mecklenburg-Vorpommern</option>
-            <option>Niedersachsen</option>
-            <option>Nordrhein-Westfalen</option>
-            <option>Rheinland-Pfalz</option>
-            <option>Saarland</option>
-            <option>Sachsen</option>
-            <option>Sachsen-Anhalt</option>
-            <option>Schleswig-Holstein</option>
-            <option>Thüringen</option>
-          </select>
+        {/* State Selection and Language Selection */}
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          {/* State Selection */}
+          <div className="bg-white rounded-2xl shadow-lg p-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">
+              {language === 'en' ? 'State Selection' : 'Bundesland-Auswahl'}
+            </h2>
+            <select className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              <option>{language === 'en' ? 'All States' : 'Alle Bundesländer'}</option>
+              <option>Baden-Württemberg</option>
+              <option>Bayern</option>
+              <option>Berlin</option>
+              <option>Brandenburg</option>
+              <option>Bremen</option>
+              <option>Hamburg</option>
+              <option>Hessen</option>
+              <option>Mecklenburg-Vorpommern</option>
+              <option>Niedersachsen</option>
+              <option>Nordrhein-Westfalen</option>
+              <option>Rheinland-Pfalz</option>
+              <option>Saarland</option>
+              <option>Sachsen</option>
+              <option>Sachsen-Anhalt</option>
+              <option>Schleswig-Holstein</option>
+              <option>Thüringen</option>
+            </select>
+          </div>
+
+          {/* Language Selection */}
+          <div className="bg-white rounded-2xl shadow-lg p-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">
+              {language === 'en' ? 'Language Selection' : 'Sprachauswahl'}
+            </h2>
+            <div className="grid grid-cols-2 gap-2">
+              <button
+                onClick={() => setLanguage('de')}
+                className={`p-3 rounded-lg font-medium transition-colors ${
+                  language === 'de' 
+                    ? 'bg-blue-500 text-white' 
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                }`}
+              >
+                🇩🇪 DE
+              </button>
+              <button
+                onClick={() => setLanguage('de-tr')}
+                className={`p-3 rounded-lg font-medium transition-colors ${
+                  language === 'de-tr' 
+                    ? 'bg-blue-500 text-white' 
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                }`}
+              >
+                🇩🇪🇹🇷 DE+TR
+              </button>
+              <button
+                onClick={() => setLanguage('de-en')}
+                className={`p-3 rounded-lg font-medium transition-colors ${
+                  language === 'de-en' 
+                    ? 'bg-blue-500 text-white' 
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                }`}
+              >
+                🇩🇪🇺🇸 DE+EN
+              </button>
+              <button
+                onClick={() => setLanguage('de-fr')}
+                className={`p-3 rounded-lg font-medium transition-colors ${
+                  language === 'de-fr' 
+                    ? 'bg-blue-500 text-white' 
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                }`}
+              >
+                🇩🇪🇫🇷 DE+FR
+              </button>
+              <button
+                onClick={() => setLanguage('de-es')}
+                className={`p-3 rounded-lg font-medium transition-colors ${
+                  language === 'de-es' 
+                    ? 'bg-blue-500 text-white' 
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                }`}
+              >
+                🇩🇪🇪🇸 DE+ES
+              </button>
+              <button
+                onClick={() => setLanguage('de-ar')}
+                className={`p-3 rounded-lg font-medium transition-colors ${
+                  language === 'de-ar' 
+                    ? 'bg-blue-500 text-white' 
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                }`}
+              >
+                🇩🇪🇸🇦 DE+AR
+              </button>
+            </div>
+          </div>
         </div>
 
         {/* Question Categories */}
@@ -500,7 +588,7 @@ export default function PremiumDashboard() {
                 <button className="w-full bg-white hover:bg-gray-50 text-gray-700 py-2 px-4 rounded-lg font-medium transition-colors group-hover:shadow-md">
                   {language === 'en' ? 'Start Quiz' : 'Quiz starten'}
                 </button>
-              </div>
+                </div>
             ))}
           </div>
         </div>
@@ -512,13 +600,13 @@ export default function PremiumDashboard() {
               <h2 className="text-xl font-bold text-gray-900">
                 {selectedCategory} {language === 'en' ? 'Questions' : 'Fragen'}
               </h2>
-              <button
+                <button
                 onClick={() => setShowQuestions(false)}
                 className="text-gray-500 hover:text-gray-700 text-xl"
               >
                 ✕
-              </button>
-            </div>
+                </button>
+              </div>
             <div className="space-y-4 max-h-96 overflow-y-auto">
               {getCategoryQuestions(selectedCategory).map((question, index) => (
                 <div key={question.id} className="border border-gray-200 rounded-lg p-4">
@@ -541,126 +629,29 @@ export default function PremiumDashboard() {
                         {optionIndex === question.correctAnswer && (
                           <span className="ml-2 text-green-600 font-medium">✓ Doğru</span>
                         )}
-                      </div>
+            </div>
                     ))}
-                  </div>
+                </div>
                   {question.explanation && (
                     <div className="mt-3 p-3 bg-blue-50 border border-blue-200 rounded">
                       <p className="text-sm text-blue-800">
                         <strong>Açıklama:</strong> {question.explanation}
                       </p>
-                    </div>
-                  )}
                 </div>
-              ))}
+              )}
             </div>
+              ))}
+                </div>
             <div className="mt-6 text-center">
               <Link href="/quiz">
                 <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium">
                   {language === 'en' ? 'Start Interactive Quiz' : 'Interaktives Quiz starten'}
                 </button>
               </Link>
-            </div>
-          </div>
-        )}
-
-        {/* AI Topic Explanations */}
-        <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">
-            {language === 'en' ? 'AI Topic Explanations' : 'KI-Themen-Erklärungen'}
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">
-                {language === 'en' ? 'Choose a topic to get detailed explanations' : 'Wählen Sie ein Thema für detaillierte Erklärungen'}
-              </h3>
-              <div className="space-y-3">
-                {aiTopics.map((topic, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setSelectedTopic(topic.name)}
-                    className={`w-full p-4 rounded-xl border-2 text-left transition-all hover:shadow-md ${
-                      selectedTopic === topic.name 
-                        ? 'border-blue-500 bg-blue-50' 
-                        : topic.color
-                    }`}
-                  >
-                    <div className="font-medium">{topic.name}</div>
-                    <div className="text-sm opacity-75 mt-1">
-                      {language === 'en' ? 'Get AI-powered explanations' : 'KI-gestützte Erklärungen erhalten'}
-                    </div>
-                  </button>
-                ))}
-              </div>
-            </div>
-            <div className="flex items-start justify-center">
-              {selectedTopic ? (
-                <div className="w-full max-h-96 overflow-y-auto">
-                  {(() => {
-                    const topic = aiTopics.find(t => t.name === selectedTopic);
-                    const content = topic?.content[language as 'en' | 'de'];
-                    return content ? (
-                      <div className="bg-gray-50 rounded-xl p-6">
-                        <h3 className="text-lg font-bold text-gray-900 mb-4">
-                          {content.title}
-                        </h3>
-                        <div className="prose prose-sm max-w-none text-gray-700">
-                          {content.content.split('\n').map((line, index) => {
-                            if (line.startsWith('**') && line.endsWith('**')) {
-                              return (
-                                <h4 key={index} className="font-bold text-gray-900 mt-4 mb-2">
-                                  {line.replace(/\*\*/g, '')}
-                                </h4>
-                              );
-                            } else if (line.startsWith('- **') && line.includes('**:')) {
-                              const [boldPart, normalPart] = line.split('**:');
-                              return (
-                                <p key={index} className="mb-1">
-                                  <strong>{boldPart.replace('- **', '')}</strong>: {normalPart}
-                                </p>
-                              );
-                            } else if (line.startsWith('- ')) {
-                              return (
-                                <p key={index} className="mb-1 ml-4">
-                                  • {line.substring(2)}
-                                </p>
-                              );
-                            } else if (line.trim()) {
-                              return (
-                                <p key={index} className="mb-2">
-                                  {line}
-                                </p>
-                              );
-                            }
-                            return <br key={index} />;
-                          })}
-                        </div>
-                        <button
-                          onClick={() => setSelectedTopic(null)}
-                          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-                        >
-                          {language === 'en' ? 'Close' : 'Schließen'}
-                        </button>
-                      </div>
-                    ) : null;
-                  })()}
-                </div>
-              ) : (
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center mb-4">
-                    <span className="text-4xl">📖</span>
-                  </div>
-                  <p className="text-gray-600">
-                    {language === 'en' 
-                      ? 'Choose a topic above to get a detailed further explanation!'
-                      : 'Wählen Sie oben ein Thema für eine detaillierte weitere Erklärung!'
-                    }
-                  </p>
-                </div>
-              )}
-            </div>
           </div>
         </div>
+        )}
+
 
         {/* Additional Tools */}
         <div className="grid md:grid-cols-3 gap-6">
@@ -682,37 +673,18 @@ export default function PremiumDashboard() {
             <div className="text-blue-600 font-medium group-hover:text-blue-700">
               {language === 'en' ? 'View Progress →' : 'Fortschritt anzeigen →'}
             </div>
-          </Link>
+            </Link>
 
-          <Link href="/groups" className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all group">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mr-4">
-                <span className="text-2xl">👥</span>
-              </div>
-              <h3 className="text-lg font-bold text-gray-900">
-                {language === 'en' ? 'Group Study' : 'Gruppenstudium'}
-              </h3>
-            </div>
-            <p className="text-gray-600 mb-4">
-              {language === 'en' 
-                ? 'Study together with friends and track group progress'
-                : 'Studieren Sie mit Freunden und verfolgen Sie den Gruppenfortschritt'
-              }
-            </p>
-            <div className="text-green-600 font-medium group-hover:text-green-700">
-              {language === 'en' ? 'Join Groups →' : 'Gruppen beitreten →'}
-            </div>
-          </Link>
 
           <Link href="/wrong-answers" className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all group">
             <div className="flex items-center mb-4">
               <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mr-4">
                 <span className="text-2xl">❌</span>
-              </div>
+          </div>
               <h3 className="text-lg font-bold text-gray-900">
                 {language === 'en' ? 'Wrong Answers Review' : 'Falsche Antworten überprüfen'}
               </h3>
-            </div>
+          </div>
             <p className="text-gray-600 mb-4">
               {language === 'en' 
                 ? 'Review and learn from your incorrect answers'
@@ -721,44 +693,11 @@ export default function PremiumDashboard() {
             </p>
             <div className="text-red-600 font-medium group-hover:text-red-700">
               {language === 'en' ? 'Review Answers →' : 'Antworten überprüfen →'}
-            </div>
-          </Link>
-        </div>
+          </div>
+            </Link>
+          </div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-white border-t mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex space-x-6 mb-4 md:mb-0">
-              <Link href="/resources" className="text-gray-600 hover:text-blue-600">Resources</Link>
-              <Link href="/legal" className="text-gray-600 hover:text-blue-600">Legal</Link>
-            </div>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-blue-600">
-                <span className="sr-only">Facebook</span>
-                <div className="w-6 h-6 bg-gray-400 rounded"></div>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-600">
-                <span className="sr-only">Twitter</span>
-                <div className="w-6 h-6 bg-gray-400 rounded"></div>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-600">
-                <span className="sr-only">Instagram</span>
-                <div className="w-6 h-6 bg-gray-400 rounded"></div>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-600">
-                <span className="sr-only">LinkedIn</span>
-                <div className="w-6 h-6 bg-gray-400 rounded"></div>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-600">
-                <span className="sr-only">Email</span>
-                <div className="w-6 h-6 bg-gray-400 rounded"></div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }

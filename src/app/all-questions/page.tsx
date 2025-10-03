@@ -38,14 +38,14 @@ export default function AllQuestionsPage() {
   ]
 
   const categories = [
-    { id: 'all', name: 'Tüm Kategoriler', icon: '📚' },
-    { id: 'Geschichte', name: 'Tarih', icon: '📚' },
-    { id: 'Politik', name: 'Politika', icon: '🏛️' },
-    { id: 'Gesellschaft', name: 'Toplum', icon: '👥' },
-    { id: 'Integration', name: 'Entegrasyon', icon: '🤝' }
+    { id: 'all', name: 'All Categories', icon: '📚' },
+    { id: 'Geschichte', name: 'History', icon: '📚' },
+    { id: 'Politik', name: 'Politics', icon: '🏛️' },
+    { id: 'Gesellschaft', name: 'Society', icon: '👥' },
+    { id: 'Integration', name: 'Integration', icon: '🤝' }
   ]
 
-  // Filtrelenmiş sorular
+  // Filtered questions
   const filteredQuestions = questions.filter(q => {
     if (selectedCategory !== 'all' && q.category !== selectedCategory) {
       return false
@@ -56,7 +56,7 @@ export default function AllQuestionsPage() {
   const toggleLanguage = (langCode: string) => {
     setSelectedLanguages(prev => {
       if (prev.includes(langCode)) {
-        // Eğer tek dil kaldıysa, varsayılan dili koru
+        // If only one language remains, keep the default language
         if (prev.length === 1) {
           return prev
         }
@@ -101,7 +101,7 @@ export default function AllQuestionsPage() {
     }
   }
 
-  // Önceki sayfaya dön
+  // Go back to previous page
   const goBack = () => {
     window.history.back()
   }
@@ -121,10 +121,10 @@ export default function AllQuestionsPage() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
         <div className="bg-white rounded-lg shadow-xl p-8 max-w-md w-full text-center">
-          <h1 className="text-2xl font-bold text-gray-800 mb-4">Soru Bulunamadı</h1>
-          <p className="text-gray-600 mb-6">Seçilen kriterlere uygun soru bulunamadı.</p>
+          <h1 className="text-2xl font-bold text-gray-800 mb-4">No Questions Found</h1>
+          <p className="text-gray-600 mb-6">No questions found matching the selected criteria.</p>
           <Link href="/" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
-            Ana Sayfaya Dön
+            Back to Home
           </Link>
         </div>
       </div>
@@ -137,18 +137,18 @@ export default function AllQuestionsPage() {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Tüm Sorular
+            All Questions
           </h1>
           <p className="text-lg text-gray-600">
-            Leben in Deutschland sınavına hazırlanın - 300+ soru
+            Prepare for the Leben in Deutschland test - 300+ questions
           </p>
         </div>
 
-        {/* Dil Seçimi */}
+        {/* Language Selection */}
         <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-          <h3 className="text-xl font-bold text-gray-800 mb-4">🌍 Dil Seçimi (Çoklu Seçim)</h3>
+          <h3 className="text-xl font-bold text-gray-800 mb-4">🌍 Language Selection (Multiple Choice)</h3>
           <p className="text-sm text-gray-600 mb-4">
-            Almanca + diğer dil kombinasyonları ile öğrenin
+            Learn with German + other language combinations
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {languages.map((lang) => (
@@ -174,13 +174,13 @@ export default function AllQuestionsPage() {
             ))}
           </div>
           <p className="text-sm text-gray-500 mt-2">
-            Seçili diller: {selectedLanguages.map(lang => languages.find(l => l.code === lang)?.name).join(', ')}
+            Selected languages: {selectedLanguages.map(lang => languages.find(l => l.code === lang)?.name).join(', ')}
           </p>
         </div>
 
-        {/* Kategori Seçimi */}
+        {/* Category Selection */}
         <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-          <h3 className="text-xl font-bold text-gray-800 mb-4">📚 Kategori Seçimi</h3>
+          <h3 className="text-xl font-bold text-gray-800 mb-4">📚 Category Selection</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             {categories.map((category) => (
               <button
@@ -199,23 +199,23 @@ export default function AllQuestionsPage() {
           </div>
         </div>
 
-        {/* Soru Gösterimi */}
+        {/* Question Display */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-2xl font-bold text-gray-800">
-              Soru {currentQuestionIndex + 1} / {filteredQuestions.length}
+              Question {currentQuestionIndex + 1} / {filteredQuestions.length}
             </h2>
             <div className="flex gap-2">
               <button
                 onClick={() => setShowAnswers(!showAnswers)}
                 className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
               >
-                {showAnswers ? 'Cevapları Gizle' : 'Cevapları Göster'}
+                {showAnswers ? 'Hide Answers' : 'Show Answers'}
               </button>
             </div>
           </div>
 
-          {/* Soru */}
+          {/* Question */}
           <div className="mb-6">
             <h3 className="text-xl font-semibold text-gray-800 mb-4">
               {isDeTr && currentQuestion.questionTr ? currentQuestion.questionTr : currentQuestion.question}
@@ -230,7 +230,7 @@ export default function AllQuestionsPage() {
               </div>
             )}
 
-            {/* Seçenekler */}
+            {/* Options */}
             <div className="space-y-3">
               {currentQuestion.options.map((option, index) => (
                 <button
@@ -256,7 +256,7 @@ export default function AllQuestionsPage() {
                     </div>
                   </div>
                   
-                  {/* Çift dil gösterimi */}
+                  {/* Dual language display */}
                   {isDeTr && currentQuestion.optionsTr && (
                     <div className="mt-1 text-sm text-gray-500 italic ml-6">
                       🇩🇪 {option}
@@ -267,15 +267,15 @@ export default function AllQuestionsPage() {
             </div>
           </div>
 
-          {/* Açıklama */}
+          {/* Explanation */}
           {showAnswers && (
             <div className="p-4 bg-blue-50 rounded-lg">
-              <h4 className="font-bold text-blue-800 mb-2">Açıklama:</h4>
+              <h4 className="font-bold text-blue-800 mb-2">Explanation:</h4>
               <p className="text-blue-700">
                 {isDeTr && currentQuestion.explanationTr ? currentQuestion.explanationTr : currentQuestion.explanation}
               </p>
               
-              {/* Çift dil gösterimi */}
+              {/* Dual language display */}
               {isDeTr && currentQuestion.explanationTr && (
                 <p className="text-sm text-blue-600 italic mt-2">
                   🇩🇪 {currentQuestion.explanation}
@@ -284,19 +284,19 @@ export default function AllQuestionsPage() {
             </div>
           )}
 
-          {/* Cevap Gönderme */}
+          {/* Submit Answer */}
           {!showResult && selectedAnswer !== null && (
             <div className="text-center mt-6">
               <button
                 onClick={handleSubmitAnswer}
                 className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg"
               >
-                ✅ Cevabı Gönder
+                ✅ Submit Answer
               </button>
             </div>
           )}
 
-          {/* Navigasyon */}
+          {/* Navigation */}
           <div className="flex justify-between mt-6">
             <button
               onClick={prevQuestion}

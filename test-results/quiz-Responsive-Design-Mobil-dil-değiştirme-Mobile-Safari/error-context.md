@@ -2,87 +2,49 @@
 
 ```yaml
 - generic [active] [ref=e1]:
-  - button "🌍 Dil Seçimi 🇩🇪" [ref=e4] [cursor=pointer]:
-    - generic [ref=e5] [cursor=pointer]: 🌍 Dil Seçimi
-    - generic [ref=e6] [cursor=pointer]: 🇩🇪
-  - alert [ref=e7]
-  - generic [ref=e8]:
-    - banner [ref=e9]:
-      - generic [ref=e13]:
-        - generic [ref=e15]: ★
-        - generic [ref=e16]: Leben in Deutschland Quiz
-    - main [ref=e17]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e7]:
+        - img "Leben in Deutschland Test Logo" [ref=e8]
+        - generic [ref=e9]: Leben in Deutschland Test
+    - main [ref=e10]:
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - heading "Leben In Deutschland Test" [level=1] [ref=e13]
+          - paragraph [ref=e14]: Your comprehensive guide to living in Germany, preparing you for the official integration test.
+        - img "Brandenburg Gate illuminated at night, Berlin" [ref=e17]
       - generic [ref=e18]:
         - generic [ref=e19]:
-          - heading "Leben In Deutschland Test" [level=1] [ref=e20]
-          - paragraph [ref=e21]: Ihr umfassender Leitfaden für das Leben in Deutschland, der Sie auf den offiziellen Integrationstest vorbereitet.
-          - generic [ref=e22]:
-            - generic [ref=e23]: "Sprache:"
-            - generic [ref=e24]:
-              - button "EN" [ref=e25] [cursor=pointer]
-              - button "DE" [ref=e26] [cursor=pointer]
-          - generic [ref=e27]:
-            - link "Premium Quiz starten" [ref=e28]:
-              - /url: /quiz
-              - button "Premium Quiz starten" [ref=e29] [cursor=pointer]
-            - link "Premium-Funktionen testen" [ref=e30]:
-              - /url: /premium-dashboard
-              - button "Premium-Funktionen testen" [ref=e31] [cursor=pointer]
-        - img "Brandenburg Gate illuminated at night, Berlin" [ref=e34]
-      - generic [ref=e35]:
-        - generic [ref=e36]:
-          - heading "Quiz starten" [level=3] [ref=e39]
-          - paragraph [ref=e40]: Premium-Mitgliedschaft erforderlich, um auf alle Quiz zuzugreifen.
-          - link "Quiz starten" [ref=e41]:
+          - heading "Start Quiz" [level=3] [ref=e22]
+          - paragraph [ref=e23]: Premium membership required to access all quizzes.
+          - link "Start Quiz" [ref=e24]:
             - /url: /quiz
-            - button "Quiz starten" [ref=e42] [cursor=pointer]
-        - generic [ref=e43]:
-          - generic [ref=e45]: ⭐
-          - heading "Premium-Funktionen" [level=3] [ref=e46]
-          - generic [ref=e47]:
-            - generic [ref=e48]:
-              - generic [ref=e49]: ✓
-              - generic [ref=e50]: 300+ Übungsfragen
-            - generic [ref=e51]:
-              - generic [ref=e52]: ✓
-              - generic [ref=e53]: Mehrsprachige Unterstützung (EN/DE)
-            - generic [ref=e54]:
-              - generic [ref=e55]: ✓
-              - generic [ref=e56]: Detaillierte Erklärungen
-            - generic [ref=e57]:
-              - generic [ref=e58]: ✓
-              - generic [ref=e59]: Detaillierte Fortschrittsverfolgung
-            - generic [ref=e60]:
-              - generic [ref=e61]: ✓
-              - generic [ref=e62]: Umfangreiche Dashboard-Funktionen
-          - generic [ref=e63]:
-            - link "Premium werden - €5.99/Monat" [ref=e64]:
+            - button "Start Quiz" [ref=e25] [cursor=pointer]
+        - generic [ref=e26]:
+          - generic [ref=e28]: ⭐
+          - heading "Premium Features" [level=3] [ref=e29]
+          - generic [ref=e30]:
+            - generic [ref=e31]:
+              - generic [ref=e32]: ✓
+              - generic [ref=e33]: 300+ practice questions
+            - generic [ref=e34]:
+              - generic [ref=e35]: ✓
+              - generic [ref=e36]: Multi-language support (EN/DE)
+            - generic [ref=e37]:
+              - generic [ref=e38]: ✓
+              - generic [ref=e39]: Detailed explanations
+            - generic [ref=e40]:
+              - generic [ref=e41]: ✓
+              - generic [ref=e42]: Detailed progress tracking
+            - generic [ref=e43]:
+              - generic [ref=e44]: ✓
+              - generic [ref=e45]: Extensive Dashboard features
+          - generic [ref=e46]:
+            - link "Go Premium - €5.99 (3 Months)" [ref=e47]:
               - /url: /payment
-              - button "Premium werden - €5.99/Monat" [ref=e65] [cursor=pointer]
-            - link "Premium-Funktionen testen" [ref=e66]:
+              - button "Go Premium - €5.99 (3 Months)" [ref=e48] [cursor=pointer]
+            - link "Test Premium Features" [ref=e49]:
               - /url: /premium-dashboard
-              - button "Premium-Funktionen testen" [ref=e67] [cursor=pointer]
-    - contentinfo [ref=e68]:
-      - generic [ref=e70]:
-        - generic [ref=e71]:
-          - link "Resources" [ref=e72]:
-            - /url: /resources
-          - link "Legal" [ref=e73]:
-            - /url: /legal
-        - generic [ref=e74]:
-          - link "Facebook" [ref=e75]:
-            - /url: "#"
-            - generic [ref=e76]: Facebook
-          - link "Twitter" [ref=e78]:
-            - /url: "#"
-            - generic [ref=e79]: Twitter
-          - link "Instagram" [ref=e81]:
-            - /url: "#"
-            - generic [ref=e82]: Instagram
-          - link "LinkedIn" [ref=e84]:
-            - /url: "#"
-            - generic [ref=e85]: LinkedIn
-          - link "Email" [ref=e87]:
-            - /url: "#"
-            - generic [ref=e88]: Email
+              - button "Test Premium Features" [ref=e50] [cursor=pointer]
+  - alert [ref=e51]
 ```

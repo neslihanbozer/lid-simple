@@ -1,0 +1,97 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e7]:
+        - img "Leben in Deutschland Test Logo" [ref=e8]
+        - generic [ref=e9]: Leben in Deutschland Test
+    - main [ref=e10]:
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - heading "Premium Dashboard" [level=1] [ref=e15]
+          - generic [ref=e16]: PREMIUM
+        - paragraph [ref=e17]: Welcome Back, User! You now have access to over 300+ questions and all premium features.
+      - generic [ref=e18]:
+        - heading "State Selection" [level=2] [ref=e19]
+        - combobox [ref=e20]:
+          - option "All States" [selected]
+          - option "Baden-Württemberg"
+          - option "Bayern"
+          - option "Berlin"
+          - option "Brandenburg"
+          - option "Bremen"
+          - option "Hamburg"
+          - option "Hessen"
+          - option "Mecklenburg-Vorpommern"
+          - option "Niedersachsen"
+          - option "Nordrhein-Westfalen"
+          - option "Rheinland-Pfalz"
+          - option "Saarland"
+          - option "Sachsen"
+          - option "Sachsen-Anhalt"
+          - option "Schleswig-Holstein"
+          - option "Thüringen"
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - heading "Question Categories (300+ Questions)" [level=2] [ref=e23]
+          - button "View All Questions" [ref=e24] [cursor=pointer]
+        - generic [ref=e25]:
+          - generic [ref=e26] [cursor=pointer]:
+            - generic [ref=e27] [cursor=pointer]: 🏛️
+            - heading "Politics" [level=3] [ref=e28] [cursor=pointer]
+            - paragraph [ref=e29] [cursor=pointer]: 50 questions
+            - button "Start Quiz" [ref=e30] [cursor=pointer]
+          - generic [ref=e31] [cursor=pointer]:
+            - generic [ref=e32] [cursor=pointer]: ⚖️
+            - heading "Law" [level=3] [ref=e33] [cursor=pointer]
+            - paragraph [ref=e34] [cursor=pointer]: 40 questions
+            - button "Start Quiz" [ref=e35] [cursor=pointer]
+          - generic [ref=e36] [cursor=pointer]:
+            - generic [ref=e37] [cursor=pointer]: 🎭
+            - heading "Culture" [level=3] [ref=e38] [cursor=pointer]
+            - paragraph [ref=e39] [cursor=pointer]: 35 questions
+            - button "Start Quiz" [ref=e40] [cursor=pointer]
+          - generic [ref=e41] [cursor=pointer]:
+            - generic [ref=e42] [cursor=pointer]: 💰
+            - heading "Economy" [level=3] [ref=e43] [cursor=pointer]
+            - paragraph [ref=e44] [cursor=pointer]: 30 questions
+            - button "Start Quiz" [ref=e45] [cursor=pointer]
+          - generic [ref=e46] [cursor=pointer]:
+            - generic [ref=e47] [cursor=pointer]: 📚
+            - heading "Education" [level=3] [ref=e48] [cursor=pointer]
+            - paragraph [ref=e49] [cursor=pointer]: 25 questions
+            - button "Start Quiz" [ref=e50] [cursor=pointer]
+          - generic [ref=e51] [cursor=pointer]:
+            - generic [ref=e52] [cursor=pointer]: 👥
+            - heading "Society" [level=3] [ref=e53] [cursor=pointer]
+            - paragraph [ref=e54] [cursor=pointer]: 45 questions
+            - button "Start Quiz" [ref=e55] [cursor=pointer]
+          - generic [ref=e56] [cursor=pointer]:
+            - generic [ref=e57] [cursor=pointer]: 📜
+            - heading "History" [level=3] [ref=e58] [cursor=pointer]
+            - paragraph [ref=e59] [cursor=pointer]: 40 questions
+            - button "Start Quiz" [ref=e60] [cursor=pointer]
+          - generic [ref=e61] [cursor=pointer]:
+            - generic [ref=e62] [cursor=pointer]: 🤝
+            - heading "Integration" [level=3] [ref=e63] [cursor=pointer]
+            - paragraph [ref=e64] [cursor=pointer]: 30 questions
+            - button "Start Quiz" [ref=e65] [cursor=pointer]
+      - generic [ref=e66]:
+        - link "📊 Progress Tracking Monitor your learning progress and track improvements View Progress →" [ref=e67]:
+          - /url: /progress
+          - generic [ref=e68]:
+            - generic [ref=e70]: 📊
+            - heading "Progress Tracking" [level=3] [ref=e71]
+          - paragraph [ref=e72]: Monitor your learning progress and track improvements
+          - generic [ref=e73]: View Progress →
+        - link "❌ Wrong Answers Review Review and learn from your incorrect answers Review Answers →" [ref=e74]:
+          - /url: /wrong-answers
+          - generic [ref=e75]:
+            - generic [ref=e77]: ❌
+            - heading "Wrong Answers Review" [level=3] [ref=e78]
+          - paragraph [ref=e79]: Review and learn from your incorrect answers
+          - generic [ref=e80]: Review Answers →
+  - alert [ref=e81]
+```

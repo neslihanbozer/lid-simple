@@ -2,119 +2,46 @@
 
 ```yaml
 - generic [active] [ref=e1]:
-  - button "🌍 Dil Seçimi 🇩🇪" [ref=e4] [cursor=pointer]:
-    - generic [ref=e5] [cursor=pointer]: 🌍 Dil Seçimi
-    - generic [ref=e6] [cursor=pointer]: 🇩🇪
-  - generic [ref=e7]:
-    - banner [ref=e8]:
-      - generic [ref=e10]:
-        - generic [ref=e12]:
-          - generic [ref=e14]: ★
-          - generic [ref=e15]: logo
-        - navigation [ref=e16]:
-          - link "Home" [ref=e17]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e7]:
+          - img "Leben in Deutschland Test Logo" [ref=e8]
+          - generic [ref=e9]: Leben in Deutschland Test
+        - navigation [ref=e10]:
+          - link "Home" [ref=e11]:
             - /url: /
-          - link "Premium Features" [ref=e18]:
+          - link "Premium Features" [ref=e12]:
             - /url: /pricing
-          - generic [ref=e19]:
-            - link "Log in" [ref=e20]:
+          - generic [ref=e13]:
+            - link "Log in" [ref=e14]:
               - /url: /auth/signin
-            - link "Sign up" [ref=e21]:
+            - link "Sign up" [ref=e15]:
               - /url: /auth/signup
-    - main [ref=e22]:
-      - generic [ref=e24]:
-        - button "EN" [ref=e25] [cursor=pointer]
-        - button "DE" [ref=e26] [cursor=pointer]
-      - generic [ref=e27]:
-        - heading "Premium Membership - €5.99/month" [level=1] [ref=e28]
-        - paragraph [ref=e29]: Enter your credit card information
-      - generic [ref=e30]:
-        - generic [ref=e31]:
-          - generic [ref=e32]:
-            - generic [ref=e33]:
-              - generic [ref=e34]: Name on Card
-              - textbox "Full Name" [ref=e35]: Test User
-            - generic [ref=e36]:
-              - generic [ref=e37]: Card Number
-              - textbox "4242424242424242" [ref=e38]
-            - generic [ref=e39]:
-              - generic [ref=e40]:
-                - generic [ref=e41]: Expiry Date
-                - textbox "12/25" [ref=e42]
-              - generic [ref=e43]:
-                - generic [ref=e44]: CVC
-                - textbox "123" [ref=e45]
-            - button "Pay €5.99 and Become Premium" [ref=e46] [cursor=pointer]
-          - link "← Back to Pricing" [ref=e48]:
-            - /url: /pricing
-        - generic [ref=e49]:
-          - heading "Test Cards" [level=3] [ref=e50]
-          - generic [ref=e51]:
-            - generic [ref=e53] [cursor=pointer]:
-              - generic [ref=e54] [cursor=pointer]:
-                - heading "✅ Success Card" [level=4] [ref=e55] [cursor=pointer]
-                - paragraph [ref=e56] [cursor=pointer]: Payment will be successful
-              - generic [ref=e57] [cursor=pointer]:
-                - generic [ref=e58] [cursor=pointer]: "4242424242424242"
-                - generic [ref=e59] [cursor=pointer]: 12/25
-            - generic [ref=e61] [cursor=pointer]:
-              - generic [ref=e62] [cursor=pointer]:
-                - heading "❌ Decline Card" [level=4] [ref=e63] [cursor=pointer]
-                - paragraph [ref=e64] [cursor=pointer]: Payment will be declined
-              - generic [ref=e65] [cursor=pointer]:
-                - generic [ref=e66] [cursor=pointer]: "4000000000000002"
-                - generic [ref=e67] [cursor=pointer]: 12/25
-            - generic [ref=e69] [cursor=pointer]:
-              - generic [ref=e70] [cursor=pointer]:
-                - heading "💰 Insufficient Funds" [level=4] [ref=e71] [cursor=pointer]
-                - paragraph [ref=e72] [cursor=pointer]: Insufficient funds error
-              - generic [ref=e73] [cursor=pointer]:
-                - generic [ref=e74] [cursor=pointer]: "4000000000009995"
-                - generic [ref=e75] [cursor=pointer]: 12/25
-            - generic [ref=e77] [cursor=pointer]:
-              - generic [ref=e78] [cursor=pointer]:
-                - heading "⏰ Expired Card" [level=4] [ref=e79] [cursor=pointer]
-                - paragraph [ref=e80] [cursor=pointer]: Card expired error
-              - generic [ref=e81] [cursor=pointer]:
-                - generic [ref=e82] [cursor=pointer]: "4000000000000069"
-                - generic [ref=e83] [cursor=pointer]: 12/20
-          - generic [ref=e84]:
-            - heading "Test Credit Card Information:" [level=4] [ref=e85]
-            - generic [ref=e86]:
-              - generic [ref=e87]:
-                - strong [ref=e88]: "Card Number:"
-                - text: "4242424242424242"
-              - generic [ref=e89]:
-                - strong [ref=e90]: "Expiry:"
-                - text: 12/25
-              - generic [ref=e91]:
-                - strong [ref=e92]: "CVC:"
-                - text: "123"
-              - generic [ref=e93]:
-                - strong [ref=e94]: "Name:"
-                - text: Test User
-    - contentinfo [ref=e95]:
-      - generic [ref=e97]:
-        - generic [ref=e98]:
-          - link "Resources" [ref=e99]:
-            - /url: /resources
-          - link "Legal" [ref=e100]:
-            - /url: /legal
-        - generic [ref=e101]:
-          - link "Facebook" [ref=e102]:
-            - /url: "#"
-            - generic [ref=e103]: Facebook
-          - link "Twitter" [ref=e105]:
-            - /url: "#"
-            - generic [ref=e106]: Twitter
-          - link "Instagram" [ref=e108]:
-            - /url: "#"
-            - generic [ref=e109]: Instagram
-          - link "LinkedIn" [ref=e111]:
-            - /url: "#"
-            - generic [ref=e112]: LinkedIn
-          - link "Email" [ref=e114]:
-            - /url: "#"
-            - generic [ref=e115]: Email
-  - alert [ref=e117]
+    - main [ref=e16]:
+      - generic [ref=e18]:
+        - button "EN" [ref=e19] [cursor=pointer]
+        - button "DE" [ref=e20] [cursor=pointer]
+      - generic [ref=e21]:
+        - heading "Premium Membership - €5.99 (3 Months)" [level=1] [ref=e22]
+        - paragraph [ref=e23]: Enter your credit card information
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - generic [ref=e28]: Name on Card
+            - textbox "Full Name" [ref=e29]
+          - generic [ref=e30]:
+            - generic [ref=e31]: Card Number
+            - textbox "4242424242424242" [ref=e32]
+          - generic [ref=e33]:
+            - generic [ref=e34]:
+              - generic [ref=e35]: Expiry Date
+              - textbox "12/25" [ref=e36]
+            - generic [ref=e37]:
+              - generic [ref=e38]: CVC
+              - textbox "123" [ref=e39]
+          - button "Pay €5.99 for 3 Months Premium" [ref=e40] [cursor=pointer]
+        - link "← Back to Pricing" [ref=e42]:
+          - /url: /pricing
+  - alert [ref=e43]
 ```

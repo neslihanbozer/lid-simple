@@ -2,98 +2,59 @@
 
 ```yaml
 - generic [active] [ref=e1]:
-  - button "🌍 Dil Seçimi 🇩🇪" [ref=e4] [cursor=pointer]:
-    - generic [ref=e5] [cursor=pointer]: 🌍 Dil Seçimi
-    - generic [ref=e6] [cursor=pointer]: 🇩🇪
-  - alert [ref=e7]
-  - generic [ref=e8]:
-    - banner [ref=e9]:
-      - generic [ref=e11]:
-        - generic [ref=e13]:
-          - generic [ref=e15]: ★
-          - generic [ref=e16]: Leben in Deutschland Quiz
-        - navigation [ref=e17]:
-          - link "Home" [ref=e18]:
-            - /url: /
-          - link "Premium Features" [ref=e19]:
-            - /url: /pricing
-          - generic [ref=e20]:
-            - link "Anmelden" [ref=e21]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e7]:
+          - img "Leben in Deutschland Test Logo" [ref=e8]
+          - generic [ref=e9]: Leben in Deutschland Test
+        - navigation [ref=e10]:
+          - generic [ref=e11]:
+            - button "EN" [ref=e12] [cursor=pointer]
+            - button "DE" [ref=e13] [cursor=pointer]
+          - generic [ref=e14]:
+            - link "Anmelden" [ref=e15]:
               - /url: /auth/signin
-            - link "Registrieren" [ref=e22]:
+            - link "Registrieren" [ref=e16]:
               - /url: /auth/signup
-    - main [ref=e23]:
-      - generic [ref=e24]:
-        - generic [ref=e25]:
-          - heading "Leben In Deutschland Test" [level=1] [ref=e26]
-          - paragraph [ref=e27]: Ihr umfassender Leitfaden für das Leben in Deutschland, der Sie auf den offiziellen Integrationstest vorbereitet.
-          - generic [ref=e28]:
-            - generic [ref=e29]: "Sprache:"
-            - generic [ref=e30]:
-              - button "EN" [ref=e31] [cursor=pointer]
-              - button "DE" [ref=e32] [cursor=pointer]
-          - generic [ref=e33]:
-            - link "Premium Quiz starten" [ref=e34]:
-              - /url: /quiz
-              - button "Premium Quiz starten" [ref=e35] [cursor=pointer]
-            - link "Premium-Funktionen testen" [ref=e36]:
-              - /url: /premium-dashboard
-              - button "Premium-Funktionen testen" [ref=e37] [cursor=pointer]
-        - img "Brandenburg Gate illuminated at night, Berlin" [ref=e40]
-      - generic [ref=e41]:
-        - generic [ref=e42]:
-          - heading "Quiz starten" [level=3] [ref=e45]
-          - paragraph [ref=e46]: Premium-Mitgliedschaft erforderlich, um auf alle Quiz zuzugreifen.
-          - link "Quiz starten" [ref=e47]:
+    - main [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - heading "Leben In Deutschland Test" [level=1] [ref=e20]
+          - paragraph [ref=e21]: Ihr umfassender Leitfaden für das Leben in Deutschland, der Sie auf den offiziellen Integrationstest vorbereitet.
+        - img "Brandenburg Gate illuminated at night, Berlin" [ref=e24]
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - heading "Quiz starten" [level=3] [ref=e29]
+          - paragraph [ref=e30]: Premium-Mitgliedschaft erforderlich, um auf alle Quiz zuzugreifen.
+          - link "Quiz starten" [ref=e31]:
             - /url: /quiz
-            - button "Quiz starten" [ref=e48] [cursor=pointer]
-        - generic [ref=e49]:
-          - generic [ref=e51]: ⭐
-          - heading "Premium-Funktionen" [level=3] [ref=e52]
+            - button "Quiz starten" [ref=e32] [cursor=pointer]
+        - generic [ref=e33]:
+          - generic [ref=e35]: ⭐
+          - heading "Premium-Funktionen" [level=3] [ref=e36]
+          - generic [ref=e37]:
+            - generic [ref=e38]:
+              - generic [ref=e39]: ✓
+              - generic [ref=e40]: 300+ Übungsfragen
+            - generic [ref=e41]:
+              - generic [ref=e42]: ✓
+              - generic [ref=e43]: Mehrsprachige Unterstützung (EN/DE)
+            - generic [ref=e44]:
+              - generic [ref=e45]: ✓
+              - generic [ref=e46]: Detaillierte Erklärungen
+            - generic [ref=e47]:
+              - generic [ref=e48]: ✓
+              - generic [ref=e49]: Detaillierte Fortschrittsverfolgung
+            - generic [ref=e50]:
+              - generic [ref=e51]: ✓
+              - generic [ref=e52]: Umfangreiche Dashboard-Funktionen
           - generic [ref=e53]:
-            - generic [ref=e54]:
-              - generic [ref=e55]: ✓
-              - generic [ref=e56]: 300+ Übungsfragen
-            - generic [ref=e57]:
-              - generic [ref=e58]: ✓
-              - generic [ref=e59]: Mehrsprachige Unterstützung (EN/DE)
-            - generic [ref=e60]:
-              - generic [ref=e61]: ✓
-              - generic [ref=e62]: Detaillierte Erklärungen
-            - generic [ref=e63]:
-              - generic [ref=e64]: ✓
-              - generic [ref=e65]: Detaillierte Fortschrittsverfolgung
-            - generic [ref=e66]:
-              - generic [ref=e67]: ✓
-              - generic [ref=e68]: Umfangreiche Dashboard-Funktionen
-          - generic [ref=e69]:
-            - link "Premium werden - €5.99/Monat" [ref=e70]:
+            - link "Premium werden - €5.99 (3 Monate)" [ref=e54]:
               - /url: /payment
-              - button "Premium werden - €5.99/Monat" [ref=e71] [cursor=pointer]
-            - link "Premium-Funktionen testen" [ref=e72]:
+              - button "Premium werden - €5.99 (3 Monate)" [ref=e55] [cursor=pointer]
+            - link "Premium-Funktionen testen" [ref=e56]:
               - /url: /premium-dashboard
-              - button "Premium-Funktionen testen" [ref=e73] [cursor=pointer]
-    - contentinfo [ref=e74]:
-      - generic [ref=e76]:
-        - generic [ref=e77]:
-          - link "Resources" [ref=e78]:
-            - /url: /resources
-          - link "Legal" [ref=e79]:
-            - /url: /legal
-        - generic [ref=e80]:
-          - link "Facebook" [ref=e81]:
-            - /url: "#"
-            - generic [ref=e82]: Facebook
-          - link "Twitter" [ref=e84]:
-            - /url: "#"
-            - generic [ref=e85]: Twitter
-          - link "Instagram" [ref=e87]:
-            - /url: "#"
-            - generic [ref=e88]: Instagram
-          - link "LinkedIn" [ref=e90]:
-            - /url: "#"
-            - generic [ref=e91]: LinkedIn
-          - link "Email" [ref=e93]:
-            - /url: "#"
-            - generic [ref=e94]: Email
+              - button "Premium-Funktionen testen" [ref=e57] [cursor=pointer]
+  - alert [ref=e58]
 ```

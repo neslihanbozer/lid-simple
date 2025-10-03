@@ -33,34 +33,14 @@ export default function Home() {
   // Hydration hatasını önlemek için mounted kontrolü
   if (!mounted) {
     return (
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-          <h1 className="text-4xl font-bold text-center">
-            Leben in Deutschland Quiz
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+            Leben in Deutschland Test
           </h1>
-          <div className="flex gap-4">
-            <div className="flex gap-2">
-              <button className="px-3 py-1 rounded text-sm bg-blue-500 text-white">
-                EN
-              </button>
-              <button className="px-3 py-1 rounded text-sm bg-gray-200 text-gray-700">
-                DE
-              </button>
-            </div>
-          </div>
+          <p className="text-lg text-gray-600">Loading...</p>
         </div>
-        <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">
-            Test your knowledge about life in Germany.
-          </h2>
-          <p className="text-lg text-gray-600 mb-2">
-            Prepare for the exam with over 300 questions, including state-specific sets.
-          </p>
-          <p className="text-lg text-gray-600 mb-8">
-            Supports multiple languages.
-          </p>
-        </div>
-      </main>
+      </div>
     )
   }
 
@@ -72,18 +52,26 @@ export default function Home() {
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
               <div className="flex items-center">
-                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">★</span>
-                </div>
-                <span className="ml-2 text-xl font-bold text-gray-800">Leben in Deutschland Quiz</span>
+                <img 
+                  src="/logo/lid_logo.png" 
+                  alt="Leben in Deutschland Test Logo" 
+                  className="w-28 h-28 object-contain"
+                  onError={(e) => {
+                    // Fallback to star icon if logo fails to load
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.parentElement!.innerHTML = `
+                      <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                        <span class="text-white text-sm font-bold">★</span>
+                      </div>
+                    `;
+                  }}
+                />
+                <span className="ml-2 text-xl font-bold text-gray-800">Leben in Deutschland Test</span>
               </div>
             </div>
-            <nav className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">Home</Link>
-              <Link href="/pricing" className="text-gray-700 hover:text-blue-600 font-medium">Premium Features</Link>
-              
+            <nav className="hidden md:flex items-center space-x-6">
               {/* Language Selector */}
-              <div className="flex gap-2">
+              <div className="flex gap-1">
                 <button
                   onClick={() => handleLanguageChange('en')}
                   className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
@@ -106,19 +94,19 @@ export default function Home() {
                 </button>
               </div>
 
-              {session ? (
+                  {session ? (
                 <div className="flex items-center space-x-4">
                   <Link href="/dashboard" className="text-gray-700 hover:text-blue-600 font-medium">Dashboard</Link>
                   <Link href="/api/auth/signout" className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-medium">
                     {language === 'en' ? 'Sign out' : 'Abmelden'}
-                  </Link>
-                </div>
+              </Link>
+            </div>
               ) : (
                 <div className="flex space-x-4">
                   <Link href="/auth/signin" className="text-gray-700 hover:text-blue-600 font-medium">{translations.login}</Link>
                   <Link href="/auth/signup" className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium">{translations.signup}</Link>
                 </div>
-              )}
+          )}
             </nav>
           </div>
         </div>
@@ -140,21 +128,8 @@ export default function Home() {
             </p>
             
 
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/quiz">
-                <button className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors">
-                  {translations.startQuiz}
-                </button>
-              </Link>
-              <Link href="/pricing">
-                <button className="bg-white hover:bg-gray-50 text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg font-semibold text-lg transition-colors">
-                  {translations.premiumFeatures}
-                </button>
-              </Link>
-            </div>
-          </div>
-          
+              </div>
+
           {/* Hero Image - Brandenburg Gate */}
           <div className="relative">
             <div className="w-full h-96 rounded-2xl overflow-hidden shadow-2xl">
@@ -172,15 +147,15 @@ export default function Home() {
                         <div class="text-4xl font-bold mb-2 drop-shadow-lg">Brandenburg Gate</div>
                         <div class="text-xl opacity-90 drop-shadow-md">Berlin, Germany</div>
                         <div class="text-sm opacity-75 mt-2 drop-shadow-md">Illuminated at night - Symbol of German Unity</div>
-                      </div>
-                    </div>
+                  </div>
+                  </div>
                   `;
                 }}
               />
-            </div>
-          </div>
-        </div>
-
+                  </div>
+                  </div>
+                </div>
+                
         {/* Feature Cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {/* Start Quiz Card */}
@@ -200,9 +175,9 @@ export default function Home() {
             <Link href="/quiz">
               <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
                 {language === 'en' ? 'Start Quiz' : 'Quiz starten'}
-              </button>
-            </Link>
-          </div>
+                      </button>
+                    </Link>
+                  </div>
 
           {/* Premium Features Card */}
           <div className="bg-white rounded-2xl shadow-lg p-8">
@@ -247,7 +222,7 @@ export default function Home() {
             <div className="space-y-3">
               <Link href="/payment">
                 <button className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg font-semibold transition-colors">
-                  {language === 'en' ? 'Go Premium - €5.99/month' : 'Premium werden - €5.99/Monat'}
+                  {language === 'en' ? 'Go Premium - €5.99 (3 Months)' : 'Premium werden - €5.99 (3 Monate)'}
                 </button>
               </Link>
               <Link href="/premium-dashboard">
@@ -256,43 +231,10 @@ export default function Home() {
                 </button>
               </Link>
             </div>
-          </div>
+      </div>
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-white border-t">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex space-x-6 mb-4 md:mb-0">
-              <Link href="/resources" className="text-gray-600 hover:text-blue-600">Resources</Link>
-              <Link href="/legal" className="text-gray-600 hover:text-blue-600">Legal</Link>
-            </div>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-blue-600">
-                <span className="sr-only">Facebook</span>
-                <div className="w-6 h-6 bg-gray-400 rounded"></div>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-600">
-                <span className="sr-only">Twitter</span>
-                <div className="w-6 h-6 bg-gray-400 rounded"></div>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-600">
-                <span className="sr-only">Instagram</span>
-                <div className="w-6 h-6 bg-gray-400 rounded"></div>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-600">
-                <span className="sr-only">LinkedIn</span>
-                <div className="w-6 h-6 bg-gray-400 rounded"></div>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-600">
-                <span className="sr-only">Email</span>
-                <div className="w-6 h-6 bg-gray-400 rounded"></div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+      </div>
   )
 }
