@@ -51,23 +51,21 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
-              <div className="flex items-center">
-                <img 
-                  src="/logo/lid_logo.png" 
-                  alt="Leben in Deutschland Test Logo" 
-                  className="w-28 h-28 object-contain"
-                  onError={(e) => {
-                    // Fallback to star icon if logo fails to load
-                    e.currentTarget.style.display = 'none';
-                    e.currentTarget.parentElement!.innerHTML = `
-                      <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                        <span class="text-white text-sm font-bold">★</span>
-                      </div>
-                    `;
-                  }}
-                />
-                <span className="ml-2 text-xl font-bold text-gray-800">Leben in Deutschland Test</span>
-              </div>
+              <img 
+                src="/logo/lid_logo.png" 
+                alt="Leben in Deutschland Test Logo" 
+                className="w-16 h-16 object-contain"
+                onError={(e) => {
+                  // Fallback to star icon if logo fails to load
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.parentElement!.innerHTML = `
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
+                      <span class="text-white text-xl font-bold">★</span>
+                    </div>
+                  `;
+                }}
+              />
+              <span className="ml-3 text-xl font-bold text-gray-800">Leben in Deutschland Test</span>
             </div>
             <nav className="hidden md:flex items-center space-x-6">
               {/* Language Selector */}
@@ -115,24 +113,23 @@ export default function Home() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Leben In Deutschland Test
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+          <div className="space-y-8">
+            <h1 className="text-6xl font-bold text-gray-900 leading-tight">
+              <span className="block">Leben In Deutschland</span>
+              <span className="block ml-8">Test</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
               {language === 'en' 
                 ? 'Your comprehensive guide to living in Germany, preparing you for the official integration test.'
                 : 'Ihr umfassender Leitfaden für das Leben in Deutschland, der Sie auf den offiziellen Integrationstest vorbereitet.'
               }
             </p>
-            
-
-              </div>
+          </div>
 
           {/* Hero Image - Brandenburg Gate */}
           <div className="relative">
-            <div className="w-full h-96 rounded-2xl overflow-hidden shadow-2xl">
+            <div className="w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl">
               <img 
                 src="/Brandenburger_Tor_abends.jpg"
                 alt="Brandenburg Gate illuminated at night, Berlin"
@@ -147,14 +144,14 @@ export default function Home() {
                         <div class="text-4xl font-bold mb-2 drop-shadow-lg">Brandenburg Gate</div>
                         <div class="text-xl opacity-90 drop-shadow-md">Berlin, Germany</div>
                         <div class="text-sm opacity-75 mt-2 drop-shadow-md">Illuminated at night - Symbol of German Unity</div>
-                  </div>
-                  </div>
+                      </div>
+                    </div>
                   `;
                 }}
               />
-                  </div>
-                  </div>
-                </div>
+            </div>
+          </div>
+        </div>
                 
         {/* Feature Cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">

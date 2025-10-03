@@ -3,45 +3,100 @@
 import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { questions } from '@/lib/questions'
 
-// German translations
-const germanTranslations = {
-  quizTitle: 'Leben in Deutschland Test',
-  freeQuiz: 'Kostenloses Quiz',
-  freeQuizInfo: 'Sie lösen gerade 50 kostenlose Fragen. Für mehr Fragen werden Sie Premium!',
-  question: 'Frage',
-  of: 'von',
-  free: '(Kostenlos)',
-  next: 'Weiter',
-  previous: 'Zurück',
-  submit: 'Abgeben',
-  quizCompleted: 'Quiz abgeschlossen!',
-  yourScore: 'Ihr Ergebnis:',
-  perfect: 'Perfekt! Sie haben alle Fragen richtig beantwortet!',
-  good: 'Gut gemacht! Sie haben die meisten Fragen richtig beantwortet.',
-  needPractice: 'Sie müssen mehr üben. Versuchen Sie es erneut!',
-  congratulations: '🎉 Herzlichen Glückwunsch!',
-  freeQuizCompleted: 'Sie haben die 50 kostenlosen Fragen abgeschlossen! Werden Sie Premium für mehr Fragen.',
-  premiumFeatures: '✅ 300+ Fragen',
-  premiumFeatures2: '✅ KI-Erklärungen',
-  premiumFeatures3: '✅ Fortschrittsverfolgung',
-  premiumFeatures4: '✅ Gruppenarbeit',
-  tryAgain: 'Erneut versuchen',
-  goPremium: '💳 Premium werden - €5.99 (3 Monate)',
-  backToHome: '← Zurück zur Startseite',
-  loading: 'Lädt...'
+// Translations
+const translations = {
+  en: {
+    quizTitle: 'Leben in Deutschland Test',
+    freeQuiz: 'Free Quiz',
+    freeQuizInfo: 'You are solving 50 free questions. Go Premium for more questions!',
+    question: 'Question',
+    of: 'of',
+    free: '(Free)',
+    next: 'Next',
+    previous: 'Previous',
+    submit: 'Submit Answer',
+    quizCompleted: 'Quiz Completed!',
+    yourScore: 'Your Score:',
+    perfect: 'Perfect! You answered all questions correctly!',
+    good: 'Well done! You answered most questions correctly.',
+    needPractice: 'You need more practice. Try again!',
+    congratulations: '🎉 Congratulations!',
+    freeQuizCompleted: 'You completed the 50 free questions! Go Premium for more questions.',
+    premiumFeatures: '✅ 300+ Questions',
+    premiumFeatures2: '✅ AI Explanations',
+    premiumFeatures3: '✅ Progress Tracking',
+    premiumFeatures4: '✅ Group Study',
+    tryAgain: 'Try Again',
+    goPremium: '💳 Go Premium - €5.99 (3 Months)',
+    backToHome: '← Back to Home',
+    loading: 'Loading...',
+    explanation: 'Explanation:',
+    nextQuestion: 'Next Question',
+    finishQuiz: 'Finish Quiz',
+    languageSelection: 'Language Selection',
+    studyLanguage: 'Study Language',
+    selectLanguage: 'Select your preferred language for explanations:',
+    defaultExplanation: 'Default explanations are in German'
+  },
+  de: {
+    quizTitle: 'Leben in Deutschland Test',
+    freeQuiz: 'Kostenloses Quiz',
+    freeQuizInfo: 'Sie lösen gerade 50 kostenlose Fragen. Für mehr Fragen werden Sie Premium!',
+    question: 'Frage',
+    of: 'von',
+    free: '(Kostenlos)',
+    next: 'Weiter',
+    previous: 'Zurück',
+    submit: 'Antwort senden',
+    quizCompleted: 'Quiz abgeschlossen!',
+    yourScore: 'Ihr Ergebnis:',
+    perfect: 'Perfekt! Sie haben alle Fragen richtig beantwortet!',
+    good: 'Gut gemacht! Sie haben die meisten Fragen richtig beantwortet.',
+    needPractice: 'Sie müssen mehr üben. Versuchen Sie es erneut!',
+    congratulations: '🎉 Herzlichen Glückwunsch!',
+    freeQuizCompleted: 'Sie haben die 50 kostenlosen Fragen abgeschlossen! Werden Sie Premium für mehr Fragen.',
+    premiumFeatures: '✅ 300+ Fragen',
+    premiumFeatures2: '✅ KI-Erklärungen',
+    premiumFeatures3: '✅ Fortschrittsverfolgung',
+    premiumFeatures4: '✅ Gruppenarbeit',
+    tryAgain: 'Erneut versuchen',
+    goPremium: '💳 Premium werden - €5.99 (3 Monate)',
+    backToHome: '← Zurück zur Startseite',
+    loading: 'Lädt...',
+    explanation: 'Erklärung:',
+    nextQuestion: 'Nächste Frage',
+    finishQuiz: 'Quiz beenden',
+    languageSelection: 'Sprachauswahl',
+    studyLanguage: 'Lernsprache',
+    selectLanguage: 'Wählen Sie Ihre bevorzugte Sprache für Erklärungen:',
+    defaultExplanation: 'Standard-Erklärungen sind auf Deutsch'
+  }
 }
 
 interface Question {
   id: number
   question: string
   questionTr?: string
+  questionEn?: string
+  questionFr?: string
+  questionEs?: string
+  questionAr?: string
   options: string[]
   optionsTr?: string[]
+  optionsEn?: string[]
+  optionsFr?: string[]
+  optionsEs?: string[]
+  optionsAr?: string[]
   correctAnswer: number
   explanation: string
   explanationTr?: string
+  explanationEn?: string
+  explanationFr?: string
+  explanationEs?: string
+  explanationAr?: string
   category?: string
   difficulty?: string
   isPremium?: boolean
@@ -55,6 +110,15 @@ export default function QuizPage() {
   const [score, setScore] = useState(0)
   const [quizCompleted, setQuizCompleted] = useState(false)
   const [isPremium, setIsPremium] = useState(false)
+  const [language, setLanguage] = useState('de')
+  const [studyLanguage, setStudyLanguage] = useState('de')
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  const t = translations[language as keyof typeof translations]
 
   useEffect(() => {
     if (session?.user?.isPremium) {
@@ -62,8 +126,54 @@ export default function QuizPage() {
     }
   }, [session])
 
-  // Premium kullanıcılar tüm soruları, ücretsiz kullanıcılar ilk 50 soruyu görebilir
+  // Premium users see all questions, free users see first 50
   const availableQuestions = isPremium ? questions : questions.slice(0, 50)
+
+  // Language options for study
+  const studyLanguageOptions = [
+    { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+    { code: 'en', name: 'English', flag: '🇺🇸' },
+    { code: 'fr', name: 'Français', flag: '🇫🇷' },
+    { code: 'es', name: 'Español', flag: '🇪🇸' },
+    { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
+    { code: 'ar', name: 'العربية', flag: '🇸🇦' }
+  ]
+
+  // Get question in study language
+  const getQuestionInLanguage = (question: Question) => {
+    switch (studyLanguage) {
+      case 'en': return question.questionEn || question.question
+      case 'fr': return question.questionFr || question.question
+      case 'es': return question.questionEs || question.question
+      case 'tr': return question.questionTr || question.question
+      case 'ar': return question.questionAr || question.question
+      default: return question.question
+    }
+  }
+
+  // Get options in study language
+  const getOptionsInLanguage = (question: Question) => {
+    switch (studyLanguage) {
+      case 'en': return question.optionsEn || question.options
+      case 'fr': return question.optionsFr || question.options
+      case 'es': return question.optionsEs || question.options
+      case 'tr': return question.optionsTr || question.options
+      case 'ar': return question.optionsAr || question.options
+      default: return question.options
+    }
+  }
+
+  // Get explanation in study language
+  const getExplanationInLanguage = (question: Question) => {
+    switch (studyLanguage) {
+      case 'en': return question.explanationEn || question.explanation
+      case 'fr': return question.explanationFr || question.explanation
+      case 'es': return question.explanationEs || question.explanation
+      case 'tr': return question.explanationTr || question.explanation
+      case 'ar': return question.explanationAr || question.explanation
+      default: return question.explanation
+    }
+  }
 
   const handleAnswerSelect = (answerIndex: number) => {
     if (showResult) return
@@ -97,36 +207,55 @@ export default function QuizPage() {
     setQuizCompleted(false)
   }
 
-  // Ücretsiz kullanıcılar için bilgilendirme
+  // Free user info
   const showFreeUserInfo = !isPremium && availableQuestions.length === 50
+
+  if (!mounted) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
+        <div className="bg-white rounded-lg shadow-xl p-8 max-w-2xl w-full">
+          <div className="animate-pulse">
+            <div className="h-8 bg-gray-200 rounded mb-4"></div>
+            <div className="h-4 bg-gray-200 rounded mb-8"></div>
+            <div className="space-y-4">
+              <div className="h-10 bg-gray-200 rounded"></div>
+              <div className="h-10 bg-gray-200 rounded"></div>
+              <div className="h-10 bg-gray-200 rounded"></div>
+              <div className="h-10 bg-gray-200 rounded"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   if (quizCompleted) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
         <div className="bg-white rounded-lg shadow-xl p-8 max-w-md w-full text-center">
-          <h1 className="text-3xl font-bold text-gray-800 mb-6">{germanTranslations.quizCompleted}</h1>
+          <h1 className="text-3xl font-bold text-gray-800 mb-6">{t.quizCompleted}</h1>
           <div className="text-6xl mb-4">🎉</div>
           <p className="text-xl text-gray-600 mb-4">
-            {germanTranslations.yourScore} <span className="font-bold text-blue-600">{score}/{availableQuestions.length}</span>
+            {t.yourScore} <span className="font-bold text-blue-600">{score}/{availableQuestions.length}</span>
           </p>
           <p className="text-gray-500 mb-6">
-            {score === availableQuestions.length ? germanTranslations.perfect :
-             score >= availableQuestions.length * 0.7 ? germanTranslations.good :
-             germanTranslations.needPractice}
+            {score === availableQuestions.length ? t.perfect :
+             score >= availableQuestions.length * 0.7 ? t.good :
+             t.needPractice}
           </p>
           
-          {/* Ücretsiz kullanıcılar için premium teşvik */}
+          {/* Free user premium promotion */}
           {showFreeUserInfo && (
             <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-lg p-4 mb-6">
-              <h3 className="text-lg font-bold text-yellow-800 mb-2">{germanTranslations.congratulations}</h3>
+              <h3 className="text-lg font-bold text-yellow-800 mb-2">{t.congratulations}</h3>
               <p className="text-yellow-700 mb-3">
-                {germanTranslations.freeQuizCompleted}
+                {t.freeQuizCompleted}
               </p>
               <div className="text-sm text-yellow-600">
-                <p>{germanTranslations.premiumFeatures}</p>
-                <p>{germanTranslations.premiumFeatures2}</p>
-                <p>{germanTranslations.premiumFeatures3}</p>
-                <p>{germanTranslations.premiumFeatures4}</p>
+                <p>{t.premiumFeatures}</p>
+                <p>{t.premiumFeatures2}</p>
+                <p>{t.premiumFeatures3}</p>
+                <p>{t.premiumFeatures4}</p>
               </div>
             </div>
           )}
@@ -136,13 +265,13 @@ export default function QuizPage() {
               onClick={resetQuiz}
               className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-colors"
             >
-              {germanTranslations.tryAgain}
+              {t.tryAgain}
             </button>
             
             {showFreeUserInfo && (
               <Link href="/payment">
                 <button className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-                  {germanTranslations.goPremium}
+                  {t.goPremium}
                 </button>
               </Link>
             )}
@@ -151,7 +280,7 @@ export default function QuizPage() {
               href="/"
               className="block w-full bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-colors"
             >
-              {germanTranslations.backToHome}
+              {t.backToHome}
             </Link>
           </div>
         </div>
@@ -160,42 +289,90 @@ export default function QuizPage() {
   }
 
   const currentQ = availableQuestions[currentQuestion]
+  const questionInStudy = getQuestionInLanguage(currentQ)
+  const optionsInStudy = getOptionsInLanguage(currentQ)
+  const explanationInStudy = getExplanationInLanguage(currentQ)
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      {/* Header with Logo */}
+      {/* Header with Logo and Language Selector */}
       <header className="bg-white shadow-sm">
-        <div className="max-w-4xl mx-auto px-4 py-4">
-          <div className="flex items-center">
-            <img 
-              src="/logo/lid_logo.png" 
-              alt="Leben in Deutschland Logo" 
-              className="h-10 w-auto mr-3"
-              onError={(e) => {
-                // Fallback if logo doesn't load
-                e.currentTarget.style.display = 'none';
-                const fallback = document.createElement('div');
-                fallback.className = 'w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-3';
-                fallback.innerHTML = '<span class="text-white text-sm font-bold">★</span>';
-                e.currentTarget.parentElement?.insertBefore(fallback, e.currentTarget);
-              }}
-            />
-            <span className="text-xl font-bold text-gray-800">Leben in Deutschland Quiz</span>
+        <div className="max-w-6xl mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center">
+              <Image 
+                src="/logo/lid_logo.png" 
+                alt="Leben in Deutschland Test" 
+                width={64}
+                height={64}
+                className="w-16 h-16 mr-3"
+              />
+              <span className="text-xl font-bold text-gray-800">Leben in Deutschland Test</span>
+            </div>
+            
+            {/* Language Selector */}
+            <div className="flex items-center space-x-4">
+              <div className="flex space-x-2">
+                <button
+                  onClick={() => setLanguage('en')}
+                  className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
+                    language === 'en' 
+                      ? 'bg-blue-500 text-white' 
+                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  }`}
+                >
+                  EN
+                </button>
+                <button
+                  onClick={() => setLanguage('de')}
+                  className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
+                    language === 'de' 
+                      ? 'bg-blue-500 text-white' 
+                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  }`}
+                >
+                  DE
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </header>
 
       <div className="flex items-center justify-center p-4">
-        <div className="bg-white rounded-lg shadow-xl p-8 max-w-2xl w-full">
-          {/* Ücretsiz kullanıcı bilgilendirmesi */}
+        <div className="bg-white rounded-lg shadow-xl p-8 max-w-4xl w-full">
+          {/* Language Selection */}
+          <div className="mb-6 bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-200 rounded-lg p-4">
+            <h3 className="text-lg font-bold text-purple-800 mb-3">{t.languageSelection}</h3>
+            <p className="text-sm text-purple-700 mb-3">{t.selectLanguage}</p>
+            <div className="flex flex-wrap gap-2">
+              {studyLanguageOptions.map((lang) => (
+                <button
+                  key={lang.code}
+                  onClick={() => setStudyLanguage(lang.code)}
+                  className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                    studyLanguage === lang.code
+                      ? 'bg-purple-500 text-white'
+                      : 'bg-white text-purple-700 border border-purple-200 hover:bg-purple-50'
+                  }`}
+                >
+                  <span>{lang.flag}</span>
+                  <span>{lang.name}</span>
+                </button>
+              ))}
+            </div>
+            <p className="text-xs text-purple-600 mt-2">{t.defaultExplanation}</p>
+          </div>
+
+          {/* Free user info */}
           {showFreeUserInfo && (
             <div className="mb-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
               <div className="flex items-center mb-2">
                 <span className="text-2xl mr-2">🎯</span>
-                <h3 className="text-lg font-bold text-blue-800">{germanTranslations.freeQuiz}</h3>
+                <h3 className="text-lg font-bold text-blue-800">{t.freeQuiz}</h3>
               </div>
               <p className="text-blue-700 text-sm">
-                {germanTranslations.freeQuizInfo}
+                {t.freeQuizInfo}
               </p>
             </div>
           )}
@@ -203,15 +380,15 @@ export default function QuizPage() {
           {/* Progress Bar */}
           <div className="mb-6">
             <div className="flex justify-between items-center mb-4">
-              <h1 className="text-2xl font-bold text-gray-800">{germanTranslations.quizTitle}</h1>
+              <h1 className="text-2xl font-bold text-gray-800">{t.quizTitle}</h1>
               <span className="text-sm text-gray-500">
-                {germanTranslations.question} {currentQuestion + 1} / {availableQuestions.length}
-                {showFreeUserInfo && <span className="text-blue-600 ml-2">{germanTranslations.free}</span>}
+                {t.question} {currentQuestion + 1} / {availableQuestions.length}
+                {showFreeUserInfo && <span className="text-blue-600 ml-2">{t.free}</span>}
               </span>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-2">
+            <div className="w-full bg-gray-200 rounded-full h-3">
               <div
-                className="bg-blue-500 h-2 rounded-full transition-all duration-300"
+                className="bg-gradient-to-r from-blue-500 to-purple-500 h-3 rounded-full transition-all duration-300"
                 style={{ width: `${((currentQuestion + 1) / availableQuestions.length) * 100}%` }}
               ></div>
             </div>
@@ -219,31 +396,54 @@ export default function QuizPage() {
 
           {/* Question */}
           <div className="mb-6">
-            <h2 className="text-xl font-semibold text-gray-800 mb-6">
-              {currentQ.question}
-            </h2>
+            <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-lg p-6 mb-4">
+              <h2 className="text-xl font-semibold text-gray-800 mb-4">
+                {currentQ.question}
+              </h2>
+              
+              {/* Show translation below if different language is selected */}
+              {studyLanguage !== 'de' && questionInStudy !== currentQ.question && (
+                <div className="border-t border-gray-200 pt-3">
+                  <p className="text-sm text-gray-600 italic">
+                    <strong>{studyLanguageOptions.find(lang => lang.code === studyLanguage)?.name}:</strong> {questionInStudy}
+                  </p>
+                </div>
+              )}
+            </div>
 
-            <div className="space-y-3">
+            <div className="grid gap-3">
               {currentQ.options.map((option, index) => (
                 <button
                   key={index}
                   onClick={() => handleAnswerSelect(index)}
                   disabled={showResult}
-                  className={`w-full p-4 text-left rounded-lg border-2 transition-all ${
+                  className={`w-full p-4 text-left rounded-lg border-2 transition-all hover:shadow-md ${
                     selectedAnswer === index
                       ? showResult
                         ? index === currentQ.correctAnswer
-                          ? 'border-green-500 bg-green-50 text-green-800'
-                          : 'border-red-500 bg-red-50 text-red-800'
-                        : 'border-blue-500 bg-blue-50 text-blue-800'
+                          ? 'border-green-500 bg-green-50 text-green-800 shadow-lg'
+                          : 'border-red-500 bg-red-50 text-red-800 shadow-lg'
+                        : 'border-blue-500 bg-blue-50 text-blue-800 shadow-md'
                       : showResult && index === currentQ.correctAnswer
-                      ? 'border-green-500 bg-green-50 text-green-800'
+                      ? 'border-green-500 bg-green-50 text-green-800 shadow-lg'
                       : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
                   }`}
                 >
-                  <div>
-                    {option}
+                  <div className="flex items-center">
+                    <span className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-sm font-bold mr-3">
+                      {String.fromCharCode(65 + index)}
+                    </span>
+                    <span>{option}</span>
                   </div>
+                  
+                  {/* Show translation below if different language is selected */}
+                  {studyLanguage !== 'de' && optionsInStudy[index] !== option && (
+                    <div className="mt-2 pt-2 border-t border-gray-100">
+                      <p className="text-xs text-gray-500 italic">
+                        <strong>{studyLanguageOptions.find(lang => lang.code === studyLanguage)?.name}:</strong> {optionsInStudy[index]}
+                      </p>
+                    </div>
+                  )}
                 </button>
               ))}
             </div>
@@ -251,36 +451,48 @@ export default function QuizPage() {
 
           {/* Result */}
           {showResult && (
-            <div className="mb-6 p-4 bg-gray-50 rounded-lg">
-              <p className="text-sm text-gray-600 mb-2">
-                <strong>Erklärung:</strong> {currentQ.explanation}
+            <div className="mb-6 p-6 bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg">
+              <p className="text-sm text-gray-700 mb-2">
+                <strong>{t.explanation}</strong>
               </p>
+              <p className="text-gray-600 mb-3">
+                {currentQ.explanation}
+              </p>
+              
+              {/* Show translation below if different language is selected */}
+              {studyLanguage !== 'de' && explanationInStudy !== currentQ.explanation && (
+                <div className="border-t border-gray-200 pt-3">
+                  <p className="text-xs text-gray-500 italic">
+                    <strong>{studyLanguageOptions.find(lang => lang.code === studyLanguage)?.name}:</strong> {explanationInStudy}
+                  </p>
+                </div>
+              )}
             </div>
           )}
 
           {/* Navigation */}
-          <div className="flex justify-between">
+          <div className="flex justify-between items-center">
             <Link
               href="/"
-              className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded transition-colors"
+              className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-colors"
             >
-              {germanTranslations.backToHome}
+              {t.backToHome}
             </Link>
 
             {!showResult ? (
               <button
                 onClick={handleSubmitAnswer}
                 disabled={selectedAnswer === null}
-                className="bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-bold py-2 px-4 rounded transition-colors"
+                className="bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-bold py-3 px-6 rounded-lg transition-colors"
               >
-                Antwort senden
+                {t.submit}
               </button>
             ) : (
               <button
                 onClick={handleNextQuestion}
-                className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition-colors"
+                className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-colors"
               >
-                {currentQuestion < availableQuestions.length - 1 ? 'Nächste Frage' : 'Quiz beenden'}
+                {currentQuestion < availableQuestions.length - 1 ? t.nextQuestion : t.finishQuiz}
               </button>
             )}
           </div>

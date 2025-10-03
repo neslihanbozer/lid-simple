@@ -401,23 +401,21 @@ export default function PremiumDashboard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
-              <div className="flex items-center">
-                <img 
-                  src="/logo/lid_logo.png" 
-                  alt="Leben in Deutschland Test Logo" 
-                  className="w-28 h-28 object-contain"
-                  onError={(e) => {
-                    // Fallback to star icon if logo fails to load
-                    e.currentTarget.style.display = 'none';
-                    e.currentTarget.parentElement!.innerHTML = `
-                      <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                        <span class="text-white text-sm font-bold">★</span>
-                      </div>
-                    `;
-                  }}
-                />
-                <span className="ml-2 text-xl font-bold text-gray-800">Leben in Deutschland Test</span>
-              </div>
+              <img 
+                src="/logo/lid_logo.png" 
+                alt="Leben in Deutschland Test Logo" 
+                className="w-16 h-16 object-contain"
+                onError={(e) => {
+                  // Fallback to star icon if logo fails to load
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.parentElement!.innerHTML = `
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
+                      <span class="text-white text-xl font-bold">★</span>
+                    </div>
+                  `;
+                }}
+              />
+              <span className="ml-3 text-xl font-bold text-gray-800">Leben in Deutschland Test</span>
             </div>
             <nav className="hidden md:flex items-center space-x-6">
               <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">
@@ -426,12 +424,8 @@ export default function PremiumDashboard() {
               <Link href="/dashboard" className="text-blue-600 font-medium">
                 {language === 'en' ? 'Dashboard' : 'Dashboard'}
               </Link>
-              
-              
-              <div className="flex space-x-4">
-                <Link href="/auth/signin" className="text-gray-700 hover:text-blue-600 font-medium">Login</Link>
-                <Link href="/auth/signup" className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium">Sign up</Link>
-              </div>
+              <Link href="/auth/signin" className="text-gray-700 hover:text-blue-600 font-medium">Login</Link>
+              <Link href="/auth/signup" className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium">Sign up</Link>
             </nav>
           </div>
         </div>
@@ -566,28 +560,43 @@ export default function PremiumDashboard() {
         </div>
 
         {/* Question Categories */}
-        <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xl font-bold text-gray-900">
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-2xl font-bold text-gray-900">
               {language === 'en' ? 'Question Categories (300+ Questions)' : 'Fragenkategorien (300+ Fragen)'}
             </h2>
-            <button className="text-blue-600 hover:text-blue-700 font-medium">
-              {language === 'en' ? 'View All Questions' : 'Alle Fragen anzeigen'}
-            </button>
+            <Link href="/quiz">
+              <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                {language === 'en' ? 'Start Full Test' : 'Vollständigen Test starten'}
+              </button>
+            </Link>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {questionCategories.map((category) => (
               <div
                 key={category.id}
-                className={`bg-gradient-to-br from-${category.color}-50 to-${category.color}-100 rounded-xl p-6 hover:shadow-lg transition-all cursor-pointer group`}
+                className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all cursor-pointer group"
                 onClick={() => handleCategoryClick(category.name)}
               >
-                <div className="text-3xl mb-3">{category.icon}</div>
-                <h3 className="font-bold text-gray-900 mb-2">{category.name}</h3>
-                <p className="text-sm text-gray-600 mb-4">{category.questions} questions</p>
-                <button className="w-full bg-white hover:bg-gray-50 text-gray-700 py-2 px-4 rounded-lg font-medium transition-colors group-hover:shadow-md">
-                  {language === 'en' ? 'Start Quiz' : 'Quiz starten'}
-                </button>
+                <div className="flex flex-col items-center text-center">
+                  <div className={`w-16 h-16 rounded-lg flex items-center justify-center mb-4 ${
+                    category.color === 'blue' ? 'bg-blue-100' :
+                    category.color === 'purple' ? 'bg-purple-100' :
+                    category.color === 'pink' ? 'bg-pink-100' :
+                    category.color === 'green' ? 'bg-green-100' :
+                    category.color === 'yellow' ? 'bg-yellow-100' :
+                    category.color === 'indigo' ? 'bg-indigo-100' :
+                    category.color === 'red' ? 'bg-red-100' :
+                    'bg-teal-100'
+                  }`}>
+                    <span className="text-2xl">{category.icon}</span>
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2">{category.name}</h3>
+                  <p className="text-sm text-gray-600 mb-4">{category.questions} questions</p>
+                  <button className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
+                    {language === 'en' ? 'Start Quiz' : 'Quiz starten'}
+                  </button>
+                </div>
                 </div>
             ))}
           </div>
@@ -654,44 +663,43 @@ export default function PremiumDashboard() {
 
 
         {/* Additional Tools */}
-        <div className="grid md:grid-cols-3 gap-6">
-          <Link href="/progress" className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all group">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
-                <span className="text-2xl">📊</span>
+        <div className="grid md:grid-cols-2 gap-8">
+          <Link href="/progress" className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all group">
+            <div className="flex items-center mb-6">
+              <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mr-6">
+                <span className="text-3xl">📊</span>
               </div>
-              <h3 className="text-lg font-bold text-gray-900">
+              <h3 className="text-2xl font-bold text-gray-900">
                 {language === 'en' ? 'Progress Tracking' : 'Fortschrittsverfolgung'}
               </h3>
             </div>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-6 text-lg leading-relaxed">
               {language === 'en' 
-                ? 'Monitor your learning progress and track improvements'
-                : 'Überwachen Sie Ihren Lernfortschritt und verfolgen Sie Verbesserungen'
+                ? 'Monitor your learning progress and track improvements across all categories. See detailed analytics and performance metrics.'
+                : 'Überwachen Sie Ihren Lernfortschritt und verfolgen Sie Verbesserungen in allen Kategorien. Sehen Sie detaillierte Analysen und Leistungsmetriken.'
               }
             </p>
-            <div className="text-blue-600 font-medium group-hover:text-blue-700">
+            <div className="text-blue-600 font-semibold text-lg group-hover:text-blue-700 transition-colors">
               {language === 'en' ? 'View Progress →' : 'Fortschritt anzeigen →'}
             </div>
             </Link>
 
-
-          <Link href="/wrong-answers" className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all group">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mr-4">
-                <span className="text-2xl">❌</span>
+          <Link href="/wrong-answers" className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all group">
+            <div className="flex items-center mb-6">
+              <div className="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mr-6">
+                <span className="text-3xl">❌</span>
           </div>
-              <h3 className="text-lg font-bold text-gray-900">
+              <h3 className="text-2xl font-bold text-gray-900">
                 {language === 'en' ? 'Wrong Answers Review' : 'Falsche Antworten überprüfen'}
               </h3>
           </div>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-6 text-lg leading-relaxed">
               {language === 'en' 
-                ? 'Review and learn from your incorrect answers'
-                : 'Überprüfen und lernen Sie aus Ihren falschen Antworten'
+                ? 'Review and learn from your incorrect answers. Analyze patterns and focus on areas that need improvement.'
+                : 'Überprüfen und lernen Sie aus Ihren falschen Antworten. Analysieren Sie Muster und konzentrieren Sie sich auf Bereiche, die Verbesserung benötigen.'
               }
             </p>
-            <div className="text-red-600 font-medium group-hover:text-red-700">
+            <div className="text-red-600 font-semibold text-lg group-hover:text-red-700 transition-colors">
               {language === 'en' ? 'Review Answers →' : 'Antworten überprüfen →'}
           </div>
             </Link>

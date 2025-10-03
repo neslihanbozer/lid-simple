@@ -3,10 +3,10 @@ import { test, expect } from '@playwright/test';
 test.describe('Quiz Functionality', () => {
   test('Ana sayfa yükleniyor', async ({ page }) => {
     await page.goto('/');
-    await expect(page).toHaveTitle(/Leben in Deutschland Quiz/);
+    await expect(page).toHaveTitle(/Leben in Deutschland Test/);
     
     // Logo'nun görünür olduğunu kontrol et
-    await expect(page.locator('text=Leben in Deutschland Quiz')).toBeVisible();
+    await expect(page.locator('text=Leben in Deutschland Test')).toBeVisible();
     
     // Start Quiz butonunun görünür olduğunu kontrol et
     await expect(page.locator('text=Start Quiz')).toBeVisible();
@@ -78,7 +78,7 @@ test.describe('Quiz Functionality', () => {
     await page.goto('/quiz');
     
     // Quiz başlığının Almanca olduğunu kontrol et
-    await expect(page.locator('text=Leben in Deutschland Quiz')).toBeVisible();
+    await expect(page.locator('text=Leben in Deutschland Test')).toBeVisible();
     
     // Ücretsiz quiz bilgisinin görünür olduğunu kontrol et
     await expect(page.locator('text=Kostenloses Quiz')).toBeVisible();
@@ -169,7 +169,7 @@ test.describe('Language Switching Tests', () => {
     await expect(page.locator('text=Language: en')).toBeVisible();
     
     // EN başlığını kontrol et
-    await expect(page.locator('h1')).toContainText('Leben in Deutschland Quiz');
+    await expect(page.locator('h1')).toContainText('Leben in Deutschland Test');
     
     // DE butonuna tıkla
     await page.click('button:has-text("DE")');
@@ -199,7 +199,7 @@ test.describe('Language Switching Tests', () => {
     await expect(page.locator('text=Language: en')).toBeVisible();
     
     // EN başlığını kontrol et
-    await expect(page.locator('h1')).toContainText('Leben in Deutschland Quiz');
+    await expect(page.locator('h1')).toContainText('Leben in Deutschland Test');
     
     // Login butonunun EN olduğunu kontrol et
     await expect(page.locator('button:has-text("Log in")')).toBeVisible();
@@ -267,7 +267,7 @@ test.describe('Responsive Design', () => {
     await expect(page.locator('h1')).toContainText('Leben-in-Deutschland-Quiz');
     
     await page.click('button:has-text("EN")');
-    await expect(page.locator('h1')).toContainText('Leben in Deutschland Quiz');
+    await expect(page.locator('h1')).toContainText('Leben in Deutschland Test');
   });
 });
 
@@ -305,7 +305,7 @@ test.describe('Performance Tests', () => {
     expect(loadTime).toBeLessThan(5000);
     
     // Temel elementlerin yüklendiğini kontrol et
-    await expect(page.locator('text=Leben in Deutschland Quiz')).toBeVisible();
+    await expect(page.locator('text=Leben in Deutschland Test')).toBeVisible();
   });
 
   test('Quiz sayfası performansı', async ({ page }) => {
@@ -331,7 +331,7 @@ test.describe('Performance Tests', () => {
     expect(loadTime).toBeLessThan(4000);
     
     // Mobilde quiz elementlerinin görünür olduğunu kontrol et
-    await expect(page.locator('text=Leben in Deutschland Quiz')).toBeVisible();
+    await expect(page.locator('text=Leben in Deutschland Test')).toBeVisible();
     await expect(page.locator('span:has-text("★")')).toBeVisible();
   });
 });
