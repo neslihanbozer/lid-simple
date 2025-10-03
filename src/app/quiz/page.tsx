@@ -28,7 +28,7 @@ const germanTranslations = {
   premiumFeatures3: '✅ Fortschrittsverfolgung',
   premiumFeatures4: '✅ Gruppenarbeit',
   tryAgain: 'Erneut versuchen',
-  goPremium: '💳 Premium werden - €5.99/Monat',
+  goPremium: '💳 Premium werden - €17.99 (3 Monate)',
   backToHome: '← Zurück zur Startseite',
   loading: 'Lädt...'
 }
@@ -62,46 +62,21 @@ export default function QuizPage() {
     }
   }, [session])
 
-  // 50 ücretsiz soru + premium sorular
-  const freeQuestions = questions.slice(0, 50) // İlk 50 soru ücretsiz
-  const premiumQuestions = questions.slice(50) // 50'den sonrası premium
-  const availableQuestions = isPremium ? questions : freeQuestions
+  // Premium kullanıcılar tüm soruları, ücretsiz kullanıcılar ilk 50 soruyu görebilir
+  const availableQuestions = isPremium ? questions : questions.slice(0, 50)
 
   const handleAnswerSelect = (answerIndex: number) => {
+    if (showResult) return
     setSelectedAnswer(answerIndex)
   }
 
-  const handleSubmitAnswer = async () => {
+  const handleSubmitAnswer = () => {
     if (selectedAnswer === null) return
-
-    const currentQ = availableQuestions[currentQuestion]
-    const isCorrect = selectedAnswer === currentQ.correctAnswer
-
-    if (isCorrect) {
-      setScore(score + 1)
-    } else {
-      // Yanlış cevap kaydet (sadece giriş yapmış kullanıcılar için)
-      if (session?.user?.id) {
-        try {
-          await fetch('/api/wrong-answers', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              questionId: currentQ.id,
-              userAnswer: selectedAnswer,
-              correctAnswer: currentQ.correctAnswer,
-              explanation: currentQ.explanation,
-              category: currentQ.category || 'General',
-              difficulty: currentQ.difficulty || 'medium'
-            })
-          })
-        } catch (error) {
-          console.error('Error saving wrong answer:', error)
-        }
-      }
-    }
-
+    
     setShowResult(true)
+    if (selectedAnswer === availableQuestions[currentQuestion].correctAnswer) {
+      setScore(score + 1)
+    }
   }
 
   const handleNextQuestion = () => {
@@ -192,135 +167,123 @@ export default function QuizPage() {
       <header className="bg-white shadow-sm">
         <div className="max-w-4xl mx-auto px-4 py-4">
           <div className="flex items-center">
-            <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-              <span className="text-white text-sm font-bold">★</span>
-            </div>
-            <span className="ml-3 text-xl font-bold text-gray-800">Leben in Deutschland Quiz</span>
+            <img 
+              src="/logo/lid_logo.png" 
+              alt="Leben in Deutschland Logo" 
+              className="h-10 w-auto mr-3"
+              onError={(e) => {
+                // Fallback if logo doesn't load
+                e.currentTarget.style.display = 'none';
+                const fallback = document.createElement('div');
+                fallback.className = 'w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-3';
+                fallback.innerHTML = '<span class="text-white text-sm font-bold">★</span>';
+                e.currentTarget.parentElement?.insertBefore(fallback, e.currentTarget);
+              }}
+            />
+            <span className="text-xl font-bold text-gray-800">Leben in Deutschland Quiz</span>
           </div>
         </div>
       </header>
 
       <div className="flex items-center justify-center p-4">
         <div className="bg-white rounded-lg shadow-xl p-8 max-w-2xl w-full">
-
-        {/* Ücretsiz kullanıcı bilgilendirmesi */}
-        {showFreeUserInfo && (
-          <div className="mb-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
-            <div className="flex items-center mb-2">
-              <span className="text-2xl mr-2">🎯</span>
-              <h3 className="text-lg font-bold text-blue-800">{germanTranslations.freeQuiz}</h3>
-            </div>
-            <p className="text-blue-700 text-sm">
-              {germanTranslations.freeQuizInfo}
-            </p>
-          </div>
-        )}
-
-        {/* Progress Bar */}
-        <div className="mb-6">
-          <div className="flex justify-between items-center mb-4">
-            <h1 className="text-2xl font-bold text-gray-800">{germanTranslations.quizTitle}</h1>
-            <span className="text-sm text-gray-500">
-              {germanTranslations.question} {currentQuestion + 1} / {availableQuestions.length}
-              {showFreeUserInfo && <span className="text-blue-600 ml-2">{germanTranslations.free}</span>}
-            </span>
-          </div>
-          <div className="w-full bg-gray-200 rounded-full h-2">
-            <div
-              className="bg-blue-500 h-2 rounded-full transition-all duration-300"
-              style={{ width: `${((currentQuestion + 1) / availableQuestions.length) * 100}%` }}
-            ></div>
-          </div>
-        </div>
-
-        {/* Question */}
-        <div className="mb-6">
-          <h2 className="text-xl font-semibold text-gray-800 mb-6">
-            {isDeTr && currentQ.questionTr ? currentQ.questionTr : currentQ.question}
-          </h2>
-          
-          {/* Çift dil gösterimi */}
-          {isDeTr && currentQ.questionTr && (
-            <div className="mb-4 p-3 bg-gray-50 rounded-lg">
-              <p className="text-sm text-gray-600 italic">
-                🇩🇪 {currentQ.question}
+          {/* Ücretsiz kullanıcı bilgilendirmesi */}
+          {showFreeUserInfo && (
+            <div className="mb-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <div className="flex items-center mb-2">
+                <span className="text-2xl mr-2">🎯</span>
+                <h3 className="text-lg font-bold text-blue-800">{germanTranslations.freeQuiz}</h3>
+              </div>
+              <p className="text-blue-700 text-sm">
+                {germanTranslations.freeQuizInfo}
               </p>
             </div>
           )}
 
-          <div className="space-y-3">
-            {currentQ.options.map((option, index) => (
-              <button
-                key={index}
-                onClick={() => handleAnswerSelect(index)}
-                disabled={showResult}
-                className={`w-full p-4 text-left rounded-lg border-2 transition-all ${
-                  selectedAnswer === index
-                    ? showResult
-                      ? index === currentQ.correctAnswer
-                        ? 'border-green-500 bg-green-50 text-green-800'
-                        : 'border-red-500 bg-red-50 text-red-800'
-                      : 'border-blue-500 bg-blue-50 text-blue-800'
-                    : showResult && index === currentQ.correctAnswer
-                    ? 'border-green-500 bg-green-50 text-green-800'
-                    : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
-                }`}
-              >
-                <div>
-                  {isDeTr && currentQ.optionsTr ? currentQ.optionsTr[index] : option}
-                </div>
-                {/* Çift dil gösterimi */}
-                {isDeTr && currentQ.optionsTr && (
-                  <div className="mt-1 text-sm text-gray-500 italic">
-                    🇩🇪 {option}
-                  </div>
-                )}
-              </button>
-            ))}
+          {/* Progress Bar */}
+          <div className="mb-6">
+            <div className="flex justify-between items-center mb-4">
+              <h1 className="text-2xl font-bold text-gray-800">{germanTranslations.quizTitle}</h1>
+              <span className="text-sm text-gray-500">
+                {germanTranslations.question} {currentQuestion + 1} / {availableQuestions.length}
+                {showFreeUserInfo && <span className="text-blue-600 ml-2">{germanTranslations.free}</span>}
+              </span>
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-2">
+              <div
+                className="bg-blue-500 h-2 rounded-full transition-all duration-300"
+                style={{ width: `${((currentQuestion + 1) / availableQuestions.length) * 100}%` }}
+              ></div>
+            </div>
           </div>
-        </div>
 
-        {/* Result */}
-        {showResult && (
-          <div className="mb-6 p-4 bg-gray-50 rounded-lg">
-            <p className="text-sm text-gray-600 mb-2">
-              <strong>Açıklama:</strong> {isDeTr && currentQ.explanationTr ? currentQ.explanationTr : currentQ.explanation}
-            </p>
-            {/* Çift dil gösterimi */}
-            {isDeTr && currentQ.explanationTr && (
-              <p className="text-sm text-gray-500 italic">
-                🇩🇪 {currentQ.explanation}
+          {/* Question */}
+          <div className="mb-6">
+            <h2 className="text-xl font-semibold text-gray-800 mb-6">
+              {currentQ.question}
+            </h2>
+
+            <div className="space-y-3">
+              {currentQ.options.map((option, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleAnswerSelect(index)}
+                  disabled={showResult}
+                  className={`w-full p-4 text-left rounded-lg border-2 transition-all ${
+                    selectedAnswer === index
+                      ? showResult
+                        ? index === currentQ.correctAnswer
+                          ? 'border-green-500 bg-green-50 text-green-800'
+                          : 'border-red-500 bg-red-50 text-red-800'
+                        : 'border-blue-500 bg-blue-50 text-blue-800'
+                      : showResult && index === currentQ.correctAnswer
+                      ? 'border-green-500 bg-green-50 text-green-800'
+                      : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                  }`}
+                >
+                  <div>
+                    {option}
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Result */}
+          {showResult && (
+            <div className="mb-6 p-4 bg-gray-50 rounded-lg">
+              <p className="text-sm text-gray-600 mb-2">
+                <strong>Erklärung:</strong> {currentQ.explanation}
               </p>
+            </div>
+          )}
+
+          {/* Navigation */}
+          <div className="flex justify-between">
+            <Link
+              href="/"
+              className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded transition-colors"
+            >
+              {germanTranslations.backToHome}
+            </Link>
+
+            {!showResult ? (
+              <button
+                onClick={handleSubmitAnswer}
+                disabled={selectedAnswer === null}
+                className="bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-bold py-2 px-4 rounded transition-colors"
+              >
+                Antwort senden
+              </button>
+            ) : (
+              <button
+                onClick={handleNextQuestion}
+                className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition-colors"
+              >
+                {currentQuestion < availableQuestions.length - 1 ? 'Nächste Frage' : 'Quiz beenden'}
+              </button>
             )}
           </div>
-        )}
-
-        {/* Navigation */}
-        <div className="flex justify-between">
-          <Link
-            href="/"
-            className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded transition-colors"
-          >
-            {germanTranslations.backToHome}
-          </Link>
-
-          {!showResult ? (
-            <button
-              onClick={handleSubmitAnswer}
-              disabled={selectedAnswer === null}
-              className="bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-bold py-2 px-4 rounded transition-colors"
-            >
-              Antwort senden
-            </button>
-          ) : (
-            <button
-              onClick={handleNextQuestion}
-              className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition-colors"
-            >
-              {currentQuestion < availableQuestions.length - 1 ? 'Nächste Frage' : 'Quiz beenden'}
-            </button>
-          )}
-        </div>
         </div>
       </div>
     </div>

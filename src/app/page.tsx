@@ -78,9 +78,34 @@ export default function Home() {
                 <span className="ml-2 text-xl font-bold text-gray-800">Leben in Deutschland Quiz</span>
               </div>
             </div>
-            <nav className="hidden md:flex space-x-8">
+            <nav className="hidden md:flex items-center space-x-8">
               <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">Home</Link>
               <Link href="/pricing" className="text-gray-700 hover:text-blue-600 font-medium">Premium Features</Link>
+              
+              {/* Language Selector */}
+              <div className="flex gap-2">
+                <button
+                  onClick={() => handleLanguageChange('en')}
+                  className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
+                    language === 'en' 
+                      ? 'bg-blue-500 text-white' 
+                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  }`}
+                >
+                  EN
+                </button>
+                <button
+                  onClick={() => handleLanguageChange('de')}
+                  className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
+                    language === 'de' 
+                      ? 'bg-blue-500 text-white' 
+                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  }`}
+                >
+                  DE
+                </button>
+              </div>
+
               {session ? (
                 <div className="flex items-center space-x-4">
                   <Link href="/dashboard" className="text-gray-700 hover:text-blue-600 font-medium">Dashboard</Link>
@@ -114,46 +139,17 @@ export default function Home() {
               }
             </p>
             
-            {/* Language Selection */}
-
-            <div className="flex items-center mb-6">
-              <span className="text-sm font-medium text-gray-700 mr-4">
-                {language === 'en' ? 'Language:' : 'Sprache:'}
-              </span>
-              <div className="flex gap-2">
-                <button
-                  onClick={() => handleLanguageChange('en')}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                    language === 'en' 
-                      ? 'bg-blue-500 text-white' 
-                      : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
-                  }`}
-                >
-                  EN
-                </button>
-                <button
-                  onClick={() => handleLanguageChange('de')}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                    language === 'de' 
-                      ? 'bg-blue-500 text-white' 
-                      : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
-                  }`}
-                >
-                  DE
-                </button>
-              </div>
-            </div>
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/quiz">
                 <button className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors">
-                  {language === 'en' ? 'Start Premium Quiz' : 'Premium Quiz starten'}
+                  {translations.startQuiz}
                 </button>
               </Link>
-              <Link href="/premium-dashboard">
+              <Link href="/pricing">
                 <button className="bg-white hover:bg-gray-50 text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg font-semibold text-lg transition-colors">
-                  {language === 'en' ? 'Test Premium Features' : 'Premium-Funktionen testen'}
+                  {translations.premiumFeatures}
                 </button>
               </Link>
             </div>

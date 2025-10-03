@@ -41,8 +41,21 @@ export default function Pricing() {
           }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      {/* Header with Logo */}
+      <header className="bg-white shadow-sm">
+        <div className="max-w-4xl mx-auto px-4 py-4">
+          <div className="flex items-center">
+            <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+              <span className="text-white text-sm font-bold">★</span>
+            </div>
+            <span className="ml-3 text-xl font-bold text-gray-800">Leben in Deutschland Quiz</span>
+          </div>
+        </div>
+      </header>
+
+      <div className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
         {/* Cancel Message */}
         {showCancelMessage && (
           <div className="mb-6 bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded-lg">
@@ -134,8 +147,8 @@ export default function Pricing() {
             
             <div className="text-center">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Premium</h2>
-              <div className="text-4xl font-bold text-blue-600 mb-2">€5.99</div>
-              <p className="text-gray-600 mb-8">aylık</p>
+              <div className="text-4xl font-bold text-blue-600 mb-2">€17.99</div>
+              <p className="text-gray-600 mb-8">3 ay (tek seferlik ödeme)</p>
             </div>
             
             <ul className="space-y-4 mb-8">
@@ -190,6 +203,7 @@ export default function Pricing() {
           >
             ← Ana sayfaya dön
           </Link>
+        </div>
         </div>
       </div>
     </div>

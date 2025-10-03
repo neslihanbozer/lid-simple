@@ -97,13 +97,16 @@ export async function POST(request: NextRequest) {
         const userId = session.metadata?.userId
 
         if (userId) {
+          const now = new Date()
+          const threeMonthsLater = new Date(now.getTime() + 90 * 24 * 60 * 60 * 1000) // 3 months from now
+          
           await prisma.subscription.create({
             data: {
               userId,
-              stripeId: session.subscription as string,
+              stripeId: session.payment_intent as string,
               status: 'active',
-              currentPeriodStart: new Date(session.subscription_details?.billing_cycle_anchor * 1000),
-              currentPeriodEnd: new Date(session.subscription_details?.billing_cycle_anchor * 1000 + 30 * 24 * 60 * 60 * 1000),
+              currentPeriodStart: now,
+              currentPeriodEnd: threeMonthsLater,
             }
           })
 

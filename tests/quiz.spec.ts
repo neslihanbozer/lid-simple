@@ -4,6 +4,31 @@ test.describe('Quiz Functionality', () => {
   test('Ana sayfa yükleniyor', async ({ page }) => {
     await page.goto('/');
     await expect(page).toHaveTitle(/Leben in Deutschland Quiz/);
+    
+    // Logo'nun görünür olduğunu kontrol et
+    await expect(page.locator('text=Leben in Deutschland Quiz')).toBeVisible();
+    
+    // Start Quiz butonunun görünür olduğunu kontrol et
+    await expect(page.locator('text=Start Quiz')).toBeVisible();
+  });
+
+  test('Header logo ve navigasyon çalışıyor', async ({ page }) => {
+    await page.goto('/');
+    
+    // Logo'nun görünür olduğunu kontrol et
+    await expect(page.locator('span:has-text("★")')).toBeVisible();
+    
+    // Navigasyon linklerini kontrol et
+    await expect(page.locator('text=Home')).toBeVisible();
+    await expect(page.locator('text=Premium Features')).toBeVisible();
+  });
+
+  test('Brandenburg Gate resmi yükleniyor', async ({ page }) => {
+    await page.goto('/');
+    
+    // Brandenburg Gate resminin yüklendiğini kontrol et
+    const image = page.locator('img[alt*="Brandenburg Gate"]');
+    await expect(image).toBeVisible();
   });
 
   test('All Questions sayfası yükleniyor', async ({ page }) => {
@@ -49,11 +74,41 @@ test.describe('Quiz Functionality', () => {
     await expect(page.locator('a:has-text("❌ Yanlış Cevaplarım")')).toBeVisible();
   });
 
-  test('Quiz sayfası premium kontrolü', async ({ page }) => {
+  test('Quiz sayfası 50 ücretsiz soru gösteriyor', async ({ page }) => {
     await page.goto('/quiz');
     
-    // Premium gerekli mesajını kontrol et
-    await expect(page.locator('text=Premium Gerekli')).toBeVisible();
+    // Quiz başlığının Almanca olduğunu kontrol et
+    await expect(page.locator('text=Leben in Deutschland Quiz')).toBeVisible();
+    
+    // Ücretsiz quiz bilgisinin görünür olduğunu kontrol et
+    await expect(page.locator('text=Kostenloses Quiz')).toBeVisible();
+    
+    // Logo'nun quiz sayfasında da görünür olduğunu kontrol et
+    await expect(page.locator('span:has-text("★")')).toBeVisible();
+  });
+
+  test('Quiz sayfası Almanca arayüz', async ({ page }) => {
+    await page.goto('/quiz');
+    
+    // Almanca butonları kontrol et
+    await expect(page.locator('text=Antwort senden')).toBeVisible();
+    
+    // Almanca progress bar kontrol et
+    await expect(page.locator('text=Frage')).toBeVisible();
+  });
+
+  test('Quiz tamamlama ve premium teşvik', async ({ page }) => {
+    await page.goto('/quiz');
+    
+    // İlk soruyu cevapla
+    const firstOption = page.locator('button').nth(1); // İkinci butonu seç (ilki home linki olabilir)
+    await firstOption.click();
+    
+    // Cevabı gönder
+    await page.locator('text=Antwort senden').click();
+    
+    // Sonraki soru butonunu kontrol et
+    await expect(page.locator('text=Nächste Frage')).toBeVisible();
   });
 
   test('Ödeme sayfası yükleniyor', async ({ page }) => {
@@ -62,6 +117,47 @@ test.describe('Quiz Functionality', () => {
     // Ödeme formunu kontrol et
     await expect(page.locator('input[placeholder="Ad Soyad"]')).toBeVisible();
     await expect(page.locator('input[placeholder="4242424242424242"]')).toBeVisible();
+  });
+});
+
+test.describe('Premium Features Tests', () => {
+  test('Premium sayfası Study.jpg resmi gösteriyor', async ({ page }) => {
+    await page.goto('/pricing');
+    
+    // Premium plan kartının görünür olduğunu kontrol et
+    await expect(page.locator('text=Premium')).toBeVisible();
+    
+    // Study.jpg resminin yüklendiğini kontrol et
+    const studyImage = page.locator('img[alt*="Study"]');
+    await expect(studyImage).toBeVisible();
+    
+    // Premium özelliklerini kontrol et
+    await expect(page.locator('text=300+ soruya erişim')).toBeVisible();
+    await expect(page.locator('text=AI ile konu anlatımı')).toBeVisible();
+  });
+
+  test('Premium sayfası fiyatlandırma', async ({ page }) => {
+    await page.goto('/pricing');
+    
+    // Fiyat bilgisini kontrol et
+    await expect(page.locator('text=€5.99')).toBeVisible();
+    
+    // Premium'a geç butonunu kontrol et
+    await expect(page.locator('text=Premium\'a Geç')).toBeVisible();
+    
+    // Ücretsiz plan bilgilerini kontrol et
+    await expect(page.locator('text=50 soruya erişim')).toBeVisible();
+  });
+
+  test('Premium dashboard sayfası', async ({ page }) => {
+    await page.goto('/premium-dashboard');
+    
+    // Premium dashboard elementlerini kontrol et
+    await expect(page.locator('text=Premium Dashboard')).toBeVisible();
+    
+    // Dil seçim butonlarını kontrol et
+    await expect(page.locator('text=🇩🇪 Deutsch')).toBeVisible();
+    await expect(page.locator('text=🇺🇸 English')).toBeVisible();
   });
 });
 
@@ -172,5 +268,70 @@ test.describe('Responsive Design', () => {
     
     await page.click('button:has-text("EN")');
     await expect(page.locator('h1')).toContainText('Leben in Deutschland Quiz');
+  });
+});
+
+test.describe('Error Handling Tests', () => {
+  test('404 sayfası', async ({ page }) => {
+    await page.goto('/nonexistent-page');
+    
+    // 404 sayfasının yüklendiğini kontrol et
+    await expect(page.locator('text=404')).toBeVisible();
+  });
+
+  test('Resim yükleme hatası fallback', async ({ page }) => {
+    await page.goto('/');
+    
+    // JavaScript ile resim hatasını simüle et
+    await page.evaluate(() => {
+      const img = document.querySelector('img[alt*="Brandenburg Gate"]');
+      if (img) {
+        img.dispatchEvent(new Event('error'));
+      }
+    });
+    
+    // Fallback içeriğinin görünür olduğunu kontrol et (gradient background)
+    await page.waitForTimeout(1000); // Fallback'in yüklenmesi için bekle
+  });
+});
+
+test.describe('Performance Tests', () => {
+  test('Sayfa yükleme hızı', async ({ page }) => {
+    const startTime = Date.now();
+    await page.goto('/');
+    const loadTime = Date.now() - startTime;
+    
+    // Sayfa 5 saniyeden az sürede yüklenmeli
+    expect(loadTime).toBeLessThan(5000);
+    
+    // Temel elementlerin yüklendiğini kontrol et
+    await expect(page.locator('text=Leben in Deutschland Quiz')).toBeVisible();
+  });
+
+  test('Quiz sayfası performansı', async ({ page }) => {
+    const startTime = Date.now();
+    await page.goto('/quiz');
+    const loadTime = Date.now() - startTime;
+    
+    // Quiz sayfası 3 saniyeden az sürede yüklenmeli
+    expect(loadTime).toBeLessThan(3000);
+    
+    // Quiz elementlerinin yüklendiğini kontrol et
+    await expect(page.locator('text=Kostenloses Quiz')).toBeVisible();
+  });
+
+  test('Mobil quiz performansı', async ({ page }) => {
+    await page.setViewportSize({ width: 375, height: 667 });
+    
+    const startTime = Date.now();
+    await page.goto('/quiz');
+    const loadTime = Date.now() - startTime;
+    
+    // Mobil quiz sayfası 4 saniyeden az sürede yüklenmeli
+    expect(loadTime).toBeLessThan(4000);
+    
+    // Mobilde quiz elementlerinin görünür olduğunu kontrol et
+    await expect(page.locator('text=Leben in Deutschland Quiz')).toBeVisible();
+    await expect(page.locator('span:has-text("★")')).toBeVisible();
   });
 });

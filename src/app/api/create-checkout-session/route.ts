@@ -18,11 +18,18 @@ export async function POST(request: NextRequest) {
     }
 
     const checkoutSession = await stripe.checkout.sessions.create({
-      mode: 'subscription',
+      mode: 'payment',
       payment_method_types: ['card'],
       line_items: [
         {
-          price: PRICE_ID,
+          price_data: {
+            currency: 'eur',
+            product_data: {
+              name: 'Premium Membership - 3 Months',
+              description: 'Access to all premium features for 3 months',
+            },
+            unit_amount: 1799, // €17.99 in cents
+          },
           quantity: 1,
         },
       ],
