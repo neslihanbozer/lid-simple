@@ -1,0 +1,52 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e6]:
+        - img "Leben in Deutschland Test Logo" [ref=e7]
+        - generic [ref=e8]: Leben in Deutschland Test
+    - main [ref=e9]:
+      - generic [ref=e10]:
+        - generic [ref=e11]:
+          - heading "Leben In Deutschland Test" [level=1] [ref=e12]:
+            - generic [ref=e13]: Leben In Deutschland
+            - generic [ref=e14]: Test
+          - paragraph [ref=e15]: Your comprehensive guide to living in Germany, preparing you for the official integration test.
+        - img "Brandenburg Gate illuminated at night, Berlin" [ref=e18]
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - heading "Start Quiz" [level=3] [ref=e23]
+          - paragraph [ref=e24]: Premium membership required to access all quizzes.
+          - link "Start Quiz" [ref=e25] [cursor=pointer]:
+            - /url: /quiz
+            - button "Start Quiz" [ref=e26] [cursor=pointer]
+        - generic [ref=e27]:
+          - generic [ref=e29]: ⭐
+          - heading "Premium Features" [level=3] [ref=e30]
+          - generic [ref=e31]:
+            - generic [ref=e32]:
+              - generic [ref=e33]: ✓
+              - generic [ref=e34]: 300+ practice questions
+            - generic [ref=e35]:
+              - generic [ref=e36]: ✓
+              - generic [ref=e37]: Multi-language support (EN/DE)
+            - generic [ref=e38]:
+              - generic [ref=e39]: ✓
+              - generic [ref=e40]: Detailed explanations
+            - generic [ref=e41]:
+              - generic [ref=e42]: ✓
+              - generic [ref=e43]: Detailed progress tracking
+            - generic [ref=e44]:
+              - generic [ref=e45]: ✓
+              - generic [ref=e46]: Extensive Dashboard features
+          - generic [ref=e47]:
+            - link "Go Premium - €5.99 (3 Months)" [ref=e48] [cursor=pointer]:
+              - /url: /payment
+              - button "Go Premium - €5.99 (3 Months)" [ref=e49] [cursor=pointer]
+            - link "Test Premium Features" [ref=e50] [cursor=pointer]:
+              - /url: /premium-dashboard
+              - button "Test Premium Features" [ref=e51] [cursor=pointer]
+  - alert [ref=e52]
+```

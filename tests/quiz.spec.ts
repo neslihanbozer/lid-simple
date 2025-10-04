@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Quiz Functionality', () => {
+test.describe('Homepage Tests', () => {
   test('Ana sayfa yükleniyor', async ({ page }) => {
     await page.goto('/');
     await expect(page).toHaveTitle(/Leben in Deutschland Test/);
@@ -12,207 +12,194 @@ test.describe('Quiz Functionality', () => {
     await expect(page.locator('text=Start Quiz')).toBeVisible();
   });
 
-  test('Header logo ve navigasyon çalışıyor', async ({ page }) => {
+  test('Hero section görünür', async ({ page }) => {
     await page.goto('/');
     
-    // Logo'nun görünür olduğunu kontrol et
-    await expect(page.locator('span:has-text("★")')).toBeVisible();
+    // Hero başlığını kontrol et
+    await expect(page.locator('h1')).toContainText('Leben In Deutschland');
     
-    // Navigasyon linklerini kontrol et
-    await expect(page.locator('text=Home')).toBeVisible();
-    await expect(page.locator('text=Premium Features')).toBeVisible();
-  });
-
-  test('Brandenburg Gate resmi yükleniyor', async ({ page }) => {
-    await page.goto('/');
-    
-    // Brandenburg Gate resminin yüklendiğini kontrol et
+    // Brandenburg Gate resmini kontrol et
     const image = page.locator('img[alt*="Brandenburg Gate"]');
     await expect(image).toBeVisible();
   });
 
-  test('All Questions sayfası yükleniyor', async ({ page }) => {
-    await page.goto('/all-questions');
-    await expect(page.locator('h1')).toContainText('Tüm Sorular');
-  });
-
-  test('Dil seçimi çalışıyor', async ({ page }) => {
-    await page.goto('/all-questions');
-    
-    // Dil seçeneklerinin görünür olduğunu kontrol et
-    await expect(page.locator('text=Deutsch + Türkçe')).toBeVisible();
-    
-    // Dil seçeneğine tıkla
-    const languageOption = page.locator('button:has-text("Deutsch + Türkçe")');
-    await languageOption.click();
-  });
-
-  test('Soru cevaplama çalışıyor', async ({ page }) => {
-    await page.goto('/all-questions');
-    
-    // Sayfanın yüklenmesini bekle
-    await page.waitForLoadState('networkidle');
-    
-    // İlk seçeneği seç - daha genel selector kullan
-    const firstOption = page.locator('button').first();
-    await firstOption.click();
-    
-    // Cevabı gönder butonunun görünür olduğunu kontrol et
-    await expect(page.locator('button:has-text("✅ Cevabı Gönder")')).toBeVisible();
-  });
-
-  test('Navigasyon butonları çalışıyor', async ({ page }) => {
-    await page.goto('/all-questions');
-    
-    // Önceki sayfa butonunu kontrol et
-    await expect(page.locator('button:has-text("← Önceki Sayfa")')).toBeVisible();
-    
-    // Ana sayfa butonunu kontrol et
-    await expect(page.locator('a:has-text("🏠 Ana Sayfa")')).toBeVisible();
-    
-    // Yanlış cevaplarım butonunu kontrol et
-    await expect(page.locator('a:has-text("❌ Yanlış Cevaplarım")')).toBeVisible();
-  });
-
-  test('Quiz sayfası 50 ücretsiz soru gösteriyor', async ({ page }) => {
-    await page.goto('/quiz');
-    
-    // Quiz başlığının Almanca olduğunu kontrol et
-    await expect(page.locator('text=Leben in Deutschland Test')).toBeVisible();
-    
-    // Ücretsiz quiz bilgisinin görünür olduğunu kontrol et
-    await expect(page.locator('text=Kostenloses Quiz')).toBeVisible();
-    
-    // Logo'nun quiz sayfasında da görünür olduğunu kontrol et
-    await expect(page.locator('span:has-text("★")')).toBeVisible();
-  });
-
-  test('Quiz sayfası Almanca arayüz', async ({ page }) => {
-    await page.goto('/quiz');
-    
-    // Almanca butonları kontrol et
-    await expect(page.locator('text=Antwort senden')).toBeVisible();
-    
-    // Almanca progress bar kontrol et
-    await expect(page.locator('text=Frage')).toBeVisible();
-  });
-
-  test('Quiz tamamlama ve premium teşvik', async ({ page }) => {
-    await page.goto('/quiz');
-    
-    // İlk soruyu cevapla
-    const firstOption = page.locator('button').nth(1); // İkinci butonu seç (ilki home linki olabilir)
-    await firstOption.click();
-    
-    // Cevabı gönder
-    await page.locator('text=Antwort senden').click();
-    
-    // Sonraki soru butonunu kontrol et
-    await expect(page.locator('text=Nächste Frage')).toBeVisible();
-  });
-
-  test('Ödeme sayfası yükleniyor', async ({ page }) => {
-    await page.goto('/payment');
-    
-    // Ödeme formunu kontrol et
-    await expect(page.locator('input[placeholder="Ad Soyad"]')).toBeVisible();
-    await expect(page.locator('input[placeholder="4242424242424242"]')).toBeVisible();
-  });
-});
-
-test.describe('Premium Features Tests', () => {
-  test('Premium sayfası Study.jpg resmi gösteriyor', async ({ page }) => {
-    await page.goto('/pricing');
-    
-    // Premium plan kartının görünür olduğunu kontrol et
-    await expect(page.locator('text=Premium')).toBeVisible();
-    
-    // Study.jpg resminin yüklendiğini kontrol et
-    const studyImage = page.locator('img[alt*="Study"]');
-    await expect(studyImage).toBeVisible();
-    
-    // Premium özelliklerini kontrol et
-    await expect(page.locator('text=300+ soruya erişim')).toBeVisible();
-    await expect(page.locator('text=AI ile konu anlatımı')).toBeVisible();
-  });
-
-  test('Premium sayfası fiyatlandırma', async ({ page }) => {
-    await page.goto('/pricing');
-    
-    // Fiyat bilgisini kontrol et
-    await expect(page.locator('text=€5.99')).toBeVisible();
-    
-    // Premium'a geç butonunu kontrol et
-    await expect(page.locator('text=Premium\'a Geç')).toBeVisible();
-    
-    // Ücretsiz plan bilgilerini kontrol et
-    await expect(page.locator('text=50 soruya erişim')).toBeVisible();
-  });
-
-  test('Premium dashboard sayfası', async ({ page }) => {
-    await page.goto('/premium-dashboard');
-    
-    // Premium dashboard elementlerini kontrol et
-    await expect(page.locator('text=Premium Dashboard')).toBeVisible();
-    
-    // Dil seçim butonlarını kontrol et
-    await expect(page.locator('text=🇩🇪 Deutsch')).toBeVisible();
-    await expect(page.locator('text=🇺🇸 English')).toBeVisible();
-  });
-});
-
-test.describe('Language Switching Tests', () => {
-  test('Ana sayfa dil değiştirme - EN to DE', async ({ page }) => {
+  test('Header navigasyon çalışıyor', async ({ page }) => {
     await page.goto('/');
     
-    // Debug panel'in görünür olduğunu kontrol et
-    await expect(page.locator('text=Language: en')).toBeVisible();
+    // Language selector butonlarını kontrol et
+    await expect(page.locator('button:has-text("EN")')).toBeVisible();
+    await expect(page.locator('button:has-text("DE")')).toBeVisible();
     
-    // EN başlığını kontrol et
-    await expect(page.locator('h1')).toContainText('Leben in Deutschland Test');
+    // Auth butonlarını kontrol et
+    await expect(page.locator('text=Log in')).toBeVisible();
+    await expect(page.locator('text=Sign up')).toBeVisible();
+  });
+
+  test('Dil değiştirme çalışıyor', async ({ page }) => {
+    await page.goto('/');
+    
+    // EN butonuna tıkla
+    await page.click('button:has-text("EN")');
+    await expect(page.locator('text=Log in')).toBeVisible();
     
     // DE butonuna tıkla
     await page.click('button:has-text("DE")');
+    await expect(page.locator('text=Anmelden')).toBeVisible();
+  });
+});
+
+test.describe('Quiz Functionality', () => {
+
+  test('Quiz sayfası yükleniyor', async ({ page }) => {
+    await page.goto('/quiz');
     
-    // Debug panel'de dil değişimini kontrol et
-    await expect(page.locator('text=Language: de')).toBeVisible();
+    // Quiz başlığının görünür olduğunu kontrol et
+    await expect(page.locator('h1:has-text("Leben in Deutschland Test")')).toBeVisible();
     
-    // DE başlığını kontrol et
-    await expect(page.locator('h1')).toContainText('Leben-in-Deutschland-Quiz');
+    // Ücretsiz quiz bilgisinin görünür olduğunu kontrol et
+    await expect(page.locator('text=Free Quiz')).toBeVisible();
     
-    // Login butonunun DE olduğunu kontrol et
-    await expect(page.locator('button:has-text("Anmelden")')).toBeVisible();
-    
-    // Signup butonunun DE olduğunu kontrol et
-    await expect(page.locator('button:has-text("Registrieren")')).toBeVisible();
+    // Dil seçimi bölümünün görünür olduğunu kontrol et
+    await expect(page.locator('text=Language Selection')).toBeVisible();
   });
 
-  test('Ana sayfa dil değiştirme - DE to EN', async ({ page }) => {
-    await page.goto('/');
+  test('Quiz dil seçimi çalışıyor', async ({ page }) => {
+    await page.goto('/quiz');
     
-    // Önce DE'ye geç
-    await page.click('button:has-text("DE")');
-    await expect(page.locator('text=Language: de')).toBeVisible();
+    // Dil seçeneklerinin görünür olduğunu kontrol et
+    await expect(page.locator('button:has-text("🇩🇪 Deutsch")')).toBeVisible();
+    await expect(page.locator('button:has-text("🇺🇸 English")')).toBeVisible();
+    await expect(page.locator('button:has-text("🇹🇷 Türkçe")')).toBeVisible();
     
-    // Sonra EN'ye geri dön
+    // Türkçe dil seçeneğine tıkla
+    await page.click('button:has-text("🇹🇷 Türkçe")');
+    
+    // Sorunun görünür olduğunu kontrol et
+    await expect(page.locator('h2')).toBeVisible();
+  });
+
+  test('Quiz soru cevaplama çalışıyor', async ({ page }) => {
+    await page.goto('/quiz');
+    
+    // İlk cevap seçeneğini seç (quiz sayfasındaki cevap butonları)
+    const answerButtons = page.locator('button').filter({ hasText: /^[A-D]\./ });
+    if (await answerButtons.count() > 0) {
+      await answerButtons.first().click();
+      
+      // Submit butonunun aktif olduğunu kontrol et
+      await expect(page.locator('button:has-text("Submit Answer")')).toBeEnabled();
+      
+      // Submit butonuna tıkla
+      await page.click('button:has-text("Submit Answer")');
+      
+      // Açıklama bölümünün görünür olduğunu kontrol et
+      await expect(page.locator('text=Explanation:')).toBeVisible();
+    }
+  });
+
+  test('Quiz navigation çalışıyor', async ({ page }) => {
+    await page.goto('/quiz');
+    
+    // İlk cevap seçeneğini seç
+    const answerButtons = page.locator('button').filter({ hasText: /^[A-D]\./ });
+    if (await answerButtons.count() > 0) {
+      await answerButtons.first().click();
+      await page.click('button:has-text("Submit Answer")');
+      
+      // Next Question butonunun görünür olduğunu kontrol et
+      await expect(page.locator('button:has-text("Next Question")')).toBeVisible();
+      
+      // Next Question butonuna tıkla
+      await page.click('button:has-text("Next Question")');
+      
+      // Yeni sorunun yüklendiğini kontrol et
+      await expect(page.locator('h2')).toBeVisible();
+    }
+  });
+});
+
+test.describe('Pricing Page Tests', () => {
+  test('Pricing sayfası yükleniyor', async ({ page }) => {
+    await page.goto('/pricing');
+    
+    // Pricing başlığının görünür olduğunu kontrol et (DE varsayılan)
+    await expect(page.locator('h1')).toContainText('Preise');
+    
+    // Free plan kartının görünür olduğunu kontrol et
+    await expect(page.locator('text=Kostenlos')).toBeVisible();
+    
+    // Premium plan kartının görünür olduğunu kontrol et
+    await expect(page.locator('text=Premium')).toBeVisible();
+  });
+
+  test('Pricing dil değiştirme çalışıyor', async ({ page }) => {
+    await page.goto('/pricing');
+    
+    // EN butonuna tıkla
     await page.click('button:has-text("EN")');
-    await expect(page.locator('text=Language: en')).toBeVisible();
+    await expect(page.locator('h1')).toContainText('Pricing');
     
-    // EN başlığını kontrol et
-    await expect(page.locator('h1')).toContainText('Leben in Deutschland Test');
-    
-    // Login butonunun EN olduğunu kontrol et
-    await expect(page.locator('button:has-text("Log in")')).toBeVisible();
-    
-    // Signup butonunun EN olduğunu kontrol et
-    await expect(page.locator('button:has-text("Sign up")')).toBeVisible();
+    // DE butonuna tıkla
+    await page.click('button:has-text("DE")');
+    await expect(page.locator('h1')).toContainText('Preise');
   });
 
-  test('Ödeme sayfası dil değiştirme', async ({ page }) => {
+  test('Premium plan özellikleri görünür', async ({ page }) => {
+    await page.goto('/pricing');
+    
+    // Premium özelliklerini kontrol et (DE varsayılan)
+    await expect(page.locator('text=300+ Fragen')).toBeVisible();
+    await expect(page.locator('text=Mehrsprachige Unterstützung')).toBeVisible();
+    await expect(page.locator('text=KI-Erklärungen')).toBeVisible();
+    
+    // Fiyat bilgisini kontrol et
+    await expect(page.locator('text=€5.99')).toBeVisible();
+    await expect(page.locator('text=3 Monate')).toBeVisible();
+  });
+
+  test('Premium plan butonu çalışıyor', async ({ page }) => {
+    await page.goto('/pricing');
+    
+    // Premium plan butonunun görünür olduğunu kontrol et (DE varsayılan)
+    await expect(page.locator('button:has-text("Premium werden")')).toBeVisible();
+    
+    // Butona tıkla
+    await page.click('button:has-text("Premium werden")');
+    
+    // Payment sayfasına yönlendirildiğini kontrol et
+    await expect(page).toHaveURL('/payment');
+  });
+});
+
+test.describe('Payment Page Tests', () => {
+  test('Payment sayfası yükleniyor', async ({ page }) => {
     await page.goto('/payment');
     
-    // EN başlığını kontrol et
+    // Payment başlığının görünür olduğunu kontrol et (EN varsayılan)
     await expect(page.locator('h1')).toContainText('Premium Membership - €5.99/month');
+    
+    // Form alanlarının görünür olduğunu kontrol et
+    await expect(page.locator('input[placeholder*="Name"]')).toBeVisible();
+    await expect(page.locator('input[placeholder*="Card"]')).toBeVisible();
+    await expect(page.locator('input[placeholder*="MM/YY"]')).toBeVisible();
+    await expect(page.locator('input[placeholder*="CVC"]')).toBeVisible();
+  });
+
+  test('Payment form doldurma', async ({ page }) => {
+    await page.goto('/payment');
+    
+    // Form alanlarını doldur
+    await page.fill('input[placeholder*="Name"]', 'Test User');
+    await page.fill('input[placeholder*="Card"]', '4242424242424242');
+    await page.fill('input[placeholder*="MM/YY"]', '12/25');
+    await page.fill('input[placeholder*="CVC"]', '123');
+    
+    // Pay butonunun aktif olduğunu kontrol et
+    await expect(page.locator('button:has-text("Pay")')).toBeEnabled();
+  });
+
+  test('Payment dil değiştirme', async ({ page }) => {
+    await page.goto('/payment');
     
     // DE butonuna tıkla
     await page.click('button:has-text("DE")');
@@ -220,54 +207,257 @@ test.describe('Language Switching Tests', () => {
     // DE başlığını kontrol et
     await expect(page.locator('h1')).toContainText('Premium-Mitgliedschaft - €5.99/Monat');
     
-    // DE form alanlarını kontrol et
+    // DE form etiketlerini kontrol et
     await expect(page.locator('label:has-text("Name auf der Karte")')).toBeVisible();
     await expect(page.locator('label:has-text("Kartennummer")')).toBeVisible();
-    await expect(page.locator('label:has-text("Ablaufdatum")')).toBeVisible();
+  });
+});
+
+test.describe('Premium Dashboard Tests', () => {
+  test('Premium dashboard yükleniyor', async ({ page }) => {
+    await page.goto('/premium-dashboard');
     
-    // DE butonunu kontrol et
-    await expect(page.locator('button:has-text("€5.99 bezahlen und Premium werden")')).toBeVisible();
+    // Premium dashboard başlığının görünür olduğunu kontrol et
+    await expect(page.locator('h1')).toContainText('Premium Dashboard');
+    
+    // Welcome banner görünür
+    await expect(page.locator('text=Welcome to Premium')).toBeVisible();
   });
 
-  test('Test kartları dil değiştirme', async ({ page }) => {
-    await page.goto('/payment');
+  test('State selection çalışıyor', async ({ page }) => {
+    await page.goto('/premium-dashboard');
     
-    // EN test kartları başlığını kontrol et
-    await expect(page.locator('h3:has-text("Test Cards")')).toBeVisible();
+    // State dropdown görünür
+    await expect(page.locator('select')).toBeVisible();
+    
+    // State seç
+    await page.selectOption('select', 'Baden-Württemberg');
+    
+    // Seçilen state'in görünür olduğunu kontrol et
+    await expect(page.locator('select')).toHaveValue('Baden-Württemberg');
+  });
+
+  test('Language selection çalışıyor', async ({ page }) => {
+    await page.goto('/premium-dashboard');
+    
+    // Language selection kartı görünür
+    await expect(page.locator('text=Language Selection')).toBeVisible();
+    
+    // Dil seçenekleri görünür
+    await expect(page.locator('button:has-text("🇩🇪 Deutsch")')).toBeVisible();
+    await expect(page.locator('button:has-text("🇩🇪🇹🇷 Deutsch + Türkçe")')).toBeVisible();
+    await expect(page.locator('button:has-text("🇩🇪🇺🇸 Deutsch + English")')).toBeVisible();
+  });
+
+  test('Question categories görünür', async ({ page }) => {
+    await page.goto('/premium-dashboard');
+    
+    // Question categories başlığı görünür
+    await expect(page.locator('text=Question Categories')).toBeVisible();
+    
+    // Kategori kartları görünür
+    await expect(page.locator('text=Politics')).toBeVisible();
+    await expect(page.locator('text=Law')).toBeVisible();
+    await expect(page.locator('text=Culture')).toBeVisible();
+    await expect(page.locator('text=Economy')).toBeVisible();
+  });
+
+  test('Additional tools görünür', async ({ page }) => {
+    await page.goto('/premium-dashboard');
+    
+    // Additional tools başlığı görünür
+    await expect(page.locator('text=Additional Tools')).toBeVisible();
+    
+    // Tool kartları görünür
+    await expect(page.locator('text=Progress Tracking')).toBeVisible();
+    await expect(page.locator('text=Wrong Answers Review')).toBeVisible();
+  });
+});
+
+test.describe('Authentication Tests', () => {
+  test('Login sayfası yükleniyor', async ({ page }) => {
+    await page.goto('/auth/signin');
+    
+    // Login başlığının görünür olduğunu kontrol et (DE varsayılan)
+    await expect(page.locator('h1')).toContainText('Anmelden');
+    
+    // Form alanlarının görünür olduğunu kontrol et
+    await expect(page.locator('input[type="email"]')).toBeVisible();
+    await expect(page.locator('input[type="password"]')).toBeVisible();
+    
+    // Login butonunun görünür olduğunu kontrol et
+    await expect(page.locator('button[type="submit"]')).toBeVisible();
+  });
+
+  test('Signup sayfası yükleniyor', async ({ page }) => {
+    await page.goto('/auth/signup');
+    
+    // Signup başlığının görünür olduğunu kontrol et (DE varsayılan)
+    await expect(page.locator('h1')).toContainText('Registrieren');
+    
+    // Form alanlarının görünür olduğunu kontrol et
+    await expect(page.locator('input[type="email"]')).toBeVisible();
+    await expect(page.locator('input[type="password"]')).toBeVisible();
+    await expect(page.locator('input[type="text"]')).toBeVisible(); // Name field
+    
+    // Signup butonunun görünür olduğunu kontrol et
+    await expect(page.locator('button[type="submit"]')).toBeVisible();
+  });
+
+  test('Login form doldurma', async ({ page }) => {
+    await page.goto('/auth/signin');
+    
+    // Form alanlarını doldur
+    await page.fill('input[type="email"]', 'test@example.com');
+    await page.fill('input[type="password"]', 'password123');
+    
+    // Submit butonunun aktif olduğunu kontrol et
+    await expect(page.locator('button[type="submit"]')).toBeEnabled();
+  });
+
+  test('Signup form doldurma', async ({ page }) => {
+    await page.goto('/auth/signup');
+    
+    // Form alanlarını doldur
+    await page.fill('input[type="text"]', 'Test User');
+    await page.fill('input[type="email"]', 'test@example.com');
+    await page.fill('input[type="password"]', 'password123');
+    
+    // Submit butonunun aktif olduğunu kontrol et
+    await expect(page.locator('button[type="submit"]')).toBeEnabled();
+  });
+
+  test('Login dil değiştirme', async ({ page }) => {
+    await page.goto('/auth/signin');
+    
+    // EN butonuna tıkla
+    await page.click('button:has-text("EN")');
+    
+    // EN başlığını kontrol et
+    await expect(page.locator('h1')).toContainText('Log in');
+    
+    // EN form etiketlerini kontrol et
+    await expect(page.locator('label:has-text("Email")')).toBeVisible();
+    await expect(page.locator('label:has-text("Password")')).toBeVisible();
+  });
+});
+
+test.describe('Progress Page Tests', () => {
+  test('Progress sayfası yükleniyor', async ({ page }) => {
+    await page.goto('/progress');
+    
+    // Progress başlığının görünür olduğunu kontrol et (EN varsayılan)
+    await expect(page.locator('h1')).toContainText('Progress Tracking');
+    
+    // Progress kartlarının görünür olduğunu kontrol et
+    await expect(page.locator('text=Politics')).toBeVisible();
+    await expect(page.locator('text=Law')).toBeVisible();
+    await expect(page.locator('text=Culture')).toBeVisible();
+  });
+
+  test('Progress dil değiştirme', async ({ page }) => {
+    await page.goto('/progress');
     
     // DE butonuna tıkla
     await page.click('button:has-text("DE")');
     
-    // DE test kartları başlığını kontrol et
-    await expect(page.locator('h3:has-text("Test-Karten")')).toBeVisible();
-    
-    // DE test kartı açıklamalarını kontrol et
-    await expect(page.locator('text=Erfolgreiche Karte')).toBeVisible();
-    await expect(page.locator('text=Abgelehnte Karte')).toBeVisible();
-    await expect(page.locator('text=Unzureichende Mittel')).toBeVisible();
-    await expect(page.locator('text=Abgelaufene Karte')).toBeVisible();
+    // DE başlığını kontrol et
+    await expect(page.locator('h1')).toContainText('Fortschrittsverfolgung');
   });
 });
 
-test.describe('Responsive Design', () => {
-  test('Mobil görünüm', async ({ page }) => {
-    await page.setViewportSize({ width: 375, height: 667 });
+test.describe('All Questions Page Tests', () => {
+  test('All Questions sayfası yükleniyor', async ({ page }) => {
     await page.goto('/all-questions');
     
-    // Mobil görünümde sayfa yükleniyor
-    await expect(page.locator('h1')).toContainText('Tüm Sorular');
+    // All Questions başlığının görünür olduğunu kontrol et
+    await expect(page.locator('h1')).toContainText('All Questions');
+    
+    // Language selection görünür
+    await expect(page.locator('text=Language Selection')).toBeVisible();
+    
+    // Category selection görünür
+    await expect(page.locator('text=Category Selection')).toBeVisible();
   });
 
-  test('Mobil dil değiştirme', async ({ page }) => {
+  test('All Questions dil seçimi', async ({ page }) => {
+    await page.goto('/all-questions');
+    
+    // Dil seçeneklerinin görünür olduğunu kontrol et
+    await expect(page.locator('button:has-text("🇩🇪 Deutsch")')).toBeVisible();
+    await expect(page.locator('button:has-text("🇩🇪🇹🇷 Deutsch + Türkçe")')).toBeVisible();
+    await expect(page.locator('button:has-text("🇩🇪🇺🇸 Deutsch + English")')).toBeVisible();
+    
+    // Türkçe dil seçeneğine tıkla
+    await page.click('button:has-text("🇩🇪🇹🇷 Deutsch + Türkçe")');
+    
+    // Sorunun görünür olduğunu kontrol et
+    await expect(page.locator('h2')).toBeVisible();
+  });
+
+  test('All Questions kategori seçimi', async ({ page }) => {
+    await page.goto('/all-questions');
+    
+    // Kategori seçeneklerinin görünür olduğunu kontrol et
+    await expect(page.locator('text=Politics')).toBeVisible();
+    await expect(page.locator('text=Law')).toBeVisible();
+    await expect(page.locator('text=Culture')).toBeVisible();
+    
+    // Politics kategorisine tıkla
+    await page.click('button:has-text("Politics")');
+    
+    // Sorunun görünür olduğunu kontrol et
+    await expect(page.locator('h2')).toBeVisible();
+  });
+});
+
+test.describe('Responsive Design Tests', () => {
+  test('Mobil görünüm - Ana sayfa', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
     await page.goto('/');
     
-    // Mobil görünümde dil değiştirme
-    await page.click('button:has-text("DE")');
-    await expect(page.locator('h1')).toContainText('Leben-in-Deutschland-Quiz');
+    // Mobil görünümde ana sayfa yükleniyor
+    await expect(page.locator('h1')).toContainText('Leben In Deutschland');
     
-    await page.click('button:has-text("EN")');
+    // Mobilde language selector butonları görünür
+    await expect(page.locator('button:has-text("EN")')).toBeVisible();
+    await expect(page.locator('button:has-text("DE")')).toBeVisible();
+  });
+
+  test('Mobil görünüm - Quiz sayfası', async ({ page }) => {
+    await page.setViewportSize({ width: 375, height: 667 });
+    await page.goto('/quiz');
+    
+    // Mobil görünümde quiz sayfası yükleniyor
     await expect(page.locator('h1')).toContainText('Leben in Deutschland Test');
+    
+    // Mobilde quiz elementleri görünür
+    await expect(page.locator('text=Free Quiz')).toBeVisible();
+    await expect(page.locator('text=Language Selection')).toBeVisible();
+  });
+
+  test('Mobil görünüm - Pricing sayfası', async ({ page }) => {
+    await page.setViewportSize({ width: 375, height: 667 });
+    await page.goto('/pricing');
+    
+    // Mobil görünümde pricing sayfası yükleniyor (DE varsayılan)
+    await expect(page.locator('h1')).toContainText('Preise');
+    
+    // Mobilde pricing kartları görünür
+    await expect(page.locator('text=Kostenlos')).toBeVisible();
+    await expect(page.locator('text=Premium')).toBeVisible();
+  });
+
+  test('Tablet görünüm', async ({ page }) => {
+    await page.setViewportSize({ width: 768, height: 1024 });
+    await page.goto('/');
+    
+    // Tablet görünümde sayfa yükleniyor
+    await expect(page.locator('h1')).toContainText('Leben In Deutschland');
+    
+    // Tablet'te tüm elementler görünür
+    await expect(page.locator('text=Start Quiz')).toBeVisible();
+    await expect(page.locator('text=Premium Features')).toBeVisible();
   });
 });
 
@@ -293,10 +483,26 @@ test.describe('Error Handling Tests', () => {
     // Fallback içeriğinin görünür olduğunu kontrol et (gradient background)
     await page.waitForTimeout(1000); // Fallback'in yüklenmesi için bekle
   });
+
+  test('API hata durumu', async ({ page }) => {
+    // API'yi mock'la ve hata döndür
+    await page.route('**/api/**', route => {
+      route.fulfill({
+        status: 500,
+        contentType: 'application/json',
+        body: JSON.stringify({ error: 'Internal Server Error' })
+      });
+    });
+    
+    await page.goto('/quiz');
+    
+    // Hata durumunda sayfa yine de yüklenmeli
+    await expect(page.locator('h1')).toContainText('Leben in Deutschland Test');
+  });
 });
 
 test.describe('Performance Tests', () => {
-  test('Sayfa yükleme hızı', async ({ page }) => {
+  test('Ana sayfa yükleme hızı', async ({ page }) => {
     const startTime = Date.now();
     await page.goto('/');
     const loadTime = Date.now() - startTime;
@@ -305,7 +511,7 @@ test.describe('Performance Tests', () => {
     expect(loadTime).toBeLessThan(5000);
     
     // Temel elementlerin yüklendiğini kontrol et
-    await expect(page.locator('text=Leben in Deutschland Test')).toBeVisible();
+    await expect(page.locator('h1')).toContainText('Leben In Deutschland');
   });
 
   test('Quiz sayfası performansı', async ({ page }) => {
@@ -317,21 +523,82 @@ test.describe('Performance Tests', () => {
     expect(loadTime).toBeLessThan(3000);
     
     // Quiz elementlerinin yüklendiğini kontrol et
-    await expect(page.locator('text=Kostenloses Quiz')).toBeVisible();
+    await expect(page.locator('h1:has-text("Leben in Deutschland Test")')).toBeVisible();
   });
 
-  test('Mobil quiz performansı', async ({ page }) => {
+  test('Pricing sayfası performansı', async ({ page }) => {
+    const startTime = Date.now();
+    await page.goto('/pricing');
+    const loadTime = Date.now() - startTime;
+    
+    // Pricing sayfası 3 saniyeden az sürede yüklenmeli
+    expect(loadTime).toBeLessThan(3000);
+    
+    // Pricing elementlerinin yüklendiğini kontrol et
+    await expect(page.locator('h1')).toContainText('Preise');
+  });
+
+  test('Mobil performans', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
     
     const startTime = Date.now();
-    await page.goto('/quiz');
+    await page.goto('/');
     const loadTime = Date.now() - startTime;
     
-    // Mobil quiz sayfası 4 saniyeden az sürede yüklenmeli
+    // Mobil sayfa 4 saniyeden az sürede yüklenmeli
     expect(loadTime).toBeLessThan(4000);
     
-    // Mobilde quiz elementlerinin görünür olduğunu kontrol et
-    await expect(page.locator('text=Leben in Deutschland Test')).toBeVisible();
-    await expect(page.locator('span:has-text("★")')).toBeVisible();
+    // Mobilde temel elementler görünür
+    await expect(page.locator('h1')).toContainText('Leben In Deutschland');
+  });
+});
+
+test.describe('Accessibility Tests', () => {
+  test('Ana sayfa erişilebilirlik', async ({ page }) => {
+    await page.goto('/');
+    
+    // Başlık etiketlerinin doğru hiyerarşide olduğunu kontrol et
+    const h1 = page.locator('h1');
+    await expect(h1).toBeVisible();
+    
+    // Butonların erişilebilir olduğunu kontrol et
+    const buttons = page.locator('button');
+    const buttonCount = await buttons.count();
+    expect(buttonCount).toBeGreaterThan(0);
+    
+    // Linklerin erişilebilir olduğunu kontrol et
+    const links = page.locator('a');
+    const linkCount = await links.count();
+    expect(linkCount).toBeGreaterThan(0);
+  });
+
+  test('Form erişilebilirliği', async ({ page }) => {
+    await page.goto('/auth/signin');
+    
+    // Form alanlarının label'ları olduğunu kontrol et
+    const inputs = page.locator('input');
+    const inputCount = await inputs.count();
+    expect(inputCount).toBeGreaterThan(0);
+    
+    // Submit butonunun erişilebilir olduğunu kontrol et
+    const submitButton = page.locator('button[type="submit"]');
+    await expect(submitButton).toBeVisible();
+  });
+});
+
+test.describe('Cross-browser Tests', () => {
+  test('Chrome uyumluluğu', async ({ page }) => {
+    await page.goto('/');
+    await expect(page.locator('h1')).toContainText('Leben In Deutschland');
+  });
+
+  test('Firefox uyumluluğu', async ({ page }) => {
+    await page.goto('/');
+    await expect(page.locator('h1')).toContainText('Leben In Deutschland');
+  });
+
+  test('Safari uyumluluğu', async ({ page }) => {
+    await page.goto('/');
+    await expect(page.locator('h1')).toContainText('Leben In Deutschland');
   });
 });

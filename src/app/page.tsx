@@ -48,7 +48,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
               <img 
@@ -68,28 +68,21 @@ export default function Home() {
               <span className="ml-3 text-xl font-bold text-gray-800">Leben in Deutschland Test</span>
             </div>
             <nav className="hidden md:flex items-center space-x-6">
-              {/* Language Selector */}
-              <div className="flex gap-1">
-                <button
-                  onClick={() => handleLanguageChange('en')}
-                  className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
-                    language === 'en' 
-                      ? 'bg-blue-500 text-white' 
-                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                  }`}
+              {/* Language Dropdown */}
+              <div className="relative">
+                <select
+                  value={language}
+                  onChange={(e) => handleLanguageChange(e.target.value)}
+                  className="appearance-none bg-white border border-gray-300 rounded-md px-3 py-2 pr-8 text-sm font-medium text-gray-700 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 >
-                  EN
-                </button>
-                <button
-                  onClick={() => handleLanguageChange('de')}
-                  className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
-                    language === 'de' 
-                      ? 'bg-blue-500 text-white' 
-                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                  }`}
-                >
-                  DE
-                </button>
+                  <option value="en">EN</option>
+                  <option value="de">DE</option>
+                </select>
+                <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                  <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
               </div>
 
                   {session ? (
@@ -114,15 +107,14 @@ export default function Home() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
-          <div className="space-y-8">
-            <h1 className="text-6xl font-bold text-gray-900 leading-tight">
-              <span className="block">Leben In Deutschland</span>
-              <span className="block ml-8">Test</span>
+          <div className="space-y-6">
+            <h1 className="text-5xl font-bold text-gray-900 leading-tight">
+              Leben in Deutschland Test
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
               {language === 'en' 
-                ? 'Your comprehensive guide to living in Germany, preparing you for the official integration test.'
-                : 'Ihr umfassender Leitfaden für das Leben in Deutschland, der Sie auf den offiziellen Integrationstest vorbereitet.'
+                ? 'Prepare for the official integration test with 300+ practice questions in English and German.'
+                : 'Bereiten Sie sich auf den offiziellen Integrationstest mit 300+ Übungsfragen auf Deutsch und Englisch vor.'
               }
             </p>
           </div>

@@ -1,0 +1,47 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e7]:
+          - img "Leben in Deutschland Test Logo" [ref=e8]
+          - generic [ref=e9]: Leben in Deutschland Test
+        - navigation [ref=e10]:
+          - link "Home" [ref=e11] [cursor=pointer]:
+            - /url: /
+          - link "Premium Features" [ref=e12] [cursor=pointer]:
+            - /url: /pricing
+          - generic [ref=e13]:
+            - link "Anmelden" [ref=e14] [cursor=pointer]:
+              - /url: /auth/signin
+            - link "Registrieren" [ref=e15] [cursor=pointer]:
+              - /url: /auth/signup
+    - main [ref=e16]:
+      - generic [ref=e18]:
+        - button "EN" [ref=e19] [cursor=pointer]
+        - button "DE" [active] [ref=e20] [cursor=pointer]
+      - generic [ref=e21]:
+        - heading "Premium-Mitgliedschaft - €5.99 (3 Monate)" [level=1] [ref=e22]
+        - paragraph [ref=e23]: Geben Sie Ihre Kreditkarteninformationen ein
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - generic [ref=e28]: Name auf der Karte
+            - textbox "Vollständiger Name" [ref=e29]
+          - generic [ref=e30]:
+            - generic [ref=e31]: Kartennummer
+            - textbox "4242424242424242" [ref=e32]
+          - generic [ref=e33]:
+            - generic [ref=e34]:
+              - generic [ref=e35]: Ablaufdatum
+              - textbox "12/25" [ref=e36]
+            - generic [ref=e37]:
+              - generic [ref=e38]: CVC
+              - textbox "123" [ref=e39]
+          - button "€5.99 für 3 Monate Premium bezahlen" [ref=e40] [cursor=pointer]
+        - link "← Zur Preisgestaltung zurück" [ref=e42] [cursor=pointer]:
+          - /url: /pricing
+  - alert [ref=e43]
+```

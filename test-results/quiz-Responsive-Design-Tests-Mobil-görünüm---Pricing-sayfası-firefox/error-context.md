@@ -1,0 +1,70 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - img "Leben in Deutschland Test Logo" [ref=e7]
+        - generic [ref=e8]: Leben in Deutschland Test
+      - generic [ref=e9]:
+        - button "EN" [ref=e10] [cursor=pointer]
+        - button "DE" [ref=e11] [cursor=pointer]
+  - generic [ref=e13]:
+    - generic [ref=e14]:
+      - heading "Preise" [level=1] [ref=e15]
+      - paragraph [ref=e16]: Testen Sie Ihr Wissen über das Leben in Deutschland
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - heading "Kostenlos" [level=2] [ref=e20]
+          - generic [ref=e21]: €0
+          - paragraph [ref=e22]: Begrenzter Zugang
+        - list [ref=e23]:
+          - listitem [ref=e24]:
+            - generic [ref=e25]: ✓
+            - generic [ref=e26]: Zugang zu 50 Fragen
+          - listitem [ref=e27]:
+            - generic [ref=e28]: ✓
+            - generic [ref=e29]: Grundkategorien
+          - listitem [ref=e30]:
+            - generic [ref=e31]: ✓
+            - generic [ref=e32]: Sofortiger Zugang
+          - listitem [ref=e33]:
+            - generic [ref=e34]: ✗
+            - generic [ref=e35]: Keine Registrierung erforderlich
+        - button "Aktueller Plan" [disabled] [ref=e36]
+      - generic [ref=e37]:
+        - generic [ref=e39]: Önerilen
+        - img "Study and Learning" [ref=e42]
+        - generic [ref=e43]:
+          - heading "Premium" [level=2] [ref=e44]
+          - generic [ref=e45]: €5.99
+          - paragraph [ref=e46]: 3 Monate (einmalige Zahlung)
+        - list [ref=e47]:
+          - listitem [ref=e48]:
+            - generic [ref=e49]: ✓
+            - generic [ref=e50]: Zugang zu 300+ Fragen
+          - listitem [ref=e51]:
+            - generic [ref=e52]: ✓
+            - generic [ref=e53]: Alle Kategorien
+          - listitem [ref=e54]:
+            - generic [ref=e55]: ✓
+            - generic [ref=e56]: KI-Themenerklärungen
+          - listitem [ref=e57]:
+            - generic [ref=e58]: ✓
+            - generic [ref=e59]: Erweiterte Analysen
+          - listitem [ref=e60]:
+            - generic [ref=e61]: ✓
+            - generic [ref=e62]: Mehrsprachige Unterstützung
+          - listitem [ref=e63]:
+            - generic [ref=e64]: ✓
+            - generic [ref=e65]: Fortschrittsverfolgung
+          - listitem [ref=e66]:
+            - generic [ref=e67]: ✓
+            - generic [ref=e68]: Schwierigkeitsgrade
+          - listitem [ref=e69]:
+            - generic [ref=e70]: ✓
+            - generic [ref=e71]: Prioritätsunterstützung
+        - button "Premium werden" [ref=e72] [cursor=pointer]
+```

@@ -1,0 +1,65 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - img "Leben in Deutschland Test" [ref=e7]
+          - generic [ref=e8]: Leben in Deutschland Test
+        - generic [ref=e10]:
+          - button "EN" [ref=e11] [cursor=pointer]
+          - button "DE" [ref=e12] [cursor=pointer]
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - heading "Sprachauswahl" [level=3] [ref=e16]
+        - paragraph [ref=e17]: "Wählen Sie Ihre bevorzugte Sprache für Erklärungen:"
+        - generic [ref=e18]:
+          - button "🇩🇪 Deutsch" [ref=e19] [cursor=pointer]:
+            - generic [ref=e20] [cursor=pointer]: 🇩🇪
+            - generic [ref=e21] [cursor=pointer]: Deutsch
+          - button "🇺🇸 English" [ref=e22] [cursor=pointer]:
+            - generic [ref=e23] [cursor=pointer]: 🇺🇸
+            - generic [ref=e24] [cursor=pointer]: English
+          - button "🇫🇷 Français" [ref=e25] [cursor=pointer]:
+            - generic [ref=e26] [cursor=pointer]: 🇫🇷
+            - generic [ref=e27] [cursor=pointer]: Français
+          - button "🇪🇸 Español" [ref=e28] [cursor=pointer]:
+            - generic [ref=e29] [cursor=pointer]: 🇪🇸
+            - generic [ref=e30] [cursor=pointer]: Español
+          - button "🇹🇷 Türkçe" [ref=e31] [cursor=pointer]:
+            - generic [ref=e32] [cursor=pointer]: 🇹🇷
+            - generic [ref=e33] [cursor=pointer]: Türkçe
+          - button "🇸🇦 العربية" [ref=e34] [cursor=pointer]:
+            - generic [ref=e35] [cursor=pointer]: 🇸🇦
+            - generic [ref=e36] [cursor=pointer]: العربية
+        - paragraph [ref=e37]: Standard-Erklärungen sind auf Deutsch
+      - generic [ref=e39]:
+        - heading "Leben in Deutschland Test" [level=1] [ref=e40]
+        - generic [ref=e41]: Frage 1 / 20
+      - generic [ref=e44]:
+        - heading "Welche Farbe hat die deutsche Flagge?" [level=2] [ref=e46]
+        - generic [ref=e47]:
+          - button "A Rot, Weiß, Grün" [ref=e48] [cursor=pointer]:
+            - generic [ref=e49] [cursor=pointer]:
+              - generic [ref=e50] [cursor=pointer]: A
+              - generic [ref=e51] [cursor=pointer]: Rot, Weiß, Grün
+          - button "B Schwarz, Rot, Gold" [ref=e52] [cursor=pointer]:
+            - generic [ref=e53] [cursor=pointer]:
+              - generic [ref=e54] [cursor=pointer]: B
+              - generic [ref=e55] [cursor=pointer]: Schwarz, Rot, Gold
+          - button "C Blau, Weiß, Rot" [ref=e56] [cursor=pointer]:
+            - generic [ref=e57] [cursor=pointer]:
+              - generic [ref=e58] [cursor=pointer]: C
+              - generic [ref=e59] [cursor=pointer]: Blau, Weiß, Rot
+          - button "D Grün, Weiß, Rot" [ref=e60] [cursor=pointer]:
+            - generic [ref=e61] [cursor=pointer]:
+              - generic [ref=e62] [cursor=pointer]: D
+              - generic [ref=e63] [cursor=pointer]: Grün, Weiß, Rot
+      - generic [ref=e64]:
+        - link "← Zurück zur Startseite" [ref=e65] [cursor=pointer]:
+          - /url: /
+        - button "Antwort senden" [disabled] [ref=e66]
+  - alert [ref=e67]
+```

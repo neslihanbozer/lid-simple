@@ -1,0 +1,43 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e7]:
+          - img "Leben in Deutschland Test Logo" [ref=e8]
+          - generic [ref=e9]: Leben in Deutschland Test
+        - navigation [ref=e10]:
+          - link "Home" [ref=e11] [cursor=pointer]:
+            - /url: /
+          - link "Dashboard" [ref=e12] [cursor=pointer]:
+            - /url: /dashboard
+          - generic [ref=e13]:
+            - button "EN" [ref=e14] [cursor=pointer]
+            - button "DE" [ref=e15] [cursor=pointer]
+          - generic [ref=e16]:
+            - link "Login" [ref=e17] [cursor=pointer]:
+              - /url: /auth/signin
+            - link "Sign up" [ref=e18] [cursor=pointer]:
+              - /url: /auth/signup
+    - main [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - heading "Progress Tracking" [level=1] [ref=e22]
+          - paragraph [ref=e23]: Track your learning progress across different topics
+        - generic [ref=e24]:
+          - generic [ref=e26]:
+            - generic [ref=e27]: History
+            - generic [ref=e28]: "%65"
+          - generic [ref=e32]:
+            - generic [ref=e33]: Politics
+            - generic [ref=e34]: "%40"
+          - generic [ref=e38]:
+            - generic [ref=e39]: Society
+            - generic [ref=e40]: "%55"
+          - generic [ref=e44]:
+            - generic [ref=e45]: Integration
+            - generic [ref=e46]: "%30"
+  - alert [ref=e49]
+```
