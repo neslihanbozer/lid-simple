@@ -10,43 +10,41 @@
     - main [ref=e9]:
       - generic [ref=e10]:
         - generic [ref=e11]:
-          - heading "Leben In Deutschland Test" [level=1] [ref=e12]:
-            - generic [ref=e13]: Leben In Deutschland
-            - generic [ref=e14]: Test
-          - paragraph [ref=e15]: Your comprehensive guide to living in Germany, preparing you for the official integration test.
-        - img "Brandenburg Gate illuminated at night, Berlin" [ref=e18]
-      - generic [ref=e19]:
-        - generic [ref=e20]:
-          - heading "Start Quiz" [level=3] [ref=e23]
-          - paragraph [ref=e24]: Premium membership required to access all quizzes.
-          - link "Start Quiz" [ref=e25] [cursor=pointer]:
+          - heading "Leben in Deutschland Test" [level=1] [ref=e12]
+          - paragraph [ref=e13]: Prepare for the official integration test with 300+ practice questions in English and German.
+        - img "Brandenburg Gate illuminated at night, Berlin" [ref=e16]
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - heading "Start Quiz" [level=3] [ref=e21]
+          - paragraph [ref=e22]: Premium membership required to access all quizzes.
+          - link "Start Quiz" [ref=e23] [cursor=pointer]:
             - /url: /quiz
-            - button "Start Quiz" [ref=e26] [cursor=pointer]
-        - generic [ref=e27]:
-          - generic [ref=e29]: ⭐
-          - heading "Premium Features" [level=3] [ref=e30]
-          - generic [ref=e31]:
-            - generic [ref=e32]:
-              - generic [ref=e33]: ✓
-              - generic [ref=e34]: 300+ practice questions
-            - generic [ref=e35]:
-              - generic [ref=e36]: ✓
-              - generic [ref=e37]: Multi-language support (EN/DE)
-            - generic [ref=e38]:
-              - generic [ref=e39]: ✓
-              - generic [ref=e40]: Detailed explanations
-            - generic [ref=e41]:
-              - generic [ref=e42]: ✓
-              - generic [ref=e43]: Detailed progress tracking
-            - generic [ref=e44]:
-              - generic [ref=e45]: ✓
-              - generic [ref=e46]: Extensive Dashboard features
-          - generic [ref=e47]:
-            - link "Go Premium - €5.99 (3 Months)" [ref=e48] [cursor=pointer]:
+            - button "Start Quiz" [ref=e24] [cursor=pointer]
+        - generic [ref=e25]:
+          - generic [ref=e27]: ⭐
+          - heading "Premium Features" [level=3] [ref=e28]
+          - generic [ref=e29]:
+            - generic [ref=e30]:
+              - generic [ref=e31]: ✓
+              - generic [ref=e32]: 300+ practice questions
+            - generic [ref=e33]:
+              - generic [ref=e34]: ✓
+              - generic [ref=e35]: Multi-language support (EN/DE)
+            - generic [ref=e36]:
+              - generic [ref=e37]: ✓
+              - generic [ref=e38]: Detailed explanations
+            - generic [ref=e39]:
+              - generic [ref=e40]: ✓
+              - generic [ref=e41]: Detailed progress tracking
+            - generic [ref=e42]:
+              - generic [ref=e43]: ✓
+              - generic [ref=e44]: Extensive Dashboard features
+          - generic [ref=e45]:
+            - link "Go Premium - €5.99 (3 Months)" [ref=e46] [cursor=pointer]:
               - /url: /payment
-              - button "Go Premium - €5.99 (3 Months)" [ref=e49] [cursor=pointer]
-            - link "Test Premium Features" [ref=e50] [cursor=pointer]:
+              - button "Go Premium - €5.99 (3 Months)" [ref=e47] [cursor=pointer]
+            - link "Test Premium Features" [ref=e48] [cursor=pointer]:
               - /url: /premium-dashboard
-              - button "Test Premium Features" [ref=e51] [cursor=pointer]
-  - alert [ref=e52]
+              - button "Test Premium Features" [ref=e49] [cursor=pointer]
+  - alert [ref=e50]
 ```

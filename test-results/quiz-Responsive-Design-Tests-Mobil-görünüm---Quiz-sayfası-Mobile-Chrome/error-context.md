@@ -35,31 +35,38 @@
             - generic [ref=e35] [cursor=pointer]: 🇸🇦
             - generic [ref=e36] [cursor=pointer]: العربية
         - paragraph [ref=e37]: Standard-Erklärungen sind auf Deutsch
-      - generic [ref=e39]:
-        - heading "Leben in Deutschland Test" [level=1] [ref=e40]
-        - generic [ref=e41]: Frage 1 / 20
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: 🎯
+          - heading "Kostenloses Quiz" [level=3] [ref=e41]
+        - paragraph [ref=e42]: Sie lösen gerade 50 kostenlose Fragen. Für mehr Fragen werden Sie Premium!
       - generic [ref=e44]:
-        - heading "Welche Farbe hat die deutsche Flagge?" [level=2] [ref=e46]
-        - generic [ref=e47]:
-          - button "A Rot, Weiß, Grün" [ref=e48] [cursor=pointer]:
-            - generic [ref=e49] [cursor=pointer]:
-              - generic [ref=e50] [cursor=pointer]: A
-              - generic [ref=e51] [cursor=pointer]: Rot, Weiß, Grün
-          - button "B Schwarz, Rot, Gold" [ref=e52] [cursor=pointer]:
-            - generic [ref=e53] [cursor=pointer]:
-              - generic [ref=e54] [cursor=pointer]: B
-              - generic [ref=e55] [cursor=pointer]: Schwarz, Rot, Gold
-          - button "C Blau, Weiß, Rot" [ref=e56] [cursor=pointer]:
-            - generic [ref=e57] [cursor=pointer]:
-              - generic [ref=e58] [cursor=pointer]: C
-              - generic [ref=e59] [cursor=pointer]: Blau, Weiß, Rot
-          - button "D Grün, Weiß, Rot" [ref=e60] [cursor=pointer]:
-            - generic [ref=e61] [cursor=pointer]:
-              - generic [ref=e62] [cursor=pointer]: D
-              - generic [ref=e63] [cursor=pointer]: Grün, Weiß, Rot
-      - generic [ref=e64]:
-        - link "← Zurück zur Startseite" [ref=e65] [cursor=pointer]:
+        - heading "Leben in Deutschland Test" [level=1] [ref=e45]
+        - generic [ref=e46]:
+          - text: Frage 1 / 50
+          - generic [ref=e47]: (Kostenlos)
+      - generic [ref=e50]:
+        - heading "Welche Farbe hat die deutsche Flagge?" [level=2] [ref=e52]
+        - generic [ref=e53]:
+          - button "A Rot, Weiß, Grün" [ref=e54] [cursor=pointer]:
+            - generic [ref=e55] [cursor=pointer]:
+              - generic [ref=e56] [cursor=pointer]: A
+              - generic [ref=e57] [cursor=pointer]: Rot, Weiß, Grün
+          - button "B Schwarz, Rot, Gold" [ref=e58] [cursor=pointer]:
+            - generic [ref=e59] [cursor=pointer]:
+              - generic [ref=e60] [cursor=pointer]: B
+              - generic [ref=e61] [cursor=pointer]: Schwarz, Rot, Gold
+          - button "C Blau, Weiß, Rot" [ref=e62] [cursor=pointer]:
+            - generic [ref=e63] [cursor=pointer]:
+              - generic [ref=e64] [cursor=pointer]: C
+              - generic [ref=e65] [cursor=pointer]: Blau, Weiß, Rot
+          - button "D Grün, Weiß, Rot" [ref=e66] [cursor=pointer]:
+            - generic [ref=e67] [cursor=pointer]:
+              - generic [ref=e68] [cursor=pointer]: D
+              - generic [ref=e69] [cursor=pointer]: Grün, Weiß, Rot
+      - generic [ref=e70]:
+        - link "← Zurück zur Startseite" [ref=e71] [cursor=pointer]:
           - /url: /
-        - button "Antwort senden" [disabled] [ref=e66]
-  - alert [ref=e67]
+        - button "Antwort senden" [disabled] [ref=e72]
+  - alert [ref=e73]
 ```

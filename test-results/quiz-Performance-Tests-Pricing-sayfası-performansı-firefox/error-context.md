@@ -1,74 +1,76 @@
 # Page snapshot
 
 ```yaml
-- generic [ref=e2]:
-  - banner [ref=e3]:
-    - generic [ref=e5]:
-      - generic [ref=e6]:
-        - img "Leben in Deutschland Test Logo" [ref=e7]
-        - generic [ref=e8]: Leben in Deutschland Test
-      - navigation [ref=e9]:
-        - link "Startseite" [ref=e10] [cursor=pointer]:
-          - /url: /
-        - generic [ref=e11]: Preise
-      - generic [ref=e12]:
-        - button "EN" [ref=e13] [cursor=pointer]
-        - button "DE" [ref=e14] [cursor=pointer]
-  - generic [ref=e16]:
-    - generic [ref=e17]:
-      - heading "Preise" [level=1] [ref=e18]
-      - paragraph [ref=e19]: Testen Sie Ihr Wissen über das Leben in Deutschland
-    - generic [ref=e20]:
-      - generic [ref=e21]:
-        - generic [ref=e22]:
-          - heading "Kostenlos" [level=2] [ref=e23]
-          - generic [ref=e24]: €0
-          - paragraph [ref=e25]: Begrenzter Zugang
-        - list [ref=e26]:
-          - listitem [ref=e27]:
-            - generic [ref=e28]: ✓
-            - generic [ref=e29]: Zugang zu 50 Fragen
-          - listitem [ref=e30]:
-            - generic [ref=e31]: ✓
-            - generic [ref=e32]: Grundkategorien
-          - listitem [ref=e33]:
-            - generic [ref=e34]: ✓
-            - generic [ref=e35]: Sofortiger Zugang
-          - listitem [ref=e36]:
-            - generic [ref=e37]: ✗
-            - generic [ref=e38]: Keine Registrierung erforderlich
-        - button "Aktueller Plan" [disabled] [ref=e39]
-      - generic [ref=e40]:
-        - generic [ref=e42]: Önerilen
-        - img "Study and Learning" [ref=e45]
-        - generic [ref=e46]:
-          - heading "Premium" [level=2] [ref=e47]
-          - generic [ref=e48]: €5.99
-          - paragraph [ref=e49]: 3 Monate (einmalige Zahlung)
-        - list [ref=e50]:
-          - listitem [ref=e51]:
-            - generic [ref=e52]: ✓
-            - generic [ref=e53]: Zugang zu 300+ Fragen
-          - listitem [ref=e54]:
-            - generic [ref=e55]: ✓
-            - generic [ref=e56]: Alle Kategorien
-          - listitem [ref=e57]:
-            - generic [ref=e58]: ✓
-            - generic [ref=e59]: KI-Themenerklärungen
-          - listitem [ref=e60]:
-            - generic [ref=e61]: ✓
-            - generic [ref=e62]: Erweiterte Analysen
-          - listitem [ref=e63]:
-            - generic [ref=e64]: ✓
-            - generic [ref=e65]: Mehrsprachige Unterstützung
-          - listitem [ref=e66]:
-            - generic [ref=e67]: ✓
-            - generic [ref=e68]: Fortschrittsverfolgung
-          - listitem [ref=e69]:
-            - generic [ref=e70]: ✓
-            - generic [ref=e71]: Schwierigkeitsgrade
-          - listitem [ref=e72]:
-            - generic [ref=e73]: ✓
-            - generic [ref=e74]: Prioritätsunterstützung
-        - button "Premium werden" [ref=e75] [cursor=pointer]
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - img "Leben in Deutschland Test Logo" [ref=e7]
+          - generic [ref=e8]: Leben in Deutschland Test
+        - navigation [ref=e9]:
+          - link "Startseite" [ref=e10] [cursor=pointer]:
+            - /url: /
+          - generic [ref=e11]: Preise
+        - generic [ref=e12]:
+          - button "EN" [ref=e13] [cursor=pointer]
+          - button "DE" [ref=e14] [cursor=pointer]
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - heading "Preise" [level=1] [ref=e18]
+        - paragraph [ref=e19]: Testen Sie Ihr Wissen über das Leben in Deutschland
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - heading "Kostenlos" [level=2] [ref=e23]
+            - generic [ref=e24]: €0
+            - paragraph [ref=e25]: Begrenzter Zugang
+          - list [ref=e26]:
+            - listitem [ref=e27]:
+              - generic [ref=e28]: ✓
+              - generic [ref=e29]: Zugang zu 50 Fragen
+            - listitem [ref=e30]:
+              - generic [ref=e31]: ✓
+              - generic [ref=e32]: Grundkategorien
+            - listitem [ref=e33]:
+              - generic [ref=e34]: ✓
+              - generic [ref=e35]: Sofortiger Zugang
+            - listitem [ref=e36]:
+              - generic [ref=e37]: ✗
+              - generic [ref=e38]: Keine Registrierung erforderlich
+          - button "Aktueller Plan" [disabled] [ref=e39]
+        - generic [ref=e40]:
+          - generic [ref=e42]: Önerilen
+          - img "Study and Learning" [ref=e45]
+          - generic [ref=e46]:
+            - heading "Premium" [level=2] [ref=e47]
+            - generic [ref=e48]: €5.99
+            - paragraph [ref=e49]: 3 Monate (einmalige Zahlung)
+          - list [ref=e50]:
+            - listitem [ref=e51]:
+              - generic [ref=e52]: ✓
+              - generic [ref=e53]: Zugang zu 300+ Fragen
+            - listitem [ref=e54]:
+              - generic [ref=e55]: ✓
+              - generic [ref=e56]: Alle Kategorien
+            - listitem [ref=e57]:
+              - generic [ref=e58]: ✓
+              - generic [ref=e59]: KI-Themenerklärungen
+            - listitem [ref=e60]:
+              - generic [ref=e61]: ✓
+              - generic [ref=e62]: Erweiterte Analysen
+            - listitem [ref=e63]:
+              - generic [ref=e64]: ✓
+              - generic [ref=e65]: Mehrsprachige Unterstützung
+            - listitem [ref=e66]:
+              - generic [ref=e67]: ✓
+              - generic [ref=e68]: Fortschrittsverfolgung
+            - listitem [ref=e69]:
+              - generic [ref=e70]: ✓
+              - generic [ref=e71]: Schwierigkeitsgrade
+            - listitem [ref=e72]:
+              - generic [ref=e73]: ✓
+              - generic [ref=e74]: Prioritätsunterstützung
+          - button "Premium werden" [ref=e75] [cursor=pointer]
+  - alert [ref=e76]
 ```

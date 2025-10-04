@@ -10,53 +10,54 @@
           - generic [ref=e8]: Leben in Deutschland Test
         - navigation [ref=e9]:
           - generic [ref=e10]:
-            - button "EN" [ref=e11] [cursor=pointer]
-            - button "DE" [ref=e12] [cursor=pointer]
-          - generic [ref=e13]:
-            - link "Log in" [ref=e14]:
+            - combobox [ref=e11]:
+              - option "EN" [selected]
+              - option "DE"
+            - generic:
+              - img
+          - generic [ref=e12]:
+            - link "Log in" [ref=e13]:
               - /url: /auth/signin
-            - link "Sign up" [ref=e15]:
+            - link "Sign up" [ref=e14]:
               - /url: /auth/signup
-    - main [ref=e16]:
-      - generic [ref=e17]:
-        - generic [ref=e18]:
-          - heading "Leben In Deutschland Test" [level=1] [ref=e19]:
-            - generic [ref=e20]: Leben In Deutschland
-            - generic [ref=e21]: Test
-          - paragraph [ref=e22]: Your comprehensive guide to living in Germany, preparing you for the official integration test.
-        - img "Brandenburg Gate illuminated at night, Berlin" [ref=e25]
-      - generic [ref=e26]:
-        - generic [ref=e27]:
-          - heading "Start Quiz" [level=3] [ref=e30]
-          - paragraph [ref=e31]: Premium membership required to access all quizzes.
-          - link "Start Quiz" [ref=e32]:
+    - main [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - heading "Leben in Deutschland Test" [level=1] [ref=e18]
+          - paragraph [ref=e19]: Prepare for the official integration test with 300+ practice questions in English and German.
+        - img "Brandenburg Gate illuminated at night, Berlin" [ref=e22]
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - heading "Start Quiz" [level=3] [ref=e27]
+          - paragraph [ref=e28]: Premium membership required to access all quizzes.
+          - link "Start Quiz" [ref=e29]:
             - /url: /quiz
-            - button "Start Quiz" [ref=e33] [cursor=pointer]
-        - generic [ref=e34]:
-          - generic [ref=e36]: ⭐
-          - heading "Premium Features" [level=3] [ref=e37]
-          - generic [ref=e38]:
+            - button "Start Quiz" [ref=e30] [cursor=pointer]
+        - generic [ref=e31]:
+          - generic [ref=e33]: ⭐
+          - heading "Premium Features" [level=3] [ref=e34]
+          - generic [ref=e35]:
+            - generic [ref=e36]:
+              - generic [ref=e37]: ✓
+              - generic [ref=e38]: 300+ practice questions
             - generic [ref=e39]:
               - generic [ref=e40]: ✓
-              - generic [ref=e41]: 300+ practice questions
+              - generic [ref=e41]: Multi-language support (EN/DE)
             - generic [ref=e42]:
               - generic [ref=e43]: ✓
-              - generic [ref=e44]: Multi-language support (EN/DE)
+              - generic [ref=e44]: Detailed explanations
             - generic [ref=e45]:
               - generic [ref=e46]: ✓
-              - generic [ref=e47]: Detailed explanations
+              - generic [ref=e47]: Detailed progress tracking
             - generic [ref=e48]:
               - generic [ref=e49]: ✓
-              - generic [ref=e50]: Detailed progress tracking
-            - generic [ref=e51]:
-              - generic [ref=e52]: ✓
-              - generic [ref=e53]: Extensive Dashboard features
-          - generic [ref=e54]:
-            - link "Go Premium - €5.99 (3 Months)" [ref=e55]:
+              - generic [ref=e50]: Extensive Dashboard features
+          - generic [ref=e51]:
+            - link "Go Premium - €5.99 (3 Months)" [ref=e52]:
               - /url: /payment
-              - button "Go Premium - €5.99 (3 Months)" [ref=e56] [cursor=pointer]
-            - link "Test Premium Features" [ref=e57]:
+              - button "Go Premium - €5.99 (3 Months)" [ref=e53] [cursor=pointer]
+            - link "Test Premium Features" [ref=e54]:
               - /url: /premium-dashboard
-              - button "Test Premium Features" [ref=e58] [cursor=pointer]
-  - alert [ref=e59]
+              - button "Test Premium Features" [ref=e55] [cursor=pointer]
+  - alert [ref=e56]
 ```

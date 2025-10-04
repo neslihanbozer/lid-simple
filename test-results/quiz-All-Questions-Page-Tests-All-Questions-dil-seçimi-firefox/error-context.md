@@ -57,7 +57,7 @@
           - generic [ref=e60] [cursor=pointer]: Integration
     - generic [ref=e61]:
       - generic [ref=e62]:
-        - heading "Question 1 / 20" [level=2] [ref=e63]
+        - heading "Question 1 / 100" [level=2] [ref=e63]
         - button "Show Answers" [ref=e65] [cursor=pointer]
       - generic [ref=e66]:
         - heading "Welche Farbe hat die deutsche Flagge?" [level=3] [ref=e67]
@@ -81,7 +81,7 @@
       - generic [ref=e85]:
         - button "← Önceki" [disabled] [ref=e86]
         - generic [ref=e87]:
-          - generic [ref=e88]: 1 / 20
+          - generic [ref=e88]: 1 / 100
           - generic [ref=e89]: "Skor: 0 / 0"
         - button "Sonraki →" [ref=e90] [cursor=pointer]
       - button "🔄 Quiz'i Sıfırla" [ref=e92] [cursor=pointer]
