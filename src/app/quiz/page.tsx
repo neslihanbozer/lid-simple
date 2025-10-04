@@ -310,7 +310,7 @@ export default function QuizPage() {
               <span className="text-xl font-bold text-gray-800">Leben in Deutschland Test</span>
             </div>
             
-            {/* Language Selector */}
+            {/* Language Selector and Auth */}
             <div className="flex items-center space-x-4">
               <div className="flex space-x-2">
                 <button
@@ -334,6 +334,94 @@ export default function QuizPage() {
                   DE
                 </button>
               </div>
+              
+              {/* Auth Section */}
+              {session ? (
+                <div className="flex items-center space-x-4">
+                  {/* User Profile Dropdown */}
+                  <div className="relative group">
+                    <button className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium">
+                      <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                        <span className="text-white text-sm font-bold">
+                          {session.user.name ? session.user.name.charAt(0).toUpperCase() : 'U'}
+                        </span>
+                      </div>
+                      <span>{session.user.name || 'User'}</span>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    
+                    {/* Dropdown Menu */}
+                    <div className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                      <div className="p-4">
+                        {/* User Info */}
+                        <div className="mb-4 pb-4 border-b border-gray-200">
+                          <div className="flex items-center space-x-3">
+                            <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                              <span className="text-white text-lg font-bold">
+                                {session.user.name ? session.user.name.charAt(0).toUpperCase() : 'U'}
+                              </span>
+                            </div>
+                            <div>
+                              <p className="font-semibold text-gray-900">{session.user.name || 'User'}</p>
+                              <p className="text-sm text-gray-600">{session.user.email}</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        {/* Subscription Status */}
+                        <div className="mb-4 pb-4 border-b border-gray-200">
+                          <div className="flex items-center justify-between">
+                            <span className="text-sm text-gray-600">Status</span>
+                            <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">
+                              Free User
+                            </span>
+                          </div>
+                          <p className="text-xs text-gray-500 mt-1">
+                            50 free questions available
+                          </p>
+                        </div>
+                        
+                        {/* Menu Items */}
+                        <div className="space-y-2">
+                          <Link href="/dashboard" className="flex items-center space-x-3 text-gray-700 hover:text-blue-600 py-2">
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                            <span>Profile</span>
+                          </Link>
+                          <Link href="/quiz" className="flex items-center space-x-3 text-gray-700 hover:text-blue-600 py-2">
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            <span>Start Quiz</span>
+                          </Link>
+                          <Link href="/pricing" className="flex items-center space-x-3 text-gray-700 hover:text-blue-600 py-2">
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                            </svg>
+                            <span>Upgrade to Premium</span>
+                          </Link>
+                          <div className="border-t border-gray-200 pt-2">
+                            <Link href="/api/auth/signout" className="flex items-center space-x-3 text-red-600 hover:text-red-700 py-2">
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                              </svg>
+                              <span>Sign out</span>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="flex space-x-4">
+                  <Link href="/auth/signin" className="text-gray-700 hover:text-blue-600 font-medium">Login</Link>
+                  <Link href="/auth/signup" className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium">Sign up</Link>
+                </div>
+              )}
             </div>
           </div>
         </div>

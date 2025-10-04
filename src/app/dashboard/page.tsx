@@ -71,35 +71,14 @@ export default function Dashboard() {
 
   useEffect(() => {
     if (session?.user) {
-      // Fetch user data from API
-      fetch('/api/user')
-        .then(res => res.json())
-        .then(data => {
-          if (data.error) {
-            console.error('Error fetching user data:', data.error)
-            // Fallback to session data
-            setUser({
-              id: session.user.id || '1',
-              name: session.user.name || 'User',
-              email: session.user.email || 'user@example.com',
-              isPremium: false,
-              subscriptionEnd: '2024-12-31'
-            })
-          } else {
-            setUser(data)
-          }
-        })
-        .catch(error => {
-          console.error('Error fetching user data:', error)
-          // Fallback to session data
-          setUser({
-            id: session.user.id || '1',
-            name: session.user.name || 'User',
-            email: session.user.email || 'user@example.com',
-            isPremium: false,
-            subscriptionEnd: '2024-12-31'
-          })
-        })
+      // Use session data directly for now
+      setUser({
+        id: session.user.id || '1',
+        name: session.user.name || 'User',
+        email: session.user.email || 'user@example.com',
+        isPremium: false, // Default to free user
+        subscriptionEnd: '2024-12-31'
+      })
     }
   }, [session])
 
@@ -115,6 +94,10 @@ export default function Dashboard() {
       </div>
     )
   }
+
+  // Debug info
+  console.log('Session:', session)
+  console.log('User:', user)
 
   if (!session) {
     return (
@@ -202,6 +185,15 @@ export default function Dashboard() {
           </p>
         </div>
 
+        {/* Debug Info */}
+        {process.env.NODE_ENV === 'development' && (
+          <div className="bg-yellow-100 border border-yellow-400 rounded-lg p-4 mb-6">
+            <h4 className="font-bold text-yellow-800 mb-2">Debug Info:</h4>
+            <p className="text-sm text-yellow-700">Session: {JSON.stringify(session, null, 2)}</p>
+            <p className="text-sm text-yellow-700">User: {JSON.stringify(user, null, 2)}</p>
+          </div>
+        )}
+
         {/* Account Information */}
         <div className="grid lg:grid-cols-3 gap-8 mb-8">
           {/* Profile Card */}
@@ -212,15 +204,16 @@ export default function Dashboard() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900">{t.profile}</h3>
-                <p className="text-gray-600">{user?.email}</p>
+                <p className="text-gray-600">{user?.email || 'No email'}</p>
               </div>
             </div>
             <div className="space-y-2">
               <p className="text-sm text-gray-600">
                 <span className="font-medium">{t.accountInfo}:</span>
               </p>
-              <p className="text-sm text-gray-800">Name: {user?.name}</p>
-              <p className="text-sm text-gray-800">Email: {user?.email}</p>
+              <p className="text-sm text-gray-800">Name: {user?.name || 'No name'}</p>
+              <p className="text-sm text-gray-800">Email: {user?.email || 'No email'}</p>
+              <p className="text-sm text-gray-800">ID: {user?.id || 'No ID'}</p>
             </div>
           </div>
 
