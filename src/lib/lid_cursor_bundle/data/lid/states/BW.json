@@ -1,0 +1,292 @@
+[
+  {
+    "id": "BW01",
+    "numberInCatalog": 1,
+    "state": "BW",
+    "text": "Welches Wappen gehört zum Bundesland Baden -Württemberg? B ild 1 Bild 2 Bild 3 Bild 4",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Bild 1"
+      },
+      {
+        "id": "B",
+        "text": "Bild 2"
+      },
+      {
+        "id": "C",
+        "text": "Bild 3"
+      },
+      {
+        "id": "D",
+        "text": "Bild 4"
+      }
+    ],
+    "kind": "image-choice",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BW02",
+    "numberInCatalog": 2,
+    "state": "BW",
+    "text": "Welches ist ein Landkreis in Baden- Württemberg?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Mecklenburgische Seenplatte"
+      },
+      {
+        "id": "B",
+        "text": "Neckar -Odenwald- Kreis"
+      },
+      {
+        "id": "C",
+        "text": "Nordfriesland"
+      },
+      {
+        "id": "D",
+        "text": "Altötting"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BW03",
+    "numberInCatalog": 3,
+    "state": "BW",
+    "text": "Für wie viele Jahre wird der Landtag in Baden- Württemberg gewählt?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "3"
+      },
+      {
+        "id": "B",
+        "text": "4"
+      },
+      {
+        "id": "C",
+        "text": "5"
+      },
+      {
+        "id": "D",
+        "text": "6"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BW04",
+    "numberInCatalog": 4,
+    "state": "BW",
+    "text": "Ab welchem Alter darf man in Baden- Württemberg bei Kommunalwahlen wählen?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "14"
+      },
+      {
+        "id": "B",
+        "text": "16"
+      },
+      {
+        "id": "C",
+        "text": "18"
+      },
+      {
+        "id": "D",
+        "text": "20"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BW05",
+    "numberInCatalog": 5,
+    "state": "BW",
+    "text": "Welche Farben hat die Landesflagge von Baden -Württemberg?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "blau- weiß -rot"
+      },
+      {
+        "id": "B",
+        "text": "schwarz- gold"
+      },
+      {
+        "id": "C",
+        "text": "weiß -blau"
+      },
+      {
+        "id": "D",
+        "text": "grün -weiß -rot"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BW06",
+    "numberInCatalog": 6,
+    "state": "BW",
+    "text": "Wo können Sie sich in Baden- Württemberg über politische Themen informieren?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "beim Ordnungsamt der Gemeinde"
+      },
+      {
+        "id": "B",
+        "text": "bei der Verbraucherzentrale"
+      },
+      {
+        "id": "C",
+        "text": "bei der Landeszentrale für politische Bildung"
+      },
+      {
+        "id": "D",
+        "text": "bei den Kirchen"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BW07",
+    "numberInCatalog": 7,
+    "state": "BW",
+    "text": "Die Landeshauptstadt von Baden- Württemberg heißt …",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Heidelberg."
+      },
+      {
+        "id": "B",
+        "text": "Stuttgart."
+      },
+      {
+        "id": "C",
+        "text": "Karlsruhe."
+      },
+      {
+        "id": "D",
+        "text": "Mannheim."
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BW08",
+    "numberInCatalog": 8,
+    "state": "BW",
+    "text": "Welches Bundesland ist Baden- Württemberg?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "1"
+      },
+      {
+        "id": "B",
+        "text": "2"
+      },
+      {
+        "id": "C",
+        "text": "3"
+      },
+      {
+        "id": "D",
+        "text": "4"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BW09",
+    "numberInCatalog": 9,
+    "state": "BW",
+    "text": "Wie nennt man die Regierungschefin/den Regierungschef in Baden- Württemberg?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Erste Ministerin/Erster Minister"
+      },
+      {
+        "id": "B",
+        "text": "Premierministerin /Premierminister"
+      },
+      {
+        "id": "C",
+        "text": "Bürgermeisterin/Bürgermeister"
+      },
+      {
+        "id": "D",
+        "text": "Ministerpräsidentin/Ministerpräsident"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BW10",
+    "numberInCatalog": 10,
+    "state": "BW",
+    "text": "Welche Minister in/ welchen Minister hat Baden -Württemberg nicht ? Teil II F",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Finanzministerin /Finanzminister"
+      },
+      {
+        "id": "B",
+        "text": "Justizministerin /Justizminister"
+      },
+      {
+        "id": "C",
+        "text": "Innenministerin/Innenminister"
+      },
+      {
+        "id": "D",
+        "text": "Außenministerin/Außenminister"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  }
+]

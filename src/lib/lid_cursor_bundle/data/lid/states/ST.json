@@ -1,0 +1,292 @@
+[
+  {
+    "id": "ST01",
+    "numberInCatalog": 1,
+    "state": "ST",
+    "text": "Welches Wappen gehört zum Bundesland Sachsen- Anhalt? B ild 1 Bild 2 Bild 3 Bild 4",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Bild 1"
+      },
+      {
+        "id": "B",
+        "text": "Bild 2"
+      },
+      {
+        "id": "C",
+        "text": "Bild 3"
+      },
+      {
+        "id": "D",
+        "text": "Bild 4"
+      }
+    ],
+    "kind": "image-choice",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "ST02",
+    "numberInCatalog": 2,
+    "state": "ST",
+    "text": "Welches ist ein Landkreis in Sachsen -Anhalt?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Ammerland"
+      },
+      {
+        "id": "B",
+        "text": "Altötting"
+      },
+      {
+        "id": "C",
+        "text": "Uckermark"
+      },
+      {
+        "id": "D",
+        "text": "Börde"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "ST03",
+    "numberInCatalog": 3,
+    "state": "ST",
+    "text": "Für wie viele Jahre wird der Landtag in Sachsen- Anhalt gewählt?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "3"
+      },
+      {
+        "id": "B",
+        "text": "4"
+      },
+      {
+        "id": "C",
+        "text": "5"
+      },
+      {
+        "id": "D",
+        "text": "6"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "ST04",
+    "numberInCatalog": 4,
+    "state": "ST",
+    "text": "Ab welchem Alter darf man in Sachsen- Anhalt bei Kommunalwahlen wählen?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "14"
+      },
+      {
+        "id": "B",
+        "text": "16"
+      },
+      {
+        "id": "C",
+        "text": "18"
+      },
+      {
+        "id": "D",
+        "text": "20"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "ST05",
+    "numberInCatalog": 5,
+    "state": "ST",
+    "text": "Welche Farben hat die Landesflagge von Sachsen- Anhalt?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "blau- weiß -rot"
+      },
+      {
+        "id": "B",
+        "text": "gelb -schwarz"
+      },
+      {
+        "id": "C",
+        "text": "grün -weiß -rot"
+      },
+      {
+        "id": "D",
+        "text": "weiß -rot"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "ST06",
+    "numberInCatalog": 6,
+    "state": "ST",
+    "text": "Wo können Sie sich in Sachsen- Anhalt über politische Themen informieren?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "bei den Kirchen"
+      },
+      {
+        "id": "B",
+        "text": "bei der Landeszentrale für politische Bildung"
+      },
+      {
+        "id": "C",
+        "text": "beim Ordnungsamt der Gemeinde"
+      },
+      {
+        "id": "D",
+        "text": "bei der Verbraucherzentrale"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "ST07",
+    "numberInCatalog": 7,
+    "state": "ST",
+    "text": "Die Landeshauptstadt von Sachsen- Anhalt heißt …",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Halle."
+      },
+      {
+        "id": "B",
+        "text": "Dessau."
+      },
+      {
+        "id": "C",
+        "text": "Magdeburg ."
+      },
+      {
+        "id": "D",
+        "text": "Wittenberg."
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "ST08",
+    "numberInCatalog": 8,
+    "state": "ST",
+    "text": "Welches Bundesland ist Sachsen- Anhalt?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "1"
+      },
+      {
+        "id": "B",
+        "text": "2"
+      },
+      {
+        "id": "C",
+        "text": "3"
+      },
+      {
+        "id": "D",
+        "text": "4"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "ST09",
+    "numberInCatalog": 9,
+    "state": "ST",
+    "text": "Wie nennt man die Regierungschefin/den Regierungschef in Sachsen- Anhalt?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Erste Ministerin/Erster Minister"
+      },
+      {
+        "id": "B",
+        "text": "Premierministerin /Premierminister"
+      },
+      {
+        "id": "C",
+        "text": "Bürgermeisterin/Bürgermeister"
+      },
+      {
+        "id": "D",
+        "text": "Ministerpräsidentin/Ministerpräsident"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "ST10",
+    "numberInCatalog": 10,
+    "state": "ST",
+    "text": "Welche Minister in/ welchen Minister hat Sachsen -Anhalt nicht ? Teil II Frag",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Justizministerin /Justizminister"
+      },
+      {
+        "id": "B",
+        "text": "Außenministerin/Außenminister"
+      },
+      {
+        "id": "C",
+        "text": "Finanzministerin /Finanzminister"
+      },
+      {
+        "id": "D",
+        "text": "Innenministerin/Innenminister"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  }
+]

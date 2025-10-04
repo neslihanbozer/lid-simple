@@ -1,0 +1,292 @@
+[
+  {
+    "id": "NI01",
+    "numberInCatalog": 1,
+    "state": "NI",
+    "text": "Welches Wappen gehört zum Bundesland Niedersachsen? Bi ld 1 Bild 2 Bild 3 Bild 4",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Bild 1"
+      },
+      {
+        "id": "B",
+        "text": "Bild 2"
+      },
+      {
+        "id": "C",
+        "text": "Bild 3"
+      },
+      {
+        "id": "D",
+        "text": "Bild 4"
+      }
+    ],
+    "kind": "image-choice",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "NI02",
+    "numberInCatalog": 2,
+    "state": "NI",
+    "text": "Welches ist ein Landkreis in Niedersachsen?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Ammerland"
+      },
+      {
+        "id": "B",
+        "text": "Rhein- Sieg -Kreis"
+      },
+      {
+        "id": "C",
+        "text": "Nordfriesland"
+      },
+      {
+        "id": "D",
+        "text": "Vogtlandkreis"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "NI03",
+    "numberInCatalog": 3,
+    "state": "NI",
+    "text": "Für wie viele Jahre wird der Landtag in Niedersachsen gewählt?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "3"
+      },
+      {
+        "id": "B",
+        "text": "4"
+      },
+      {
+        "id": "C",
+        "text": "5"
+      },
+      {
+        "id": "D",
+        "text": "6"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "NI04",
+    "numberInCatalog": 4,
+    "state": "NI",
+    "text": "Ab welchem Alter darf man in Niedersachsen bei Kommunalwahlen wählen?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "14"
+      },
+      {
+        "id": "B",
+        "text": "16"
+      },
+      {
+        "id": "C",
+        "text": "18"
+      },
+      {
+        "id": "D",
+        "text": "20"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "NI05",
+    "numberInCatalog": 5,
+    "state": "NI",
+    "text": "Welche Farben hat die Landesflagge von Niedersachsen?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "weiß -blau"
+      },
+      {
+        "id": "B",
+        "text": "schwarz- rot-gold"
+      },
+      {
+        "id": "C",
+        "text": "schwarz- gelb"
+      },
+      {
+        "id": "D",
+        "text": "blau- weiß -rot"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "NI06",
+    "numberInCatalog": 6,
+    "state": "NI",
+    "text": "Wo können Sie sich in Niedersachsen über politische Themen informieren?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "bei der Landeszentrale für politische Bildung"
+      },
+      {
+        "id": "B",
+        "text": "beim Ordnungsamt der Gemeinde"
+      },
+      {
+        "id": "C",
+        "text": "bei der Verbraucherzentrale"
+      },
+      {
+        "id": "D",
+        "text": "bei den Kirchen"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "NI07",
+    "numberInCatalog": 7,
+    "state": "NI",
+    "text": "Die Landeshauptstadt von Niedersachsen heißt …",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Hannover."
+      },
+      {
+        "id": "B",
+        "text": "Braunschweig."
+      },
+      {
+        "id": "C",
+        "text": "Wolfsburg."
+      },
+      {
+        "id": "D",
+        "text": "Osnabrück."
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "NI08",
+    "numberInCatalog": 8,
+    "state": "NI",
+    "text": "Welches Bundesland ist Niedersachsen?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "1"
+      },
+      {
+        "id": "B",
+        "text": "2"
+      },
+      {
+        "id": "C",
+        "text": "3"
+      },
+      {
+        "id": "D",
+        "text": "4"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "NI09",
+    "numberInCatalog": 9,
+    "state": "NI",
+    "text": "Wie nennt man die Regierungschefin/den Regierungschef in Niedersachsen?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Erste Ministerin/Erster Minister"
+      },
+      {
+        "id": "B",
+        "text": "Premierministerin /Premierminister"
+      },
+      {
+        "id": "C",
+        "text": "Bürgermeisterin/Bürgermeister"
+      },
+      {
+        "id": "D",
+        "text": "Ministerpräsidentin/Ministerpräsident"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "NI10",
+    "numberInCatalog": 10,
+    "state": "NI",
+    "text": "Welche Minister in/ welchen Minister hat Niedersachsen nicht ? Teil II Frag",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Justizministerin /Justizminister"
+      },
+      {
+        "id": "B",
+        "text": "Außenministerin/Außenminister"
+      },
+      {
+        "id": "C",
+        "text": "Finanzministerin /Finanzminister"
+      },
+      {
+        "id": "D",
+        "text": "Innenministerin/Innenminister"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  }
+]

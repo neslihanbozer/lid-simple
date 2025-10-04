@@ -1,0 +1,292 @@
+[
+  {
+    "id": "MV01",
+    "numberInCatalog": 1,
+    "state": "MV",
+    "text": "Welches Wappen gehört zum Bundesland Mecklenburg -Vorpommern? B ild 1 Bild 2 Bild 3 Bild 4",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Bild 1"
+      },
+      {
+        "id": "B",
+        "text": "Bild 2"
+      },
+      {
+        "id": "C",
+        "text": "Bild 3"
+      },
+      {
+        "id": "D",
+        "text": "Bild 4"
+      }
+    ],
+    "kind": "image-choice",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "MV02",
+    "numberInCatalog": 2,
+    "state": "MV",
+    "text": "Welches ist ein Landkreis in Mecklenburg -Vorpommern?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Prignitz"
+      },
+      {
+        "id": "B",
+        "text": "Mecklenburgische Seenplatte"
+      },
+      {
+        "id": "C",
+        "text": "Vogtlandkreis"
+      },
+      {
+        "id": "D",
+        "text": "Rhein- Sieg -Kreis"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "MV03",
+    "numberInCatalog": 3,
+    "state": "MV",
+    "text": "Für wie viele Jahre wird der Landtag in Mecklenburg -Vorpommern gewählt?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "3"
+      },
+      {
+        "id": "B",
+        "text": "4"
+      },
+      {
+        "id": "C",
+        "text": "5"
+      },
+      {
+        "id": "D",
+        "text": "6"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "MV04",
+    "numberInCatalog": 4,
+    "state": "MV",
+    "text": "Ab welchem Alter darf man in Mecklenburg -Vorpommern bei Kommunalwahlen wählen?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "14"
+      },
+      {
+        "id": "B",
+        "text": "16"
+      },
+      {
+        "id": "C",
+        "text": "18"
+      },
+      {
+        "id": "D",
+        "text": "20"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "MV05",
+    "numberInCatalog": 5,
+    "state": "MV",
+    "text": "Welche Farben hat die Landesflagge von Mecklenburg -Vorpommern?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "schwarz- rot-gold"
+      },
+      {
+        "id": "B",
+        "text": "blau- weiß -gelb -rot"
+      },
+      {
+        "id": "C",
+        "text": "grün -weiß -rot"
+      },
+      {
+        "id": "D",
+        "text": "schwarz- gelb"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "MV06",
+    "numberInCatalog": 6,
+    "state": "MV",
+    "text": "Wo können Sie sich in Mecklenburg -Vorpommern über politische Themen informieren?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "bei der Landeszentrale für politische Bildung"
+      },
+      {
+        "id": "B",
+        "text": "bei den Kirchen"
+      },
+      {
+        "id": "C",
+        "text": "beim Ordnungsamt der Gemeinde"
+      },
+      {
+        "id": "D",
+        "text": "bei der Verbraucherzentrale"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "MV07",
+    "numberInCatalog": 7,
+    "state": "MV",
+    "text": "Die Landeshauptstadt von Mecklenburg -Vorpommern heißt …",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Greifswald."
+      },
+      {
+        "id": "B",
+        "text": "Schwerin."
+      },
+      {
+        "id": "C",
+        "text": "Rostock."
+      },
+      {
+        "id": "D",
+        "text": "Wismar."
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "MV08",
+    "numberInCatalog": 8,
+    "state": "MV",
+    "text": "Welches Bundesland ist Mecklenburg -Vorpommern?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "1"
+      },
+      {
+        "id": "B",
+        "text": "2"
+      },
+      {
+        "id": "C",
+        "text": "3"
+      },
+      {
+        "id": "D",
+        "text": "4"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "MV09",
+    "numberInCatalog": 9,
+    "state": "MV",
+    "text": "Wie nennt man die Regierungschefin/den Regierungschef in Mecklenburg -Vorpommern?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Erste Ministerin/Erster Minister"
+      },
+      {
+        "id": "B",
+        "text": "Premierministerin /Premierminister"
+      },
+      {
+        "id": "C",
+        "text": "Bürgermeisterin/Bürgermeister"
+      },
+      {
+        "id": "D",
+        "text": "Ministerpräsidentin/Ministerpräsident"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "MV10",
+    "numberInCatalog": 10,
+    "state": "MV",
+    "text": "Welche Minister in/ welchen Minister hat Mecklenburg -Vorpommern nicht ? Teil II Frag",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Justizministerin /Justizminister"
+      },
+      {
+        "id": "B",
+        "text": "Außenministerin/Außenminister"
+      },
+      {
+        "id": "C",
+        "text": "Finanzministerin /Finanzminister"
+      },
+      {
+        "id": "D",
+        "text": "Innenministerin/Innenminister"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  }
+]

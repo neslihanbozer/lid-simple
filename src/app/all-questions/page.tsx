@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { questions } from '@/lib/questions'
+import { loadAllQuestions, getAvailableStates } from '@/lib/bundle-parser'
 
 interface Question {
   id: number
@@ -27,6 +28,9 @@ export default function AllQuestionsPage() {
   const [showResult, setShowResult] = useState(false)
   const [score, setScore] = useState(0)
   const [answeredQuestions, setAnsweredQuestions] = useState<Set<number>>(new Set())
+  const [selectedState, setSelectedState] = useState<string>('')
+  const [bundleQuestions, setBundleQuestions] = useState<any[]>([])
+  const [availableStates, setAvailableStates] = useState<Array<{code: string, name: string}>>([])
 
   const languages = [
     { code: 'de', name: 'Deutsch', flag: '🇩🇪', isDefault: true },
@@ -45,8 +49,42 @@ export default function AllQuestionsPage() {
     { id: 'Integration', name: 'Integration', icon: '🤝' }
   ]
 
-  // Filtered questions
-  const filteredQuestions = questions.filter(q => {
+  // Load bundle questions on component mount
+  useEffect(() => {
+    const loadQuestions = async () => {
+      try {
+        const states = getAvailableStates()
+        setAvailableStates(states)
+        
+        const generalQuestions = await loadAllQuestions()
+        setBundleQuestions(generalQuestions)
+      } catch (error) {
+        console.error('Error loading bundle questions:', error)
+        // Fallback to original questions
+        setBundleQuestions(questions)
+      }
+    }
+    
+    loadQuestions()
+  }, [])
+
+  // Update questions when state changes
+  useEffect(() => {
+    const updateQuestions = async () => {
+      try {
+        const allQuestions = await loadAllQuestions(selectedState || undefined)
+        setBundleQuestions(allQuestions)
+      } catch (error) {
+        console.error('Error loading questions:', error)
+      }
+    }
+    
+    updateQuestions()
+  }, [selectedState])
+
+  // Filtered questions (use bundle questions if available, otherwise fallback to original)
+  const allQuestions = bundleQuestions.length > 0 ? bundleQuestions : questions
+  const filteredQuestions = allQuestions.filter(q => {
     if (selectedCategory !== 'all' && q.category !== selectedCategory) {
       return false
     }
@@ -81,7 +119,7 @@ export default function AllQuestionsPage() {
       setScore(score + 1)
     }
     
-    setAnsweredQuestions(prev => new Set([...prev, currentQuestion.id]))
+    setAnsweredQuestions(prev => new Set([...Array.from(prev), currentQuestion.id]))
     setShowResult(true)
   }
 
@@ -114,6 +152,18 @@ export default function AllQuestionsPage() {
     setAnsweredQuestions(new Set())
   }
 
+  // Wait for questions to load
+  if (bundleQuestions.length === 0) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading questions...</p>
+        </div>
+      </div>
+    )
+  }
+
   const currentQuestion = filteredQuestions[currentQuestionIndex]
   const isDeTr = selectedLanguages.includes('de-tr')
 
@@ -142,6 +192,26 @@ export default function AllQuestionsPage() {
           <p className="text-lg text-gray-600">
             Prepare for the Leben in Deutschland test - 300+ questions
           </p>
+        </div>
+
+        {/* State Selection */}
+        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+          <h3 className="text-xl font-bold text-gray-800 mb-4">🏛️ State Selection</h3>
+          <p className="text-sm text-gray-600 mb-4">
+            Select a state to include state-specific questions (Premium feature)
+          </p>
+          <select
+            value={selectedState}
+            onChange={(e) => setSelectedState(e.target.value)}
+            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          >
+            <option value="">General Questions Only (Free)</option>
+            {availableStates.map((state) => (
+              <option key={state.code} value={state.code}>
+                {state.name} (+10 state questions)
+              </option>
+            ))}
+          </select>
         </div>
 
         {/* Language Selection */}
@@ -232,7 +302,7 @@ export default function AllQuestionsPage() {
 
             {/* Options */}
             <div className="space-y-3">
-              {currentQuestion.options.map((option, index) => (
+                    {currentQuestion.options.map((option: string, index: number) => (
                 <button
                   key={index}
                   onClick={() => handleAnswerSelect(index)}

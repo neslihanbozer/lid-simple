@@ -1,0 +1,292 @@
+[
+  {
+    "id": "BY01",
+    "numberInCatalog": 1,
+    "state": "BY",
+    "text": "Welches Wappen gehört zum Freist aat Bayern? B ild 1 Bild 2 Bild 3 Bild 4",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Bild 1"
+      },
+      {
+        "id": "B",
+        "text": "Bild 2"
+      },
+      {
+        "id": "C",
+        "text": "Bild 3"
+      },
+      {
+        "id": "D",
+        "text": "Bild 4"
+      }
+    ],
+    "kind": "image-choice",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BY02",
+    "numberInCatalog": 2,
+    "state": "BY",
+    "text": "Welches ist ein Landkreis in Bayern?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Prignitz"
+      },
+      {
+        "id": "B",
+        "text": "Rhein- Sieg -Kreis"
+      },
+      {
+        "id": "C",
+        "text": "Nordfriesland"
+      },
+      {
+        "id": "D",
+        "text": "Altötting"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BY03",
+    "numberInCatalog": 3,
+    "state": "BY",
+    "text": "Für wie viele Jahre wird der Landtag in Bayern gewählt?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "3"
+      },
+      {
+        "id": "B",
+        "text": "4"
+      },
+      {
+        "id": "C",
+        "text": "5"
+      },
+      {
+        "id": "D",
+        "text": "6"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BY04",
+    "numberInCatalog": 4,
+    "state": "BY",
+    "text": "Ab welchem Alter darf man in Bayern bei Kommunalwahlen wählen?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "14"
+      },
+      {
+        "id": "B",
+        "text": "16"
+      },
+      {
+        "id": "C",
+        "text": "18"
+      },
+      {
+        "id": "D",
+        "text": "20"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BY05",
+    "numberInCatalog": 5,
+    "state": "BY",
+    "text": "Welche Farben hat die Landesflagge von Bayern?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "blau- weiß -rot"
+      },
+      {
+        "id": "B",
+        "text": "weiß -blau"
+      },
+      {
+        "id": "C",
+        "text": "grün -weiß -rot"
+      },
+      {
+        "id": "D",
+        "text": "schwarz- gelb"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BY06",
+    "numberInCatalog": 6,
+    "state": "BY",
+    "text": "Wo können Sie sich in Bayern über politische Themen informieren?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "beim Ordnungsamt der Gemeinde"
+      },
+      {
+        "id": "B",
+        "text": "bei der Landeszentrale für politische Bildung"
+      },
+      {
+        "id": "C",
+        "text": "bei der Verbraucherzentrale"
+      },
+      {
+        "id": "D",
+        "text": "bei den Kirchen"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BY07",
+    "numberInCatalog": 7,
+    "state": "BY",
+    "text": "Die Landeshauptstadt von Bayern heißt …",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Ingolstadt."
+      },
+      {
+        "id": "B",
+        "text": "Regensburg."
+      },
+      {
+        "id": "C",
+        "text": "Nürnberg."
+      },
+      {
+        "id": "D",
+        "text": "München."
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BY08",
+    "numberInCatalog": 8,
+    "state": "BY",
+    "text": "Welches Bundesland ist Bayern?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "1"
+      },
+      {
+        "id": "B",
+        "text": "2"
+      },
+      {
+        "id": "C",
+        "text": "3"
+      },
+      {
+        "id": "D",
+        "text": "4"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BY09",
+    "numberInCatalog": 9,
+    "state": "BY",
+    "text": "Wie nennt man die Regierungschefin/den Regierungschef in Bayern?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Erste Ministerin/Erster Minister"
+      },
+      {
+        "id": "B",
+        "text": "Premierministerin /Premierminister"
+      },
+      {
+        "id": "C",
+        "text": "Bürgermeisterin/Bürgermeister"
+      },
+      {
+        "id": "D",
+        "text": "Ministerpräsidentin/Ministerpräsident"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BY10",
+    "numberInCatalog": 10,
+    "state": "BY",
+    "text": "Welche Mi nister in/welchen Minister hat Bayern nicht ? Teil II Frag",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Justizministerin /Justizminister"
+      },
+      {
+        "id": "B",
+        "text": "Außenministerin/Außenminister"
+      },
+      {
+        "id": "C",
+        "text": "Finanzministerin /Finanzminister"
+      },
+      {
+        "id": "D",
+        "text": "Innenministerin/Innenminister"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  }
+]

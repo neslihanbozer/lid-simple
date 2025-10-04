@@ -1,0 +1,292 @@
+[
+  {
+    "id": "BB01",
+    "numberInCatalog": 1,
+    "state": "BB",
+    "text": "Welches Wappen gehört zum Bundesland Brandenburg? B ild 1 Bild 2 Bild 3 Bild 4",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Bild 1"
+      },
+      {
+        "id": "B",
+        "text": "Bild 2"
+      },
+      {
+        "id": "C",
+        "text": "Bild 3"
+      },
+      {
+        "id": "D",
+        "text": "Bild 4"
+      }
+    ],
+    "kind": "image-choice",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BB02",
+    "numberInCatalog": 2,
+    "state": "BB",
+    "text": "Welches ist ein Landkreis in Brandenburg?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Prignitz"
+      },
+      {
+        "id": "B",
+        "text": "Rhein- Sieg -Kreis"
+      },
+      {
+        "id": "C",
+        "text": "Vogtlandkreis"
+      },
+      {
+        "id": "D",
+        "text": "Amberg -Sulzbach"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BB03",
+    "numberInCatalog": 3,
+    "state": "BB",
+    "text": "Für wie viele Jahre wird der Landtag in Brandenburg gewählt?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "3"
+      },
+      {
+        "id": "B",
+        "text": "4"
+      },
+      {
+        "id": "C",
+        "text": "5"
+      },
+      {
+        "id": "D",
+        "text": "6"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BB04",
+    "numberInCatalog": 4,
+    "state": "BB",
+    "text": "Ab welchem Alter darf man in Brandenburg bei Kommunalwahlen wählen?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "14"
+      },
+      {
+        "id": "B",
+        "text": "16"
+      },
+      {
+        "id": "C",
+        "text": "18"
+      },
+      {
+        "id": "D",
+        "text": "20"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BB05",
+    "numberInCatalog": 5,
+    "state": "BB",
+    "text": "Welche Farben hat die Landesflagge von Brandenburg?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "blau- weiß -rot"
+      },
+      {
+        "id": "B",
+        "text": "rot-weiß"
+      },
+      {
+        "id": "C",
+        "text": "grün -weiß -rot"
+      },
+      {
+        "id": "D",
+        "text": "schwarz- gelb"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BB06",
+    "numberInCatalog": 6,
+    "state": "BB",
+    "text": "Wo können Sie sich in Brandenburg über politische Themen informieren?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "bei den Kirchen"
+      },
+      {
+        "id": "B",
+        "text": "beim Ordnungsamt der Gemeinde"
+      },
+      {
+        "id": "C",
+        "text": "bei der Landeszentrale für politische Bildung"
+      },
+      {
+        "id": "D",
+        "text": "bei der Verbraucherzentrale"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BB07",
+    "numberInCatalog": 7,
+    "state": "BB",
+    "text": "Die Landeshauptstadt von Brandenburg heißt …",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Potsdam."
+      },
+      {
+        "id": "B",
+        "text": "Cottbus."
+      },
+      {
+        "id": "C",
+        "text": "Brandenburg."
+      },
+      {
+        "id": "D",
+        "text": "Frankfurt/Oder."
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BB08",
+    "numberInCatalog": 8,
+    "state": "BB",
+    "text": "Welches Bundesland ist Brandenburg?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "1"
+      },
+      {
+        "id": "B",
+        "text": "2"
+      },
+      {
+        "id": "C",
+        "text": "3"
+      },
+      {
+        "id": "D",
+        "text": "4"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BB09",
+    "numberInCatalog": 9,
+    "state": "BB",
+    "text": "Wie nennt man die Regierungschefin/den Regierungschef in Brandenburg?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Erste Ministerin/Erster Minister"
+      },
+      {
+        "id": "B",
+        "text": "Premierministerin /Premierminister"
+      },
+      {
+        "id": "C",
+        "text": "Bürgermeisterin/Bürgermeister"
+      },
+      {
+        "id": "D",
+        "text": "Ministerpräsidentin/Ministerpräsident"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BB10",
+    "numberInCatalog": 10,
+    "state": "BB",
+    "text": "Welche Minister in/ welchen Minister hat Brandenburg nicht ? Teil II Frag",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Justizministerin /Justizminister"
+      },
+      {
+        "id": "B",
+        "text": "Außenministerin/Außenminister"
+      },
+      {
+        "id": "C",
+        "text": "Finanzministerin /Finanzminister"
+      },
+      {
+        "id": "D",
+        "text": "Innenministerin/Innenminister"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  }
+]

@@ -1,0 +1,292 @@
+[
+  {
+    "id": "NW01",
+    "numberInCatalog": 1,
+    "state": "NW",
+    "text": "Welches Wappen gehört zum Bundesland Nordrhein- Westfalen? Bild 1 Bild 2 Bild 3 Bild 4",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Bild 1"
+      },
+      {
+        "id": "B",
+        "text": "Bild 2"
+      },
+      {
+        "id": "C",
+        "text": "Bild 3"
+      },
+      {
+        "id": "D",
+        "text": "Bild 4"
+      }
+    ],
+    "kind": "image-choice",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "NW02",
+    "numberInCatalog": 2,
+    "state": "NW",
+    "text": "Welches ist ein Landkreis in Nordrhein- Westfalen?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Ammerland"
+      },
+      {
+        "id": "B",
+        "text": "Rhein- Sieg -Kreis"
+      },
+      {
+        "id": "C",
+        "text": "Nordfriesland"
+      },
+      {
+        "id": "D",
+        "text": "Vogtlandkreis"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "NW03",
+    "numberInCatalog": 3,
+    "state": "NW",
+    "text": "Für wie viele Jahre wird der Landtag in Nordrhein- Westfalen gewählt?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "3"
+      },
+      {
+        "id": "B",
+        "text": "4"
+      },
+      {
+        "id": "C",
+        "text": "5"
+      },
+      {
+        "id": "D",
+        "text": "6"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "NW04",
+    "numberInCatalog": 4,
+    "state": "NW",
+    "text": "Ab welchem Alter darf man in Nordrhein- Westfalen bei Kommunalwahlen wählen?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "14"
+      },
+      {
+        "id": "B",
+        "text": "16"
+      },
+      {
+        "id": "C",
+        "text": "18"
+      },
+      {
+        "id": "D",
+        "text": "20"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "NW05",
+    "numberInCatalog": 5,
+    "state": "NW",
+    "text": "Welche Farben hat die Landesflagge von Nordrhein- Westfalen?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "rot-weiß"
+      },
+      {
+        "id": "B",
+        "text": "grün -weiß -rot"
+      },
+      {
+        "id": "C",
+        "text": "schwarz- gold"
+      },
+      {
+        "id": "D",
+        "text": "blau- weiß -rot"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "NW06",
+    "numberInCatalog": 6,
+    "state": "NW",
+    "text": "Wo können Sie sich in Nordrhein- Westfalen über politische Themen informieren?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "bei den Kirchen"
+      },
+      {
+        "id": "B",
+        "text": "beim Ordnungsamt der Gemeinde"
+      },
+      {
+        "id": "C",
+        "text": "bei der Verbraucherzentrale"
+      },
+      {
+        "id": "D",
+        "text": "bei der Landeszentrale für politische Bildung"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "NW07",
+    "numberInCatalog": 7,
+    "state": "NW",
+    "text": "Die Landeshauptstadt von Nordrhein -Westfalen heißt …",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Köln."
+      },
+      {
+        "id": "B",
+        "text": "Bonn."
+      },
+      {
+        "id": "C",
+        "text": "Düsseldorf."
+      },
+      {
+        "id": "D",
+        "text": "Dortmund."
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "NW08",
+    "numberInCatalog": 8,
+    "state": "NW",
+    "text": "Welches Bundesland ist Nordrhein- Westfalen?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "1"
+      },
+      {
+        "id": "B",
+        "text": "2"
+      },
+      {
+        "id": "C",
+        "text": "3"
+      },
+      {
+        "id": "D",
+        "text": "4"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "NW09",
+    "numberInCatalog": 9,
+    "state": "NW",
+    "text": "Wie nennt man die Regierungschefin/den Regierungschef in Nordrhein- Westfalen?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Erste Ministerin/Erster Minister"
+      },
+      {
+        "id": "B",
+        "text": "Premierministerin /Premierminister"
+      },
+      {
+        "id": "C",
+        "text": "Bürgermeisterin/Bürgermeister"
+      },
+      {
+        "id": "D",
+        "text": "Ministerpräsidentin/Ministerpräsident"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "NW10",
+    "numberInCatalog": 10,
+    "state": "NW",
+    "text": "Welche Minister in/ welchen Minister hat Nordrhein- Westfalen nicht ? Teil II Frag",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Justizministerin /Justizminister"
+      },
+      {
+        "id": "B",
+        "text": "Außenministerin/Außenminister"
+      },
+      {
+        "id": "C",
+        "text": "Finanzministerin /Finanzminister"
+      },
+      {
+        "id": "D",
+        "text": "Innenministerin/Innenminister"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  }
+]

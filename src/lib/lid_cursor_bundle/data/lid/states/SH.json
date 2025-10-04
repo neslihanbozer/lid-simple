@@ -1,0 +1,292 @@
+[
+  {
+    "id": "SH01",
+    "numberInCatalog": 1,
+    "state": "SH",
+    "text": "Welches Wappen gehört zum Bundesland Schleswig -Holstein? B ild 1 Bild 2 Bild 3 Bild 4",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Bild 1"
+      },
+      {
+        "id": "B",
+        "text": "Bild 2"
+      },
+      {
+        "id": "C",
+        "text": "Bild 3"
+      },
+      {
+        "id": "D",
+        "text": "Bild 4"
+      }
+    ],
+    "kind": "image-choice",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "SH02",
+    "numberInCatalog": 2,
+    "state": "SH",
+    "text": "Welches ist ein Landkreis in Schleswig -Holstein?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Ammerland"
+      },
+      {
+        "id": "B",
+        "text": "Mecklenburgische Seenplatte"
+      },
+      {
+        "id": "C",
+        "text": "Nordfriesland"
+      },
+      {
+        "id": "D",
+        "text": "Rhein- Sieg -Kreis"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "SH03",
+    "numberInCatalog": 3,
+    "state": "SH",
+    "text": "Für wie viele Jahre wird der Landtag in Schleswig -Holstein gewählt?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "3"
+      },
+      {
+        "id": "B",
+        "text": "4"
+      },
+      {
+        "id": "C",
+        "text": "5"
+      },
+      {
+        "id": "D",
+        "text": "6"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "SH04",
+    "numberInCatalog": 4,
+    "state": "SH",
+    "text": "Ab welchem Alter darf man in Schleswig -Holstein bei Kommunalwahlen wählen?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "14"
+      },
+      {
+        "id": "B",
+        "text": "16"
+      },
+      {
+        "id": "C",
+        "text": "18"
+      },
+      {
+        "id": "D",
+        "text": "20"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "SH05",
+    "numberInCatalog": 5,
+    "state": "SH",
+    "text": "Welche Farben hat die Landesflagge von Schleswig -Holstein?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "weiß -blau"
+      },
+      {
+        "id": "B",
+        "text": "blau- weiß -rot"
+      },
+      {
+        "id": "C",
+        "text": "weiß -rot"
+      },
+      {
+        "id": "D",
+        "text": "grün -weiß -rot"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "SH06",
+    "numberInCatalog": 6,
+    "state": "SH",
+    "text": "Wo können Sie sich in Schleswig -Holstein über politische Themen informieren?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "bei der Verbraucherzentrale"
+      },
+      {
+        "id": "B",
+        "text": "beim Ordnungsamt der Gemeinde"
+      },
+      {
+        "id": "C",
+        "text": "beim / bei der Landesbeauftragten für politische Bildung"
+      },
+      {
+        "id": "D",
+        "text": "bei den Kirchen"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "SH07",
+    "numberInCatalog": 7,
+    "state": "SH",
+    "text": "Die Landeshauptstadt von Schleswig -Holstein heißt …",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Husum."
+      },
+      {
+        "id": "B",
+        "text": "Flensburg."
+      },
+      {
+        "id": "C",
+        "text": "Lübeck."
+      },
+      {
+        "id": "D",
+        "text": "Kiel."
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "SH08",
+    "numberInCatalog": 8,
+    "state": "SH",
+    "text": "Welches Bundesland ist Schleswig -Holstein?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "1"
+      },
+      {
+        "id": "B",
+        "text": "2"
+      },
+      {
+        "id": "C",
+        "text": "3"
+      },
+      {
+        "id": "D",
+        "text": "4"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "SH09",
+    "numberInCatalog": 9,
+    "state": "SH",
+    "text": "Wie nennt man die Regierungschefin/den Regierungschef in Schleswig -Holstein?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Erste Ministerin/Erster Minister"
+      },
+      {
+        "id": "B",
+        "text": "Premierministerin /Premierminister"
+      },
+      {
+        "id": "C",
+        "text": "Bürgermeisterin/Bürgermeister"
+      },
+      {
+        "id": "D",
+        "text": "Ministerpräsidentin/Ministerpräsident"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "SH10",
+    "numberInCatalog": 10,
+    "state": "SH",
+    "text": "Welche Minister in/ welchen Minister hat Schleswig -Holstein nicht ? Teil II Frag",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Justizministerin /Justizminister"
+      },
+      {
+        "id": "B",
+        "text": "Außenministerin/Außenminister"
+      },
+      {
+        "id": "C",
+        "text": "Finanzministerin /Finanzminister"
+      },
+      {
+        "id": "D",
+        "text": "Innenministerin/Innenminister"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  }
+]

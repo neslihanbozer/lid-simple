@@ -1,0 +1,292 @@
+[
+  {
+    "id": "BE01",
+    "numberInCatalog": 1,
+    "state": "BE",
+    "text": "Welches Wappen gehört zum Bundesland Berlin? Bi ld 1 Bild 2 Bild 3 Bild 4",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Bild 1"
+      },
+      {
+        "id": "B",
+        "text": "Bild 2"
+      },
+      {
+        "id": "C",
+        "text": "Bild 3"
+      },
+      {
+        "id": "D",
+        "text": "Bild 4"
+      }
+    ],
+    "kind": "image-choice",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BE02",
+    "numberInCatalog": 2,
+    "state": "BE",
+    "text": "Welches ist ein Bezirk von Berlin?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Altona"
+      },
+      {
+        "id": "B",
+        "text": "Prignitz"
+      },
+      {
+        "id": "C",
+        "text": "Pankow"
+      },
+      {
+        "id": "D",
+        "text": "Mecklenburgische Seenplatte"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BE03",
+    "numberInCatalog": 3,
+    "state": "BE",
+    "text": "Für wie viele Jahre wird das Landesparlament in Berlin gewählt?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "3"
+      },
+      {
+        "id": "B",
+        "text": "4"
+      },
+      {
+        "id": "C",
+        "text": "5"
+      },
+      {
+        "id": "D",
+        "text": "6"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BE04",
+    "numberInCatalog": 4,
+    "state": "BE",
+    "text": "Ab welchem Alter darf man in Berlin bei Kommunalwahlen (Wahl der Bezirksverordnetenversammlung) wählen?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "14"
+      },
+      {
+        "id": "B",
+        "text": "16"
+      },
+      {
+        "id": "C",
+        "text": "18"
+      },
+      {
+        "id": "D",
+        "text": "20"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BE05",
+    "numberInCatalog": 5,
+    "state": "BE",
+    "text": "Welche Farben hat die Landesflagge von Berlin?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "blau- weiß -rot"
+      },
+      {
+        "id": "B",
+        "text": "weiß -rot"
+      },
+      {
+        "id": "C",
+        "text": "grün -weiß -rot"
+      },
+      {
+        "id": "D",
+        "text": "schwarz- gold"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BE06",
+    "numberInCatalog": 6,
+    "state": "BE",
+    "text": "Wo können Sie sich in Berlin über politische Themen informieren?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "beim Ordnungsamt der Gemeinde"
+      },
+      {
+        "id": "B",
+        "text": "bei den Kirchen"
+      },
+      {
+        "id": "C",
+        "text": "bei der Verbraucherzentrale"
+      },
+      {
+        "id": "D",
+        "text": "bei der Landeszentrale für politische Bildung"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BE07",
+    "numberInCatalog": 7,
+    "state": "BE",
+    "text": "Welches Bundesland ist ein Stadtstaat?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Berlin"
+      },
+      {
+        "id": "B",
+        "text": "Saarland"
+      },
+      {
+        "id": "C",
+        "text": "Brandenb urg"
+      },
+      {
+        "id": "D",
+        "text": "Hessen"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BE08",
+    "numberInCatalog": 8,
+    "state": "BE",
+    "text": "Welches Bundesland ist Berlin?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "1"
+      },
+      {
+        "id": "B",
+        "text": "2"
+      },
+      {
+        "id": "C",
+        "text": "3"
+      },
+      {
+        "id": "D",
+        "text": "4"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BE09",
+    "numberInCatalog": 9,
+    "state": "BE",
+    "text": "Wie nennt man die Regierungschefin/den Regierungschef des Stadtstaates Berlin?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Ministerpräsidentin/Ministerpräsident"
+      },
+      {
+        "id": "B",
+        "text": "Oberbürgermeisterin/Oberbürgermeister"
+      },
+      {
+        "id": "C",
+        "text": "Präsidentin/Präsident des Senates"
+      },
+      {
+        "id": "D",
+        "text": "Regierende Bürgermeisterin/Regierender Bürgermeister"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  },
+  {
+    "id": "BE10",
+    "numberInCatalog": 10,
+    "state": "BE",
+    "text": "Welche Senator in/ welchen Senator hat Berlin nicht ? Teil II F",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Finanzsenatorin/Finanzsenator"
+      },
+      {
+        "id": "B",
+        "text": "Innensenatorin/Innensenator"
+      },
+      {
+        "id": "C",
+        "text": "Senatorin/Senator für Außenbeziehungen"
+      },
+      {
+        "id": "D",
+        "text": "Justizsenatorin/Justizsenator"
+      }
+    ],
+    "kind": "text",
+    "source": {
+      "pdfUrl": "uploaded:/gesamtfragenkatalog-lebenindeutschland.pdf",
+      "pdfStand": "07.05.2025"
+    }
+  }
+]
