@@ -353,8 +353,8 @@ const aiTopics = [
 
 export default function PremiumDashboard() {
   const { data: session } = useSession()
-  const [language, setLanguage] = useState('en')
-  const [translations, setTranslations] = useState(enTranslations)
+  const [language] = useState('en') // Fixed to English
+  const [translations] = useState(enTranslations)
   const [mounted, setMounted] = useState(false)
   const [selectedTopic, setSelectedTopic] = useState<string | null>(null)
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
@@ -362,8 +362,7 @@ export default function PremiumDashboard() {
 
   useEffect(() => {
     setMounted(true)
-    setTranslations(language === 'en' ? enTranslations : deTranslations)
-  }, [language])
+  }, [])
 
   const handleCategoryClick = (categoryName: string) => {
     setSelectedCategory(categoryName)
@@ -461,9 +460,8 @@ export default function PremiumDashboard() {
         </div>
 
 
-        {/* State Selection and Language Selection */}
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
-          {/* State Selection */}
+        {/* State Selection */}
+        <div className="mb-8">
           <div className="bg-white rounded-2xl shadow-lg p-6">
             <h2 className="text-xl font-bold text-gray-900 mb-4">
               {language === 'en' ? 'State Selection' : 'Bundesland-Auswahl'}
@@ -487,75 +485,6 @@ export default function PremiumDashboard() {
               <option>Schleswig-Holstein</option>
               <option>Thüringen</option>
             </select>
-          </div>
-
-          {/* Language Selection */}
-          <div className="bg-white rounded-2xl shadow-lg p-6">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">
-              {language === 'en' ? 'Language Selection' : 'Sprachauswahl'}
-            </h2>
-            <div className="grid grid-cols-2 gap-2">
-              <button
-                onClick={() => setLanguage('de')}
-                className={`p-3 rounded-lg font-medium transition-colors ${
-                  language === 'de' 
-                    ? 'bg-blue-500 text-white' 
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
-              >
-                🇩🇪 DE
-              </button>
-              <button
-                onClick={() => setLanguage('de-tr')}
-                className={`p-3 rounded-lg font-medium transition-colors ${
-                  language === 'de-tr' 
-                    ? 'bg-blue-500 text-white' 
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
-              >
-                🇩🇪🇹🇷 DE+TR
-              </button>
-              <button
-                onClick={() => setLanguage('de-en')}
-                className={`p-3 rounded-lg font-medium transition-colors ${
-                  language === 'de-en' 
-                    ? 'bg-blue-500 text-white' 
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
-              >
-                🇩🇪🇺🇸 DE+EN
-              </button>
-              <button
-                onClick={() => setLanguage('de-fr')}
-                className={`p-3 rounded-lg font-medium transition-colors ${
-                  language === 'de-fr' 
-                    ? 'bg-blue-500 text-white' 
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
-              >
-                🇩🇪🇫🇷 DE+FR
-              </button>
-              <button
-                onClick={() => setLanguage('de-es')}
-                className={`p-3 rounded-lg font-medium transition-colors ${
-                  language === 'de-es' 
-                    ? 'bg-blue-500 text-white' 
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
-              >
-                🇩🇪🇪🇸 DE+ES
-              </button>
-              <button
-                onClick={() => setLanguage('de-ar')}
-                className={`p-3 rounded-lg font-medium transition-colors ${
-                  language === 'de-ar' 
-                    ? 'bg-blue-500 text-white' 
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
-              >
-                🇩🇪🇸🇦 DE+AR
-              </button>
-            </div>
           </div>
         </div>
 
