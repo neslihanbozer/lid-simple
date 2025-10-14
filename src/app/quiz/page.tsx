@@ -1,233 +1,53 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { useSession } from 'next-auth/react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { questions } from '@/lib/questions'
-import { loadAllQuestions } from '@/lib/bundle-parser'
 
-// Translations
-const translations = {
-  en: {
-    quizTitle: 'Leben in Deutschland Test',
-    freeQuiz: 'Free Quiz',
-    freeQuizInfo: 'You are solving 300 general questions. Go Premium for state-specific questions!',
-    question: 'Question',
-    of: 'of',
-    free: '(Free)',
-    next: 'Next',
-    previous: 'Previous',
-    submit: 'Submit Answer',
-    quizCompleted: 'Quiz Completed!',
-    yourScore: 'Your Score:',
-    perfect: 'Perfect! You answered all questions correctly!',
-    good: 'Well done! You answered most questions correctly.',
-    needPractice: 'You need more practice. Try again!',
-    congratulations: '🎉 Congratulations!',
-    freeQuizCompleted: 'You completed the 300 general questions! Go Premium for state-specific questions.',
-    premiumFeatures: '✅ 300+ Questions',
-    premiumFeatures2: '✅ AI Explanations',
-    premiumFeatures3: '✅ Progress Tracking',
-    premiumFeatures4: '✅ Group Study',
-    tryAgain: 'Try Again',
-    goPremium: '💳 Go Premium - €5.99 (3 Months)',
-    backToHome: '← Back to Home',
-    loading: 'Loading...',
-    explanation: 'Explanation:',
-    nextQuestion: 'Next Question',
-    finishQuiz: 'Finish Quiz',
-    languageSelection: 'Language Selection',
-    studyLanguage: 'Study Language',
-    selectLanguage: 'Select your preferred language for explanations:',
-    defaultExplanation: 'Default explanations are in German'
-  },
-  de: {
-    quizTitle: 'Leben in Deutschland Test',
-    freeQuiz: 'Kostenloses Quiz',
-    freeQuizInfo: 'Sie lösen gerade 300 allgemeine Fragen. Für länderspezifische Fragen werden Sie Premium!',
-    question: 'Frage',
-    of: 'von',
-    free: '(Kostenlos)',
-    next: 'Weiter',
-    previous: 'Zurück',
-    submit: 'Antwort senden',
-    quizCompleted: 'Quiz abgeschlossen!',
-    yourScore: 'Ihr Ergebnis:',
-    perfect: 'Perfekt! Sie haben alle Fragen richtig beantwortet!',
-    good: 'Gut gemacht! Sie haben die meisten Fragen richtig beantwortet.',
-    needPractice: 'Sie müssen mehr üben. Versuchen Sie es erneut!',
-    congratulations: '🎉 Herzlichen Glückwunsch!',
-    freeQuizCompleted: 'Sie haben die 300 allgemeinen Fragen abgeschlossen! Werden Sie Premium für länderspezifische Fragen.',
-    premiumFeatures: '✅ 300+ Fragen',
-    premiumFeatures2: '✅ KI-Erklärungen',
-    premiumFeatures3: '✅ Fortschrittsverfolgung',
-    premiumFeatures4: '✅ Gruppenarbeit',
-    tryAgain: 'Erneut versuchen',
-    goPremium: '💳 Premium werden - €5.99 (3 Monate)',
-    backToHome: '← Zurück zur Startseite',
-    loading: 'Lädt...',
-    explanation: 'Erklärung:',
-    nextQuestion: 'Nächste Frage',
-    finishQuiz: 'Quiz beenden',
-    languageSelection: 'Sprachauswahl',
-    studyLanguage: 'Lernsprache',
-    selectLanguage: 'Wählen Sie Ihre bevorzugte Sprache für Erklärungen:',
-    defaultExplanation: 'Standard-Erklärungen sind auf Deutsch'
-  }
-}
-
-interface Question {
-  id: number
-  question: string
-  questionTr?: string
-  questionEn?: string
-  questionFr?: string
-  questionEs?: string
-  questionRu?: string
-  questionAr?: string
-  options: string[]
-  optionsTr?: string[]
-  optionsEn?: string[]
-  optionsFr?: string[]
-  optionsEs?: string[]
-  optionsRu?: string[]
-  optionsAr?: string[]
-  correctAnswer: number
-  explanation: string
-  explanationTr?: string
-  explanationEn?: string
-  explanationFr?: string
-  explanationEs?: string
-  explanationRu?: string
-  explanationAr?: string
-  category?: string
-  difficulty?: string
-  isPremium?: boolean
-}
-
-export default function QuizPage() {
-  const { data: session, status } = useSession()
+export default function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
   const [showResult, setShowResult] = useState(false)
   const [score, setScore] = useState(0)
   const [quizCompleted, setQuizCompleted] = useState(false)
-  const [isPremium, setIsPremium] = useState(false)
-  const [language, setLanguage] = useState('de')
-  const [studyLanguage, setStudyLanguage] = useState('de')
   const [mounted, setMounted] = useState(false)
-  const [bundleQuestions, setBundleQuestions] = useState<any[]>([])
-  const [availableQuestions, setAvailableQuestions] = useState<any[]>([])
+  const [questions, setQuestions] = useState<any[]>([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     setMounted(true)
+    loadQuestions()
   }, [])
 
-  const t = translations[language as keyof typeof translations]
-
-  useEffect(() => {
-    if (session?.user?.isPremium) {
-      setIsPremium(true)
-    }
-  }, [session])
-
-  // Load bundle questions on component mount
-  useEffect(() => {
-    const loadQuestions = async () => {
-      try {
-        // Load general questions from bundle (300 questions)
-        const generalQuestions = await loadAllQuestions()
-        setBundleQuestions(generalQuestions)
-        
-        // For free users: show all 300 general questions (no state questions)
-        // For premium users: show all 300 general questions + state questions when selected
-        if (isPremium) {
-          setAvailableQuestions(generalQuestions)
-        } else {
-          // Free users get all 300 general questions
-          setAvailableQuestions(generalQuestions)
-        }
-      } catch (error) {
-        console.error('Error loading bundle questions:', error)
-        // Fallback to original questions
-        const fallbackQuestions = isPremium ? questions : questions.slice(0, 50)
-        setAvailableQuestions(fallbackQuestions)
-      }
-    }
-    
-    loadQuestions()
-  }, [isPremium])
-
-  // Language options for study
-  const studyLanguageOptions = [
-    { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-    { code: 'en', name: 'English', flag: '🇺🇸' },
-    { code: 'fr', name: 'Français', flag: '🇫🇷' },
-    { code: 'es', name: 'Español', flag: '🇪🇸' },
-    { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
-    { code: 'ru', name: 'Русский', flag: '🇷🇺' },
-    { code: 'ar', name: 'العربية', flag: '🇸🇦' }
-  ]
-
-  // Get question in study language
-  const getQuestionInLanguage = (question: Question) => {
-    if (!question) return ''
-    switch (studyLanguage) {
-      case 'en': return question.questionEn || question.question || ''
-      case 'fr': return question.questionFr || question.question || ''
-      case 'es': return question.questionEs || question.question || ''
-      case 'tr': return question.questionTr || question.question || ''
-      case 'ru': return question.questionRu || question.question || ''
-      case 'ar': return question.questionAr || question.question || ''
-      default: return question.question || ''
-    }
-  }
-
-  // Get options in study language
-  const getOptionsInLanguage = (question: Question) => {
-    if (!question) return []
-    switch (studyLanguage) {
-      case 'en': return question.optionsEn || question.options || []
-      case 'fr': return question.optionsFr || question.options || []
-      case 'es': return question.optionsEs || question.options || []
-      case 'tr': return question.optionsTr || question.options || []
-      case 'ru': return question.optionsRu || question.options || []
-      case 'ar': return question.optionsAr || question.options || []
-      default: return question.options || []
-    }
-  }
-
-  // Get explanation in study language
-  const getExplanationInLanguage = (question: Question) => {
-    if (!question) return ''
-    switch (studyLanguage) {
-      case 'en': return question.explanationEn || question.explanation || ''
-      case 'fr': return question.explanationFr || question.explanation || ''
-      case 'es': return question.explanationEs || question.explanation || ''
-      case 'tr': return question.explanationTr || question.explanation || ''
-      case 'ru': return question.explanationRu || question.explanation || ''
-      case 'ar': return question.explanationAr || question.explanation || ''
-      default: return question.explanation || ''
+  const loadQuestions = async () => {
+    try {
+      const { questions: loadQuestionsFn } = await import('@/lib/questions')
+      const loadedQuestions = await loadQuestionsFn()
+      setQuestions(loadedQuestions)
+      setLoading(false)
+    } catch (error) {
+      console.error('Error loading questions:', error)
+      setLoading(false)
     }
   }
 
   const handleAnswerSelect = (answerIndex: number) => {
-    if (showResult) return
     setSelectedAnswer(answerIndex)
   }
 
-  const handleSubmitAnswer = () => {
+  const handleSubmit = () => {
     if (selectedAnswer === null) return
     
-    setShowResult(true)
-    if (selectedAnswer === availableQuestions[currentQuestion].correctAnswer) {
+    const isCorrect = selectedAnswer === questions[currentQuestion].correctAnswer
+    if (isCorrect) {
       setScore(score + 1)
     }
+
+    setShowResult(true)
   }
 
-  const handleNextQuestion = () => {
-    if (currentQuestion < availableQuestions.length - 1) {
+  const handleNext = () => {
+    if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1)
       setSelectedAnswer(null)
       setShowResult(false)
@@ -244,430 +64,196 @@ export default function QuizPage() {
     setQuizCompleted(false)
   }
 
-  // Free user info
-  const showFreeUserInfo = !isPremium && availableQuestions.length === 50
-
-  if (!mounted) {
+  if (!mounted || loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
-        <div className="bg-white rounded-lg shadow-xl p-8 max-w-2xl w-full">
-          <div className="animate-pulse">
-            <div className="h-8 bg-gray-200 rounded mb-4"></div>
-            <div className="h-4 bg-gray-200 rounded mb-8"></div>
-            <div className="space-y-4">
-              <div className="h-10 bg-gray-200 rounded"></div>
-              <div className="h-10 bg-gray-200 rounded"></div>
-              <div className="h-10 bg-gray-200 rounded"></div>
-              <div className="h-10 bg-gray-200 rounded"></div>
-            </div>
-          </div>
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Loading...</h1>
+          <p className="text-gray-600">Loading 300 questions from Leben in Deutschland test...</p>
+        </div>
+      </div>
+    )
+  }
+
+  if (questions.length === 0) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">No Questions Available</h1>
+          <p className="text-gray-600 mb-4">Could not load questions. Please try again.</p>
+          <button 
+            onClick={loadQuestions}
+            className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+          >
+            Retry
+          </button>
         </div>
       </div>
     )
   }
 
   if (quizCompleted) {
+    const percentage = Math.round((score / questions.length) * 100)
+    let message = ''
+    if (percentage >= 90) {
+      message = 'Perfect! You answered all questions correctly!'
+    } else if (percentage >= 70) {
+      message = 'Well done! You answered most questions correctly.'
+    } else {
+      message = 'You need more practice. Try again!'
+    }
+
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
-        <div className="bg-white rounded-lg shadow-xl p-8 max-w-md w-full text-center">
-          <h1 className="text-3xl font-bold text-gray-800 mb-6">{t.quizCompleted}</h1>
-          <div className="text-6xl mb-4">🎉</div>
-          <p className="text-xl text-gray-600 mb-4">
-            {t.yourScore} <span className="font-bold text-blue-600">{score}/{availableQuestions.length}</span>
-          </p>
-          <p className="text-gray-500 mb-6">
-            {score === availableQuestions.length ? t.perfect :
-             score >= availableQuestions.length * 0.7 ? t.good :
-             t.needPractice}
-          </p>
-          
-          {/* Free user premium promotion */}
-          {showFreeUserInfo && (
-            <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-lg p-4 mb-6">
-              <h3 className="text-lg font-bold text-yellow-800 mb-2">{t.congratulations}</h3>
-              <p className="text-yellow-700 mb-3">
-                {t.freeQuizCompleted}
-              </p>
-              <div className="text-sm text-yellow-600">
-                <p>{t.premiumFeatures}</p>
-                <p>{t.premiumFeatures2}</p>
-                <p>{t.premiumFeatures3}</p>
-                <p>{t.premiumFeatures4}</p>
+      <div className="min-h-screen bg-gray-50">
+        {/* Header */}
+        <header className="bg-white shadow-sm">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center py-6">
+              <div className="flex items-center">
+                <img 
+                  src="/logo/lid_logo.png" 
+                  alt="Leben in Deutschland Test Logo" 
+                  className="w-16 h-16 object-contain"
+                />
+                <span className="ml-3 text-xl font-bold text-gray-800">Leben in Deutschland Test</span>
               </div>
+              <nav className="hidden md:flex items-center space-x-6">
+                <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">Home</Link>
+              </nav>
             </div>
-          )}
-          
-          <div className="space-y-3">
-            <button
-              onClick={resetQuiz}
-              className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-            >
-              {t.tryAgain}
-            </button>
-            
-            {showFreeUserInfo && (
-              <Link href="/payment">
-                <button className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-                  {t.goPremium}
-                </button>
-              </Link>
-            )}
-            
-            <Link
-              href="/"
-              className="block w-full bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-            >
-              {t.backToHome}
-            </Link>
           </div>
-        </div>
+        </header>
+
+        {/* Results */}
+        <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
+            <div className="mb-8">
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">🎉 Congratulations!</h1>
+              <h2 className="text-2xl font-semibold text-gray-700 mb-6">Quiz Completed!</h2>
+              <div className="text-6xl font-bold text-blue-600 mb-4">{percentage}%</div>
+              <p className="text-xl text-gray-600 mb-4">Your Score: {score} / {questions.length}</p>
+              <p className="text-lg text-gray-700 mb-8">{message}</p>
+      </div>
+
+            <div className="space-y-4">
+              <button
+                onClick={resetQuiz}
+                className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors mr-4"
+              >
+                Try Again
+              </button>
+              <Link href="/">
+                <button className="bg-gray-500 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                  Back to Home
+              </button>
+            </Link>
+            </div>
+          </div>
+        </main>
       </div>
     )
   }
 
-  // Wait for questions to load
-  if (availableQuestions.length === 0) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
-          <p className="text-gray-600">{t.loading}</p>
-        </div>
-      </div>
-    )
-  }
-
-  const currentQ = availableQuestions[currentQuestion]
-  if (!currentQ) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
-        <div className="text-center">
-          <p className="text-gray-600">Question not found</p>
-          <Link href="/" className="text-blue-500 hover:underline">Back to Home</Link>
-        </div>
-      </div>
-    )
-  }
-
-  const questionInStudy = getQuestionInLanguage(currentQ)
-  const optionsInStudy = getOptionsInLanguage(currentQ)
-  const explanationInStudy = getExplanationInLanguage(currentQ)
+  const question = questions[currentQuestion]
+  const isCorrect = selectedAnswer === question.correctAnswer
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      {/* Header with Logo and Language Selector */}
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
       <header className="bg-white shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
-              <Image 
+              <img 
                 src="/logo/lid_logo.png" 
-                alt="Leben in Deutschland Test" 
-                width={64}
-                height={64}
-                className="w-16 h-16 mr-3"
+                alt="Leben in Deutschland Test Logo" 
+                className="w-16 h-16 object-contain"
               />
-              <span className="text-xl font-bold text-gray-800">Leben in Deutschland Test</span>
+              <span className="ml-3 text-xl font-bold text-gray-800">Leben in Deutschland Test</span>
             </div>
-            
-            {/* Language Selector and Auth */}
-            <div className="flex items-center space-x-4">
-              <div className="flex space-x-2">
-                <button
-                  onClick={() => setLanguage('en')}
-                  className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
-                    language === 'en' 
-                      ? 'bg-blue-500 text-white' 
-                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                  }`}
-                >
-                  EN
-                </button>
-                <button
-                  onClick={() => setLanguage('de')}
-                  className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
-                    language === 'de' 
-                      ? 'bg-blue-500 text-white' 
-                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                  }`}
-                >
-                  DE
-                </button>
-              </div>
-              
-              {/* Auth Section */}
-              {session ? (
-                <div className="flex items-center space-x-4">
-                  {/* User Profile Dropdown */}
-                  <div className="relative group">
-                    <button className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium">
-                      <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm font-bold">
-                          {session.user.name ? session.user.name.charAt(0).toUpperCase() : 'U'}
-                        </span>
-                      </div>
-                      <span>{session.user.name || 'User'}</span>
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </button>
-                    
-                    {/* Dropdown Menu */}
-                    <div className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                      <div className="p-4">
-                        {/* User Info */}
-                        <div className="mb-4 pb-4 border-b border-gray-200">
-                          <div className="flex items-center space-x-3">
-                            <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
-                              <span className="text-white text-lg font-bold">
-                                {session.user.name ? session.user.name.charAt(0).toUpperCase() : 'U'}
-                              </span>
-                            </div>
-                            <div>
-                              <p className="font-semibold text-gray-900">{session.user.name || 'User'}</p>
-                              <p className="text-sm text-gray-600">{session.user.email}</p>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        {/* Subscription Status */}
-                        <div className="mb-4 pb-4 border-b border-gray-200">
-                          <div className="flex items-center justify-between">
-                            <span className="text-sm text-gray-600">Status</span>
-                            <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">
-                              Free User
-                            </span>
-                          </div>
-                          <p className="text-xs text-gray-500 mt-1">
-                            50 free questions available
-                          </p>
-                        </div>
-                        
-                        {/* Menu Items */}
-                        <div className="space-y-2">
-                          <Link href="/dashboard" className="flex items-center space-x-3 text-gray-700 hover:text-blue-600 py-2">
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                            </svg>
-                            <span>Profile</span>
-                          </Link>
-                          <Link href="/quiz" className="flex items-center space-x-3 text-gray-700 hover:text-blue-600 py-2">
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                            </svg>
-                            <span>Start Quiz</span>
-                          </Link>
-                          <Link href="/pricing" className="flex items-center space-x-3 text-gray-700 hover:text-blue-600 py-2">
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                            </svg>
-                            <span>Upgrade to Premium</span>
-                          </Link>
-                          <div className="border-t border-gray-200 pt-2">
-                            <Link href="/api/auth/signout" className="flex items-center space-x-3 text-red-600 hover:text-red-700 py-2">
-                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-                              </svg>
-                              <span>Sign out</span>
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                <div className="flex space-x-4">
-                  <Link href="/auth/signin" className="text-gray-700 hover:text-blue-600 font-medium">Login</Link>
-                  <Link href="/auth/signup" className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium">Sign up</Link>
-                </div>
-              )}
-            </div>
+            <nav className="hidden md:flex items-center space-x-6">
+              <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">Home</Link>
+            </nav>
           </div>
         </div>
       </header>
 
-      <div className="flex items-center justify-center p-4">
-        <div className="bg-white rounded-lg shadow-xl p-8 max-w-6xl w-full">
-          {/* Language Selection */}
-          <div className="mb-6 bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-200 rounded-lg p-6">
-            <div className="text-center mb-4">
-              <h3 className="text-xl font-bold text-purple-800 mb-2">{t.languageSelection}</h3>
-              <p className="text-sm text-purple-700">{t.selectLanguage}</p>
-            </div>
-            
-            <div className="flex flex-wrap justify-center gap-2 mb-4">
-              {studyLanguageOptions.map((lang) => (
-                <button
-                  key={lang.code}
-                  onClick={() => setStudyLanguage(lang.code)}
-                  className={`px-3 py-2 rounded-lg border-2 transition-all duration-200 text-center font-medium hover:scale-105 ${
-                    studyLanguage === lang.code
-                      ? 'border-purple-500 bg-purple-100 text-purple-800 shadow-lg transform scale-105'
-                      : 'border-purple-200 bg-white text-purple-700 hover:border-purple-300 hover:bg-purple-50 hover:shadow-md'
-                  }`}
-                >
-                  <div className="flex items-center space-x-2">
-                    <span className="text-xl">{lang.flag}</span>
-                    <span className="text-sm font-semibold">{lang.name}</span>
-                  </div>
-                </button>
-              ))}
-            </div>
-            
-            <div className="text-center">
-              <p className="text-xs text-purple-600 bg-purple-100 rounded-full px-3 py-1 inline-block">
-                {t.defaultExplanation}
-              </p>
-            </div>
+      {/* Quiz Content */}
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Progress */}
+        <div className="mb-8">
+          <div className="flex justify-between items-center mb-4">
+            <h1 className="text-2xl font-bold text-gray-900">Question {currentQuestion + 1} of {questions.length}</h1>
+            <span className="text-lg font-semibold text-blue-600">Score: {score}</span>
           </div>
-
-          {/* Free user info */}
-          {showFreeUserInfo && (
-            <div className="mb-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
-              <div className="flex items-center mb-2">
-                <span className="text-2xl mr-2">🎯</span>
-                <h3 className="text-lg font-bold text-blue-800">{t.freeQuiz}</h3>
-              </div>
-              <p className="text-blue-700 text-sm">
-                {t.freeQuizInfo}
-              </p>
-            </div>
-          )}
-
-          {/* Progress Bar */}
-          <div className="mb-6">
-            <div className="flex justify-between items-center mb-4">
-              <h1 className="text-2xl font-bold text-gray-800">{t.quizTitle}</h1>
-              <span className="text-sm text-gray-500">
-                {t.question} {currentQuestion + 1} / {availableQuestions.length}
-                {showFreeUserInfo && <span className="text-blue-600 ml-2">{t.free}</span>}
-              </span>
-            </div>
-            <div className="w-full bg-gray-200 rounded-full h-3">
-              <div
-                className="bg-gradient-to-r from-blue-500 to-purple-500 h-3 rounded-full transition-all duration-300"
-                style={{ width: `${((currentQuestion + 1) / availableQuestions.length) * 100}%` }}
+          <div className="w-full bg-gray-200 rounded-full h-2">
+            <div 
+              className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+              style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
               ></div>
             </div>
           </div>
 
           {/* Question */}
-          <div className="mb-8">
-            <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-lg p-8 mb-6">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-6 leading-relaxed">
-                {currentQ.question}
-              </h2>
-              
-              {/* Show translation below if different language is selected */}
-              {studyLanguage !== 'de' && questionInStudy !== currentQ.question && (
-                <div className="border-t border-gray-200 pt-3">
-                  <p className="text-sm text-gray-600 italic">
-                    <strong>{studyLanguageOptions.find(lang => lang.code === studyLanguage)?.name}:</strong> {questionInStudy}
-                  </p>
-                </div>
-              )}
-              
-            </div>
-
-            <div className="grid gap-4">
-                    {currentQ.options.map((option: string, index: number) => (
+        <div className="bg-white rounded-2xl shadow-lg p-8">
+          <h2 className="text-xl font-semibold text-gray-900 mb-6">{question.question}</h2>
+          
+          <div className="space-y-4 mb-8">
+            {question.options.map((option, index) => (
                 <button
                   key={index}
-                  onClick={() => handleAnswerSelect(index)}
+                onClick={() => !showResult && handleAnswerSelect(index)}
                   disabled={showResult}
-                  className={`w-full p-6 text-left rounded-lg border-2 transition-all hover:shadow-md text-lg ${
-                    selectedAnswer === index
-                      ? showResult
-                        ? index === currentQ.correctAnswer
-                          ? 'border-green-500 bg-green-50 text-green-800 shadow-lg'
-                          : 'border-red-500 bg-red-50 text-red-800 shadow-lg'
-                        : 'border-blue-500 bg-blue-50 text-blue-800 shadow-md'
-                      : showResult && index === currentQ.correctAnswer
-                      ? 'border-green-500 bg-green-50 text-green-800 shadow-lg'
+                className={`w-full p-4 text-left rounded-lg border-2 transition-all ${
+                  showResult
+                    ? index === question.correctAnswer
+                      ? 'border-green-500 bg-green-50 text-green-800'
+                      : selectedAnswer === index
+                      ? 'border-red-500 bg-red-50 text-red-800'
+                      : 'border-gray-200 bg-gray-50'
+                    : selectedAnswer === index
+                    ? 'border-blue-500 bg-blue-50 text-blue-800'
                       : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
                   }`}
                 >
-                  <div className="flex items-center">
-                    <span className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-lg font-bold mr-4">
-                      {String.fromCharCode(65 + index)}
-                    </span>
-                    <span className="text-lg leading-relaxed">{option}</span>
-                  </div>
-                  
-                  {/* Show translation below if different language is selected */}
-                  {studyLanguage !== 'de' && optionsInStudy[index] !== option && (
-                    <div className="mt-2 pt-2 border-t border-gray-100">
-                      <p className="text-xs text-gray-500 italic">
-                        <strong>{studyLanguageOptions.find(lang => lang.code === studyLanguage)?.name}:</strong> {optionsInStudy[index]}
-                      </p>
-                    </div>
-                  )}
-                  
+                <span className="font-medium">{String.fromCharCode(65 + index)}) </span>
+                {option}
+                {showResult && index === question.correctAnswer && (
+                  <span className="ml-2 text-green-600 font-semibold">✓ Correct</span>
+                )}
+                {showResult && selectedAnswer === index && index !== question.correctAnswer && (
+                  <span className="ml-2 text-red-600 font-semibold">✗ Wrong</span>
+                )}
                 </button>
               ))}
-            </div>
           </div>
-
-          {/* Result */}
-          {showResult && (
-            <div className="mb-8 p-8 bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg">
-              <div className="flex items-center mb-6">
-                <span className="text-4xl mr-4">
-                  {selectedAnswer === currentQ.correctAnswer ? '✅' : '❌'}
-                </span>
-                <h3 className="text-2xl font-bold text-gray-800">
-                  {selectedAnswer === currentQ.correctAnswer ? 'Correct!' : 'Incorrect!'}
-                </h3>
-              </div>
-              
-              <div className="mb-6">
-                <h4 className="text-xl font-semibold text-gray-700 mb-4">{t.explanation}:</h4>
-                <p className="text-lg text-gray-600 leading-relaxed mb-3">
-                  {currentQ.explanation}
-                </p>
-                
-                {/* Show translation below if different language is selected */}
-                {studyLanguage !== 'de' && explanationInStudy !== currentQ.explanation && (
-                  <div className="border-t border-gray-200 pt-4">
-                    <p className="text-base text-gray-600 italic">
-                      <strong>{studyLanguageOptions.find(lang => lang.code === studyLanguage)?.name}:</strong> {explanationInStudy}
-                    </p>
-                  </div>
-                )}
-                
-              </div>
-            </div>
-          )}
-
-          {/* Navigation */}
-          <div className="flex justify-between items-center">
-            <Link
-              href="/"
-              className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-4 px-8 rounded-lg transition-colors text-lg"
-            >
-              {t.backToHome}
-            </Link>
 
             {!showResult ? (
               <button
-                onClick={handleSubmitAnswer}
+              onClick={handleSubmit}
                 disabled={selectedAnswer === null}
-                className="bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-colors text-lg"
+              className="w-full bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300 text-white py-3 rounded-lg font-semibold transition-colors"
               >
-                {t.submit}
+              Submit Answer
               </button>
             ) : (
+            <div className="space-y-4">
+              {question.explanation && (
+                <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                  <h3 className="font-semibold text-blue-900 mb-2">Explanation:</h3>
+                  <p className="text-blue-800">{question.explanation}</p>
+                </div>
+              )}
               <button
-                onClick={handleNextQuestion}
-                className="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-lg transition-colors text-lg"
+                onClick={handleNext}
+                className="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-semibold transition-colors"
               >
-                {currentQuestion < availableQuestions.length - 1 ? t.nextQuestion : t.finishQuiz}
+                {currentQuestion < questions.length - 1 ? 'Next Question' : 'Finish Quiz'}
               </button>
+            </div>
             )}
-          </div>
         </div>
-      </div>
+      </main>
     </div>
   )
 }
