@@ -10,15 +10,11 @@ export default function Home() {
     setMounted(true)
   }, [])
 
-  // Hydration hatasını önlemek için mounted kontrolü
   if (!mounted) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Leben in Deutschland Test
-          </h1>
-          <p className="text-lg text-gray-600">Loading...</p>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Loading...</h1>
         </div>
       </div>
     )
@@ -35,15 +31,6 @@ export default function Home() {
                 src="/logo/lid_logo.png" 
                 alt="Leben in Deutschland Test Logo" 
                 className="w-16 h-16 object-contain"
-                onError={(e) => {
-                  // Fallback to star icon if logo fails to load
-                  e.currentTarget.style.display = 'none';
-                  e.currentTarget.parentElement!.innerHTML = `
-                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
-                      <span class="text-white text-xl font-bold">★</span>
-                    </div>
-                  `;
-                }}
               />
               <span className="ml-3 text-xl font-bold text-gray-800">Leben in Deutschland Test</span>
             </div>
@@ -74,20 +61,6 @@ export default function Home() {
                 src="/Brandenburger_Tor_abends.jpg"
                 alt="Brandenburg Gate illuminated at night, Berlin"
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  // Fallback to gradient background if image fails to load
-                  e.currentTarget.style.display = 'none';
-                  e.currentTarget.parentElement!.innerHTML = `
-                    <div class="w-full h-full bg-gradient-to-br from-amber-900 via-yellow-800 to-orange-900 flex items-center justify-center">
-                      <div class="text-center text-white">
-                        <div class="text-8xl mb-4 drop-shadow-2xl">🏛️</div>
-                        <div class="text-4xl font-bold mb-2 drop-shadow-lg">Brandenburg Gate</div>
-                        <div class="text-xl opacity-90 drop-shadow-md">Berlin, Germany</div>
-                        <div class="text-sm opacity-75 mt-2 drop-shadow-md">Illuminated at night - Symbol of German Unity</div>
-                      </div>
-                    </div>
-                  `;
-                }}
               />
             </div>
           </div>
