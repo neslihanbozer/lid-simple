@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import AdSlot from '@/components/AdSlot'
 
 export default function Home() {
   const [mounted, setMounted] = useState(false)
@@ -88,6 +89,11 @@ export default function Home() {
               </button>
             </Link>
       </div>
+        </div>
+
+        {/* Ad Slot */}
+        <div className="max-w-2xl mx-auto px-4 py-8">
+          <AdSlot slot="1234567890" />
         </div>
       </main>
 

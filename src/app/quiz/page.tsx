@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { questions } from '@/lib/questions'
+import { loadAllQuestions } from '@/lib/bundle-parser'
 
 export default function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -21,8 +21,7 @@ export default function Quiz() {
 
   const loadQuestions = async () => {
     try {
-      const { questions: loadQuestionsFn } = await import('@/lib/questions')
-      const loadedQuestions = await loadQuestionsFn()
+      const loadedQuestions = await loadAllQuestions()
       setQuestions(loadedQuestions)
       setLoading(false)
     } catch (error) {

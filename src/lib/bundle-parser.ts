@@ -41,12 +41,45 @@ export async function loadAllQuestions(): Promise<Question[]> {
         correctAnswer = 2; // C - Usually the third option for basic rights
       }
       
+      // Create meaningful explanations based on question content
+      let explanation = "";
+      
+      if (questionText.includes('meinungsfreiheit') || questionText.includes('gegen die regierung')) {
+        explanation = "Meinungsfreiheit ist ein Grundrecht in Deutschland. Menschen dürfen ihre Meinung frei äußern, auch wenn sie kritisch gegenüber der Regierung ist.";
+      } else if (questionText.includes('religionsunterricht') || questionText.includes('eltern')) {
+        explanation = "In Deutschland haben Eltern das Recht zu entscheiden, ob ihr Kind am Religionsunterricht teilnimmt. Dies ist Teil der Religionsfreiheit.";
+      } else if (questionText.includes('bundesländer') || questionText.includes('federal')) {
+        explanation = "Deutschland besteht aus 16 Bundesländern. Jedes Bundesland hat eigene Kompetenzen in Bildung, Kultur und innerer Sicherheit.";
+      } else if (questionText.includes('grundgesetz') || questionText.includes('verfassung')) {
+        explanation = "Das Grundgesetz ist die Verfassung der Bundesrepublik Deutschland und garantiert die Grundrechte aller Bürger.";
+      } else if (questionText.includes('wahl') || questionText.includes('wählen')) {
+        explanation = "In Deutschland haben alle Bürger ab 18 Jahren das aktive und passive Wahlrecht. Wahlen sind frei, gleich, geheim und allgemein.";
+      } else if (questionText.includes('steuern') || questionText.includes('finanzen')) {
+        explanation = "Steuern sind die Haupteinnahmequelle des Staates und finanzieren öffentliche Leistungen wie Bildung, Gesundheit und Infrastruktur.";
+      } else if (questionText.includes('geschichte') || questionText.includes('historisch')) {
+        explanation = "Die deutsche Geschichte ist geprägt von wichtigen Ereignissen wie der Wiedervereinigung 1990 und der europäischen Integration.";
+      } else if (questionText.includes('kultur') || questionText.includes('tradition')) {
+        explanation = "Deutschland hat eine reiche kulturelle Tradition mit berühmten Schriftstellern, Musikern und Künstlern.";
+      } else if (questionText.includes('integration') || questionText.includes('einwanderung')) {
+        explanation = "Integration bedeutet, dass Menschen mit Migrationshintergrund gleichberechtigt an der Gesellschaft teilhaben können.";
+      } else if (questionText.includes('gesellschaft') || questionText.includes('sozial')) {
+        explanation = "Die deutsche Gesellschaft ist vielfältig und basiert auf demokratischen Werten wie Toleranz und Solidarität.";
+      } else if (questionText.includes('rechtsstaat') || questionText.includes('gesetze')) {
+        explanation = "Deutschland ist ein Rechtsstaat. Alle Menschen müssen sich an die Gesetze halten, unabhängig von ihrer Herkunft oder ihrem Status.";
+      } else if (questionText.includes('demokratie') || questionText.includes('demokratisch')) {
+        explanation = "Deutschland ist eine parlamentarische Demokratie. Das Volk wählt Vertreter, die in seinem Namen Entscheidungen treffen.";
+      } else if (questionText.includes('europa') || questionText.includes('eu')) {
+        explanation = "Deutschland ist Gründungsmitglied der Europäischen Union und spielt eine wichtige Rolle in der europäischen Integration.";
+      } else {
+        explanation = `Diese Frage behandelt wichtige Aspekte des Lebens in Deutschland. Die richtige Antwort basiert auf deutschen Gesetzen, Traditionen oder gesellschaftlichen Werten.`;
+      }
+      
       return {
         id: lidQuestion.id,
         question: lidQuestion.text,
         options: lidQuestion.choices.map((choice: any) => choice.text),
         correctAnswer: correctAnswer,
-        explanation: `Frage ${lidQuestion.numberInCatalog} aus dem offiziellen Leben in Deutschland Test.`,
+        explanation: explanation,
         category: "Allgemein",
         difficulty: "medium"
       };
