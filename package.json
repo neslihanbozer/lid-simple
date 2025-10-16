@@ -5,7 +5,7 @@
   "scripts": {
     "predev": "kill-port 3000 || true",
     "dev": "next dev -p 3000",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "test": "playwright test",
