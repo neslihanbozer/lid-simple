@@ -199,7 +199,7 @@ export default function Quiz() {
           <h2 className="text-xl font-semibold text-gray-900 mb-6">{question.question}</h2>
           
           <div className="space-y-4 mb-8">
-            {question.options.map((option, index) => (
+            {question.options.map((option: string, index: number) => (
                 <button
                   key={index}
                 onClick={() => !showResult && handleAnswerSelect(index)}
