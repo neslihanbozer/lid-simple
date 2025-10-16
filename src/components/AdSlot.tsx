@@ -36,7 +36,7 @@ export default function AdSlot({
     <div ref={adRef}>
       <ins className="adsbygoogle"
         style={style || { display:"block" }}
-        data-ad-client="ca-pub-4113696984513542"
+        data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT || ""}
         data-ad-slot={slot}
         data-ad-format={format}
         data-full-width-responsive={fullWidthResponsive ? "true" : "false"}

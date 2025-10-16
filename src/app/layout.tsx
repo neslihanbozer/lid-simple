@@ -19,9 +19,6 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <head>
-        {/* Google AdSense Meta Tag */}
-        <meta name="google-adsense-account" content="ca-pub-4113696984513542" />
-        
         <Script id="consent-default" strategy="beforeInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -35,20 +32,20 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* GA4 */}
-        <Script async src={"https://www.googletagmanager.com/gtag/js?id=G-1HKWV83BJL"} />
+        {/* GA4 - commented out, uncomment and set NEXT_PUBLIC_GA_ID if needed */}
+        {/* <Script async src={"https://www.googletagmanager.com/gtag/js?id=" + (process.env.NEXT_PUBLIC_GA_ID || "")} />
         <Script id="ga4" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-1HKWV83BJL');
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID || ""}');
           `}
-        </Script>
+        </Script> */}
 
         <Script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4113696984513542"
+          src={"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + (process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "")}
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
