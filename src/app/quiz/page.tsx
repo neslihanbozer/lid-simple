@@ -160,15 +160,15 @@ export default function Quiz() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
               <img 
                 src="/logo/lid_logo.png" 
                 alt="Leben in Deutschland Test Logo" 
-                className="w-16 h-16 object-contain"
+                className="w-14 h-14 object-contain"
               />
-              <span className="ml-3 text-xl font-bold text-gray-800">Leben in Deutschland Test</span>
+              <span className="ml-3 text-lg font-bold text-gray-800">Leben in Deutschland Test</span>
             </div>
             <nav className="hidden md:flex items-center space-x-6">
               <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">Home</Link>
@@ -178,12 +178,12 @@ export default function Quiz() {
       </header>
 
       {/* Quiz Content */}
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         {/* Progress */}
-        <div className="mb-8">
-          <div className="flex justify-between items-center mb-4">
-            <h1 className="text-2xl font-bold text-gray-900">Question {currentQuestion + 1} of {questions.length}</h1>
-            <span className="text-lg font-semibold text-blue-600">Score: {score}</span>
+        <div className="mb-6">
+          <div className="flex justify-between items-center mb-3">
+            <h1 className="text-lg font-bold text-gray-900">Question {currentQuestion + 1} of {questions.length}</h1>
+            <span className="text-base font-semibold text-blue-600">Score: {score}</span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
@@ -194,16 +194,16 @@ export default function Quiz() {
           </div>
 
           {/* Question */}
-        <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-6">{question.question}</h2>
+        <div className="bg-white rounded-2xl shadow-lg p-6">
+          <h2 className="text-lg font-semibold text-gray-900 mb-4">{question.question}</h2>
           
-          <div className="space-y-4 mb-8">
+          <div className="space-y-3 mb-6">
             {question.options.map((option: string, index: number) => (
                 <button
                   key={index}
                 onClick={() => !showResult && handleAnswerSelect(index)}
                   disabled={showResult}
-                className={`w-full p-4 text-left rounded-lg border-2 transition-all ${
+                className={`w-full p-3 text-left rounded-lg border-2 transition-all text-sm ${
                   showResult
                     ? index === question.correctAnswer
                       ? 'border-green-500 bg-green-50 text-green-800'
@@ -236,16 +236,16 @@ export default function Quiz() {
               Submit Answer
               </button>
             ) : (
-            <div className="space-y-4">
+            <div className="space-y-3">
               {question.explanation && (
-                <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                  <h3 className="font-semibold text-blue-900 mb-2">Explanation:</h3>
-                  <p className="text-blue-800">{question.explanation}</p>
+                <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                  <h3 className="font-semibold text-blue-900 mb-1 text-sm">Explanation:</h3>
+                  <p className="text-blue-800 text-sm">{question.explanation}</p>
                 </div>
               )}
               <button
                 onClick={handleNext}
-                className="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-semibold transition-colors"
+                className="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg font-semibold transition-colors text-sm"
               >
                 {currentQuestion < questions.length - 1 ? 'Next Question' : 'Finish Quiz'}
               </button>

@@ -23,28 +23,28 @@ export default function ProgressPage() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
               <div className="flex items-center">
                 <img 
                   src="/logo/lid_logo.png" 
                   alt="Leben in Deutschland Test Logo" 
-                  className="w-28 h-28 object-contain"
+                  className="w-12 h-12 object-contain"
                   onError={(e) => {
                     // Fallback to star icon if logo fails to load
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = `
-                      <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                        <span class="text-white text-sm font-bold">★</span>
+                      <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                        <span class="text-white text-xs font-bold">★</span>
                       </div>
                     `;
                   }}
                 />
-                <span className="ml-2 text-xl font-bold text-gray-800">Leben in Deutschland Test</span>
+                <span className="ml-2 text-lg font-bold text-gray-800">Leben in Deutschland Test</span>
               </div>
             </div>
-            <nav className="hidden md:flex items-center space-x-6">
+            <nav className="hidden md:flex items-center space-x-4">
               <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">
                 {language === 'en' ? 'Home' : 'Startseite'}
               </Link>
@@ -86,13 +86,13 @@ export default function ProgressPage() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="bg-white rounded-2xl shadow-lg p-8">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gray-800 mb-4">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="bg-white rounded-2xl shadow-lg p-6">
+          <div className="text-center mb-6">
+            <h1 className="text-2xl font-bold text-gray-800 mb-3">
               {language === 'en' ? 'Progress Tracking' : 'Fortschrittsverfolgung'}
             </h1>
-            <p className="text-lg text-gray-600">
+            <p className="text-base text-gray-600">
               {language === 'en' 
                 ? 'Track your learning progress across different topics'
                 : 'Verfolgen Sie Ihren Lernfortschritt in verschiedenen Themen'
