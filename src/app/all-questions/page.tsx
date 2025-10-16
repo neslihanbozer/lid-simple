@@ -54,7 +54,7 @@ export default function AllQuestionsPage() {
     const loadQuestions = async () => {
       try {
         const states = getAvailableStates()
-        setAvailableStates(states)
+        setAvailableStates(states.map(state => ({ code: state, name: state })))
         
         const generalQuestions = await loadAllQuestions()
         setBundleQuestions(generalQuestions)
