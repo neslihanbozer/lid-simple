@@ -32,16 +32,20 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* GA4 - commented out, uncomment and set NEXT_PUBLIC_GA_ID if needed */}
-        {/* <Script async src={"https://www.googletagmanager.com/gtag/js?id=" + (process.env.NEXT_PUBLIC_GA_ID || "")} />
-        <Script id="ga4" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID || ""}');
-          `}
-        </Script> */}
+        {(() => {
+          const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+          return GA_ID && (
+            <>
+              <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+              <script dangerouslySetInnerHTML={{__html:`
+                window.dataLayer=window.dataLayer||[];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config','${GA_ID}',{ anonymize_ip:true, debug_mode:true });
+              `}} />
+            </>
+          );
+        })()}
 
         <Script
           async
