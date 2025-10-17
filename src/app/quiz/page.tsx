@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { loadAllQuestions } from '@/lib/bundle-parser'
+import Seo from "@/components/Seo";
 
 export default function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -156,29 +157,43 @@ export default function Quiz() {
   const question = questions[currentQuestion]
   const isCorrect = selectedAnswer === question.correctAnswer
 
-  return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="flex items-center">
-              <img 
-                src="/logo/lid_logo.png" 
-                alt="Leben in Deutschland Test Logo" 
-                className="w-14 h-14 object-contain"
-              />
-              <span className="ml-3 text-lg font-bold text-gray-800">Leben in Deutschland Test</span>
-            </div>
-            <nav className="hidden md:flex items-center space-x-6">
-              <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">Home</Link>
-            </nav>
-          </div>
-        </div>
-      </header>
+  const canonical = "https://lebenindeutschland-prep.com/quiz";
 
-      {/* Quiz Content */}
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+  return (
+    <>
+      <Seo
+        title="Einbürgerungstest Quiz – Ücretsiz Mini Deneme"
+        description="Leben in Deutschland deneme sınavı: süre, puanlama ve açıklamalar. Mini denemeyi başlatmadan önce formatı öğrenin."
+        canonical={canonical}
+        faq={[
+          { q: "Süre kaç dakika?", a: "Resmi sınavda 60 dakika verilir; mini denemede benzer süre kullanılır." },
+          { q: "Kaç soru var?", a: "Genel havuzdan 33 soru gelir; en az 17 doğru gerekir." },
+          { q: "Eyalet soruları dahil mi?", a: "Evet, eyalete özgü 3 soru bulunur." },
+          { q: "Ücretsiz deneyebilir miyim?", a: "Evet, mini denemeyi ücretsiz başlatabilirsiniz." }
+        ]}
+      />
+      <div className="min-h-screen bg-gray-50">
+        {/* Header */}
+        <header className="bg-white shadow-sm">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center py-4">
+              <div className="flex items-center">
+                <img 
+                  src="/logo/lid_logo.png" 
+                  alt="Leben in Deutschland Test Logo" 
+                  className="w-14 h-14 object-contain"
+                />
+                <span className="ml-3 text-lg font-bold text-gray-800">Leben in Deutschland Test</span>
+              </div>
+              <nav className="hidden md:flex items-center space-x-6">
+                <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">Home</Link>
+              </nav>
+            </div>
+          </div>
+        </header>
+
+        {/* Quiz Content */}
+        <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         {/* Progress */}
         <div className="mb-6">
           <div className="flex justify-between items-center mb-3">
@@ -254,5 +269,6 @@ export default function Quiz() {
         </div>
       </main>
     </div>
+    </>
   )
 }

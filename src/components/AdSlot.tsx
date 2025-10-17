@@ -1,46 +1,25 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-type Props = {
-  slot: string;                         // data-ad-slot
-  style?: React.CSSProperties;
-  format?: string;                      // "auto" | "fluid" | etc.
-  fullWidthResponsive?: boolean;
-};
+const ADS_ENABLED = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true";
 
-export default function AdSlot({
-  slot,
-  style,
-  format="auto",
-  fullWidthResponsive=true
-}: Props) {
-  const adRef = useRef<HTMLDivElement>(null);
-  const adLoaded = useRef(false);
-
+export default function AdSlot(props: React.HTMLAttributes<HTMLDivElement>) {
+  const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    if (adLoaded.current || !adRef.current) return;
-    
+    if (!ADS_ENABLED) return;
     try {
       // @ts-ignore
-      if (window.adsbygoogle && !adRef.current.hasAttribute('data-adsbygoogle-status')) {
-        // @ts-ignore
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-        adLoaded.current = true;
-      }
-    } catch (error) {
-      console.log('AdSense error:', error);
-    }
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch {}
   }, []);
-
+  if (!ADS_ENABLED) return null;
   return (
-    <div ref={adRef}>
-      <ins className="adsbygoogle"
-        style={style || { display:"block" }}
-        data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT || ""}
-        data-ad-slot={slot}
-        data-ad-format={format}
-        data-full-width-responsive={fullWidthResponsive ? "true" : "false"}
-      />
-    </div>
+    <ins
+      className="adsbygoogle"
+      style={{ display: "block" }}
+      data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT}
+      data-ad-slot={props["data-ad-slot"] || ""}
+      data-full-width-responsive="true"
+    />
   );
 }
