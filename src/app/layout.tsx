@@ -51,12 +51,14 @@ export default function RootLayout({
         />
         <script dangerouslySetInnerHTML={{__html:`
           window.__onConsentAccept=function(){
-            gtag('consent','update',{
-              ad_storage:'granted',
-              ad_user_data:'granted',
-              ad_personalization:'granted',
-              analytics_storage:'granted'
-            });
+            try{
+              gtag('consent','update',{
+                ad_storage:'granted',
+                ad_user_data:'granted',
+                ad_personalization:'granted',
+                analytics_storage:'granted'
+              });
+            }catch(e){}
           };
         `}} />
       </head>

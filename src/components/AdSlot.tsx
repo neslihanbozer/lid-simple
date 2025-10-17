@@ -3,7 +3,11 @@ import { useEffect, useRef } from "react";
 
 const ADS_ENABLED = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true";
 
-export default function AdSlot(props: React.HTMLAttributes<HTMLDivElement>) {
+type AdSlotProps = React.HTMLAttributes<HTMLDivElement> & {
+  "data-ad-slot"?: string;
+};
+
+export default function AdSlot(props: AdSlotProps) {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!ADS_ENABLED) return;

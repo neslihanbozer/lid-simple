@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { loadAllQuestions } from '@/lib/bundle-parser'
-import Seo from "@/components/Seo";
 
 export default function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -160,19 +159,7 @@ export default function Quiz() {
   const canonical = "https://lebenindeutschland-prep.com/quiz";
 
   return (
-    <>
-      <Seo
-        title="Einbürgerungstest Quiz – Ücretsiz Mini Deneme"
-        description="Leben in Deutschland deneme sınavı: süre, puanlama ve açıklamalar. Mini denemeyi başlatmadan önce formatı öğrenin."
-        canonical={canonical}
-        faq={[
-          { q: "Süre kaç dakika?", a: "Resmi sınavda 60 dakika verilir; mini denemede benzer süre kullanılır." },
-          { q: "Kaç soru var?", a: "Genel havuzdan 33 soru gelir; en az 17 doğru gerekir." },
-          { q: "Eyalet soruları dahil mi?", a: "Evet, eyalete özgü 3 soru bulunur." },
-          { q: "Ücretsiz deneyebilir miyim?", a: "Evet, mini denemeyi ücretsiz başlatabilirsiniz." }
-        ]}
-      />
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Header */}
         <header className="bg-white shadow-sm">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -269,6 +256,5 @@ export default function Quiz() {
         </div>
       </main>
     </div>
-    </>
   )
 }

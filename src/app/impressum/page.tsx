@@ -1,13 +1,8 @@
-import Seo from "@/components/Seo";
-
 export default function Page() {
   return (
-    <>
-      <Seo title="Impressum" description="Impressum" canonical="https://lebenindeutschland-prep.com/impressum" />
-      <main className="container mx-auto max-w-3xl px-4 py-8">
-        <h1 className="text-2xl font-semibold mb-4">Impressum</h1>
-        <p>Buraya yasal işletme/iletişim bilgileriniz (ad, adres, e-posta) gelecek. Almanya için zorunludur.</p>
-      </main>
-    </>
+    <main className="container mx-auto max-w-3xl px-4 py-8">
+      <h1 className="text-2xl font-semibold mb-4">Impressum</h1>
+      <p>Buraya yasal işletme/iletişim bilgileriniz (ad, adres, e-posta) gelecek. Almanya için zorunludur.</p>
+    </main>
   );
 }

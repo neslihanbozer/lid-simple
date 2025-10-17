@@ -1,2 +1,10 @@
+# *
 User-agent: *
-Disallow:
+Allow: /
+
+# Host
+Host: https://lebenindeutschland-prep.com
+
+# Sitemaps
+Sitemap: https://lebenindeutschland-prep.com/sitemap.xml
+Sitemap: https://lebenindeutschland-prep.com/server-sitemap.xml
