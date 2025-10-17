@@ -1,3 +1,7 @@
+export const metadata = { 
+  robots: { index: false, follow: false } 
+};
+
 export default function Page() {
   return (
     <main className="container mx-auto max-w-3xl px-4 py-8">

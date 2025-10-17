@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { loadAllQuestions } from '@/lib/bundle-parser'
+import AdsenseSafe from '@/components/AdsenseSafe'
 
 export default function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -255,6 +256,9 @@ export default function Quiz() {
             )}
         </div>
       </main>
+      
+      {/* AdSense Safe Component */}
+      <AdsenseSafe />
     </div>
   )
 }
