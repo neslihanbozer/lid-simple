@@ -1,25 +1,19 @@
-'use client'
-
-import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import AdSlot from '@/components/AdSlot'
 
-export default function Home() {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Loading...</h1>
-        </div>
-      </div>
-    )
+export const metadata = {
+  title: 'Leben in Deutschland Test - Kostenlose Übungsfragen | Einbürgerungstest',
+  description: 'Bereiten Sie sich kostenlos auf den Einbürgerungstest vor! 300+ offizielle Übungsfragen aus dem Leben in Deutschland Test. Sofort starten, keine Anmeldung erforderlich.',
+  keywords: 'Leben in Deutschland Test, Einbürgerungstest, Einbürgerung, Deutschland Test, Übungsfragen, kostenlos',
+  openGraph: {
+    title: 'Leben in Deutschland Test - Kostenlose Übungsfragen',
+    description: 'Bereiten Sie sich kostenlos auf den Einbürgerungstest vor! 300+ offizielle Übungsfragen.',
+    type: 'website',
+    url: 'https://lebenindeutschland-prep.com',
   }
+}
+
+export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -36,7 +30,7 @@ export default function Home() {
               <span className="ml-2 text-base font-bold text-gray-800">Leben in Deutschland Test</span>
             </div>
             <nav className="hidden md:flex items-center space-x-4">
-              <span className="text-sm text-gray-500">Welcome to Leben in Deutschland Test</span>
+              <span className="text-sm text-gray-500">Willkommen zum Leben in Deutschland Test</span>
             </nav>
           </div>
         </div>
@@ -51,7 +45,7 @@ export default function Home() {
               Leben in Deutschland Test
             </h1>
             <p className="text-base text-gray-600 leading-relaxed max-w-lg">
-              Prepare for the official integration test with 300+ practice questions.
+              Bereiten Sie sich auf den offiziellen Einbürgerungstest mit über 300 Übungsfragen vor.
             </p>
           </div>
 
@@ -78,14 +72,14 @@ export default function Home() {
               Leben in Deutschland Quiz
             </h3>
             <p className="text-sm text-gray-600 mb-2">
-              300 practice questions covering all topics for the official integration test.
+              300 Übungsfragen zu allen Themen des offiziellen Einbürgerungstests.
             </p>
             <p className="text-xs text-green-600 font-semibold mb-3">
-              ✓ Free for everyone
+              ✓ Kostenlos für alle
             </p>
             <Link href="/quiz">
               <button className="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold transition-colors text-sm">
-                Start Quiz
+                Quiz starten
               </button>
             </Link>
       </div>

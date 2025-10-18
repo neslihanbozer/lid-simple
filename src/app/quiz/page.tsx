@@ -68,8 +68,8 @@ export default function Quiz() {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Loading...</h1>
-          <p className="text-gray-600">Loading 300 questions from Leben in Deutschland test...</p>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Lädt...</h1>
+          <p className="text-gray-600">300 Fragen aus dem Leben in Deutschland Test werden geladen...</p>
         </div>
       </div>
     )
@@ -79,13 +79,13 @@ export default function Quiz() {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">No Questions Available</h1>
-          <p className="text-gray-600 mb-4">Could not load questions. Please try again.</p>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Keine Fragen verfügbar</h1>
+          <p className="text-gray-600 mb-4">Fragen konnten nicht geladen werden. Bitte versuchen Sie es erneut.</p>
           <button 
             onClick={loadQuestions}
             className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
           >
-            Retry
+            Erneut versuchen
           </button>
         </div>
       </div>
@@ -96,11 +96,11 @@ export default function Quiz() {
     const percentage = Math.round((score / questions.length) * 100)
     let message = ''
     if (percentage >= 90) {
-      message = 'Perfect! You answered all questions correctly!'
+      message = 'Perfekt! Sie haben alle Fragen richtig beantwortet!'
     } else if (percentage >= 70) {
-      message = 'Well done! You answered most questions correctly.'
+      message = 'Gut gemacht! Sie haben die meisten Fragen richtig beantwortet.'
     } else {
-      message = 'You need more practice. Try again!'
+      message = 'Sie brauchen mehr Übung. Versuchen Sie es erneut!'
     }
 
     return (
@@ -118,7 +118,7 @@ export default function Quiz() {
                 <span className="ml-3 text-xl font-bold text-gray-800">Leben in Deutschland Test</span>
               </div>
               <nav className="hidden md:flex items-center space-x-6">
-                <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">Home</Link>
+                <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">Startseite</Link>
               </nav>
             </div>
           </div>
@@ -128,10 +128,10 @@ export default function Quiz() {
         <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
             <div className="mb-8">
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">🎉 Congratulations!</h1>
-              <h2 className="text-2xl font-semibold text-gray-700 mb-6">Quiz Completed!</h2>
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">🎉 Herzlichen Glückwunsch!</h1>
+              <h2 className="text-2xl font-semibold text-gray-700 mb-6">Quiz abgeschlossen!</h2>
               <div className="text-6xl font-bold text-blue-600 mb-4">{percentage}%</div>
-              <p className="text-xl text-gray-600 mb-4">Your Score: {score} / {questions.length}</p>
+              <p className="text-xl text-gray-600 mb-4">Ihr Ergebnis: {score} / {questions.length}</p>
               <p className="text-lg text-gray-700 mb-8">{message}</p>
       </div>
 
@@ -140,11 +140,11 @@ export default function Quiz() {
                 onClick={resetQuiz}
                 className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors mr-4"
               >
-                Try Again
+                Erneut versuchen
               </button>
               <Link href="/">
                 <button className="bg-gray-500 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                  Back to Home
+                  Zurück zur Startseite
               </button>
             </Link>
             </div>
@@ -174,7 +174,7 @@ export default function Quiz() {
                 <span className="ml-3 text-lg font-bold text-gray-800">Leben in Deutschland Test</span>
               </div>
               <nav className="hidden md:flex items-center space-x-6">
-                <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">Home</Link>
+                <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">Startseite</Link>
               </nav>
             </div>
           </div>
@@ -185,8 +185,8 @@ export default function Quiz() {
         {/* Progress */}
         <div className="mb-6">
           <div className="flex justify-between items-center mb-3">
-            <h1 className="text-lg font-bold text-gray-900">Question {currentQuestion + 1} of {questions.length}</h1>
-            <span className="text-base font-semibold text-blue-600">Score: {score}</span>
+            <h1 className="text-lg font-bold text-gray-900">Frage {currentQuestion + 1} von {questions.length}</h1>
+            <span className="text-base font-semibold text-blue-600">Punktzahl: {score}</span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
@@ -221,10 +221,10 @@ export default function Quiz() {
                 <span className="font-medium">{String.fromCharCode(65 + index)}) </span>
                 {option}
                 {showResult && index === question.correctAnswer && (
-                  <span className="ml-2 text-green-600 font-semibold">✓ Correct</span>
+                  <span className="ml-2 text-green-600 font-semibold">✓ Richtig</span>
                 )}
                 {showResult && selectedAnswer === index && index !== question.correctAnswer && (
-                  <span className="ml-2 text-red-600 font-semibold">✗ Wrong</span>
+                  <span className="ml-2 text-red-600 font-semibold">✗ Falsch</span>
                 )}
                 </button>
               ))}
@@ -236,13 +236,13 @@ export default function Quiz() {
                 disabled={selectedAnswer === null}
               className="w-full bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300 text-white py-3 rounded-lg font-semibold transition-colors"
               >
-              Submit Answer
+              Antwort abschicken
               </button>
             ) : (
             <div className="space-y-3">
               {question.explanation && (
                 <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                  <h3 className="font-semibold text-blue-900 mb-1 text-sm">Explanation:</h3>
+                  <h3 className="font-semibold text-blue-900 mb-1 text-sm">Erklärung:</h3>
                   <p className="text-blue-800 text-sm">{question.explanation}</p>
                 </div>
               )}
@@ -250,7 +250,7 @@ export default function Quiz() {
                 onClick={handleNext}
                 className="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg font-semibold transition-colors text-sm"
               >
-                {currentQuestion < questions.length - 1 ? 'Next Question' : 'Finish Quiz'}
+                {currentQuestion < questions.length - 1 ? 'Nächste Frage' : 'Quiz beenden'}
               </button>
             </div>
             )}

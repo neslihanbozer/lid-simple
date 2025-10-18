@@ -9,6 +9,7 @@ const nextConfig = {
     return [
       { source: '/einbuergerungstest', destination: '/', permanent: true },
       { source: '/einbuergerungstest/', destination: '/', permanent: true },
+      { source: '/berlin-fragen', destination: '/bundeslaender/berlin-fragen', permanent: true },
     ];
   },
 }
