@@ -29,12 +29,10 @@ export default function Home() {
               />
               <span className="ml-2 text-base font-bold text-gray-800">Leben in Deutschland Test</span>
             </div>
-            <nav className="hidden md:flex items-center space-x-6">
+            <nav className="flex items-center space-x-6">
               <a href="/" className="text-gray-700 hover:text-blue-600 font-medium">Startseite</a>
               <a href="/quiz" className="text-gray-700 hover:text-blue-600 font-medium">Quiz</a>
-              <a href="/progress" className="text-gray-700 hover:text-blue-600 font-medium">Fortschritt</a>
-              <a href="/about" className="text-gray-700 hover:text-blue-600 font-medium">Über uns</a>
-              <a href="/faq" className="text-gray-700 hover:text-blue-600 font-medium">FAQ</a>
+              <a href="/contact" className="text-gray-700 hover:text-blue-600 font-medium">Kontakt</a>
             </nav>
           </div>
         </div>
