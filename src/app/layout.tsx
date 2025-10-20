@@ -7,8 +7,9 @@ import CookieBanner from '@/components/CookieBanner'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Leben in Deutschland Test',
-  description: 'Test your knowledge about life in Germany',
+  title: 'Leben in Deutschland Test - Kostenlose Übungsfragen | Einbürgerungstest',
+  description: 'Bereiten Sie sich kostenlos auf den Einbürgerungstest vor! 300+ offizielle Übungsfragen aus dem Leben in Deutschland Test. Sofort starten, keine Anmeldung erforderlich.',
+  keywords: 'Leben in Deutschland Test, Einbürgerungstest, Einbürgerung, Deutschland Test, Übungsfragen, kostenlos',
 }
 
 export default function RootLayout({
@@ -17,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="tr">
+    <html lang="de">
       <head>
         <Script id="consent-default" strategy="beforeInteractive">
           {`
