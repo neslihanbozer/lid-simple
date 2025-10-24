@@ -32,3 +32,13 @@ body {
   flex: 1 1 300px;
   box-sizing: border-box;
 }
+
+/* Quiz styles - avoid list markers / chips */
+.quiz ul, .quiz ol { 
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+}
+.quiz *::marker, .quiz li::before { 
+  content: none !important; 
+}

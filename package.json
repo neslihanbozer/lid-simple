@@ -13,7 +13,12 @@
     "test:ui": "playwright test --ui",
     "test:headed": "playwright test --headed",
     "lid:setup": "py -m pip install --quiet pymupdf pillow",
-    "lid:pdf2json": "py scripts/lid_pymupdf_extract.py"
+    "lid:clean": "node scripts/lid_reset.mjs",
+    "lid:pdf:extract": "py scripts/lid_pymupdf_extract.py",
+    "lid:build": "node scripts/lid_join_validate.mjs",
+    "lid:all": "npm run lid:clean && npm run lid:pdf:extract && npm run lid:build",
+    "lid:sanity": "node scripts/lid_sanity.mjs",
+    "prebuild": "node scripts/lid_join_validate.mjs"
   },
   "dependencies": {
     "@prisma/client": "^5.0.0",
@@ -21,6 +26,7 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "bcryptjs": "^2.4.3",
+    "csv-parse": "^6.1.0",
     "jsonwebtoken": "^9.0.0",
     "next": "14.0.0",
     "next-auth": "^4.24.0",
