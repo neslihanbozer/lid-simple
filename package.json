@@ -11,7 +11,9 @@
     "lint": "next lint",
     "test": "playwright test",
     "test:ui": "playwright test --ui",
-    "test:headed": "playwright test --headed"
+    "test:headed": "playwright test --headed",
+    "lid:setup": "py -m pip install --quiet pymupdf pillow",
+    "lid:pdf2json": "py scripts/lid_pymupdf_extract.py"
   },
   "dependencies": {
     "@prisma/client": "^5.0.0",
