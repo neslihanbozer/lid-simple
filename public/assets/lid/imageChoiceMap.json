@@ -1,0 +1,327 @@
+{
+  "GEN021": {
+    "kind": "image-choice",
+    "state": null,
+    "assets": {
+      "A": "/assets/lid/general/GEN021_A.png",
+      "B": "/assets/lid/general/GEN021_B.png",
+      "C": "/assets/lid/general/GEN021_C.png",
+      "D": "/assets/lid/general/GEN021_D.png"
+    },
+    "page": 9
+  },
+  "GEN055": {
+    "kind": "single-image",
+    "state": null,
+    "asset": "/assets/lid/general/GEN055.png",
+    "page": 21
+  },
+  "GEN070": {
+    "kind": "single-image",
+    "state": null,
+    "asset": "/assets/lid/general/GEN070.png",
+    "page": 27
+  },
+  "GEN130": {
+    "kind": "single-image",
+    "state": null,
+    "asset": "/assets/lid/general/GEN130.png",
+    "page": 48
+  },
+  "GEN176": {
+    "kind": "single-image",
+    "state": null,
+    "asset": "/assets/lid/general/GEN176.png",
+    "page": 64
+  },
+  "GEN181": {
+    "kind": "single-image",
+    "state": null,
+    "asset": "/assets/lid/general/GEN181.png",
+    "page": 67
+  },
+  "GEN187": {
+    "kind": "single-image",
+    "state": null,
+    "asset": "/assets/lid/general/GEN187.png",
+    "page": 70
+  },
+  "GEN209": {
+    "kind": "image-choice",
+    "state": null,
+    "assets": {
+      "A": "/assets/lid/general/GEN209_A.png",
+      "B": "/assets/lid/general/GEN209_B.png",
+      "C": "/assets/lid/general/GEN209_C.png",
+      "D": "/assets/lid/general/GEN209_D.png"
+    },
+    "page": 78
+  },
+  "GEN216": {
+    "kind": "single-image",
+    "state": null,
+    "asset": "/assets/lid/general/GEN216.png",
+    "page": 81
+  },
+  "GEN226": {
+    "kind": "image-choice",
+    "state": null,
+    "assets": {
+      "A": "/assets/lid/general/GEN226_A.png",
+      "B": "/assets/lid/general/GEN226_B.png",
+      "C": "/assets/lid/general/GEN226_C.png",
+      "D": "/assets/lid/general/GEN226_D.png"
+    },
+    "page": 85
+  },
+  "GEN235": {
+    "kind": "single-image",
+    "state": null,
+    "asset": "/assets/lid/general/GEN235.png",
+    "page": 88
+  },
+  "BB01": {
+    "kind": "image-choice",
+    "state": "BB",
+    "assets": {
+      "A": "/assets/lid/states/BB/BB01_A.png",
+      "B": "/assets/lid/states/BB/BB01_B.png",
+      "C": "/assets/lid/states/BB/BB01_C.png",
+      "D": "/assets/lid/states/BB/BB01_D.png"
+    },
+    "page": 127
+  },
+  "BB08": {
+    "kind": "single-image",
+    "state": "BB",
+    "asset": "/assets/lid/states/BB/BB08.png",
+    "page": 130
+  },
+  "BE01": {
+    "kind": "image-choice",
+    "state": "BE",
+    "assets": {
+      "A": "/assets/lid/states/BE/BE01_A.png",
+      "B": "/assets/lid/states/BE/BE01_B.png",
+      "C": "/assets/lid/states/BE/BE01_C.png",
+      "D": "/assets/lid/states/BE/BE01_D.png"
+    },
+    "page": 122
+  },
+  "BE08": {
+    "kind": "single-image",
+    "state": "BE",
+    "asset": "/assets/lid/states/BE/BE08.png",
+    "page": 125
+  },
+  "BW01": {
+    "kind": "image-choice",
+    "state": "BW",
+    "assets": {
+      "A": "/assets/lid/states/BW/BW01_A.png",
+      "B": "/assets/lid/states/BW/BW01_B.png",
+      "C": "/assets/lid/states/BW/BW01_C.png",
+      "D": "/assets/lid/states/BW/BW01_D.png"
+    },
+    "page": 112
+  },
+  "BW08": {
+    "kind": "single-image",
+    "state": "BW",
+    "asset": "/assets/lid/states/BW/BW08.png",
+    "page": 115
+  },
+  "BY01": {
+    "kind": "image-choice",
+    "state": "BY",
+    "assets": {
+      "A": "/assets/lid/states/BY/BY01_A.png",
+      "B": "/assets/lid/states/BY/BY01_B.png",
+      "C": "/assets/lid/states/BY/BY01_C.png",
+      "D": "/assets/lid/states/BY/BY01_D.png"
+    },
+    "page": 117
+  },
+  "BY08": {
+    "kind": "single-image",
+    "state": "BY",
+    "asset": "/assets/lid/states/BY/BY08.png",
+    "page": 120
+  },
+  "HB01": {
+    "kind": "image-choice",
+    "state": "HB",
+    "assets": {
+      "A": "/assets/lid/states/HB/HB01_A.png",
+      "B": "/assets/lid/states/HB/HB01_B.png",
+      "C": "/assets/lid/states/HB/HB01_C.png",
+      "D": "/assets/lid/states/HB/HB01_D.png"
+    },
+    "page": 132
+  },
+  "HB08": {
+    "kind": "single-image",
+    "state": "HB",
+    "asset": "/assets/lid/states/HB/HB08.png",
+    "page": 135
+  },
+  "HE01": {
+    "kind": "image-choice",
+    "state": "HE",
+    "assets": {
+      "A": "/assets/lid/states/HE/HE01_A.png",
+      "B": "/assets/lid/states/HE/HE01_B.png",
+      "C": "/assets/lid/states/HE/HE01_C.png",
+      "D": "/assets/lid/states/HE/HE01_D.png"
+    },
+    "page": 142
+  },
+  "HE08": {
+    "kind": "single-image",
+    "state": "HE",
+    "asset": "/assets/lid/states/HE/HE08.png",
+    "page": 145
+  },
+  "HH01": {
+    "kind": "image-choice",
+    "state": "HH",
+    "assets": {
+      "A": "/assets/lid/states/HH/HH01_A.png",
+      "B": "/assets/lid/states/HH/HH01_B.png",
+      "C": "/assets/lid/states/HH/HH01_C.png",
+      "D": "/assets/lid/states/HH/HH01_D.png"
+    },
+    "page": 137
+  },
+  "HH08": {
+    "kind": "single-image",
+    "state": "HH",
+    "asset": "/assets/lid/states/HH/HH08.png",
+    "page": 140
+  },
+  "MV01": {
+    "kind": "image-choice",
+    "state": "MV",
+    "assets": {
+      "A": "/assets/lid/states/MV/MV01_A.png",
+      "B": "/assets/lid/states/MV/MV01_B.png",
+      "C": "/assets/lid/states/MV/MV01_C.png",
+      "D": "/assets/lid/states/MV/MV01_D.png"
+    },
+    "page": 147
+  },
+  "MV08": {
+    "kind": "single-image",
+    "state": "MV",
+    "asset": "/assets/lid/states/MV/MV08.png",
+    "page": 150
+  },
+  "NI01": {
+    "kind": "image-choice",
+    "state": "NI",
+    "assets": {
+      "A": "/assets/lid/states/NI/NI01_A.png",
+      "B": "/assets/lid/states/NI/NI01_B.png",
+      "C": "/assets/lid/states/NI/NI01_C.png",
+      "D": "/assets/lid/states/NI/NI01_D.png"
+    },
+    "page": 152
+  },
+  "NI08": {
+    "kind": "single-image",
+    "state": "NI",
+    "asset": "/assets/lid/states/NI/NI08.png",
+    "page": 155
+  },
+  "NW01": {
+    "kind": "image-choice",
+    "state": "NW",
+    "assets": {
+      "A": "/assets/lid/states/NW/NW01_A.png",
+      "B": "/assets/lid/states/NW/NW01_B.png",
+      "C": "/assets/lid/states/NW/NW01_C.png",
+      "D": "/assets/lid/states/NW/NW01_D.png"
+    },
+    "page": 157
+  },
+  "NW08": {
+    "kind": "single-image",
+    "state": "NW",
+    "asset": "/assets/lid/states/NW/NW08.png",
+    "page": 160
+  },
+  "RP01": {
+    "kind": "image-choice",
+    "state": "RP",
+    "assets": {
+      "A": "/assets/lid/states/RP/RP01_A.png",
+      "B": "/assets/lid/states/RP/RP01_B.png",
+      "C": "/assets/lid/states/RP/RP01_C.png",
+      "D": "/assets/lid/states/RP/RP01_D.png"
+    },
+    "page": 162
+  },
+  "RP08": {
+    "kind": "single-image",
+    "state": "RP",
+    "asset": "/assets/lid/states/RP/RP08.png",
+    "page": 165
+  },
+  "SH08": {
+    "kind": "single-image",
+    "state": "SH",
+    "asset": "/assets/lid/states/SH/SH08.png",
+    "page": 185
+  },
+  "SL01": {
+    "kind": "image-choice",
+    "state": "SL",
+    "assets": {
+      "A": "/assets/lid/states/SL/SL01_A.png",
+      "B": "/assets/lid/states/SL/SL01_B.png",
+      "C": "/assets/lid/states/SL/SL01_C.png",
+      "D": "/assets/lid/states/SL/SL01_D.png"
+    },
+    "page": 167
+  },
+  "SL08": {
+    "kind": "single-image",
+    "state": "SL",
+    "asset": "/assets/lid/states/SL/SL08.png",
+    "page": 170
+  },
+  "SN01": {
+    "kind": "image-choice",
+    "state": "SN",
+    "assets": {
+      "A": "/assets/lid/states/SN/SN01_A.png",
+      "B": "/assets/lid/states/SN/SN01_B.png",
+      "C": "/assets/lid/states/SN/SN01_C.png",
+      "D": "/assets/lid/states/SN/SN01_D.png"
+    },
+    "page": 177
+  },
+  "SN08": {
+    "kind": "single-image",
+    "state": "SN",
+    "asset": "/assets/lid/states/SN/SN08.png",
+    "page": 180
+  },
+  "TH01": {
+    "kind": "image-choice",
+    "state": "TH",
+    "assets": {
+      "A": "/assets/lid/states/TH/TH01_A.png",
+      "B": "/assets/lid/states/TH/TH01_B.png",
+      "C": "/assets/lid/states/TH/TH01_C.png",
+      "D": "/assets/lid/states/TH/TH01_D.png"
+    },
+    "page": 187
+  },
+  "TH08": {
+    "kind": "single-image",
+    "state": "TH",
+    "asset": "/assets/lid/states/TH/TH08.png",
+    "page": 190
+  }
+}

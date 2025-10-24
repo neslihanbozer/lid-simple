@@ -1,0 +1,504 @@
+{
+  "images": [
+    {
+      "id": "GEN021",
+      "slot": "A",
+      "path": "/assets/lid/export/GEN_021_xxx_siklar_A.png"
+    },
+    {
+      "id": "GEN021",
+      "slot": "B",
+      "path": "/assets/lid/export/GEN_021_xxx_siklar_B.png"
+    },
+    {
+      "id": "GEN021",
+      "slot": "C",
+      "path": "/assets/lid/export/GEN_021_xxx_siklar_C.png"
+    },
+    {
+      "id": "GEN021",
+      "slot": "D",
+      "path": "/assets/lid/export/GEN_021_xxx_siklar_D.png"
+    },
+    {
+      "id": "GEN055",
+      "slot": "STEM",
+      "path": "/assets/lid/export/GEN_055_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "GEN070",
+      "slot": "STEM",
+      "path": "/assets/lid/export/GEN_070_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "GEN130",
+      "slot": "STEM",
+      "path": "/assets/lid/export/GEN_130_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "GEN176",
+      "slot": "STEM",
+      "path": "/assets/lid/export/GEN_176_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "GEN181",
+      "slot": "STEM",
+      "path": "/assets/lid/export/GEN_181_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "GEN187",
+      "slot": "STEM",
+      "path": "/assets/lid/export/GEN_187_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "GEN209",
+      "slot": "A",
+      "path": "/assets/lid/export/GEN_209_xxx_siklar_A.png"
+    },
+    {
+      "id": "GEN209",
+      "slot": "B",
+      "path": "/assets/lid/export/GEN_209_xxx_siklar_B.png"
+    },
+    {
+      "id": "GEN209",
+      "slot": "C",
+      "path": "/assets/lid/export/GEN_209_xxx_siklar_C.png"
+    },
+    {
+      "id": "GEN209",
+      "slot": "D",
+      "path": "/assets/lid/export/GEN_209_xxx_siklar_D.png"
+    },
+    {
+      "id": "GEN216",
+      "slot": "STEM",
+      "path": "/assets/lid/export/GEN_216_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "GEN226",
+      "slot": "A",
+      "path": "/assets/lid/export/GEN_226_xxx_siklar_A.png"
+    },
+    {
+      "id": "GEN226",
+      "slot": "B",
+      "path": "/assets/lid/export/GEN_226_xxx_siklar_B.png"
+    },
+    {
+      "id": "GEN226",
+      "slot": "C",
+      "path": "/assets/lid/export/GEN_226_xxx_siklar_C.png"
+    },
+    {
+      "id": "GEN226",
+      "slot": "D",
+      "path": "/assets/lid/export/GEN_226_xxx_siklar_D.png"
+    },
+    {
+      "id": "GEN235",
+      "slot": "STEM",
+      "path": "/assets/lid/export/GEN_235_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "BW01",
+      "slot": "A",
+      "path": "/assets/lid/export/BW_01_xxx_siklar_A.png"
+    },
+    {
+      "id": "BW01",
+      "slot": "B",
+      "path": "/assets/lid/export/BW_01_xxx_siklar_B.png"
+    },
+    {
+      "id": "BW01",
+      "slot": "C",
+      "path": "/assets/lid/export/BW_01_xxx_siklar_C.png"
+    },
+    {
+      "id": "BW01",
+      "slot": "D",
+      "path": "/assets/lid/export/BW_01_xxx_siklar_D.png"
+    },
+    {
+      "id": "BW08",
+      "slot": "STEM",
+      "path": "/assets/lid/export/BW_08_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "BY01",
+      "slot": "A",
+      "path": "/assets/lid/export/BY_01_xxx_siklar_A.png"
+    },
+    {
+      "id": "BY01",
+      "slot": "B",
+      "path": "/assets/lid/export/BY_01_xxx_siklar_B.png"
+    },
+    {
+      "id": "BY01",
+      "slot": "C",
+      "path": "/assets/lid/export/BY_01_xxx_siklar_C.png"
+    },
+    {
+      "id": "BY01",
+      "slot": "D",
+      "path": "/assets/lid/export/BY_01_xxx_siklar_D.png"
+    },
+    {
+      "id": "BY08",
+      "slot": "STEM",
+      "path": "/assets/lid/export/BY_08_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "BE01",
+      "slot": "A",
+      "path": "/assets/lid/export/BE_01_xxx_siklar_A.png"
+    },
+    {
+      "id": "BE01",
+      "slot": "B",
+      "path": "/assets/lid/export/BE_01_xxx_siklar_B.png"
+    },
+    {
+      "id": "BE01",
+      "slot": "C",
+      "path": "/assets/lid/export/BE_01_xxx_siklar_C.png"
+    },
+    {
+      "id": "BE01",
+      "slot": "D",
+      "path": "/assets/lid/export/BE_01_xxx_siklar_D.png"
+    },
+    {
+      "id": "BE08",
+      "slot": "STEM",
+      "path": "/assets/lid/export/BE_08_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "BB01",
+      "slot": "A",
+      "path": "/assets/lid/export/BB_01_xxx_siklar_A.png"
+    },
+    {
+      "id": "BB01",
+      "slot": "B",
+      "path": "/assets/lid/export/BB_01_xxx_siklar_B.png"
+    },
+    {
+      "id": "BB01",
+      "slot": "C",
+      "path": "/assets/lid/export/BB_01_xxx_siklar_C.png"
+    },
+    {
+      "id": "BB01",
+      "slot": "D",
+      "path": "/assets/lid/export/BB_01_xxx_siklar_D.png"
+    },
+    {
+      "id": "BB08",
+      "slot": "STEM",
+      "path": "/assets/lid/export/BB_08_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "HB01",
+      "slot": "A",
+      "path": "/assets/lid/export/HB_01_xxx_siklar_A.png"
+    },
+    {
+      "id": "HB01",
+      "slot": "B",
+      "path": "/assets/lid/export/HB_01_xxx_siklar_B.png"
+    },
+    {
+      "id": "HB01",
+      "slot": "C",
+      "path": "/assets/lid/export/HB_01_xxx_siklar_C.png"
+    },
+    {
+      "id": "HB01",
+      "slot": "D",
+      "path": "/assets/lid/export/HB_01_xxx_siklar_D.png"
+    },
+    {
+      "id": "HB08",
+      "slot": "STEM",
+      "path": "/assets/lid/export/HB_08_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "HH01",
+      "slot": "A",
+      "path": "/assets/lid/export/HH_01_xxx_siklar_A.png"
+    },
+    {
+      "id": "HH01",
+      "slot": "B",
+      "path": "/assets/lid/export/HH_01_xxx_siklar_B.png"
+    },
+    {
+      "id": "HH01",
+      "slot": "C",
+      "path": "/assets/lid/export/HH_01_xxx_siklar_C.png"
+    },
+    {
+      "id": "HH01",
+      "slot": "D",
+      "path": "/assets/lid/export/HH_01_xxx_siklar_D.png"
+    },
+    {
+      "id": "HH08",
+      "slot": "STEM",
+      "path": "/assets/lid/export/HH_08_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "HE01",
+      "slot": "A",
+      "path": "/assets/lid/export/HE_01_xxx_siklar_A.png"
+    },
+    {
+      "id": "HE01",
+      "slot": "B",
+      "path": "/assets/lid/export/HE_01_xxx_siklar_B.png"
+    },
+    {
+      "id": "HE01",
+      "slot": "C",
+      "path": "/assets/lid/export/HE_01_xxx_siklar_C.png"
+    },
+    {
+      "id": "HE01",
+      "slot": "D",
+      "path": "/assets/lid/export/HE_01_xxx_siklar_D.png"
+    },
+    {
+      "id": "HE08",
+      "slot": "STEM",
+      "path": "/assets/lid/export/HE_08_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "MV01",
+      "slot": "A",
+      "path": "/assets/lid/export/MV_01_xxx_siklar_A.png"
+    },
+    {
+      "id": "MV01",
+      "slot": "B",
+      "path": "/assets/lid/export/MV_01_xxx_siklar_B.png"
+    },
+    {
+      "id": "MV01",
+      "slot": "C",
+      "path": "/assets/lid/export/MV_01_xxx_siklar_C.png"
+    },
+    {
+      "id": "MV01",
+      "slot": "D",
+      "path": "/assets/lid/export/MV_01_xxx_siklar_D.png"
+    },
+    {
+      "id": "MV08",
+      "slot": "STEM",
+      "path": "/assets/lid/export/MV_08_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "NI01",
+      "slot": "A",
+      "path": "/assets/lid/export/NI_01_xxx_siklar_A.png"
+    },
+    {
+      "id": "NI01",
+      "slot": "B",
+      "path": "/assets/lid/export/NI_01_xxx_siklar_B.png"
+    },
+    {
+      "id": "NI01",
+      "slot": "C",
+      "path": "/assets/lid/export/NI_01_xxx_siklar_C.png"
+    },
+    {
+      "id": "NI01",
+      "slot": "D",
+      "path": "/assets/lid/export/NI_01_xxx_siklar_D.png"
+    },
+    {
+      "id": "NI08",
+      "slot": "STEM",
+      "path": "/assets/lid/export/NI_08_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "NW01",
+      "slot": "A",
+      "path": "/assets/lid/export/NW_01_xxx_siklar_A.png"
+    },
+    {
+      "id": "NW01",
+      "slot": "B",
+      "path": "/assets/lid/export/NW_01_xxx_siklar_B.png"
+    },
+    {
+      "id": "NW01",
+      "slot": "C",
+      "path": "/assets/lid/export/NW_01_xxx_siklar_C.png"
+    },
+    {
+      "id": "NW01",
+      "slot": "D",
+      "path": "/assets/lid/export/NW_01_xxx_siklar_D.png"
+    },
+    {
+      "id": "NW08",
+      "slot": "STEM",
+      "path": "/assets/lid/export/NW_08_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "RP01",
+      "slot": "A",
+      "path": "/assets/lid/export/RP_01_xxx_siklar_A.png"
+    },
+    {
+      "id": "RP01",
+      "slot": "B",
+      "path": "/assets/lid/export/RP_01_xxx_siklar_B.png"
+    },
+    {
+      "id": "RP01",
+      "slot": "C",
+      "path": "/assets/lid/export/RP_01_xxx_siklar_C.png"
+    },
+    {
+      "id": "RP01",
+      "slot": "D",
+      "path": "/assets/lid/export/RP_01_xxx_siklar_D.png"
+    },
+    {
+      "id": "RP08",
+      "slot": "STEM",
+      "path": "/assets/lid/export/RP_08_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "SL01",
+      "slot": "A",
+      "path": "/assets/lid/export/SL_01_xxx_siklar_A.png"
+    },
+    {
+      "id": "SL01",
+      "slot": "B",
+      "path": "/assets/lid/export/SL_01_xxx_siklar_B.png"
+    },
+    {
+      "id": "SL01",
+      "slot": "C",
+      "path": "/assets/lid/export/SL_01_xxx_siklar_C.png"
+    },
+    {
+      "id": "SL01",
+      "slot": "D",
+      "path": "/assets/lid/export/SL_01_xxx_siklar_D.png"
+    },
+    {
+      "id": "SL08",
+      "slot": "STEM",
+      "path": "/assets/lid/export/SL_08_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "SN01",
+      "slot": "A",
+      "path": "/assets/lid/export/SN_01_xxx_siklar_A.png"
+    },
+    {
+      "id": "SN01",
+      "slot": "B",
+      "path": "/assets/lid/export/SN_01_xxx_siklar_B.png"
+    },
+    {
+      "id": "SN01",
+      "slot": "C",
+      "path": "/assets/lid/export/SN_01_xxx_siklar_C.png"
+    },
+    {
+      "id": "SN01",
+      "slot": "D",
+      "path": "/assets/lid/export/SN_01_xxx_siklar_D.png"
+    },
+    {
+      "id": "SN08",
+      "slot": "STEM",
+      "path": "/assets/lid/export/SN_08_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "SN01",
+      "slot": "A",
+      "path": "/assets/lid/export/SN_01_xxx_siklar_A.png"
+    },
+    {
+      "id": "SN01",
+      "slot": "B",
+      "path": "/assets/lid/export/SN_01_xxx_siklar_B.png"
+    },
+    {
+      "id": "SN01",
+      "slot": "C",
+      "path": "/assets/lid/export/SN_01_xxx_siklar_C.png"
+    },
+    {
+      "id": "SN01",
+      "slot": "D",
+      "path": "/assets/lid/export/SN_01_xxx_siklar_D.png"
+    },
+    {
+      "id": "SN08",
+      "slot": "STEM",
+      "path": "/assets/lid/export/SN_08_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "SH01",
+      "slot": "A",
+      "path": "/assets/lid/export/SH_01_xxx_siklar_A.png"
+    },
+    {
+      "id": "SH01",
+      "slot": "B",
+      "path": "/assets/lid/export/SH_01_xxx_siklar_B.png"
+    },
+    {
+      "id": "SH01",
+      "slot": "C",
+      "path": "/assets/lid/export/SH_01_xxx_siklar_C.png"
+    },
+    {
+      "id": "SH01",
+      "slot": "D",
+      "path": "/assets/lid/export/SH_01_xxx_siklar_D.png"
+    },
+    {
+      "id": "SH08",
+      "slot": "STEM",
+      "path": "/assets/lid/export/SH_08_sorukismi_xxxx_STEM.png"
+    },
+    {
+      "id": "TH01",
+      "slot": "A",
+      "path": "/assets/lid/export/TH_01_xxx_siklar_A.png"
+    },
+    {
+      "id": "TH01",
+      "slot": "B",
+      "path": "/assets/lid/export/TH_01_xxx_siklar_B.png"
+    },
+    {
+      "id": "TH01",
+      "slot": "C",
+      "path": "/assets/lid/export/TH_01_xxx_siklar_C.png"
+    },
+    {
+      "id": "TH01",
+      "slot": "D",
+      "path": "/assets/lid/export/TH_01_xxx_siklar_D.png"
+    },
+    {
+      "id": "TH08",
+      "slot": "STEM",
+      "path": "/assets/lid/export/TH_08_sorukismi_xxxx_STEM.png"
+    }
+  ]
+}

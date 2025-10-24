@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
+  // Only use export for production builds
+  ...(process.env.NODE_ENV === 'production' && { output: 'export' }),
+  ...(process.env.NODE_ENV === 'production' && { trailingSlash: true }),
   images: {
     unoptimized: true
   },

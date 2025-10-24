@@ -11,10 +11,10 @@ export default function AdsenseSafe(){
   if (!ADS_CLIENT) return null;
   if (!isWhitelisted(path)) return null;
   return (
-    <>
+    <div className="mt-8">
       <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_CLIENT}`} crossOrigin="anonymous" />
       <ins className="adsbygoogle" style={{display:"block",minHeight:90}} data-ad-client={ADS_CLIENT} data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true" />
       <script dangerouslySetInnerHTML={{__html:`(adsbygoogle=window.adsbygoogle||[]).push({});`}} />
-    </>
+    </div>
   );
 }
