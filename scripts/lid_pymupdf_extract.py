@@ -26,7 +26,9 @@ BULLETS = ("☐", "□", "■", "◻", "▪", "–", "-")
 
 def nrm(s): return re.sub(r"\s+", " ", s or "").strip()
 
-def is_choice(s): return (s or "").strip().startswith(BULLETS)
+def is_choice(s): 
+    text = (s or "").strip()
+    return any(text.startswith(bullet) for bullet in BULLETS)
 
 def strip_bullet(s):
     t = (s or "").strip()
@@ -72,20 +74,32 @@ def extract_text(page, qrect):
     ls = [(bb, txt) for (typ, bb, txt) in blocks(page) if typ == "text" and bb.y0 >= qrect.y0 and bb.y1 <= qrect.y1]
     # drop heading + inline Bild-row
     ls = [(bb, txt) for (bb, txt) in ls if not RE_TASK.search(txt or "")]
-    stem = []
-    choices = []
+    
+    # Get all text as one string
+    all_text = " ".join([txt or "" for bb, txt in ls])
+    
+    # Remove Bild rows
     bild_row = None
-    seen = False
     for bb, txt in ls:
         if RE_BILDROW.search(txt or "") or re.search(r"\bBild\s*[1-4]\b", txt or "", re.I):
             bild_row = bb
-            continue
-        if is_choice(txt or ""):
-            seen = True
-            if len(choices) < 4: choices.append(strip_bullet(txt))
-        else:
-            if not seen: stem.append(txt or "")
-    return nrm(" ".join(stem)), [nrm(c) for c in choices[:4]], bild_row
+            break
+    
+    # Split by bullet points to get stem and choices
+    # Try different bullet patterns
+    bullet_patterns = [r'☐', r'□', r'■', r'◻', r'▪', r'–', r'-']
+    
+    for pattern in bullet_patterns:
+        parts = re.split(pattern, all_text)
+        if len(parts) >= 5:  # 1 stem + 4 choices
+            stem_text = parts[0].strip()
+            choice_texts = [parts[i].strip() for i in range(1, 5) if parts[i].strip()]
+            if len(choice_texts) >= 4:
+                choices = [nrm(choice) for choice in choice_texts[:4]]
+                return nrm(stem_text), choices, bild_row
+    
+    # Fallback: return empty choices
+    return nrm(all_text), [], bild_row
 
 def image_rects(page):
     rects = []

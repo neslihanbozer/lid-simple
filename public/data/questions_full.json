@@ -39,7 +39,7 @@
       "section": "general",
       "state": null,
       "number": 3,
-      "text": "Seite 2 von 191 Deutschland ist ein Rechtsstaat. Was ist damit gemeint?  Alle Einwohnerinnen/Einwohner und der Staat müssen sich an die Gesetze halten.  Der Staat muss sich nicht an die Gesetze halten.  Nur Deutsche müssen die Gesetze befolgen.  Die Gerichte machen die Gesetze.",
+      "text": "Deutschland ist ein Rechtsstaat. Was ist damit gemeint?  Alle Einwohnerinnen/Einwohner und der Staat müssen sich an die Gesetze halten.  Der Staat muss sich nicht an die Gesetze halten.  Nur Deutsche müssen die Gesetze befolgen.  Die Gerichte machen die Gesetze.",
       "stem": {
         "images": []
       },
@@ -90,7 +90,7 @@
       "section": "general",
       "state": null,
       "number": 6,
-      "text": "Seite 3 von 191 Wie heißt die deutsche Verfassung?  Volksgesetz  Bundesgesetz  Deutsches Gesetz  Grundgesetz",
+      "text": "Wie heißt die deutsche Verfassung?  Volksgesetz  Bundesgesetz  Deutsches Gesetz  Grundgesetz",
       "stem": {
         "images": []
       },
@@ -141,7 +141,7 @@
       "section": "general",
       "state": null,
       "number": 9,
-      "text": "Seite 4 von 191 Welches Grundrecht gilt in Deutschland nur für Ausländerinnen/Ausländer? Das Grundrecht auf …  Schutz der Familie  Menschenwürde  Asyl  Meinungsfreiheit",
+      "text": "Welches Grundrecht gilt in Deutschland nur für Ausländerinnen/Ausländer? Das Grundrecht auf …  Schutz der Familie  Menschenwürde  Asyl  Meinungsfreiheit",
       "stem": {
         "images": []
       },
@@ -192,7 +192,7 @@
       "section": "general",
       "state": null,
       "number": 12,
-      "text": "Seite 5 von 191 Eine Partei im Deutschen Bundestag will die Pressefreiheit abschaffen. Ist das möglich?  Ja, wenn mehr als die Hälfte der Abgeordneten im Bundestag dafür sind.  Ja, aber dazu müssen zwei Drittel der Abgeordneten im Bundestag dafür sein.  Nein, denn die Pressefreiheit ist ein Grundrecht. Sie kann nicht abgeschafft werden.  Nein, denn nur der Bundesrat kann die Pressefreiheit abschaffen.",
+      "text": "Eine Partei im Deutschen Bundestag will die Pressefreiheit abschaffen. Ist das möglich?  Ja, wenn mehr als die Hälfte der Abgeordneten im Bundestag dafür sind.  Ja, aber dazu müssen zwei Drittel der Abgeordneten im Bundestag dafür sein.  Nein, denn die Pressefreiheit ist ein Grundrecht. Sie kann nicht abgeschafft werden.  Nein, denn nur der Bundesrat kann die Pressefreiheit abschaffen.",
       "stem": {
         "images": []
       },
@@ -243,7 +243,7 @@
       "section": "general",
       "state": null,
       "number": 15,
-      "text": "Seite 6 von 191 Was verbietet das deutsche Grundgesetz?  Militärdienst  Zwangsarbeit  freie Berufswahl  Arbeit im Ausland",
+      "text": "Was verbietet das deutsche Grundgesetz?  Militärdienst  Zwangsarbeit  freie Berufswahl  Arbeit im Ausland",
       "stem": {
         "images": []
       },
@@ -294,7 +294,7 @@
       "section": "general",
       "state": null,
       "number": 18,
-      "text": "Seite 7 von 191 Welches Grundrecht ist in Artikel 1 des Grundgesetzes der Bundesrepublik Deutschland garantiert?  die Unantastbarkeit der Menschenwürde  das Recht auf Leben  Religionsfreiheit  Meinungsfreiheit",
+      "text": "Welches Grundrecht ist in Artikel 1 des Grundgesetzes der Bundesrepublik Deutschland garantiert?  die Unantastbarkeit der Menschenwürde  das Recht auf Leben  Religionsfreiheit  Meinungsfreiheit",
       "stem": {
         "images": []
       },
@@ -328,7 +328,7 @@
       "section": "general",
       "state": null,
       "number": 20,
-      "text": "Seite 8 von 191 Eine Partei in Deutschland verfolgt das Ziel, eine Diktatur zu errichten. Sie ist dann …  tolerant.  rechtsstaatlich orientiert.  gesetzestreu.  verfassungswidrig.",
+      "text": "Eine Partei in Deutschland verfolgt das Ziel, eine Diktatur zu errichten. Sie ist dann …  tolerant.  rechtsstaatlich orientiert.  gesetzestreu.  verfassungswidrig.",
       "stem": {
         "images": []
       },
@@ -367,7 +367,7 @@
       "section": "general",
       "state": null,
       "number": 22,
-      "text": "Seite 9 von 191 Was für eine Staatsform hat Deutschland?  Monarchie  Diktatur  Republik  Fürstentum",
+      "text": "Was für eine Staatsform hat Deutschland?  Monarchie  Diktatur  Republik  Fürstentum",
       "stem": {
         "images": []
       },
@@ -418,11 +418,28 @@
       "section": "general",
       "state": null,
       "number": 25,
-      "text": "Seite 10 von 191 Was ist kein Bundesland der Bundesrepublik Deutschland?  Elsass-Lothringen  Nordrhein-Westfalen  Mecklenburg-Vorpommern  Sachsen-Anhalt",
+      "text": "Was ist kein Bundesland der Bundesrepublik Deutschland?  Elsass",
       "stem": {
         "images": []
       },
-      "choices": [],
+      "choices": [
+        {
+          "id": "A",
+          "text": "Lothringen  Nordrhein"
+        },
+        {
+          "id": "B",
+          "text": "Westfalen  Mecklenburg"
+        },
+        {
+          "id": "C",
+          "text": "Vorpommern  Sachsen"
+        },
+        {
+          "id": "D",
+          "text": "Anhalt"
+        }
+      ],
       "answer": "A",
       "explanation": "",
       "source": {
@@ -469,7 +486,7 @@
       "section": "general",
       "state": null,
       "number": 28,
-      "text": "Seite 11 von 191 Wer wählt in Deutschland die Abgeordneten zum Bundestag?  das Militär  die Wirtschaft  das wahlberechtigte Volk  die Verwaltung",
+      "text": "Wer wählt in Deutschland die Abgeordneten zum Bundestag?  das Militär  die Wirtschaft  das wahlberechtigte Volk  die Verwaltung",
       "stem": {
         "images": []
       },
@@ -520,7 +537,7 @@
       "section": "general",
       "state": null,
       "number": 31,
-      "text": "Seite 12 von 191 Die Zusammenarbeit von Parteien zur Bildung einer Regierung nennt man in Deutschland …  Einheit.  Koalition.  Ministerium.  Fraktion.",
+      "text": "Die Zusammenarbeit von Parteien zur Bildung einer Regierung nennt man in Deutschland …  Einheit.  Koalition.  Ministerium.  Fraktion.",
       "stem": {
         "images": []
       },
@@ -571,7 +588,7 @@
       "section": "general",
       "state": null,
       "number": 34,
-      "text": "Seite 13 von 191 Was ist Deutschland nicht?  eine Demokratie  ein Rechtsstaat  eine Monarchie  ein Sozialstaat",
+      "text": "Was ist Deutschland nicht?  eine Demokratie  ein Rechtsstaat  eine Monarchie  ein Sozialstaat",
       "stem": {
         "images": []
       },
@@ -622,7 +639,7 @@
       "section": "general",
       "state": null,
       "number": 37,
-      "text": "Seite 14 von 191 Wie werden die Regierungschefinnen/Regierungschefs der meisten Bundesländer in Deutschland genannt?  Erste Ministerin/Erster Minister  Premierministerin/Premierminister  Senatorin/Senator  Ministerpräsidentin/Ministerpräsident",
+      "text": "Wie werden die Regierungschefinnen/Regierungschefs der meisten Bundesländer in Deutschland genannt?  Erste Ministerin/Erster Minister  Premierministerin/Premierminister  Senatorin/Senator  Ministerpräsidentin/Ministerpräsident",
       "stem": {
         "images": []
       },
@@ -673,7 +690,7 @@
       "section": "general",
       "state": null,
       "number": 40,
-      "text": "Seite 15 von 191 Mit welchen Worten beginnt die deutsche Nationalhymne?  Völker, hört die Signale …  Einigkeit und Recht und Freiheit …  Freude schöner Götterfunken …  Deutschland einig Vaterland …",
+      "text": "Mit welchen Worten beginnt die deutsche Nationalhymne?  Völker, hört die Signale …  Einigkeit und Recht und Freiheit …  Freude schöner Götterfunken …  Deutschland einig Vaterland …",
       "stem": {
         "images": []
       },
@@ -724,7 +741,7 @@
       "section": "general",
       "state": null,
       "number": 43,
-      "text": "Seite 16 von 191 Wann kann in Deutschland eine Partei verboten werden?  wenn ihr Wahlkampf zu teuer ist  wenn sie gegen die Verfassung kämpft  wenn sie Kritik am Staatsoberhaupt äußert  wenn ihr Programm eine neue Richtung vorschlägt",
+      "text": "Wann kann in Deutschland eine Partei verboten werden?  wenn ihr Wahlkampf zu teuer ist  wenn sie gegen die Verfassung kämpft  wenn sie Kritik am Staatsoberhaupt äußert  wenn ihr Programm eine neue Richtung vorschlägt",
       "stem": {
         "images": []
       },
@@ -775,7 +792,7 @@
       "section": "general",
       "state": null,
       "number": 46,
-      "text": "Seite 17 von 191 Der deutsche Staat hat viele Aufgaben. Welche Aufgabe gehört dazu?  Er baut Straßen und Schulen.  Er verkauft Lebensmittel und Kleidung.  Er versorgt alle Einwohnerinnen und Einwohner kostenlos mit Zeitungen.  Er produziert Autos und Busse.",
+      "text": "Der deutsche Staat hat viele Aufgaben. Welche Aufgabe gehört dazu?  Er baut Straßen und Schulen.  Er verkauft Lebensmittel und Kleidung.  Er versorgt alle Einwohnerinnen und Einwohner kostenlos mit Zeitungen.  Er produziert Autos und Busse.",
       "stem": {
         "images": []
       },
@@ -826,7 +843,7 @@
       "section": "general",
       "state": null,
       "number": 49,
-      "text": "Seite 18 von 191 Wer bestimmt in Deutschland die Schulpolitik?  die Lehrer und Lehrerinnen  die Bundesländer  das Familienministerium  die Universitäten",
+      "text": "Wer bestimmt in Deutschland die Schulpolitik?  die Lehrer und Lehrerinnen  die Bundesländer  das Familienministerium  die Universitäten",
       "stem": {
         "images": []
       },
@@ -877,7 +894,7 @@
       "section": "general",
       "state": null,
       "number": 52,
-      "text": "Seite 19 von 191 Was bedeutet \"Volkssouveränität\"? Alle Staatsgewalt geht vom ...  Volke aus.  Bundestag aus.  preußischen König aus.  Bundesverfassungsgericht aus.",
+      "text": "Was bedeutet \"Volkssouveränität\"? Alle Staatsgewalt geht vom ...  Volke aus.  Bundestag aus.  preußischen König aus.  Bundesverfassungsgericht aus.",
       "stem": {
         "images": []
       },
@@ -911,7 +928,7 @@
       "section": "general",
       "state": null,
       "number": 54,
-      "text": "Seite 20 von 191 Was ist keine staatliche Gewalt in Deutschland?  Legislative  Judikative  Exekutive  Direktive",
+      "text": "Was ist keine staatliche Gewalt in Deutschland?  Legislative  Judikative  Exekutive  Direktive",
       "stem": {
         "images": []
       },
@@ -949,7 +966,7 @@
       "section": "general",
       "state": null,
       "number": 56,
-      "text": "Seite 21 von 191 Welches Amt gehört in Deutschland zur Gemeindeverwaltung?  Pfarramt  Ordnungsamt  Finanzamt  Auswärtiges Amt",
+      "text": "Welches Amt gehört in Deutschland zur Gemeindeverwaltung?  Pfarramt  Ordnungsamt  Finanzamt  Auswärtiges Amt",
       "stem": {
         "images": []
       },
@@ -1000,26 +1017,26 @@
       "section": "general",
       "state": null,
       "number": 59,
-      "text": "Seite 22 von 191 Vor wie vielen Jahren gab es erstmals eine jüdische Gemeinde auf dem Gebiet des heutigen Deutschlands?",
+      "text": "Vor wie vielen Jahren gab es erstmals eine jüdische Gemeinde auf dem Gebiet des heutigen Deutschlands?",
       "stem": {
         "images": []
       },
       "choices": [
         {
           "id": "A",
-          "text": ""
+          "text": "vor etwa 300 Jahren"
         },
         {
           "id": "B",
-          "text": ""
+          "text": "vor etwa 700 Jahren"
         },
         {
           "id": "C",
-          "text": ""
+          "text": "vor etwa 1150 Jahren"
         },
         {
           "id": "D",
-          "text": ""
+          "text": "vor etwa 1700 Jahren"
         }
       ],
       "answer": "A",
@@ -1068,7 +1085,7 @@
       "section": "general",
       "state": null,
       "number": 62,
-      "text": "Seite 23 von 191 Wenn das Parlament eines deutschen Bundeslandes gewählt wird, nennt man das …  Kommunalwahl  Landtagswahl  Europawahl  Bundestagswahl",
+      "text": "Wenn das Parlament eines deutschen Bundeslandes gewählt wird, nennt man das …  Kommunalwahl  Landtagswahl  Europawahl  Bundestagswahl",
       "stem": {
         "images": []
       },
@@ -1119,7 +1136,7 @@
       "section": "general",
       "state": null,
       "number": 65,
-      "text": "Seite 24 von 191 Es gehört nicht zu den Aufgaben des Deutschen Bundestages, …  Gesetze zu entwerfen.  die Bundesregierung zu kontrollieren.  die Bundeskanzlerin/den Bundeskanzler zu wählen.  das Bundeskabinett zu bilden.",
+      "text": "Es gehört nicht zu den Aufgaben des Deutschen Bundestages, …  Gesetze zu entwerfen.  die Bundesregierung zu kontrollieren.  die Bundeskanzlerin/den Bundeskanzler zu wählen.  das Bundeskabinett zu bilden.",
       "stem": {
         "images": []
       },
@@ -1143,19 +1160,19 @@
       "choices": [
         {
           "id": "A",
-          "text": ""
+          "text": "Berlin und München"
         },
         {
           "id": "B",
-          "text": ""
+          "text": "Hamburg und Essen"
         },
         {
           "id": "C",
-          "text": ""
+          "text": "Nürnberg und Stuttgart"
         },
         {
           "id": "D",
-          "text": ""
+          "text": "Worms und Speyer"
         }
       ],
       "answer": "A",
@@ -1187,7 +1204,7 @@
       "section": "general",
       "state": null,
       "number": 68,
-      "text": "Seite 25 von 191 Warum kontrolliert der Staat in Deutschland das Schulwesen?  weil es in Deutschland nur staatliche Schulen gibt  weil alle Schülerinnen und Schüler einen Schulabschluss haben müssen  weil es in den Bundesländern verschiedene Schulen gibt  weil es nach dem Grundgesetz seine Aufgabe ist",
+      "text": "Warum kontrolliert der Staat in Deutschland das Schulwesen?  weil es in Deutschland nur staatliche Schulen gibt  weil alle Schülerinnen und Schüler einen Schulabschluss haben müssen  weil es in den Bundesländern verschiedene Schulen gibt  weil es nach dem Grundgesetz seine Aufgabe ist",
       "stem": {
         "images": []
       },
@@ -1204,7 +1221,7 @@
       "section": "general",
       "state": null,
       "number": 69,
-      "text": "Seite 26 von 191 Die Bundesrepublik Deutschland hat einen dreistufigen Verwaltungsaufbau. Wie heißt die unterste politische Stufe?  Stadträte  Landräte  Gemeinden  Bezirksämter",
+      "text": "Die Bundesrepublik Deutschland hat einen dreistufigen Verwaltungsaufbau. Wie heißt die unterste politische Stufe?  Stadträte  Landräte  Gemeinden  Bezirksämter",
       "stem": {
         "images": []
       },
@@ -1221,7 +1238,7 @@
       "section": "general",
       "state": null,
       "number": 70,
-      "text": "Seite 27 von 191 Der deutsche Bundespräsident Gustav Heinemann gibt Helmut Schmidt 1974 die Ernennungsurkunde zum deutschen Bundeskanzler. Was gehört zu den Aufgaben der deutschen Bundespräsidentin/des deutschen Bundespräsidenten? © Bundesregierung/Engelbert Reineke  Sie/Er führt die Regierungsgeschäfte.  Sie/Er kontrolliert die Regierungspartei.  Sie/Er wählt die Ministerinnen/Minister aus.  Sie/Er schlägt die Kanzlerin/den Kanzler zur Wahl vor.",
+      "text": "Der deutsche Bundespräsident Gustav Heinemann gibt Helmut Schmidt 1974 die Ernennungsurkunde zum deutschen Bundeskanzler. Was gehört zu den Aufgaben der deutschen Bundespräsidentin/des deutschen Bundespräsidenten? © Bundesregierung/Engelbert Reineke  Sie/Er führt die Regierungsgeschäfte.  Sie/Er kontrolliert die Regierungspartei.  Sie/Er wählt die Ministerinnen/Minister aus.  Sie/Er schlägt die Kanzlerin/den Kanzler zur Wahl vor.",
       "stem": {
         "images": [
           "/assets/lid/export/GEN_070_sorukismi_xxxx_STEM.png"
@@ -1276,7 +1293,7 @@
       "section": "general",
       "state": null,
       "number": 73,
-      "text": "Seite 28 von 191 Die beiden größten Fraktionen im Deutschen Bundestag heißen zurzeit …  CDU/CSU und AfD.  Die Linke und Bündnis 90/Die Grünen.  Bündnis 90/Die Grünen und SPD.  Die Linke und CDU/CSU.",
+      "text": "Die beiden größten Fraktionen im Deutschen Bundestag heißen zurzeit …  CDU/CSU und AfD.  Die Linke und Bündnis 90/Die Grünen.  Bündnis 90/Die Grünen und SPD.  Die Linke und CDU/CSU.",
       "stem": {
         "images": []
       },
@@ -1327,7 +1344,7 @@
       "section": "general",
       "state": null,
       "number": 76,
-      "text": "Seite 29 von 191 Was bedeutet die Abkürzung CDU in Deutschland?  Christliche Deutsche Union  Club Deutscher Unternehmer  Christlicher Deutscher Umweltschutz  Christlich Demokratische Union",
+      "text": "Was bedeutet die Abkürzung CDU in Deutschland?  Christliche Deutsche Union  Club Deutscher Unternehmer  Christlicher Deutscher Umweltschutz  Christlich Demokratische Union",
       "stem": {
         "images": []
       },
@@ -1378,7 +1395,7 @@
       "section": "general",
       "state": null,
       "number": 79,
-      "text": "Seite 30 von 191 Was bedeutet die Abkürzung FDP in Deutschland?  Friedliche Demonstrative Partei  Freie Deutschland Partei  Führende Demokratische Partei  Freie Demokratische Partei",
+      "text": "Was bedeutet die Abkürzung FDP in Deutschland?  Friedliche Demonstrative Partei  Freie Deutschland Partei  Führende Demokratische Partei  Freie Demokratische Partei",
       "stem": {
         "images": []
       },
@@ -1429,7 +1446,7 @@
       "section": "general",
       "state": null,
       "number": 82,
-      "text": "Seite 31 von 191 Wer leitet das deutsche Bundeskabinett?  die Bundestagspräsidentin/der Bundestagspräsident  die Bundespräsidentin/der Bundespräsident  die Bundesratspräsidentin/der Bundesratspräsident  die Bundeskanzlerin/der Bundeskanzler",
+      "text": "Wer leitet das deutsche Bundeskabinett?  die Bundestagspräsidentin/der Bundestagspräsident  die Bundespräsidentin/der Bundespräsident  die Bundesratspräsidentin/der Bundesratspräsident  die Bundeskanzlerin/der Bundeskanzler",
       "stem": {
         "images": []
       },
@@ -1480,7 +1497,7 @@
       "section": "general",
       "state": null,
       "number": 85,
-      "text": "Seite 32 von 191 Wer bildet den deutschen Bundesrat?  die Abgeordneten des Bundestages  die Ministerinnen und Minister der Bundesregierung  die Regierungsvertreter der Bundesländer  die Parteimitglieder",
+      "text": "Wer bildet den deutschen Bundesrat?  die Abgeordneten des Bundestages  die Ministerinnen und Minister der Bundesregierung  die Regierungsvertreter der Bundesländer  die Parteimitglieder",
       "stem": {
         "images": []
       },
@@ -1531,7 +1548,7 @@
       "section": "general",
       "state": null,
       "number": 88,
-      "text": "Seite 33 von 191 Die parlamentarische Opposition im Deutschen Bundestag …  kontrolliert die Regierung.  entscheidet, wer Bundesministerin/Bundesminister wird.  bestimmt, wer im Bundesrat sitzt.  schlägt die Regierungschefinnen/Regierungschefs der Länder vor.",
+      "text": "Die parlamentarische Opposition im Deutschen Bundestag …  kontrolliert die Regierung.  entscheidet, wer Bundesministerin/Bundesminister wird.  bestimmt, wer im Bundesrat sitzt.  schlägt die Regierungschefinnen/Regierungschefs der Länder vor.",
       "stem": {
         "images": []
       },
@@ -1582,7 +1599,7 @@
       "section": "general",
       "state": null,
       "number": 91,
-      "text": "Seite 34 von 191 In Deutschland kann ein Regierungswechsel in einem Bundesland Auswirkungen auf die Bundespolitik haben. Das Regieren wird …  schwieriger, wenn sich dadurch die Mehrheit im Bundestag ändert.  leichter, wenn dadurch neue Parteien in den Bundesrat kommen.  schwieriger, wenn dadurch die Mehrheit im Bundesrat verändert wird.  leichter, wenn es sich um ein reiches Bundesland handelt.",
+      "text": "In Deutschland kann ein Regierungswechsel in einem Bundesland Auswirkungen auf die Bundespolitik haben. Das Regieren wird …  schwieriger, wenn sich dadurch die Mehrheit im Bundestag ändert.  leichter, wenn dadurch neue Parteien in den Bundesrat kommen.  schwieriger, wenn dadurch die Mehrheit im Bundesrat verändert wird.  leichter, wenn es sich um ein reiches Bundesland handelt.",
       "stem": {
         "images": []
       },
@@ -1633,7 +1650,7 @@
       "section": "general",
       "state": null,
       "number": 94,
-      "text": "Seite 35 von 191 Ab welchem Alter darf man in Deutschland an der Wahl zum Deutschen Bundestag teilnehmen?  16  18  21  23",
+      "text": "Ab welchem Alter darf man in Deutschland an der Wahl zum Deutschen Bundestag teilnehmen?  16  18  21  23",
       "stem": {
         "images": []
       },
@@ -1674,19 +1691,19 @@
       "choices": [
         {
           "id": "A",
-          "text": ""
+          "text": "Kürzung sozialer Leistungen"
         },
         {
           "id": "B",
-          "text": ""
+          "text": "bis zu 100 Sozialstunden"
         },
         {
           "id": "C",
-          "text": ""
+          "text": "gar nicht, Holocaustleugnung ist erlaubt"
         },
         {
           "id": "D",
-          "text": ""
+          "text": "mit Freiheitsstrafe bis zu fünf Jahren oder mit Geldstrafe"
         }
       ],
       "answer": "A",
@@ -1701,7 +1718,7 @@
       "section": "general",
       "state": null,
       "number": 97,
-      "text": "Seite 36 von 191 Was bezahlt man in Deutschland automatisch, wenn man fest angestellt ist?  Sozialversicherung  Sozialhilfe  Kindergeld  Wohngeld",
+      "text": "Was bezahlt man in Deutschland automatisch, wenn man fest angestellt ist?  Sozialversicherung  Sozialhilfe  Kindergeld  Wohngeld",
       "stem": {
         "images": []
       },
@@ -1752,7 +1769,7 @@
       "section": "general",
       "state": null,
       "number": 100,
-      "text": "Seite 37 von 191 Was gehört nicht zur gesetzlichen Sozialversicherung?  die Lebensversicherung  die gesetzliche Rentenversicherung  die Arbeitslosenversicherung  die Pflegeversicherung",
+      "text": "Was gehört nicht zur gesetzlichen Sozialversicherung?  die Lebensversicherung  die gesetzliche Rentenversicherung  die Arbeitslosenversicherung  die Pflegeversicherung",
       "stem": {
         "images": []
       },
@@ -1803,7 +1820,7 @@
       "section": "general",
       "state": null,
       "number": 103,
-      "text": "Seite 38 von 191 Was wird in Deutschland als \"Ampelkoalition\" bezeichnet? Die Zusammenarbeit …  der Bundestagsfraktionen von CDU und CSU  von SPD, FDP und Bündnis 90/Die Grünen in einer Regierung  von CSU, Die LINKE und Bündnis 90/Die Grünen in einer Regierung  der Bundestagsfraktionen von CDU und SPD",
+      "text": "Was wird in Deutschland als \"Ampelkoalition\" bezeichnet? Die Zusammenarbeit …  der Bundestagsfraktionen von CDU und CSU  von SPD, FDP und Bündnis 90/Die Grünen in einer Regierung  von CSU, Die LINKE und Bündnis 90/Die Grünen in einer Regierung  der Bundestagsfraktionen von CDU und SPD",
       "stem": {
         "images": []
       },
@@ -1854,7 +1871,7 @@
       "section": "general",
       "state": null,
       "number": 106,
-      "text": "Seite 39 von 191 In Deutschland helfen ehrenamtliche Wahlhelferinnen und Wahlhelfer bei den Wahlen. Was ist eine Aufgabe von Wahlhelferinnen/Wahlhelfern?  Sie helfen Kindern und alten Menschen beim Wählen.  Sie schreiben Karten und Briefe mit der Angabe des Wahllokals.  Sie geben Zwischenergebnisse an Journalisten weiter.  Sie zählen die Stimmen nach dem Ende der Wahl.",
+      "text": "In Deutschland helfen ehrenamtliche Wahlhelferinnen und Wahlhelfer bei den Wahlen. Was ist eine Aufgabe von Wahlhelferinnen/Wahlhelfern?  Sie helfen Kindern und alten Menschen beim Wählen.  Sie schreiben Karten und Briefe mit der Angabe des Wahllokals.  Sie geben Zwischenergebnisse an Journalisten weiter.  Sie zählen die Stimmen nach dem Ende der Wahl.",
       "stem": {
         "images": []
       },
@@ -1905,7 +1922,7 @@
       "section": "general",
       "state": null,
       "number": 109,
-      "text": "Seite 40 von 191 Wie oft gibt es normalerweise Bundestagswahlen in Deutschland?  alle drei Jahre  alle vier Jahre  alle fünf Jahre  alle sechs Jahre",
+      "text": "Wie oft gibt es normalerweise Bundestagswahlen in Deutschland?  alle drei Jahre  alle vier Jahre  alle fünf Jahre  alle sechs Jahre",
       "stem": {
         "images": []
       },
@@ -1946,19 +1963,19 @@
       "choices": [
         {
           "id": "A",
-          "text": ""
+          "text": "die Politik Israels öffentlich kritisieren"
         },
         {
           "id": "B",
-          "text": ""
+          "text": "das Aufhängen einer israelischen Flagge auf dem Privatgrundstück"
         },
         {
           "id": "C",
-          "text": ""
+          "text": "eine Diskussion über die Politik Israels"
         },
         {
           "id": "D",
-          "text": ""
+          "text": "der öffentliche Aufruf zur Vernichtung Israels"
         }
       ],
       "answer": "A",
@@ -1973,7 +1990,7 @@
       "section": "general",
       "state": null,
       "number": 112,
-      "text": "Seite 41 von 191 Die Wahlen in Deutschland sind …  speziell.  geheim.  berufsbezogen.  geschlechtsabhängig.",
+      "text": "Die Wahlen in Deutschland sind …  speziell.  geheim.  berufsbezogen.  geschlechtsabhängig.",
       "stem": {
         "images": []
       },
@@ -2024,7 +2041,7 @@
       "section": "general",
       "state": null,
       "number": 115,
-      "text": "Seite 42 von 191 Was bedeutet \"aktives Wahlrecht\" in Deutschland?  Man kann gewählt werden.  Man muss wählen gehen.  Man kann wählen.  Man muss zur Auszählung der Stimmen gehen.",
+      "text": "Was bedeutet \"aktives Wahlrecht\" in Deutschland?  Man kann gewählt werden.  Man muss wählen gehen.  Man kann wählen.  Man muss zur Auszählung der Stimmen gehen.",
       "stem": {
         "images": []
       },
@@ -2075,26 +2092,26 @@
       "section": "general",
       "state": null,
       "number": 118,
-      "text": "Seite 43 von 191 Wer darf bei den rund 40 jüdischen Makkabi-Sportvereinen Mitglied werden?",
+      "text": "Wer darf bei den rund 40 jüdischen Makkabi",
       "stem": {
         "images": []
       },
       "choices": [
         {
           "id": "A",
-          "text": ""
+          "text": "Sportvereinen Mitglied werden?"
         },
         {
           "id": "B",
-          "text": ""
+          "text": "nur Deutsche"
         },
         {
           "id": "C",
-          "text": ""
+          "text": "nur Israelis"
         },
         {
           "id": "D",
-          "text": ""
+          "text": "nur religiöse Menschen"
         }
       ],
       "answer": "A",
@@ -2143,7 +2160,7 @@
       "section": "general",
       "state": null,
       "number": 121,
-      "text": "Seite 44 von 191 Eine Partei möchte in den Deutschen Bundestag. Sie muss aber einen Mindestanteil an Wählerstimmen haben. Das heißt …  5%-Hürde.  Zulassungsgrenze.  Basiswert.  Richtlinie.",
+      "text": "Eine Partei möchte in den Deutschen Bundestag. Sie muss aber einen Mindestanteil an Wählerstimmen haben. Das heißt …  5%-Hürde.  Zulassungsgrenze.  Basiswert.  Richtlinie.",
       "stem": {
         "images": []
       },
@@ -2194,7 +2211,7 @@
       "section": "general",
       "state": null,
       "number": 124,
-      "text": "Seite 45 von 191 Die Bundestagswahl in Deutschland ist die Wahl …  der Bundeskanzlerin/des Bundeskanzlers.  der Parlamente der Länder.  des Parlaments für Deutschland.  der Bundespräsidentin/des Bundespräsidenten.",
+      "text": "Die Bundestagswahl in Deutschland ist die Wahl …  der Bundeskanzlerin/des Bundeskanzlers.  der Parlamente der Länder.  des Parlaments für Deutschland.  der Bundespräsidentin/des Bundespräsidenten.",
       "stem": {
         "images": []
       },
@@ -2245,7 +2262,7 @@
       "section": "general",
       "state": null,
       "number": 127,
-      "text": "Seite 46 von 191 Warum gibt es die 5%-Hürde im Wahlgesetz der Bundesrepublik Deutschland? Es gibt sie, weil …  die Programme von vielen kleinen Parteien viele Gemeinsamkeiten haben.  die Bürgerinnen und Bürger bei vielen kleinen Parteien die Orientierung verlieren können.  viele kleine Parteien die Regierungsbildung erschweren.  die kleinen Parteien nicht so viel Geld haben, um die Politikerinnen und Politiker zu bezahlen.",
+      "text": "Warum gibt es die 5%-Hürde im Wahlgesetz der Bundesrepublik Deutschland? Es gibt sie, weil …  die Programme von vielen kleinen Parteien viele Gemeinsamkeiten haben.  die Bürgerinnen und Bürger bei vielen kleinen Parteien die Orientierung verlieren können.  viele kleine Parteien die Regierungsbildung erschweren.  die kleinen Parteien nicht so viel Geld haben, um die Politikerinnen und Politiker zu bezahlen.",
       "stem": {
         "images": []
       },
@@ -2279,7 +2296,7 @@
       "section": "general",
       "state": null,
       "number": 129,
-      "text": "Seite 47 von 191 Vom Volk gewählt wird in Deutschland …  die Bundeskanzlerin/der Bundeskanzler.  die Ministerpräsidentin/der Ministerpräsident eines Bundeslandes.  der Bundestag.  die Bundespräsidentin/der Bundespräsident.",
+      "text": "Vom Volk gewählt wird in Deutschland …  die Bundeskanzlerin/der Bundeskanzler.  die Ministerpräsidentin/der Ministerpräsident eines Bundeslandes.  der Bundestag.  die Bundespräsidentin/der Bundespräsident.",
       "stem": {
         "images": []
       },
@@ -2296,7 +2313,7 @@
       "section": "general",
       "state": null,
       "number": 130,
-      "text": "Seite 48 von 191 Welcher Stimmzettel wäre bei einer Bundestagswahl gültig? In Anlehnung an Bundeswahlordnung (BWO), Anlage 26  1  2  3  4",
+      "text": "Welcher Stimmzettel wäre bei einer Bundestagswahl gültig? In Anlehnung an Bundeswahlordnung (BWO), Anlage 26  1  2  3  4",
       "stem": {
         "images": [
           "/assets/lid/export/GEN_130_sorukismi_xxxx_STEM.png"
@@ -2351,7 +2368,7 @@
       "section": "general",
       "state": null,
       "number": 133,
-      "text": "Seite 49 von 191 Was ist bei Bundestags- und Landtagswahlen in Deutschland erlaubt?  Der Ehemann wählt für seine Frau mit.  Man kann durch Briefwahl seine Stimme abgeben.  Man kann am Wahltag telefonisch seine Stimme abgeben.  Kinder ab dem Alter von 14 Jahren dürfen wählen.",
+      "text": "Was ist bei Bundestags- und Landtagswahlen in Deutschland erlaubt?  Der Ehemann wählt für seine Frau mit.  Man kann durch Briefwahl seine Stimme abgeben.  Man kann am Wahltag telefonisch seine Stimme abgeben.  Kinder ab dem Alter von 14 Jahren dürfen wählen.",
       "stem": {
         "images": []
       },
@@ -2402,7 +2419,7 @@
       "section": "general",
       "state": null,
       "number": 136,
-      "text": "Seite 50 von 191 Sie gehen in Deutschland zum Arbeitsgericht bei …  falscher Nebenkostenabrechnung.  ungerechtfertigter Kündigung durch Ihre Chefin/Ihren Chef.  Problemen mit den Nachbarinnen/Nachbarn.  Schwierigkeiten nach einem Verkehrsunfall.",
+      "text": "Sie gehen in Deutschland zum Arbeitsgericht bei …  falscher Nebenkostenabrechnung.  ungerechtfertigter Kündigung durch Ihre Chefin/Ihren Chef.  Problemen mit den Nachbarinnen/Nachbarn.  Schwierigkeiten nach einem Verkehrsunfall.",
       "stem": {
         "images": []
       },
@@ -2453,7 +2470,7 @@
       "section": "general",
       "state": null,
       "number": 139,
-      "text": "Seite 51 von 191 Wann kommt es in Deutschland zu einem Prozess vor Gericht? Wenn jemand …  zu einer anderen Religion übertritt.  eine Straftat begangen hat und angeklagt wird.  eine andere Meinung als die der Regierung vertritt.  sein Auto falsch geparkt hat und es abgeschleppt wird.",
+      "text": "Wann kommt es in Deutschland zu einem Prozess vor Gericht? Wenn jemand …  zu einer anderen Religion übertritt.  eine Straftat begangen hat und angeklagt wird.  eine andere Meinung als die der Regierung vertritt.  sein Auto falsch geparkt hat und es abgeschleppt wird.",
       "stem": {
         "images": []
       },
@@ -2504,7 +2521,7 @@
       "section": "general",
       "state": null,
       "number": 142,
-      "text": "Seite 52 von 191 Was ist die Hauptaufgabe einer Richterin/eines Richters in Deutschland? Eine Richterin/ein Richter …  vertritt Bürgerinnen und Bürger vor einem Gericht.  arbeitet an einem Gericht und spricht Urteile.  ändert Gesetze.  betreut Jugendliche vor Gericht.",
+      "text": "Was ist die Hauptaufgabe einer Richterin/eines Richters in Deutschland? Eine Richterin/ein Richter …  vertritt Bürgerinnen und Bürger vor einem Gericht.  arbeitet an einem Gericht und spricht Urteile.  ändert Gesetze.  betreut Jugendliche vor Gericht.",
       "stem": {
         "images": []
       },
@@ -2555,7 +2572,7 @@
       "section": "general",
       "state": null,
       "number": 145,
-      "text": "Seite 53 von 191 In Deutschland wird die Staatsgewalt geteilt. Für welche Staatsgewalt arbeitet eine Richterin/ein Richter? Für die …  Judikative  Exekutive  Presse  Legislative",
+      "text": "In Deutschland wird die Staatsgewalt geteilt. Für welche Staatsgewalt arbeitet eine Richterin/ein Richter? Für die …  Judikative  Exekutive  Presse  Legislative",
       "stem": {
         "images": []
       },
@@ -2606,7 +2623,7 @@
       "section": "general",
       "state": null,
       "number": 148,
-      "text": "Seite 54 von 191 Was ist eine Aufgabe der Polizei in Deutschland?  das Land zu verteidigen  die Bürgerinnen und Bürger abzuhören  die Gesetze zu beschließen  die Einhaltung von Gesetzen zu überwachen",
+      "text": "Was ist eine Aufgabe der Polizei in Deutschland?  das Land zu verteidigen  die Bürgerinnen und Bürger abzuhören  die Gesetze zu beschließen  die Einhaltung von Gesetzen zu überwachen",
       "stem": {
         "images": []
       },
@@ -2630,19 +2647,19 @@
       "choices": [
         {
           "id": "A",
-          "text": ""
+          "text": "ein jüdisches Fest besuchen"
         },
         {
           "id": "B",
-          "text": ""
+          "text": "die israelische Regierung kritisieren"
         },
         {
           "id": "C",
-          "text": ""
+          "text": "den Holocaust leugnen"
         },
         {
           "id": "D",
-          "text": ""
+          "text": "gegen Juden Fußball spielen."
         }
       ],
       "answer": "A",
@@ -2674,7 +2691,7 @@
       "section": "general",
       "state": null,
       "number": 151,
-      "text": "Seite 55 von 191 Wer baute die Mauer in Berlin?  Großbritannien  die DDR  die Bundesrepublik Deutschland  die USA",
+      "text": "Wer baute die Mauer in Berlin?  Großbritannien  die DDR  die Bundesrepublik Deutschland  die USA",
       "stem": {
         "images": []
       },
@@ -2725,7 +2742,7 @@
       "section": "general",
       "state": null,
       "number": 154,
-      "text": "Seite 56 von 191 Wann war der Zweite Weltkrieg zu Ende?  1933  1945  1949  1961",
+      "text": "Wann war der Zweite Weltkrieg zu Ende?  1933  1945  1949  1961",
       "stem": {
         "images": []
       },
@@ -2776,7 +2793,7 @@
       "section": "general",
       "state": null,
       "number": 157,
-      "text": "Seite 57 von 191 Die Nationalsozialisten mit Adolf Hitler errichteten 1933 in Deutschland …  eine Diktatur.  einen demokratischen Staat.  eine Monarchie.  ein Fürstentum.",
+      "text": "Die Nationalsozialisten mit Adolf Hitler errichteten 1933 in Deutschland …  eine Diktatur.  einen demokratischen Staat.  eine Monarchie.  ein Fürstentum.",
       "stem": {
         "images": []
       },
@@ -2827,7 +2844,7 @@
       "section": "general",
       "state": null,
       "number": 160,
-      "text": "Seite 58 von 191 Welcher Krieg dauerte von 1939 bis 1945?  der Erste Weltkrieg  der Zweite Weltkrieg  der Vietnamkrieg  der Golfkrieg",
+      "text": "Welcher Krieg dauerte von 1939 bis 1945?  der Erste Weltkrieg  der Zweite Weltkrieg  der Vietnamkrieg  der Golfkrieg",
       "stem": {
         "images": []
       },
@@ -2878,7 +2895,7 @@
       "section": "general",
       "state": null,
       "number": 163,
-      "text": "Seite 59 von 191 In welchem Jahr zerstörten die Nationalsozialisten Synagogen und jüdische Geschäfte in Deutschland?  1925  1930  1938  1945",
+      "text": "In welchem Jahr zerstörten die Nationalsozialisten Synagogen und jüdische Geschäfte in Deutschland?  1925  1930  1938  1945",
       "stem": {
         "images": []
       },
@@ -2929,7 +2946,7 @@
       "section": "general",
       "state": null,
       "number": 166,
-      "text": "Seite 60 von 191 Bei welchen Demonstrationen in Deutschland riefen die Menschen \"Wir sind das Volk\"?  beim Arbeiteraufstand 1953 in der DDR  bei den Demonstrationen 1968 in der Bundesrepublik Deutschland  bei den Anti-Atomkraft-Demonstrationen 1985 in der Bundesrepublik Deutschland  bei den Montagsdemonstrationen 1989 in der DDR",
+      "text": "Bei welchen Demonstrationen in Deutschland riefen die Menschen \"Wir sind das Volk\"?  beim Arbeiteraufstand 1953 in der DDR  bei den Demonstrationen 1968 in der Bundesrepublik Deutschland  bei den Anti-Atomkraft-Demonstrationen 1985 in der Bundesrepublik Deutschland  bei den Montagsdemonstrationen 1989 in der DDR",
       "stem": {
         "images": []
       },
@@ -2980,7 +2997,7 @@
       "section": "general",
       "state": null,
       "number": 169,
-      "text": "Seite 61 von 191 Wann wurde die Bundesrepublik Deutschland gegründet?  1939  1945  1949  1951",
+      "text": "Wann wurde die Bundesrepublik Deutschland gegründet?  1939  1945  1949  1951",
       "stem": {
         "images": []
       },
@@ -3031,7 +3048,7 @@
       "section": "general",
       "state": null,
       "number": 172,
-      "text": "Seite 62 von 191 In welcher Besatzungszone wurde die DDR gegründet? In der …  amerikanischen Besatzungszone  französischen Besatzungszone  britischen Besatzungszone  sowjetischen Besatzungszone",
+      "text": "In welcher Besatzungszone wurde die DDR gegründet? In der …  amerikanischen Besatzungszone  französischen Besatzungszone  britischen Besatzungszone  sowjetischen Besatzungszone",
       "stem": {
         "images": []
       },
@@ -3082,7 +3099,7 @@
       "section": "general",
       "state": null,
       "number": 175,
-      "text": "Seite 63 von 191 Wie viele Besatzungszonen gab es in Deutschland nach dem Zweiten Weltkrieg?  3  4  5  6",
+      "text": "Wie viele Besatzungszonen gab es in Deutschland nach dem Zweiten Weltkrieg?  3  4  5  6",
       "stem": {
         "images": []
       },
@@ -3099,7 +3116,7 @@
       "section": "general",
       "state": null,
       "number": 176,
-      "text": "Seite 64 von 191 Wie waren die Besatzungszonen Deutschlands nach 1945 verteilt?  1=Großbritannien, 2=Sowjetunion, 3=Frankreich, 4=USA  1=Sowjetunion, 2=Großbritannien, 3=USA, 4=Frankreich  1=Großbritannien, 2=Sowjetunion, 3=USA, 4=Frankreich  1=Großbritannien, 2=USA, 3=Sowjetunion, 4=Frankreich",
+      "text": "Wie waren die Besatzungszonen Deutschlands nach 1945 verteilt?  1=Großbritannien, 2=Sowjetunion, 3=Frankreich, 4=USA  1=Sowjetunion, 2=Großbritannien, 3=USA, 4=Frankreich  1=Großbritannien, 2=Sowjetunion, 3=USA, 4=Frankreich  1=Großbritannien, 2=USA, 3=Sowjetunion, 4=Frankreich",
       "stem": {
         "images": [
           "/assets/lid/export/GEN_176_sorukismi_xxxx_STEM.png"
@@ -3154,7 +3171,7 @@
       "section": "general",
       "state": null,
       "number": 179,
-      "text": "Seite 65 von 191 Wie endete der Zweite Weltkrieg in Europa offiziell?  mit dem Tod Adolf Hitlers  durch die bedingungslose Kapitulation Deutschlands  mit dem Rückzug der Deutschen aus den besetzten Gebieten  durch eine Revolution in Deutschland",
+      "text": "Wie endete der Zweite Weltkrieg in Europa offiziell?  mit dem Tod Adolf Hitlers  durch die bedingungslose Kapitulation Deutschlands  mit dem Rückzug der Deutschen aus den besetzten Gebieten  durch eine Revolution in Deutschland",
       "stem": {
         "images": []
       },
@@ -3171,7 +3188,7 @@
       "section": "general",
       "state": null,
       "number": 180,
-      "text": "Seite 66 von 191 Der erste Bundeskanzler der Bundesrepublik Deutschland war …  Ludwig Erhard.  Willy Brandt.  Konrad Adenauer.  Gerhard Schröder.",
+      "text": "Der erste Bundeskanzler der Bundesrepublik Deutschland war …  Ludwig Erhard.  Willy Brandt.  Konrad Adenauer.  Gerhard Schröder.",
       "stem": {
         "images": []
       },
@@ -3188,7 +3205,7 @@
       "section": "general",
       "state": null,
       "number": 181,
-      "text": "Seite 67 von 191 Was wollte Willy Brandt mit seinem Kniefall 1970 im ehemaligen jüdischen Ghetto in Warschau ausdrücken? © Bundesregierung/Engelbert Reineke  Er hat sich den ehemaligen Alliierten unterworfen.  Er bat Polen und die polnischen Juden um Vergebung.  Er zeigte seine Demut vor dem Warschauer Pakt.  Er sprach ein Gebet am Grab des Unbekannten Soldaten.",
+      "text": "Was wollte Willy Brandt mit seinem Kniefall 1970 im ehemaligen jüdischen Ghetto in Warschau ausdrücken? © Bundesregierung/Engelbert Reineke  Er hat sich den ehemaligen Alliierten unterworfen.  Er bat Polen und die polnischen Juden um Vergebung.  Er zeigte seine Demut vor dem Warschauer Pakt.  Er sprach ein Gebet am Grab des Unbekannten Soldaten.",
       "stem": {
         "images": [
           "/assets/lid/export/GEN_181_sorukismi_xxxx_STEM.png"
@@ -3216,19 +3233,19 @@
       "choices": [
         {
           "id": "A",
-          "text": ""
+          "text": "Basilika"
         },
         {
           "id": "B",
-          "text": ""
+          "text": "Moschee"
         },
         {
           "id": "C",
-          "text": ""
+          "text": "Synagoge"
         },
         {
           "id": "D",
-          "text": ""
+          "text": "Kirche"
         }
       ],
       "answer": "A",
@@ -3260,26 +3277,26 @@
       "section": "general",
       "state": null,
       "number": 184,
-      "text": "Seite 68 von 191 184. Auf welcher rechtlichen Grundlage wurde der Staat Israel gegründet?",
+      "text": "184. Auf welcher rechtlichen Grundlage wurde der Staat Israel gegründet?",
       "stem": {
         "images": []
       },
       "choices": [
         {
           "id": "A",
-          "text": ""
+          "text": "eine Resolution der Vereinten Nationen"
         },
         {
           "id": "B",
-          "text": ""
+          "text": "ein Beschluss des Zionistenkongresses"
         },
         {
           "id": "C",
-          "text": ""
+          "text": "ein Vorschlag der Bundesregierung"
         },
         {
           "id": "D",
-          "text": ""
+          "text": "ein Vorschlag der UdSSR"
         }
       ],
       "answer": "A",
@@ -3311,7 +3328,7 @@
       "section": "general",
       "state": null,
       "number": 186,
-      "text": "Seite 69 von 191 Im Jahr 1953 gab es in der DDR einen Aufstand, an den lange Zeit in der Bundesrepublik Deutschland ein Feiertag erinnerte. Wann war das?  1. Mai  17. Juni  20. Juli  9. November",
+      "text": "Im Jahr 1953 gab es in der DDR einen Aufstand, an den lange Zeit in der Bundesrepublik Deutschland ein Feiertag erinnerte. Wann war das?  1. Mai  17. Juni  20. Juli  9. November",
       "stem": {
         "images": []
       },
@@ -3349,7 +3366,7 @@
       "section": "general",
       "state": null,
       "number": 188,
-      "text": "Seite 70 von 191 In welchem Jahr wurde die Mauer in Berlin gebaut?  1953  1956  1959  1961",
+      "text": "In welchem Jahr wurde die Mauer in Berlin gebaut?  1953  1956  1959  1961",
       "stem": {
         "images": []
       },
@@ -3400,7 +3417,7 @@
       "section": "general",
       "state": null,
       "number": 191,
-      "text": "Seite 71 von 191 Wann wurde die Mauer in Berlin für alle geöffnet?  1987  1989  1992  1995",
+      "text": "Wann wurde die Mauer in Berlin für alle geöffnet?  1987  1989  1992  1995",
       "stem": {
         "images": []
       },
@@ -3451,7 +3468,7 @@
       "section": "general",
       "state": null,
       "number": 194,
-      "text": "Seite 72 von 191 Am 3. Oktober feiert man in Deutschland den Tag der Deutschen …  Einheit.  Nation.  Bundesländer.  Städte.",
+      "text": "Am 3. Oktober feiert man in Deutschland den Tag der Deutschen …  Einheit.  Nation.  Bundesländer.  Städte.",
       "stem": {
         "images": []
       },
@@ -3502,7 +3519,7 @@
       "section": "general",
       "state": null,
       "number": 197,
-      "text": "Seite 73 von 191 Welches heutige deutsche Bundesland gehörte früher zum Gebiet der DDR?  Thüringen  Hessen  Bayern  Bremen",
+      "text": "Welches heutige deutsche Bundesland gehörte früher zum Gebiet der DDR?  Thüringen  Hessen  Bayern  Bremen",
       "stem": {
         "images": []
       },
@@ -3553,7 +3570,7 @@
       "section": "general",
       "state": null,
       "number": 200,
-      "text": "Seite 74 von 191 Welches heutige deutsche Bundesland gehörte früher zum Gebiet der DDR?  Hessen  Schleswig-Holstein  Mecklenburg-Vorpommern  Saarland",
+      "text": "Welches heutige deutsche Bundesland gehörte früher zum Gebiet der DDR?  Hessen  Schleswig-Holstein  Mecklenburg-Vorpommern  Saarland",
       "stem": {
         "images": []
       },
@@ -3570,11 +3587,28 @@
       "section": "general",
       "state": null,
       "number": 201,
-      "text": "Welche der folgenden Auflistungen enthält nur Bundesländer, die zum Gebiet der früheren DDR gehörten?  Niedersachsen, Nordrhein-Westfalen, Hessen, Schleswig-Holstein, Brandenburg  Mecklenburg-Vorpommern, Brandenburg, Sachsen, Sachsen-Anhalt, Thüringen  Bayern, Baden-Württemberg, Rheinland-Pfalz, Thüringen, Sachsen  Sachsen, Thüringen, Hessen, Niedersachen, Brandenburg",
+      "text": "Welche der folgenden Auflistungen enthält nur Bundesländer, die zum Gebiet der früheren DDR gehörten?  Niedersachsen, Nordrhein",
       "stem": {
         "images": []
       },
-      "choices": [],
+      "choices": [
+        {
+          "id": "A",
+          "text": "Westfalen, Hessen, Schleswig"
+        },
+        {
+          "id": "B",
+          "text": "Holstein, Brandenburg  Mecklenburg"
+        },
+        {
+          "id": "C",
+          "text": "Vorpommern, Brandenburg, Sachsen, Sachsen"
+        },
+        {
+          "id": "D",
+          "text": "Anhalt, Thüringen  Bayern, Baden"
+        }
+      ],
       "answer": "A",
       "explanation": "",
       "source": {
@@ -3604,7 +3638,7 @@
       "section": "general",
       "state": null,
       "number": 203,
-      "text": "Seite 75 von 191 Wie hieß das Wirtschaftssystem der DDR?  Marktwirtschaft  Planwirtschaft  Angebot und Nachfrage  Kapitalismus",
+      "text": "Wie hieß das Wirtschaftssystem der DDR?  Marktwirtschaft  Planwirtschaft  Angebot und Nachfrage  Kapitalismus",
       "stem": {
         "images": []
       },
@@ -3655,26 +3689,26 @@
       "section": "general",
       "state": null,
       "number": 206,
-      "text": "Seite 76 von 191 206. Woran erinnern die sogenannten „Stolpersteine“ in Deutschland?",
+      "text": "206. Woran erinnern die sogenannten „Stolpersteine“ in Deutschland?",
       "stem": {
         "images": []
       },
       "choices": [
         {
           "id": "A",
-          "text": ""
+          "text": "an berühmte deutsche Politikerinnen und Politiker"
         },
         {
           "id": "B",
-          "text": ""
+          "text": "an die Opfer des Nationalsozialismus"
         },
         {
           "id": "C",
-          "text": ""
+          "text": "an Verkehrstote"
         },
         {
           "id": "D",
-          "text": ""
+          "text": "an bekannte jüdische Musiker"
         }
       ],
       "answer": "A",
@@ -3706,7 +3740,7 @@
       "section": "general",
       "state": null,
       "number": 208,
-      "text": "Seite 77 von 191 Was war die \"Stasi\"?  der Geheimdienst im \"Dritten Reich\"  eine berühmte deutsche Gedenkstätte  der Geheimdienst der DDR  ein deutscher Sportverein während des Zweiten Weltkrieges",
+      "text": "Was war die \"Stasi\"?  der Geheimdienst im \"Dritten Reich\"  eine berühmte deutsche Gedenkstätte  der Geheimdienst der DDR  ein deutscher Sportverein während des Zweiten Weltkrieges",
       "stem": {
         "images": []
       },
@@ -3745,7 +3779,7 @@
       "section": "general",
       "state": null,
       "number": 210,
-      "text": "Seite 78 von 191 Was ereignete sich am 17. Juni 1953 in der DDR?  der feierliche Beitritt zum Warschauer Pakt  landesweite Streiks und ein Volksaufstand  der 1. SED-Parteitag  der erste Besuch Fidel Castros",
+      "text": "Was ereignete sich am 17. Juni 1953 in der DDR?  der feierliche Beitritt zum Warschauer Pakt  landesweite Streiks und ein Volksaufstand  der 1. SED-Parteitag  der erste Besuch Fidel Castros",
       "stem": {
         "images": []
       },
@@ -3796,7 +3830,7 @@
       "section": "general",
       "state": null,
       "number": 213,
-      "text": "Seite 79 von 191 Wie viele Einwohner hat Deutschland?  70 Millionen  78 Millionen  84 Millionen  90 Millionen",
+      "text": "Wie viele Einwohner hat Deutschland?  70 Millionen  78 Millionen  84 Millionen  90 Millionen",
       "stem": {
         "images": []
       },
@@ -3813,11 +3847,28 @@
       "section": "general",
       "state": null,
       "number": 214,
-      "text": "Welche Farben hat die deutsche Flagge?  schwarz-rot-gold  rot-weiß-schwarz  schwarz-rot-grün  schwarz-gelb-rot",
+      "text": "Welche Farben hat die deutsche Flagge?  schwarz",
       "stem": {
         "images": []
       },
-      "choices": [],
+      "choices": [
+        {
+          "id": "A",
+          "text": "rot"
+        },
+        {
+          "id": "B",
+          "text": "gold  rot"
+        },
+        {
+          "id": "C",
+          "text": "weiß"
+        },
+        {
+          "id": "D",
+          "text": "schwarz  schwarz"
+        }
+      ],
       "answer": "A",
       "explanation": "",
       "source": {
@@ -3830,7 +3881,7 @@
       "section": "general",
       "state": null,
       "number": 215,
-      "text": "Seite 80 von 191 Wer wird als \"Kanzler der Deutschen Einheit\" bezeichnet?  Gerhard Schröder  Helmut Kohl  Konrad Adenauer  Helmut Schmidt",
+      "text": "Wer wird als \"Kanzler der Deutschen Einheit\" bezeichnet?  Gerhard Schröder  Helmut Kohl  Konrad Adenauer  Helmut Schmidt",
       "stem": {
         "images": []
       },
@@ -3868,7 +3919,7 @@
       "section": "general",
       "state": null,
       "number": 217,
-      "text": "Seite 81 von 191 In welchem Zeitraum gab es die Deutsche Demokratische Republik (DDR)?  1919 bis 1927  1933 bis 1945  1945 bis 1961  1949 bis 1990",
+      "text": "In welchem Zeitraum gab es die Deutsche Demokratische Republik (DDR)?  1919 bis 1927  1933 bis 1945  1945 bis 1961  1949 bis 1990",
       "stem": {
         "images": []
       },
@@ -3919,7 +3970,7 @@
       "section": "general",
       "state": null,
       "number": 220,
-      "text": "Seite 82 von 191 Der 27. Januar ist in Deutschland ein offizieller Gedenktag. Woran erinnert dieser Tag?  an das Ende des Zweiten Weltkrieges  an die Verabschiedung des Grundgesetzes  an die Wiedervereinigung Deutschlands  an die Opfer des Nationalsozialismus (Tag der Befreiung des Vernichtungslagers Auschwitz)",
+      "text": "Der 27. Januar ist in Deutschland ein offizieller Gedenktag. Woran erinnert dieser Tag?  an das Ende des Zweiten Weltkrieges  an die Verabschiedung des Grundgesetzes  an die Wiedervereinigung Deutschlands  an die Opfer des Nationalsozialismus (Tag der Befreiung des Vernichtungslagers Auschwitz)",
       "stem": {
         "images": []
       },
@@ -3970,7 +4021,7 @@
       "section": "general",
       "state": null,
       "number": 223,
-      "text": "Seite 83 von 191 Welches Land ist ein Nachbarland von Deutschland?  Rumänien  Bulgarien  Polen  Griechenland",
+      "text": "Welches Land ist ein Nachbarland von Deutschland?  Rumänien  Bulgarien  Polen  Griechenland",
       "stem": {
         "images": []
       },
@@ -4004,7 +4055,7 @@
       "section": "general",
       "state": null,
       "number": 225,
-      "text": "Seite 84 von 191 In welchem anderen Land gibt es eine große deutschsprachige Bevölkerung?  Tschechien  Norwegen  Spanien  Österreich",
+      "text": "In welchem anderen Land gibt es eine große deutschsprachige Bevölkerung?  Tschechien  Norwegen  Spanien  Österreich",
       "stem": {
         "images": []
       },
@@ -4060,7 +4111,7 @@
       "section": "general",
       "state": null,
       "number": 228,
-      "text": "Seite 85 von 191 Wie wird der Beitritt der DDR zur Bundesrepublik Deutschland im Jahr 1990 allgemein genannt?  NATO-Osterweiterung  EU-Osterweiterung  Deutsche Wiedervereinigung  Europäische Gemeinschaft",
+      "text": "Wie wird der Beitritt der DDR zur Bundesrepublik Deutschland im Jahr 1990 allgemein genannt?  NATO-Osterweiterung  EU-Osterweiterung  Deutsche Wiedervereinigung  Europäische Gemeinschaft",
       "stem": {
         "images": []
       },
@@ -4111,7 +4162,7 @@
       "section": "general",
       "state": null,
       "number": 231,
-      "text": "Seite 86 von 191 Was bedeutet der Begriff \"europäische Integration\"?  Damit sind amerikanische Einwanderinnen und Einwanderer in Europa gemeint.  Der Begriff meint den Einwanderungsstopp nach Europa.  Damit sind europäische Auswanderinnen und Auswanderer in den USA gemeint.  Der Begriff meint den Zusammenschluss europäischer Staaten zur EU.",
+      "text": "Was bedeutet der Begriff \"europäische Integration\"?  Damit sind amerikanische Einwanderinnen und Einwanderer in Europa gemeint.  Der Begriff meint den Einwanderungsstopp nach Europa.  Damit sind europäische Auswanderinnen und Auswanderer in den USA gemeint.  Der Begriff meint den Zusammenschluss europäischer Staaten zur EU.",
       "stem": {
         "images": []
       },
@@ -4162,7 +4213,7 @@
       "section": "general",
       "state": null,
       "number": 234,
-      "text": "Seite 87 von 191 Wo ist ein Sitz des Europäischen Parlaments?  London  Paris  Berlin  Straßburg",
+      "text": "Wo ist ein Sitz des Europäischen Parlaments?  London  Paris  Berlin  Straßburg",
       "stem": {
         "images": []
       },
@@ -4179,7 +4230,7 @@
       "section": "general",
       "state": null,
       "number": 235,
-      "text": "Seite 88 von 191 Der damalige französische Staatspräsident François Mitterrand und der damalige deutsche Bundeskanzler Helmut Kohl gedenken in Verdun gemeinsam der Toten beider Weltkriege. Welches Ziel der Europäischen Union wird bei diesem Treffen deutlich? © Bundesregierung/Richard Schulze-Vorberg  Freundschaft zwischen England und Deutschland  Reisefreiheit in alle Länder der EU  Frieden und Sicherheit in den Ländern der EU  einheitliche Feiertage in den Ländern der EU",
+      "text": "Der damalige französische Staatspräsident François Mitterrand und der damalige deutsche Bundeskanzler Helmut Kohl gedenken in Verdun gemeinsam der Toten beider Weltkriege. Welches Ziel der Europäischen Union wird bei diesem Treffen deutlich? © Bundesregierung/Richard Schulze-Vorberg  Freundschaft zwischen England und Deutschland  Reisefreiheit in alle Länder der EU  Frieden und Sicherheit in den Ländern der EU  einheitliche Feiertage in den Ländern der EU",
       "stem": {
         "images": [
           "/assets/lid/export/GEN_235_sorukismi_xxxx_STEM.png"
@@ -4234,7 +4285,7 @@
       "section": "general",
       "state": null,
       "number": 238,
-      "text": "Seite 89 von 191 An welchen Orten arbeitet das Europäische Parlament?  Paris, London und Den Haag  Straßburg, Luxemburg und Brüssel  Rom, Bern und Wien  Bonn, Zürich und Mailand",
+      "text": "An welchen Orten arbeitet das Europäische Parlament?  Paris, London und Den Haag  Straßburg, Luxemburg und Brüssel  Rom, Bern und Wien  Bonn, Zürich und Mailand",
       "stem": {
         "images": []
       },
@@ -4285,7 +4336,7 @@
       "section": "general",
       "state": null,
       "number": 241,
-      "text": "Seite 90 von 191 Frau Seger bekommt ein Kind. Was muss sie tun, um Elterngeld zu erhalten?  Sie muss an ihre Krankenkasse schreiben.  Sie muss einen Antrag bei der Elterngeldstelle stellen.  Sie muss nichts tun, denn sie bekommt automatisch Elterngeld.  Sie muss das Arbeitsamt um Erlaubnis bitten.",
+      "text": "Frau Seger bekommt ein Kind. Was muss sie tun, um Elterngeld zu erhalten?  Sie muss an ihre Krankenkasse schreiben.  Sie muss einen Antrag bei der Elterngeldstelle stellen.  Sie muss nichts tun, denn sie bekommt automatisch Elterngeld.  Sie muss das Arbeitsamt um Erlaubnis bitten.",
       "stem": {
         "images": []
       },
@@ -4336,7 +4387,7 @@
       "section": "general",
       "state": null,
       "number": 244,
-      "text": "Seite 91 von 191 Welchen Schulabschluss braucht man normalerweise, um an einer Universität in Deutschland ein Studium zu beginnen?  das Abitur  ein Diplom  die Prokura  eine Gesellenprüfung",
+      "text": "Welchen Schulabschluss braucht man normalerweise, um an einer Universität in Deutschland ein Studium zu beginnen?  das Abitur  ein Diplom  die Prokura  eine Gesellenprüfung",
       "stem": {
         "images": []
       },
@@ -4387,7 +4438,7 @@
       "section": "general",
       "state": null,
       "number": 247,
-      "text": "Seite 92 von 191 Eine Frau ist schwanger. Sie ist kurz vor und nach der Geburt ihres Kindes vom Gesetz besonders beschützt. Wie heißt dieser Schutz?  Elternzeit  Mutterschutz  Geburtsvorbereitung  Wochenbett",
+      "text": "Eine Frau ist schwanger. Sie ist kurz vor und nach der Geburt ihres Kindes vom Gesetz besonders beschützt. Wie heißt dieser Schutz?  Elternzeit  Mutterschutz  Geburtsvorbereitung  Wochenbett",
       "stem": {
         "images": []
       },
@@ -4438,7 +4489,7 @@
       "section": "general",
       "state": null,
       "number": 250,
-      "text": "Seite 93 von 191 In Deutschland hat man die besten Chancen auf einen gut bezahlten Arbeitsplatz, wenn man …  katholisch ist.  gut ausgebildet ist.  eine Frau ist.  Mitglied einer Partei ist.",
+      "text": "In Deutschland hat man die besten Chancen auf einen gut bezahlten Arbeitsplatz, wenn man …  katholisch ist.  gut ausgebildet ist.  eine Frau ist.  Mitglied einer Partei ist.",
       "stem": {
         "images": []
       },
@@ -4489,7 +4540,7 @@
       "section": "general",
       "state": null,
       "number": 253,
-      "text": "Seite 94 von 191 Wo müssen Sie sich anmelden, wenn Sie in Deutschland umziehen?  beim Einwohnermeldeamt  beim Standesamt  beim Ordnungsamt  beim Gewerbeamt",
+      "text": "Wo müssen Sie sich anmelden, wenn Sie in Deutschland umziehen?  beim Einwohnermeldeamt  beim Standesamt  beim Ordnungsamt  beim Gewerbeamt",
       "stem": {
         "images": []
       },
@@ -4540,7 +4591,7 @@
       "section": "general",
       "state": null,
       "number": 256,
-      "text": "Seite 95 von 191 Ein Ehepaar möchte in Deutschland ein Restaurant eröffnen. Was braucht es dazu unbedingt?  eine Erlaubnis der Polizei  eine Genehmigung einer Partei  eine Genehmigung des Einwohnermeldeamts  eine Gaststättenerlaubnis von der zuständigen Behörde",
+      "text": "Ein Ehepaar möchte in Deutschland ein Restaurant eröffnen. Was braucht es dazu unbedingt?  eine Erlaubnis der Polizei  eine Genehmigung einer Partei  eine Genehmigung des Einwohnermeldeamts  eine Gaststättenerlaubnis von der zuständigen Behörde",
       "stem": {
         "images": []
       },
@@ -4591,7 +4642,7 @@
       "section": "general",
       "state": null,
       "number": 259,
-      "text": "Seite 96 von 191 Das Berufsinformationszentrum BIZ bei der Bundesagentur für Arbeit in Deutschland hilft bei der …  Rentenberechnung.  Lehrstellensuche.  Steuererklärung.  Krankenversicherung.",
+      "text": "Das Berufsinformationszentrum BIZ bei der Bundesagentur für Arbeit in Deutschland hilft bei der …  Rentenberechnung.  Lehrstellensuche.  Steuererklärung.  Krankenversicherung.",
       "stem": {
         "images": []
       },
@@ -4642,7 +4693,7 @@
       "section": "general",
       "state": null,
       "number": 262,
-      "text": "Seite 97 von 191 Was bedeutet in Deutschland der Grundsatz der Gleichbehandlung?  Niemand darf z.B. wegen einer Behinderung benachteiligt werden.  Man darf andere Personen benachteiligen, wenn ausreichende persönliche Gründe hierfür vorliegen.  Niemand darf gegen Personen klagen, wenn sie benachteiligt wurden.  Es ist für alle Gesetz, benachteiligten Gruppen jährlich Geld zu spenden.",
+      "text": "Was bedeutet in Deutschland der Grundsatz der Gleichbehandlung?  Niemand darf z.B. wegen einer Behinderung benachteiligt werden.  Man darf andere Personen benachteiligen, wenn ausreichende persönliche Gründe hierfür vorliegen.  Niemand darf gegen Personen klagen, wenn sie benachteiligt wurden.  Es ist für alle Gesetz, benachteiligten Gruppen jährlich Geld zu spenden.",
       "stem": {
         "images": []
       },
@@ -4693,7 +4744,7 @@
       "section": "general",
       "state": null,
       "number": 265,
-      "text": "Seite 98 von 191 Wohin muss man in Deutschland zuerst gehen, wenn man heiraten möchte?  zum Einwohnermeldeamt  zum Ordnungsamt  zur Agentur für Arbeit  zum Standesamt",
+      "text": "Wohin muss man in Deutschland zuerst gehen, wenn man heiraten möchte?  zum Einwohnermeldeamt  zum Ordnungsamt  zur Agentur für Arbeit  zum Standesamt",
       "stem": {
         "images": []
       },
@@ -4744,7 +4795,7 @@
       "section": "general",
       "state": null,
       "number": 268,
-      "text": "Seite 99 von 191 Eine junge Frau will den Führerschein machen. Sie hat Angst vor der Prüfung, weil ihre Muttersprache nicht Deutsch ist. Was ist richtig?  Sie muss mindestens zehn Jahre in Deutschland leben, bevor sie den Führerschein machen kann.  Wenn sie kein Deutsch kann, darf sie keinen Führerschein haben.  Sie muss den Führerschein in dem Land machen, in dem man ihre Sprache spricht.  Sie kann die Theorie-Prüfung vielleicht in ihrer Muttersprache machen. Es gibt mehr als zehn Sprachen zur Auswahl.",
+      "text": "Eine junge Frau will den Führerschein machen. Sie hat Angst vor der Prüfung, weil ihre Muttersprache nicht Deutsch ist. Was ist richtig?  Sie muss mindestens zehn Jahre in Deutschland leben, bevor sie den Führerschein machen kann.  Wenn sie kein Deutsch kann, darf sie keinen Führerschein haben.  Sie muss den Führerschein in dem Land machen, in dem man ihre Sprache spricht.  Sie kann die Theorie-Prüfung vielleicht in ihrer Muttersprache machen. Es gibt mehr als zehn Sprachen zur Auswahl.",
       "stem": {
         "images": []
       },
@@ -4795,7 +4846,7 @@
       "section": "general",
       "state": null,
       "number": 271,
-      "text": "Seite 100 von 191 Was ist in Deutschland ein Brauch zu Weihnachten?  bunte Eier verstecken  einen Tannenbaum schmücken  sich mit Masken und Kostümen verkleiden  Kürbisse vor die Tür stellen",
+      "text": "Was ist in Deutschland ein Brauch zu Weihnachten?  bunte Eier verstecken  einen Tannenbaum schmücken  sich mit Masken und Kostümen verkleiden  Kürbisse vor die Tür stellen",
       "stem": {
         "images": []
       },
@@ -4846,7 +4897,7 @@
       "section": "general",
       "state": null,
       "number": 274,
-      "text": "Seite 101 von 191 Sie haben in Deutschland absichtlich einen Brief geöffnet, der an eine andere Person adressiert ist. Was haben Sie nicht beachtet?  das Schweigerecht  das Briefgeheimnis  die Schweigepflicht  die Meinungsfreiheit",
+      "text": "Sie haben in Deutschland absichtlich einen Brief geöffnet, der an eine andere Person adressiert ist. Was haben Sie nicht beachtet?  das Schweigerecht  das Briefgeheimnis  die Schweigepflicht  die Meinungsfreiheit",
       "stem": {
         "images": []
       },
@@ -4897,7 +4948,7 @@
       "section": "general",
       "state": null,
       "number": 277,
-      "text": "Seite 102 von 191 Eine Frau, die ein zweijähriges Kind hat, bewirbt sich in Deutschland um eine Stelle. Was ist ein Beispiel für Diskriminierung? Sie bekommt die Stelle nur deshalb nicht, weil sie …  kein Englisch spricht.  zu hohe Gehaltsvorstellungen hat.  keine Erfahrungen in diesem Beruf hat.  Mutter ist.",
+      "text": "Eine Frau, die ein zweijähriges Kind hat, bewirbt sich in Deutschland um eine Stelle. Was ist ein Beispiel für Diskriminierung? Sie bekommt die Stelle nur deshalb nicht, weil sie …  kein Englisch spricht.  zu hohe Gehaltsvorstellungen hat.  keine Erfahrungen in diesem Beruf hat.  Mutter ist.",
       "stem": {
         "images": []
       },
@@ -4948,7 +4999,7 @@
       "section": "general",
       "state": null,
       "number": 280,
-      "text": "Seite 103 von 191 Wenn Sie sich in Deutschland gegen einen falschen Steuerbescheid wehren wollen, müssen Sie …  nichts machen.  den Bescheid wegwerfen.  Einspruch einlegen.  warten, bis ein anderer Bescheid kommt.",
+      "text": "Wenn Sie sich in Deutschland gegen einen falschen Steuerbescheid wehren wollen, müssen Sie …  nichts machen.  den Bescheid wegwerfen.  Einspruch einlegen.  warten, bis ein anderer Bescheid kommt.",
       "stem": {
         "images": []
       },
@@ -4999,7 +5050,7 @@
       "section": "general",
       "state": null,
       "number": 283,
-      "text": "Seite 104 von 191 Was tun Sie, wenn Sie eine falsche Rechnung von einer deutschen Behörde bekommen?  Ich lasse die Rechnung liegen.  Ich lege Widerspruch bei der Behörde ein.  Ich schicke die Rechnung an die Behörde zurück.  Ich gehe mit der Rechnung zum Finanzamt.",
+      "text": "Was tun Sie, wenn Sie eine falsche Rechnung von einer deutschen Behörde bekommen?  Ich lasse die Rechnung liegen.  Ich lege Widerspruch bei der Behörde ein.  Ich schicke die Rechnung an die Behörde zurück.  Ich gehe mit der Rechnung zum Finanzamt.",
       "stem": {
         "images": []
       },
@@ -5050,7 +5101,7 @@
       "section": "general",
       "state": null,
       "number": 286,
-      "text": "Seite 105 von 191 Welche Organisation in einer Firma hilft den Arbeitnehmerinnen und Arbeitnehmern bei Problemen mit der Arbeitgeberin/dem Arbeitgeber?  der Betriebsrat  die Betriebsprüferin/der Betriebsprüfer  die Betriebsgruppe  das Betriebsmanagement",
+      "text": "Welche Organisation in einer Firma hilft den Arbeitnehmerinnen und Arbeitnehmern bei Problemen mit der Arbeitgeberin/dem Arbeitgeber?  der Betriebsrat  die Betriebsprüferin/der Betriebsprüfer  die Betriebsgruppe  das Betriebsmanagement",
       "stem": {
         "images": []
       },
@@ -5084,26 +5135,26 @@
       "section": "general",
       "state": null,
       "number": 288,
-      "text": "Seite 106 von 191 Woraus begründet sich Deutschlands besondere Verantwortung für Israel?",
+      "text": "Woraus begründet sich Deutschlands besondere Verantwortung für Israel?",
       "stem": {
         "images": []
       },
       "choices": [
         {
           "id": "A",
-          "text": ""
+          "text": "aus der Mitgliedschaft in der Europäischen Union (EU)"
         },
         {
           "id": "B",
-          "text": ""
+          "text": "aus den nationalsozialistischen Verbrechen gegen Juden"
         },
         {
           "id": "C",
-          "text": ""
+          "text": "aus dem Grundgesetz der Bundesrepublik Deutschland"
         },
         {
           "id": "D",
-          "text": ""
+          "text": "aus der christlichen Tradition"
         }
       ],
       "answer": "A",
@@ -5118,7 +5169,7 @@
       "section": "general",
       "state": null,
       "number": 289,
-      "text": "Seite 107 von 191 Ein Mann mit dunkler Hautfarbe bewirbt sich um eine Stelle als Kellner in einem Restaurant in Deutschland. Was ist ein Beispiel für Diskriminierung? Er bekommt die Stelle nur deshalb nicht, weil …  seine Deutschkenntnisse zu gering sind.  er zu hohe Gehaltsvorstellungen hat.  er eine dunkle Haut hat.  er keine Erfahrungen im Beruf hat.",
+      "text": "Ein Mann mit dunkler Hautfarbe bewirbt sich um eine Stelle als Kellner in einem Restaurant in Deutschland. Was ist ein Beispiel für Diskriminierung? Er bekommt die Stelle nur deshalb nicht, weil …  seine Deutschkenntnisse zu gering sind.  er zu hohe Gehaltsvorstellungen hat.  er eine dunkle Haut hat.  er keine Erfahrungen im Beruf hat.",
       "stem": {
         "images": []
       },
@@ -5169,7 +5220,7 @@
       "section": "general",
       "state": null,
       "number": 292,
-      "text": "Seite 108 von 191 Die Menschen in Deutschland leben nach dem Grundsatz der religiösen Toleranz. Was bedeutet das?  Es dürfen keine Moscheen gebaut werden.  Alle Menschen glauben an Gott.  Jeder kann glauben, was er möchte.  Der Staat entscheidet, an welchen Gott die Menschen glauben.",
+      "text": "Die Menschen in Deutschland leben nach dem Grundsatz der religiösen Toleranz. Was bedeutet das?  Es dürfen keine Moscheen gebaut werden.  Alle Menschen glauben an Gott.  Jeder kann glauben, was er möchte.  Der Staat entscheidet, an welchen Gott die Menschen glauben.",
       "stem": {
         "images": []
       },
@@ -5220,7 +5271,7 @@
       "section": "general",
       "state": null,
       "number": 295,
-      "text": "Seite 109 von 191 Welche Religion hat die europäische und deutsche Kultur geprägt?  der Hinduismus  das Christentum  der Buddhismus  der Islam",
+      "text": "Welche Religion hat die europäische und deutsche Kultur geprägt?  der Hinduismus  das Christentum  der Buddhismus  der Islam",
       "stem": {
         "images": []
       },
@@ -5271,7 +5322,7 @@
       "section": "general",
       "state": null,
       "number": 298,
-      "text": "Seite 110 von 191 In der DDR lebten vor allem Migrantinnen und Migranten aus …  Vietnam, Polen, Mosambik.  Frankreich, Rumänien, Somalia.  Chile, Ungarn, Simbabwe.  Nordkorea, Mexiko, Ägypten.",
+      "text": "In der DDR lebten vor allem Migrantinnen und Migranten aus …  Vietnam, Polen, Mosambik.  Frankreich, Rumänien, Somalia.  Chile, Ungarn, Simbabwe.  Nordkorea, Mexiko, Ägypten.",
       "stem": {
         "images": []
       },
@@ -5305,7 +5356,7 @@
       "section": "general",
       "state": null,
       "number": 300,
-      "text": "Seite 111 von 191 Aus welchem Land kamen die ersten Gastarbeiterinnen und Gastarbeiter in die Bundesrepublik Deutschland?  Italien  Spanien  Portugal  Türkei",
+      "text": "Aus welchem Land kamen die ersten Gastarbeiterinnen und Gastarbeiter in die Bundesrepublik Deutschland?  Italien  Spanien  Portugal  Türkei",
       "stem": {
         "images": []
       },
@@ -5344,7 +5395,7 @@
       "section": "state",
       "state": "BW",
       "number": 2,
-      "text": "Seite 112 von 191 Welches ist ein Landkreis in Baden-Württemberg?  Mecklenburgische Seenplatte  Neckar-Odenwald-Kreis  Nordfriesland  Altötting",
+      "text": "Welches ist ein Landkreis in Baden-Württemberg?  Mecklenburgische Seenplatte  Neckar-Odenwald-Kreis  Nordfriesland  Altötting",
       "stem": {
         "images": []
       },
@@ -5395,11 +5446,28 @@
       "section": "state",
       "state": "BW",
       "number": 5,
-      "text": "Seite 113 von 191 Welche Farben hat die Landesflagge von Baden-Württemberg?  blau-weiß-rot  schwarz-gold  weiß-blau  grün-weiß-rot",
+      "text": "Welche Farben hat die Landesflagge von Baden",
       "stem": {
         "images": []
       },
-      "choices": [],
+      "choices": [
+        {
+          "id": "A",
+          "text": "Württemberg?  blau"
+        },
+        {
+          "id": "B",
+          "text": "weiß"
+        },
+        {
+          "id": "C",
+          "text": "rot  schwarz"
+        },
+        {
+          "id": "D",
+          "text": "gold  weiß"
+        }
+      ],
       "answer": "A",
       "explanation": "",
       "source": {
@@ -5429,7 +5497,7 @@
       "section": "state",
       "state": "BW",
       "number": 7,
-      "text": "Seite 114 von 191 Die Landeshauptstadt von Baden-Württemberg heißt …  Heidelberg.  Stuttgart.  Karlsruhe.  Mannheim.",
+      "text": "Die Landeshauptstadt von Baden-Württemberg heißt …  Heidelberg.  Stuttgart.  Karlsruhe.  Mannheim.",
       "stem": {
         "images": []
       },
@@ -5446,7 +5514,7 @@
       "section": "state",
       "state": "BW",
       "number": 8,
-      "text": "Seite 115 von 191 Welches Bundesland ist Baden-Württemberg?  1  2  3  4",
+      "text": "Welches Bundesland ist Baden-Württemberg?  1  2  3  4",
       "stem": {
         "images": [
           "/assets/lid/export/BW_08_sorukismi_xxxx_STEM.png"
@@ -5484,7 +5552,7 @@
       "section": "state",
       "state": "BW",
       "number": 10,
-      "text": "Seite 116 von 191 Welche Ministerin/welchen Minister hat Baden-Württemberg nicht?  Finanzministerin/Finanzminister  Justizministerin/Justizminister  Innenministerin/Innenminister  Außenministerin/Außenminister",
+      "text": "Welche Ministerin/welchen Minister hat Baden-Württemberg nicht?  Finanzministerin/Finanzminister  Justizministerin/Justizminister  Innenministerin/Innenminister  Außenministerin/Außenminister",
       "stem": {
         "images": []
       },
@@ -5523,7 +5591,7 @@
       "section": "state",
       "state": "BY",
       "number": 2,
-      "text": "Seite 117 von 191 Welches ist ein Landkreis in Bayern?  Prignitz  Rhein-Sieg-Kreis  Nordfriesland  Altötting",
+      "text": "Welches ist ein Landkreis in Bayern?  Prignitz  Rhein-Sieg-Kreis  Nordfriesland  Altötting",
       "stem": {
         "images": []
       },
@@ -5574,11 +5642,28 @@
       "section": "state",
       "state": "BY",
       "number": 5,
-      "text": "Seite 118 von 191 Welche Farben hat die Landesflagge von Bayern?  blau-weiß-rot  weiß-blau  grün-weiß-rot  schwarz-gelb",
+      "text": "Welche Farben hat die Landesflagge von Bayern?  blau",
       "stem": {
         "images": []
       },
-      "choices": [],
+      "choices": [
+        {
+          "id": "A",
+          "text": "weiß"
+        },
+        {
+          "id": "B",
+          "text": "rot  weiß"
+        },
+        {
+          "id": "C",
+          "text": "blau  grün"
+        },
+        {
+          "id": "D",
+          "text": "weiß"
+        }
+      ],
       "answer": "A",
       "explanation": "",
       "source": {
@@ -5608,7 +5693,7 @@
       "section": "state",
       "state": "BY",
       "number": 7,
-      "text": "Seite 119 von 191 Die Landeshauptstadt von Bayern heißt …  Ingolstadt.  Regensburg.  Nürnberg.  München.",
+      "text": "Die Landeshauptstadt von Bayern heißt …  Ingolstadt.  Regensburg.  Nürnberg.  München.",
       "stem": {
         "images": []
       },
@@ -5625,7 +5710,7 @@
       "section": "state",
       "state": "BY",
       "number": 8,
-      "text": "Seite 120 von 191 Welches Bundesland ist Bayern?  1  2  3  4",
+      "text": "Welches Bundesland ist Bayern?  1  2  3  4",
       "stem": {
         "images": [
           "/assets/lid/export/BY_08_sorukismi_xxxx_STEM.png"
@@ -5663,7 +5748,7 @@
       "section": "state",
       "state": "BY",
       "number": 10,
-      "text": "Seite 121 von 191 Welche Ministerin/welchen Minister hat Bayern nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
+      "text": "Welche Ministerin/welchen Minister hat Bayern nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
       "stem": {
         "images": []
       },
@@ -5702,7 +5787,7 @@
       "section": "state",
       "state": "BE",
       "number": 2,
-      "text": "Seite 122 von 191 Welches ist ein Bezirk von Berlin?  Altona  Prignitz  Pankow  Mecklenburgische Seenplatte",
+      "text": "Welches ist ein Bezirk von Berlin?  Altona  Prignitz  Pankow  Mecklenburgische Seenplatte",
       "stem": {
         "images": []
       },
@@ -5753,11 +5838,28 @@
       "section": "state",
       "state": "BE",
       "number": 5,
-      "text": "Seite 123 von 191 Welche Farben hat die Landesflagge von Berlin?  blau-weiß-rot  weiß-rot  grün-weiß-rot  schwarz-gold",
+      "text": "Welche Farben hat die Landesflagge von Berlin?  blau",
       "stem": {
         "images": []
       },
-      "choices": [],
+      "choices": [
+        {
+          "id": "A",
+          "text": "weiß"
+        },
+        {
+          "id": "B",
+          "text": "rot  weiß"
+        },
+        {
+          "id": "C",
+          "text": "rot  grün"
+        },
+        {
+          "id": "D",
+          "text": "weiß"
+        }
+      ],
       "answer": "A",
       "explanation": "",
       "source": {
@@ -5787,7 +5889,7 @@
       "section": "state",
       "state": "BE",
       "number": 7,
-      "text": "Seite 124 von 191 Welches Bundesland ist ein Stadtstaat?  Berlin  Saarland  Brandenburg  Hessen",
+      "text": "Welches Bundesland ist ein Stadtstaat?  Berlin  Saarland  Brandenburg  Hessen",
       "stem": {
         "images": []
       },
@@ -5804,7 +5906,7 @@
       "section": "state",
       "state": "BE",
       "number": 8,
-      "text": "Seite 125 von 191 Welches Bundesland ist Berlin?  1  2  3  4",
+      "text": "Welches Bundesland ist Berlin?  1  2  3  4",
       "stem": {
         "images": [
           "/assets/lid/export/BE_08_sorukismi_xxxx_STEM.png"
@@ -5842,7 +5944,7 @@
       "section": "state",
       "state": "BE",
       "number": 10,
-      "text": "Seite 126 von 191 Welche Senatorin/welchen Senator hat Berlin nicht?  Finanzsenatorin/Finanzsenator  Innensenatorin/Innensenator  Senatorin/Senator für Außenbeziehungen  Justizsenatorin/Justizsenator",
+      "text": "Welche Senatorin/welchen Senator hat Berlin nicht?  Finanzsenatorin/Finanzsenator  Innensenatorin/Innensenator  Senatorin/Senator für Außenbeziehungen  Justizsenatorin/Justizsenator",
       "stem": {
         "images": []
       },
@@ -5881,7 +5983,7 @@
       "section": "state",
       "state": "BB",
       "number": 2,
-      "text": "Seite 127 von 191 Welches ist ein Landkreis in Brandenburg?  Prignitz  Rhein-Sieg-Kreis  Vogtlandkreis  Amberg-Sulzbach",
+      "text": "Welches ist ein Landkreis in Brandenburg?  Prignitz  Rhein-Sieg-Kreis  Vogtlandkreis  Amberg-Sulzbach",
       "stem": {
         "images": []
       },
@@ -5932,11 +6034,28 @@
       "section": "state",
       "state": "BB",
       "number": 5,
-      "text": "Seite 128 von 191 Welche Farben hat die Landesflagge von Brandenburg?  blau-weiß-rot  rot-weiß  grün-weiß-rot  schwarz-gelb",
+      "text": "Welche Farben hat die Landesflagge von Brandenburg?  blau",
       "stem": {
         "images": []
       },
-      "choices": [],
+      "choices": [
+        {
+          "id": "A",
+          "text": "weiß"
+        },
+        {
+          "id": "B",
+          "text": "rot  rot"
+        },
+        {
+          "id": "C",
+          "text": "weiß  grün"
+        },
+        {
+          "id": "D",
+          "text": "weiß"
+        }
+      ],
       "answer": "A",
       "explanation": "",
       "source": {
@@ -5966,7 +6085,7 @@
       "section": "state",
       "state": "BB",
       "number": 7,
-      "text": "Seite 129 von 191 Die Landeshauptstadt von Brandenburg heißt …  Potsdam.  Cottbus.  Brandenburg.  Frankfurt/Oder.",
+      "text": "Die Landeshauptstadt von Brandenburg heißt …  Potsdam.  Cottbus.  Brandenburg.  Frankfurt/Oder.",
       "stem": {
         "images": []
       },
@@ -5983,7 +6102,7 @@
       "section": "state",
       "state": "BB",
       "number": 8,
-      "text": "Seite 130 von 191 Welches Bundesland ist Brandenburg?  1  2  3  4",
+      "text": "Welches Bundesland ist Brandenburg?  1  2  3  4",
       "stem": {
         "images": [
           "/assets/lid/export/BB_08_sorukismi_xxxx_STEM.png"
@@ -6021,7 +6140,7 @@
       "section": "state",
       "state": "BB",
       "number": 10,
-      "text": "Seite 131 von 191 Welche Ministerin/welchen Minister hat Brandenburg nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
+      "text": "Welche Ministerin/welchen Minister hat Brandenburg nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
       "stem": {
         "images": []
       },
@@ -6060,7 +6179,7 @@
       "section": "state",
       "state": "HB",
       "number": 2,
-      "text": "Seite 132 von 191 Welches ist ein Stadtteil von Bremen?  Altona  Hemelingen  Pankow  Babelsberg",
+      "text": "Welches ist ein Stadtteil von Bremen?  Altona  Hemelingen  Pankow  Babelsberg",
       "stem": {
         "images": []
       },
@@ -6111,11 +6230,28 @@
       "section": "state",
       "state": "HB",
       "number": 5,
-      "text": "Seite 133 von 191 Welche Farben hat die Landesflagge von Bremen?  blau-weiß-rot  rot-weiß  grün-weiß-rot  schwarz-gold",
+      "text": "Welche Farben hat die Landesflagge von Bremen?  blau",
       "stem": {
         "images": []
       },
-      "choices": [],
+      "choices": [
+        {
+          "id": "A",
+          "text": "weiß"
+        },
+        {
+          "id": "B",
+          "text": "rot  rot"
+        },
+        {
+          "id": "C",
+          "text": "weiß  grün"
+        },
+        {
+          "id": "D",
+          "text": "weiß"
+        }
+      ],
       "answer": "A",
       "explanation": "",
       "source": {
@@ -6145,7 +6281,7 @@
       "section": "state",
       "state": "HB",
       "number": 7,
-      "text": "Seite 134 von 191 Was ist ein deutscher Stadtstaat?  Bremen  München  Frankfurt  Erfurt",
+      "text": "Was ist ein deutscher Stadtstaat?  Bremen  München  Frankfurt  Erfurt",
       "stem": {
         "images": []
       },
@@ -6162,7 +6298,7 @@
       "section": "state",
       "state": "HB",
       "number": 8,
-      "text": "Seite 135 von 191 Welches Bundesland ist Bremen?  1  2  3  4",
+      "text": "Welches Bundesland ist Bremen?  1  2  3  4",
       "stem": {
         "images": [
           "/assets/lid/export/HB_08_sorukismi_xxxx_STEM.png"
@@ -6200,7 +6336,7 @@
       "section": "state",
       "state": "HB",
       "number": 10,
-      "text": "Seite 136 von 191 Welche Senatorin/welchen Senator hat Bremen nicht?  Senatorin/Senator für Außenbeziehungen  Finanzsenatorin/Finanzsenator  Justizsenatorin/Justizsenator  Innensenatorin/Innensenator",
+      "text": "Welche Senatorin/welchen Senator hat Bremen nicht?  Senatorin/Senator für Außenbeziehungen  Finanzsenatorin/Finanzsenator  Justizsenatorin/Justizsenator  Innensenatorin/Innensenator",
       "stem": {
         "images": []
       },
@@ -6239,7 +6375,7 @@
       "section": "state",
       "state": "HH",
       "number": 2,
-      "text": "Seite 137 von 191 Welches ist ein Bezirk von Hamburg?  Altona  Hemelingen  Pankow  Mecklenburgische Seenplatte",
+      "text": "Welches ist ein Bezirk von Hamburg?  Altona  Hemelingen  Pankow  Mecklenburgische Seenplatte",
       "stem": {
         "images": []
       },
@@ -6290,11 +6426,28 @@
       "section": "state",
       "state": "HH",
       "number": 5,
-      "text": "Seite 138 von 191 Welche Farben hat die Landesflagge von Hamburg?  blau-weiß-rot  weiß-rot  grün-weiß-rot  schwarz-gelb",
+      "text": "Welche Farben hat die Landesflagge von Hamburg?  blau",
       "stem": {
         "images": []
       },
-      "choices": [],
+      "choices": [
+        {
+          "id": "A",
+          "text": "weiß"
+        },
+        {
+          "id": "B",
+          "text": "rot  weiß"
+        },
+        {
+          "id": "C",
+          "text": "rot  grün"
+        },
+        {
+          "id": "D",
+          "text": "weiß"
+        }
+      ],
       "answer": "A",
       "explanation": "",
       "source": {
@@ -6324,7 +6477,7 @@
       "section": "state",
       "state": "HH",
       "number": 7,
-      "text": "Seite 139 von 191 Welches Bundesland ist ein Stadtstaat?  Hamburg  Sachsen  Bayern  Thüringen",
+      "text": "Welches Bundesland ist ein Stadtstaat?  Hamburg  Sachsen  Bayern  Thüringen",
       "stem": {
         "images": []
       },
@@ -6341,7 +6494,7 @@
       "section": "state",
       "state": "HH",
       "number": 8,
-      "text": "Seite 140 von 191 Welches Bundesland ist Hamburg?  1  2  3  4",
+      "text": "Welches Bundesland ist Hamburg?  1  2  3  4",
       "stem": {
         "images": [
           "/assets/lid/export/HH_08_sorukismi_xxxx_STEM.png"
@@ -6379,7 +6532,7 @@
       "section": "state",
       "state": "HH",
       "number": 10,
-      "text": "Seite 141 von 191 Welche Senatorin/welchen Senator hat Hamburg nicht?  Justizsenatorin/Justizsenator  Senatorin/Senator für Außenbeziehungen  Finanzsenatorin/Finanzsenator  Innensenatorin/Innensenator",
+      "text": "Welche Senatorin/welchen Senator hat Hamburg nicht?  Justizsenatorin/Justizsenator  Senatorin/Senator für Außenbeziehungen  Finanzsenatorin/Finanzsenator  Innensenatorin/Innensenator",
       "stem": {
         "images": []
       },
@@ -6418,7 +6571,7 @@
       "section": "state",
       "state": "HE",
       "number": 2,
-      "text": "Seite 142 von 191 Welches ist ein Landkreis in Hessen?  Ammerland  Altötting  Prignitz  Main-Taunus-Kreis",
+      "text": "Welches ist ein Landkreis in Hessen?  Ammerland  Altötting  Prignitz  Main-Taunus-Kreis",
       "stem": {
         "images": []
       },
@@ -6469,11 +6622,28 @@
       "section": "state",
       "state": "HE",
       "number": 5,
-      "text": "Seite 143 von 191 Welche Farben hat die Landesflagge von Hessen?  blau-weiß-rot  rot-weiß  schwarz-gold  grün-weiß-rot",
+      "text": "Welche Farben hat die Landesflagge von Hessen?  blau",
       "stem": {
         "images": []
       },
-      "choices": [],
+      "choices": [
+        {
+          "id": "A",
+          "text": "weiß"
+        },
+        {
+          "id": "B",
+          "text": "rot  rot"
+        },
+        {
+          "id": "C",
+          "text": "weiß  schwarz"
+        },
+        {
+          "id": "D",
+          "text": "gold  grün"
+        }
+      ],
       "answer": "A",
       "explanation": "",
       "source": {
@@ -6503,7 +6673,7 @@
       "section": "state",
       "state": "HE",
       "number": 7,
-      "text": "Seite 144 von 191 Die Landeshauptstadt von Hessen heißt …  Kassel.  Darmstadt.  Frankfurt.  Wiesbaden.",
+      "text": "Die Landeshauptstadt von Hessen heißt …  Kassel.  Darmstadt.  Frankfurt.  Wiesbaden.",
       "stem": {
         "images": []
       },
@@ -6520,7 +6690,7 @@
       "section": "state",
       "state": "HE",
       "number": 8,
-      "text": "Seite 145 von 191 Welches Bundesland ist Hessen?  1  2  3  4",
+      "text": "Welches Bundesland ist Hessen?  1  2  3  4",
       "stem": {
         "images": [
           "/assets/lid/export/HE_08_sorukismi_xxxx_STEM.png"
@@ -6558,7 +6728,7 @@
       "section": "state",
       "state": "HE",
       "number": 10,
-      "text": "Seite 146 von 191 Welche Ministerin/welchen Minister hat Hessen nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
+      "text": "Welche Ministerin/welchen Minister hat Hessen nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
       "stem": {
         "images": []
       },
@@ -6597,7 +6767,7 @@
       "section": "state",
       "state": "MV",
       "number": 2,
-      "text": "Seite 147 von 191 Welches ist ein Landkreis in Mecklenburg-Vorpommern?  Prignitz  Mecklenburgische Seenplatte  Vogtlandkreis  Rhein-Sieg-Kreis",
+      "text": "Welches ist ein Landkreis in Mecklenburg-Vorpommern?  Prignitz  Mecklenburgische Seenplatte  Vogtlandkreis  Rhein-Sieg-Kreis",
       "stem": {
         "images": []
       },
@@ -6648,11 +6818,28 @@
       "section": "state",
       "state": "MV",
       "number": 5,
-      "text": "Seite 148 von 191 Welche Farben hat die Landesflagge von Mecklenburg-Vorpommern?  schwarz-rot-gold  blau-weiß-gelb-rot  grün-weiß-rot  schwarz-gelb",
+      "text": "Welche Farben hat die Landesflagge von Mecklenburg",
       "stem": {
         "images": []
       },
-      "choices": [],
+      "choices": [
+        {
+          "id": "A",
+          "text": "Vorpommern?  schwarz"
+        },
+        {
+          "id": "B",
+          "text": "rot"
+        },
+        {
+          "id": "C",
+          "text": "gold  blau"
+        },
+        {
+          "id": "D",
+          "text": "weiß"
+        }
+      ],
       "answer": "A",
       "explanation": "",
       "source": {
@@ -6682,7 +6869,7 @@
       "section": "state",
       "state": "MV",
       "number": 7,
-      "text": "Seite 149 von 191 Die Landeshauptstadt von Mecklenburg-Vorpommern heißt …  Greifswald.  Schwerin.  Rostock.  Wismar.",
+      "text": "Die Landeshauptstadt von Mecklenburg-Vorpommern heißt …  Greifswald.  Schwerin.  Rostock.  Wismar.",
       "stem": {
         "images": []
       },
@@ -6699,7 +6886,7 @@
       "section": "state",
       "state": "MV",
       "number": 8,
-      "text": "Seite 150 von 191 Welches Bundesland ist Mecklenburg-Vorpommern?  1  2  3  4",
+      "text": "Welches Bundesland ist Mecklenburg-Vorpommern?  1  2  3  4",
       "stem": {
         "images": [
           "/assets/lid/export/MV_08_sorukismi_xxxx_STEM.png"
@@ -6737,7 +6924,7 @@
       "section": "state",
       "state": "MV",
       "number": 10,
-      "text": "Seite 151 von 191 Welche Ministerin/welchen Minister hat Mecklenburg-Vorpommern nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
+      "text": "Welche Ministerin/welchen Minister hat Mecklenburg-Vorpommern nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
       "stem": {
         "images": []
       },
@@ -6776,7 +6963,7 @@
       "section": "state",
       "state": "NI",
       "number": 2,
-      "text": "Seite 152 von 191 Welches ist ein Landkreis in Niedersachsen?  Ammerland  Rhein-Sieg-Kreis  Nordfriesland  Vogtlandkreis",
+      "text": "Welches ist ein Landkreis in Niedersachsen?  Ammerland  Rhein-Sieg-Kreis  Nordfriesland  Vogtlandkreis",
       "stem": {
         "images": []
       },
@@ -6827,11 +7014,28 @@
       "section": "state",
       "state": "NI",
       "number": 5,
-      "text": "Seite 153 von 191 Welche Farben hat die Landesflagge von Niedersachsen?  weiß-blau  schwarz-rot-gold  schwarz-gelb  blau-weiß-rot",
+      "text": "Welche Farben hat die Landesflagge von Niedersachsen?  weiß",
       "stem": {
         "images": []
       },
-      "choices": [],
+      "choices": [
+        {
+          "id": "A",
+          "text": "blau  schwarz"
+        },
+        {
+          "id": "B",
+          "text": "rot"
+        },
+        {
+          "id": "C",
+          "text": "gold  schwarz"
+        },
+        {
+          "id": "D",
+          "text": "gelb  blau"
+        }
+      ],
       "answer": "A",
       "explanation": "",
       "source": {
@@ -6861,7 +7065,7 @@
       "section": "state",
       "state": "NI",
       "number": 7,
-      "text": "Seite 154 von 191 Die Landeshauptstadt von Niedersachsen heißt …  Hannover.  Braunschweig.  Wolfsburg.  Osnabrück.",
+      "text": "Die Landeshauptstadt von Niedersachsen heißt …  Hannover.  Braunschweig.  Wolfsburg.  Osnabrück.",
       "stem": {
         "images": []
       },
@@ -6878,7 +7082,7 @@
       "section": "state",
       "state": "NI",
       "number": 8,
-      "text": "Seite 155 von 191 Welches Bundesland ist Niedersachsen?  1  2  3  4",
+      "text": "Welches Bundesland ist Niedersachsen?  1  2  3  4",
       "stem": {
         "images": [
           "/assets/lid/export/NI_08_sorukismi_xxxx_STEM.png"
@@ -6916,7 +7120,7 @@
       "section": "state",
       "state": "NI",
       "number": 10,
-      "text": "Seite 156 von 191 Welche Ministerin/welchen Minister hat Niedersachsen nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
+      "text": "Welche Ministerin/welchen Minister hat Niedersachsen nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
       "stem": {
         "images": []
       },
@@ -6955,7 +7159,7 @@
       "section": "state",
       "state": "NW",
       "number": 2,
-      "text": "Seite 157 von 191 Welches ist ein Landkreis in Nordrhein-Westfalen?  Ammerland  Rhein-Sieg-Kreis  Nordfriesland  Vogtlandkreis",
+      "text": "Welches ist ein Landkreis in Nordrhein-Westfalen?  Ammerland  Rhein-Sieg-Kreis  Nordfriesland  Vogtlandkreis",
       "stem": {
         "images": []
       },
@@ -7006,11 +7210,28 @@
       "section": "state",
       "state": "NW",
       "number": 5,
-      "text": "Seite 158 von 191 Welche Farben hat die Landesflagge von Nordrhein-Westfalen?  rot-weiß  grün-weiß-rot  schwarz-gold  blau-weiß-rot",
+      "text": "Welche Farben hat die Landesflagge von Nordrhein",
       "stem": {
         "images": []
       },
-      "choices": [],
+      "choices": [
+        {
+          "id": "A",
+          "text": "Westfalen?  rot"
+        },
+        {
+          "id": "B",
+          "text": "weiß  grün"
+        },
+        {
+          "id": "C",
+          "text": "weiß"
+        },
+        {
+          "id": "D",
+          "text": "rot  schwarz"
+        }
+      ],
       "answer": "A",
       "explanation": "",
       "source": {
@@ -7040,7 +7261,7 @@
       "section": "state",
       "state": "NW",
       "number": 7,
-      "text": "Seite 159 von 191 Die Landeshauptstadt von Nordrhein-Westfalen heißt …  Köln.  Bonn.  Düsseldorf.  Dortmund.",
+      "text": "Die Landeshauptstadt von Nordrhein-Westfalen heißt …  Köln.  Bonn.  Düsseldorf.  Dortmund.",
       "stem": {
         "images": []
       },
@@ -7057,7 +7278,7 @@
       "section": "state",
       "state": "NW",
       "number": 8,
-      "text": "Seite 160 von 191 Welches Bundesland ist Nordrhein-Westfalen?  1  2  3  4",
+      "text": "Welches Bundesland ist Nordrhein-Westfalen?  1  2  3  4",
       "stem": {
         "images": [
           "/assets/lid/export/NW_08_sorukismi_xxxx_STEM.png"
@@ -7095,7 +7316,7 @@
       "section": "state",
       "state": "NW",
       "number": 10,
-      "text": "Seite 161 von 191 Welche Ministerin/welchen Minister hat Nordrhein-Westfalen nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
+      "text": "Welche Ministerin/welchen Minister hat Nordrhein-Westfalen nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
       "stem": {
         "images": []
       },
@@ -7134,7 +7355,7 @@
       "section": "state",
       "state": "RP",
       "number": 2,
-      "text": "Seite 162 von 191 Welches ist ein Landkreis in Rheinland-Pfalz?  Westerwaldkreis  Altötting  Emsland  Prignitz",
+      "text": "Welches ist ein Landkreis in Rheinland-Pfalz?  Westerwaldkreis  Altötting  Emsland  Prignitz",
       "stem": {
         "images": []
       },
@@ -7185,11 +7406,28 @@
       "section": "state",
       "state": "RP",
       "number": 5,
-      "text": "Seite 163 von 191 Welche Farben hat die Landesflagge von Rheinland-Pfalz?  weiß-rot  schwarz-rot-gold  schwarz-gelb  grün-weiß-rot",
+      "text": "Welche Farben hat die Landesflagge von Rheinland",
       "stem": {
         "images": []
       },
-      "choices": [],
+      "choices": [
+        {
+          "id": "A",
+          "text": "Pfalz?  weiß"
+        },
+        {
+          "id": "B",
+          "text": "rot  schwarz"
+        },
+        {
+          "id": "C",
+          "text": "rot"
+        },
+        {
+          "id": "D",
+          "text": "gold  schwarz"
+        }
+      ],
       "answer": "A",
       "explanation": "",
       "source": {
@@ -7219,7 +7457,7 @@
       "section": "state",
       "state": "RP",
       "number": 7,
-      "text": "Seite 164 von 191 Die Landeshauptstadt von Rheinland-Pfalz heißt …  Mainz.  Kaiserslautern.  Ludwigshafen.  Koblenz.",
+      "text": "Die Landeshauptstadt von Rheinland-Pfalz heißt …  Mainz.  Kaiserslautern.  Ludwigshafen.  Koblenz.",
       "stem": {
         "images": []
       },
@@ -7236,7 +7474,7 @@
       "section": "state",
       "state": "RP",
       "number": 8,
-      "text": "Seite 165 von 191 Welches Bundesland ist Rheinland-Pfalz?  1  2  3  4",
+      "text": "Welches Bundesland ist Rheinland-Pfalz?  1  2  3  4",
       "stem": {
         "images": [
           "/assets/lid/export/RP_08_sorukismi_xxxx_STEM.png"
@@ -7274,7 +7512,7 @@
       "section": "state",
       "state": "RP",
       "number": 10,
-      "text": "Seite 166 von 191 Welche Ministerin/welchen Minister hat Rheinland-Pfalz nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
+      "text": "Welche Ministerin/welchen Minister hat Rheinland-Pfalz nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
       "stem": {
         "images": []
       },
@@ -7313,7 +7551,7 @@
       "section": "state",
       "state": "SL",
       "number": 2,
-      "text": "Seite 167 von 191 Welches ist ein Landkreis im Saarland?  Mecklenburgische Seenplatte  Altötting  Neunkirchen  Rhein-Sieg-Kreis",
+      "text": "Welches ist ein Landkreis im Saarland?  Mecklenburgische Seenplatte  Altötting  Neunkirchen  Rhein-Sieg-Kreis",
       "stem": {
         "images": []
       },
@@ -7364,11 +7602,28 @@
       "section": "state",
       "state": "SL",
       "number": 5,
-      "text": "Seite 168 von 191 Welche Farben hat die Landesflagge des Saarlandes?  weiß-blau  schwarz-rot-gold  schwarz-gelb  grün-weiß-rot",
+      "text": "Welche Farben hat die Landesflagge des Saarlandes?  weiß",
       "stem": {
         "images": []
       },
-      "choices": [],
+      "choices": [
+        {
+          "id": "A",
+          "text": "blau  schwarz"
+        },
+        {
+          "id": "B",
+          "text": "rot"
+        },
+        {
+          "id": "C",
+          "text": "gold  schwarz"
+        },
+        {
+          "id": "D",
+          "text": "gelb  grün"
+        }
+      ],
       "answer": "A",
       "explanation": "",
       "source": {
@@ -7398,7 +7653,7 @@
       "section": "state",
       "state": "SL",
       "number": 7,
-      "text": "Seite 169 von 191 Die Landeshauptstadt des Saarlandes heißt …  Neunkirchen.  Homburg.  Saarbrücken.  Völklingen.",
+      "text": "Die Landeshauptstadt des Saarlandes heißt …  Neunkirchen.  Homburg.  Saarbrücken.  Völklingen.",
       "stem": {
         "images": []
       },
@@ -7415,7 +7670,7 @@
       "section": "state",
       "state": "SL",
       "number": 8,
-      "text": "Seite 170 von 191 Welches Bundesland ist das Saarland?  1  2  3  4",
+      "text": "Welches Bundesland ist das Saarland?  1  2  3  4",
       "stem": {
         "images": [
           "/assets/lid/export/SL_08_sorukismi_xxxx_STEM.png"
@@ -7453,7 +7708,7 @@
       "section": "state",
       "state": "SL",
       "number": 10,
-      "text": "Seite 171 von 191 Welche Ministerin/welchen Minister hat das Saarland nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
+      "text": "Welche Ministerin/welchen Minister hat das Saarland nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
       "stem": {
         "images": []
       },
@@ -7496,7 +7751,7 @@
       "section": "state",
       "state": "SN",
       "number": 2,
-      "text": "Seite 172 von 191 Welches ist ein Landkreis in Sachsen?  Vogtlandkreis  Altötting  Uckermark  Nordfriesland",
+      "text": "Welches ist ein Landkreis in Sachsen?  Vogtlandkreis  Altötting  Uckermark  Nordfriesland",
       "stem": {
         "images": []
       },
@@ -7547,11 +7802,28 @@
       "section": "state",
       "state": "SN",
       "number": 5,
-      "text": "Seite 173 von 191 Welche Farben hat die Landesflagge von Sachsen?  blau-weiß-rot  weiß-grün  grün-weiß-rot  schwarz-gelb",
+      "text": "Welche Farben hat die Landesflagge von Sachsen?  blau",
       "stem": {
         "images": []
       },
-      "choices": [],
+      "choices": [
+        {
+          "id": "A",
+          "text": "weiß"
+        },
+        {
+          "id": "B",
+          "text": "rot  weiß"
+        },
+        {
+          "id": "C",
+          "text": "grün  grün"
+        },
+        {
+          "id": "D",
+          "text": "weiß"
+        }
+      ],
       "answer": "A",
       "explanation": "",
       "source": {
@@ -7581,7 +7853,7 @@
       "section": "state",
       "state": "SN",
       "number": 7,
-      "text": "Seite 174 von 191 Die Landeshauptstadt von Sachsen heißt …  Leipzig.  Dresden.  Chemnitz.  Zwickau.",
+      "text": "Die Landeshauptstadt von Sachsen heißt …  Leipzig.  Dresden.  Chemnitz.  Zwickau.",
       "stem": {
         "images": []
       },
@@ -7598,7 +7870,7 @@
       "section": "state",
       "state": "SN",
       "number": 8,
-      "text": "Seite 175 von 191 Welches Bundesland ist Sachsen?  1  2  3  4",
+      "text": "Welches Bundesland ist Sachsen?  1  2  3  4",
       "stem": {
         "images": [
           "/assets/lid/export/SN_08_sorukismi_xxxx_STEM.png"
@@ -7637,7 +7909,7 @@
       "section": "state",
       "state": "SN",
       "number": 10,
-      "text": "Seite 176 von 191 Welche Ministerin/welchen Minister hat Sachsen nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
+      "text": "Welche Ministerin/welchen Minister hat Sachsen nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
       "stem": {
         "images": []
       },
@@ -7680,7 +7952,7 @@
       "section": "state",
       "state": "SN",
       "number": 2,
-      "text": "Seite 177 von 191 Welches ist ein Landkreis in Sachsen-Anhalt?  Ammerland  Altötting  Uckermark  Börde",
+      "text": "Welches ist ein Landkreis in Sachsen-Anhalt?  Ammerland  Altötting  Uckermark  Börde",
       "stem": {
         "images": []
       },
@@ -7731,11 +8003,28 @@
       "section": "state",
       "state": "SN",
       "number": 5,
-      "text": "Seite 178 von 191 Welche Farben hat die Landesflagge von Sachsen-Anhalt?  blau-weiß-rot  gelb-schwarz  grün-weiß-rot  weiß-rot",
+      "text": "Welche Farben hat die Landesflagge von Sachsen",
       "stem": {
         "images": []
       },
-      "choices": [],
+      "choices": [
+        {
+          "id": "A",
+          "text": "Anhalt?  blau"
+        },
+        {
+          "id": "B",
+          "text": "weiß"
+        },
+        {
+          "id": "C",
+          "text": "rot  gelb"
+        },
+        {
+          "id": "D",
+          "text": "schwarz  grün"
+        }
+      ],
       "answer": "A",
       "explanation": "",
       "source": {
@@ -7765,7 +8054,7 @@
       "section": "state",
       "state": "SN",
       "number": 7,
-      "text": "Seite 179 von 191 Die Landeshauptstadt von Sachsen-Anhalt heißt …  Halle.  Dessau.  Magdeburg.  Wittenberg.",
+      "text": "Die Landeshauptstadt von Sachsen-Anhalt heißt …  Halle.  Dessau.  Magdeburg.  Wittenberg.",
       "stem": {
         "images": []
       },
@@ -7782,7 +8071,7 @@
       "section": "state",
       "state": "SN",
       "number": 8,
-      "text": "Seite 180 von 191 Welches Bundesland ist Sachsen-Anhalt?  1  2  3  4",
+      "text": "Welches Bundesland ist Sachsen-Anhalt?  1  2  3  4",
       "stem": {
         "images": [
           "/assets/lid/export/SN_08_sorukismi_xxxx_STEM.png"
@@ -7821,7 +8110,7 @@
       "section": "state",
       "state": "SN",
       "number": 10,
-      "text": "Seite 181 von 191 Welche Ministerin/welchen Minister hat Sachsen-Anhalt nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
+      "text": "Welche Ministerin/welchen Minister hat Sachsen-Anhalt nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
       "stem": {
         "images": []
       },
@@ -7860,7 +8149,7 @@
       "section": "state",
       "state": "SH",
       "number": 2,
-      "text": "Seite 182 von 191 Welches ist ein Landkreis in Schleswig-Holstein?  Ammerland  Mecklenburgische Seenplatte  Nordfriesland  Rhein-Sieg-Kreis",
+      "text": "Welches ist ein Landkreis in Schleswig-Holstein?  Ammerland  Mecklenburgische Seenplatte  Nordfriesland  Rhein-Sieg-Kreis",
       "stem": {
         "images": []
       },
@@ -7911,11 +8200,28 @@
       "section": "state",
       "state": "SH",
       "number": 5,
-      "text": "Seite 183 von 191 Welche Farben hat die Landesflagge von Schleswig-Holstein?  weiß-blau  blau-weiß-rot  weiß-rot  grün-weiß-rot",
+      "text": "Welche Farben hat die Landesflagge von Schleswig",
       "stem": {
         "images": []
       },
-      "choices": [],
+      "choices": [
+        {
+          "id": "A",
+          "text": "Holstein?  weiß"
+        },
+        {
+          "id": "B",
+          "text": "blau  blau"
+        },
+        {
+          "id": "C",
+          "text": "weiß"
+        },
+        {
+          "id": "D",
+          "text": "rot  weiß"
+        }
+      ],
       "answer": "A",
       "explanation": "",
       "source": {
@@ -7945,7 +8251,7 @@
       "section": "state",
       "state": "SH",
       "number": 7,
-      "text": "Seite 184 von 191 Die Landeshauptstadt von Schleswig-Holstein heißt …  Husum.  Flensburg.  Lübeck.  Kiel.",
+      "text": "Die Landeshauptstadt von Schleswig-Holstein heißt …  Husum.  Flensburg.  Lübeck.  Kiel.",
       "stem": {
         "images": []
       },
@@ -7962,7 +8268,7 @@
       "section": "state",
       "state": "SH",
       "number": 8,
-      "text": "Seite 185 von 191 Welches Bundesland ist Schleswig-Holstein?  1  2  3  4",
+      "text": "Welches Bundesland ist Schleswig-Holstein?  1  2  3  4",
       "stem": {
         "images": [
           "/assets/lid/export/SH_08_sorukismi_xxxx_STEM.png"
@@ -8000,7 +8306,7 @@
       "section": "state",
       "state": "SH",
       "number": 10,
-      "text": "Seite 186 von 191 Welche Ministerin/welchen Minister hat Schleswig-Holstein nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
+      "text": "Welche Ministerin/welchen Minister hat Schleswig-Holstein nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
       "stem": {
         "images": []
       },
@@ -8039,7 +8345,7 @@
       "section": "state",
       "state": "TH",
       "number": 2,
-      "text": "Seite 187 von 191 Welches ist ein Landkreis in Thüringen?  Ammerland  Altötting  Nordfriesland  Wartburgkreis",
+      "text": "Welches ist ein Landkreis in Thüringen?  Ammerland  Altötting  Nordfriesland  Wartburgkreis",
       "stem": {
         "images": []
       },
@@ -8090,11 +8396,28 @@
       "section": "state",
       "state": "TH",
       "number": 5,
-      "text": "Seite 188 von 191 Welche Farben hat die Landesflagge von Thüringen?  blau-weiß-rot  weiß-rot  grün-weiß-rot  schwarz-gold",
+      "text": "Welche Farben hat die Landesflagge von Thüringen?  blau",
       "stem": {
         "images": []
       },
-      "choices": [],
+      "choices": [
+        {
+          "id": "A",
+          "text": "weiß"
+        },
+        {
+          "id": "B",
+          "text": "rot  weiß"
+        },
+        {
+          "id": "C",
+          "text": "rot  grün"
+        },
+        {
+          "id": "D",
+          "text": "weiß"
+        }
+      ],
       "answer": "A",
       "explanation": "",
       "source": {
@@ -8124,7 +8447,7 @@
       "section": "state",
       "state": "TH",
       "number": 7,
-      "text": "Seite 189 von 191 Die Landeshauptstadt von Thüringen heißt …  Eisenach.  Erfurt.  Gera.  Jena.",
+      "text": "Die Landeshauptstadt von Thüringen heißt …  Eisenach.  Erfurt.  Gera.  Jena.",
       "stem": {
         "images": []
       },
@@ -8141,7 +8464,7 @@
       "section": "state",
       "state": "TH",
       "number": 8,
-      "text": "Seite 190 von 191 Welches Bundesland ist Thüringen?  1  2  3  4",
+      "text": "Welches Bundesland ist Thüringen?  1  2  3  4",
       "stem": {
         "images": [
           "/assets/lid/export/TH_08_sorukismi_xxxx_STEM.png"
@@ -8179,7 +8502,7 @@
       "section": "state",
       "state": "TH",
       "number": 10,
-      "text": "Seite 191 von 191 Welche Ministerin/welchen Minister hat Thüringen nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
+      "text": "Welche Ministerin/welchen Minister hat Thüringen nicht?  Justizministerin/Justizminister  Außenministerin/Außenminister  Finanzministerin/Finanzminister  Innenministerin/Innenminister",
       "stem": {
         "images": []
       },

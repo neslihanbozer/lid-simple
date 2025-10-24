@@ -17,8 +17,9 @@ const exists = async p => { try { await fs.access(p); return true; } catch { ret
 function normalizeStem(s) {
   return (s || "")
     .replace(/\s+/g, " ")
-    .replace(/[\u25A0\u25A1\u25A2\u25A3\u25A9\u25AA\u25AB\u25CF\u25CB▪■□◻•●]/g, "")
+    .replace(/[\u25A0\u25A1\u25A2\u25A3\u25A9\u25AA\u25AB\u25CF\u25CB▪■□◻•●].*$/, "")
     .replace(/(?:Bild\s*[1-4]\s*){1,8}/gi, "")
+    .replace(/Seite\s+\d+\s+von\s+\d+/gi, "")
     .replace(/\s+/g, " ")
     .trim();
 }

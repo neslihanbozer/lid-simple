@@ -1,0 +1,31 @@
+# .cursorrules
+goals:
+  - Make a short PLAN first. Then apply minimal, testable changes (max 3–5 files).
+  - Keep code style, lints, and error handling consistent with the repo.
+  - Add/modify tests for every non-trivial change.
+
+context:
+  prefer:
+    - ./src/**/*
+    - ./apps/**/*
+    - ./packages/**/*
+    - ./docs/**/*.md
+    - ./openapi.yaml
+  avoid:
+    - node_modules/**/*
+    - dist/**/* 
+    - build/**/*
+    - .next/**/*
+    - target/**/*
+    - **/*.map
+    - **/*.min.*
+
+constraints:
+  - Do not add new libraries unless asked.
+  - Keep public interfaces backward compatible.
+  - For migrations, output PLAN → wait for approval → APPLY.
+
+review:
+  - Summarize changes in bullets.
+  - Show diff hunks only for edited files.
+  - List risks & TODOs.

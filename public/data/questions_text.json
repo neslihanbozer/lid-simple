@@ -165,7 +165,7 @@
       "section": "general",
       "state": null,
       "number": 21,
-      "text": "Welches ist das Wappen der Bundesrepublik Deutschland?    ",
+      "text": "Welches ist das Wappen der Bundesrepublik Deutschland? Bild 1 Bild 2 Bild 3 Bild 4  Bild 1  Bild 2  Bild 3  Bild 4",
       "choices": []
     },
     {
@@ -197,8 +197,25 @@
       "section": "general",
       "state": null,
       "number": 25,
-      "text": "Seite 10 von 191 Was ist kein Bundesland der Bundesrepublik Deutschland?  Elsass-Lothringen  Nordrhein-Westfalen  Mecklenburg-Vorpommern  Sachsen-Anhalt",
-      "choices": []
+      "text": "Seite 10 von 191 Was ist kein Bundesland der Bundesrepublik Deutschland?  Elsass",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Lothringen  Nordrhein"
+        },
+        {
+          "id": "B",
+          "text": "Westfalen  Mecklenburg"
+        },
+        {
+          "id": "C",
+          "text": "Vorpommern  Sachsen"
+        },
+        {
+          "id": "D",
+          "text": "Anhalt"
+        }
+      ]
     },
     {
       "id": "GEN026",
@@ -473,19 +490,19 @@
       "choices": [
         {
           "id": "A",
-          "text": ""
+          "text": "vor etwa 300 Jahren"
         },
         {
           "id": "B",
-          "text": ""
+          "text": "vor etwa 700 Jahren"
         },
         {
           "id": "C",
-          "text": ""
+          "text": "vor etwa 1150 Jahren"
         },
         {
           "id": "D",
-          "text": ""
+          "text": "vor etwa 1700 Jahren"
         }
       ]
     },
@@ -546,19 +563,19 @@
       "choices": [
         {
           "id": "A",
-          "text": ""
+          "text": "Berlin und München"
         },
         {
           "id": "B",
-          "text": ""
+          "text": "Hamburg und Essen"
         },
         {
           "id": "C",
-          "text": ""
+          "text": "Nürnberg und Stuttgart"
         },
         {
           "id": "D",
-          "text": ""
+          "text": "Worms und Speyer"
         }
       ]
     },
@@ -803,19 +820,19 @@
       "choices": [
         {
           "id": "A",
-          "text": ""
+          "text": "Kürzung sozialer Leistungen"
         },
         {
           "id": "B",
-          "text": ""
+          "text": "bis zu 100 Sozialstunden"
         },
         {
           "id": "C",
-          "text": ""
+          "text": "gar nicht, Holocaustleugnung ist erlaubt"
         },
         {
           "id": "D",
-          "text": ""
+          "text": "mit Freiheitsstrafe bis zu fünf Jahren oder mit Geldstrafe"
         }
       ]
     },
@@ -940,19 +957,19 @@
       "choices": [
         {
           "id": "A",
-          "text": ""
+          "text": "die Politik Israels öffentlich kritisieren"
         },
         {
           "id": "B",
-          "text": ""
+          "text": "das Aufhängen einer israelischen Flagge auf dem Privatgrundstück"
         },
         {
           "id": "C",
-          "text": ""
+          "text": "eine Diskussion über die Politik Israels"
         },
         {
           "id": "D",
-          "text": ""
+          "text": "der öffentliche Aufruf zur Vernichtung Israels"
         }
       ]
     },
@@ -1009,23 +1026,23 @@
       "section": "general",
       "state": null,
       "number": 118,
-      "text": "Seite 43 von 191 Wer darf bei den rund 40 jüdischen Makkabi-Sportvereinen Mitglied werden?",
+      "text": "Seite 43 von 191 Wer darf bei den rund 40 jüdischen Makkabi",
       "choices": [
         {
           "id": "A",
-          "text": ""
+          "text": "Sportvereinen Mitglied werden?"
         },
         {
           "id": "B",
-          "text": ""
+          "text": "nur Deutsche"
         },
         {
           "id": "C",
-          "text": ""
+          "text": "nur Israelis"
         },
         {
           "id": "D",
-          "text": ""
+          "text": "nur religiöse Menschen"
         }
       ]
     },
@@ -1278,19 +1295,19 @@
       "choices": [
         {
           "id": "A",
-          "text": ""
+          "text": "ein jüdisches Fest besuchen"
         },
         {
           "id": "B",
-          "text": ""
+          "text": "die israelische Regierung kritisieren"
         },
         {
           "id": "C",
-          "text": ""
+          "text": "den Holocaust leugnen"
         },
         {
           "id": "D",
-          "text": ""
+          "text": "gegen Juden Fußball spielen."
         }
       ]
     },
@@ -1559,19 +1576,19 @@
       "choices": [
         {
           "id": "A",
-          "text": ""
+          "text": "Basilika"
         },
         {
           "id": "B",
-          "text": ""
+          "text": "Moschee"
         },
         {
           "id": "C",
-          "text": ""
+          "text": "Synagoge"
         },
         {
           "id": "D",
-          "text": ""
+          "text": "Kirche"
         }
       ]
     },
@@ -1592,19 +1609,19 @@
       "choices": [
         {
           "id": "A",
-          "text": ""
+          "text": "eine Resolution der Vereinten Nationen"
         },
         {
           "id": "B",
-          "text": ""
+          "text": "ein Beschluss des Zionistenkongresses"
         },
         {
           "id": "C",
-          "text": ""
+          "text": "ein Vorschlag der Bundesregierung"
         },
         {
           "id": "D",
-          "text": ""
+          "text": "ein Vorschlag der UdSSR"
         }
       ]
     },
@@ -1741,8 +1758,25 @@
       "section": "general",
       "state": null,
       "number": 201,
-      "text": "Welche der folgenden Auflistungen enthält nur Bundesländer, die zum Gebiet der früheren DDR gehörten?  Niedersachsen, Nordrhein-Westfalen, Hessen, Schleswig-Holstein, Brandenburg  Mecklenburg-Vorpommern, Brandenburg, Sachsen, Sachsen-Anhalt, Thüringen  Bayern, Baden-Württemberg, Rheinland-Pfalz, Thüringen, Sachsen  Sachsen, Thüringen, Hessen, Niedersachen, Brandenburg",
-      "choices": []
+      "text": "Welche der folgenden Auflistungen enthält nur Bundesländer, die zum Gebiet der früheren DDR gehörten?  Niedersachsen, Nordrhein",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Westfalen, Hessen, Schleswig"
+        },
+        {
+          "id": "B",
+          "text": "Holstein, Brandenburg  Mecklenburg"
+        },
+        {
+          "id": "C",
+          "text": "Vorpommern, Brandenburg, Sachsen, Sachsen"
+        },
+        {
+          "id": "D",
+          "text": "Anhalt, Thüringen  Bayern, Baden"
+        }
+      ]
     },
     {
       "id": "GEN202",
@@ -1785,19 +1819,19 @@
       "choices": [
         {
           "id": "A",
-          "text": ""
+          "text": "an berühmte deutsche Politikerinnen und Politiker"
         },
         {
           "id": "B",
-          "text": ""
+          "text": "an die Opfer des Nationalsozialismus"
         },
         {
           "id": "C",
-          "text": ""
+          "text": "an Verkehrstote"
         },
         {
           "id": "D",
-          "text": ""
+          "text": "an bekannte jüdische Musiker"
         }
       ]
     },
@@ -1822,7 +1856,7 @@
       "section": "general",
       "state": null,
       "number": 209,
-      "text": "Welches war das Wappen der Deutschen Demokratischen Republik?    ",
+      "text": "Welches war das Wappen der Deutschen Demokratischen Republik? Bild 1 Bild 2 Bild 3 Bild 4  Bild 1  Bild 2  Bild 3  Bild 4",
       "choices": []
     },
     {
@@ -1862,8 +1896,25 @@
       "section": "general",
       "state": null,
       "number": 214,
-      "text": "Welche Farben hat die deutsche Flagge?  schwarz-rot-gold  rot-weiß-schwarz  schwarz-rot-grün  schwarz-gelb-rot",
-      "choices": []
+      "text": "Welche Farben hat die deutsche Flagge?  schwarz",
+      "choices": [
+        {
+          "id": "A",
+          "text": "rot"
+        },
+        {
+          "id": "B",
+          "text": "gold  rot"
+        },
+        {
+          "id": "C",
+          "text": "weiß"
+        },
+        {
+          "id": "D",
+          "text": "schwarz  schwarz"
+        }
+      ]
     },
     {
       "id": "GEN215",
@@ -1958,7 +2009,7 @@
       "section": "general",
       "state": null,
       "number": 226,
-      "text": "Welche ist die Flagge der Europäischen Union?    ",
+      "text": "Welche ist die Flagge der Europäischen Union? Bild 1 Bild 2 Bild 3 Bild 4  Bild 1  Bild 2  Bild 3  Bild 4",
       "choices": []
     },
     {
@@ -2458,19 +2509,19 @@
       "choices": [
         {
           "id": "A",
-          "text": ""
+          "text": "aus der Mitgliedschaft in der Europäischen Union (EU)"
         },
         {
           "id": "B",
-          "text": ""
+          "text": "aus den nationalsozialistischen Verbrechen gegen Juden"
         },
         {
           "id": "C",
-          "text": ""
+          "text": "aus dem Grundgesetz der Bundesrepublik Deutschland"
         },
         {
           "id": "D",
-          "text": ""
+          "text": "aus der christlichen Tradition"
         }
       ]
     },
@@ -2575,7 +2626,7 @@
       "section": "state",
       "state": "BW",
       "number": 1,
-      "text": "Welches Wappen gehört zum Bundesland Baden-Württemberg?    ",
+      "text": "Welches Wappen gehört zum Bundesland Baden-Württemberg? Bild 1 Bild 2 Bild 3 Bild 4  Bild 1  Bild 2  Bild 3  Bild 4",
       "choices": []
     },
     {
@@ -2607,8 +2658,25 @@
       "section": "state",
       "state": "BW",
       "number": 5,
-      "text": "Seite 113 von 191 Welche Farben hat die Landesflagge von Baden-Württemberg?  blau-weiß-rot  schwarz-gold  weiß-blau  grün-weiß-rot",
-      "choices": []
+      "text": "Seite 113 von 191 Welche Farben hat die Landesflagge von Baden",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Württemberg?  blau"
+        },
+        {
+          "id": "B",
+          "text": "weiß"
+        },
+        {
+          "id": "C",
+          "text": "rot  schwarz"
+        },
+        {
+          "id": "D",
+          "text": "gold  weiß"
+        }
+      ]
     },
     {
       "id": "BW06",
@@ -2655,7 +2723,7 @@
       "section": "state",
       "state": "BY",
       "number": 1,
-      "text": "Welches Wappen gehört zum Freistaat Bayern?    ",
+      "text": "Welches Wappen gehört zum Freistaat Bayern? Bild 1 Bild 2 Bild 3 Bild 4  Bild 1  Bild 2  Bild 3  Bild 4",
       "choices": []
     },
     {
@@ -2687,8 +2755,25 @@
       "section": "state",
       "state": "BY",
       "number": 5,
-      "text": "Seite 118 von 191 Welche Farben hat die Landesflagge von Bayern?  blau-weiß-rot  weiß-blau  grün-weiß-rot  schwarz-gelb",
-      "choices": []
+      "text": "Seite 118 von 191 Welche Farben hat die Landesflagge von Bayern?  blau",
+      "choices": [
+        {
+          "id": "A",
+          "text": "weiß"
+        },
+        {
+          "id": "B",
+          "text": "rot  weiß"
+        },
+        {
+          "id": "C",
+          "text": "blau  grün"
+        },
+        {
+          "id": "D",
+          "text": "weiß"
+        }
+      ]
     },
     {
       "id": "BY06",
@@ -2735,7 +2820,7 @@
       "section": "state",
       "state": "BE",
       "number": 1,
-      "text": "Welches Wappen gehört zum Bundesland Berlin?    ",
+      "text": "Welches Wappen gehört zum Bundesland Berlin? Bild 1 Bild 2 Bild 3 Bild 4  Bild 1  Bild 2  Bild 3  Bild 4",
       "choices": []
     },
     {
@@ -2767,8 +2852,25 @@
       "section": "state",
       "state": "BE",
       "number": 5,
-      "text": "Seite 123 von 191 Welche Farben hat die Landesflagge von Berlin?  blau-weiß-rot  weiß-rot  grün-weiß-rot  schwarz-gold",
-      "choices": []
+      "text": "Seite 123 von 191 Welche Farben hat die Landesflagge von Berlin?  blau",
+      "choices": [
+        {
+          "id": "A",
+          "text": "weiß"
+        },
+        {
+          "id": "B",
+          "text": "rot  weiß"
+        },
+        {
+          "id": "C",
+          "text": "rot  grün"
+        },
+        {
+          "id": "D",
+          "text": "weiß"
+        }
+      ]
     },
     {
       "id": "BE06",
@@ -2815,7 +2917,7 @@
       "section": "state",
       "state": "BB",
       "number": 1,
-      "text": "Welches Wappen gehört zum Bundesland Brandenburg?    ",
+      "text": "Welches Wappen gehört zum Bundesland Brandenburg? Bild 1 Bild 2 Bild 3 Bild 4  Bild 1  Bild 2  Bild 3  Bild 4",
       "choices": []
     },
     {
@@ -2847,8 +2949,25 @@
       "section": "state",
       "state": "BB",
       "number": 5,
-      "text": "Seite 128 von 191 Welche Farben hat die Landesflagge von Brandenburg?  blau-weiß-rot  rot-weiß  grün-weiß-rot  schwarz-gelb",
-      "choices": []
+      "text": "Seite 128 von 191 Welche Farben hat die Landesflagge von Brandenburg?  blau",
+      "choices": [
+        {
+          "id": "A",
+          "text": "weiß"
+        },
+        {
+          "id": "B",
+          "text": "rot  rot"
+        },
+        {
+          "id": "C",
+          "text": "weiß  grün"
+        },
+        {
+          "id": "D",
+          "text": "weiß"
+        }
+      ]
     },
     {
       "id": "BB06",
@@ -2895,7 +3014,7 @@
       "section": "state",
       "state": "HB",
       "number": 1,
-      "text": "Welches Wappen gehört zur Freien Hansestadt Bremen?    ",
+      "text": "Welches Wappen gehört zur Freien Hansestadt Bremen? Bild 1 Bild 2 Bild 3 Bild 4  Bild 1  Bild 2  Bild 3  Bild 4",
       "choices": []
     },
     {
@@ -2927,8 +3046,25 @@
       "section": "state",
       "state": "HB",
       "number": 5,
-      "text": "Seite 133 von 191 Welche Farben hat die Landesflagge von Bremen?  blau-weiß-rot  rot-weiß  grün-weiß-rot  schwarz-gold",
-      "choices": []
+      "text": "Seite 133 von 191 Welche Farben hat die Landesflagge von Bremen?  blau",
+      "choices": [
+        {
+          "id": "A",
+          "text": "weiß"
+        },
+        {
+          "id": "B",
+          "text": "rot  rot"
+        },
+        {
+          "id": "C",
+          "text": "weiß  grün"
+        },
+        {
+          "id": "D",
+          "text": "weiß"
+        }
+      ]
     },
     {
       "id": "HB06",
@@ -2975,7 +3111,7 @@
       "section": "state",
       "state": "HH",
       "number": 1,
-      "text": "Welches Wappen gehört zur Freien und Hansestadt Hamburg?    ",
+      "text": "Welches Wappen gehört zur Freien und Hansestadt Hamburg? Bild 1 Bild 2 Bild 3 Bild 4  Bild 1  Bild 2  Bild 3  Bild 4",
       "choices": []
     },
     {
@@ -3007,8 +3143,25 @@
       "section": "state",
       "state": "HH",
       "number": 5,
-      "text": "Seite 138 von 191 Welche Farben hat die Landesflagge von Hamburg?  blau-weiß-rot  weiß-rot  grün-weiß-rot  schwarz-gelb",
-      "choices": []
+      "text": "Seite 138 von 191 Welche Farben hat die Landesflagge von Hamburg?  blau",
+      "choices": [
+        {
+          "id": "A",
+          "text": "weiß"
+        },
+        {
+          "id": "B",
+          "text": "rot  weiß"
+        },
+        {
+          "id": "C",
+          "text": "rot  grün"
+        },
+        {
+          "id": "D",
+          "text": "weiß"
+        }
+      ]
     },
     {
       "id": "HH06",
@@ -3055,7 +3208,7 @@
       "section": "state",
       "state": "HE",
       "number": 1,
-      "text": "Welches Wappen gehört zum Bundesland Hessen?    ",
+      "text": "Welches Wappen gehört zum Bundesland Hessen? Bild 1 Bild 2 Bild 3 Bild 4  Bild 1  Bild 2  Bild 3  Bild 4",
       "choices": []
     },
     {
@@ -3087,8 +3240,25 @@
       "section": "state",
       "state": "HE",
       "number": 5,
-      "text": "Seite 143 von 191 Welche Farben hat die Landesflagge von Hessen?  blau-weiß-rot  rot-weiß  schwarz-gold  grün-weiß-rot",
-      "choices": []
+      "text": "Seite 143 von 191 Welche Farben hat die Landesflagge von Hessen?  blau",
+      "choices": [
+        {
+          "id": "A",
+          "text": "weiß"
+        },
+        {
+          "id": "B",
+          "text": "rot  rot"
+        },
+        {
+          "id": "C",
+          "text": "weiß  schwarz"
+        },
+        {
+          "id": "D",
+          "text": "gold  grün"
+        }
+      ]
     },
     {
       "id": "HE06",
@@ -3135,7 +3305,7 @@
       "section": "state",
       "state": "MV",
       "number": 1,
-      "text": "Welches Wappen gehört zum Bundesland Mecklenburg-Vorpommern?    ",
+      "text": "Welches Wappen gehört zum Bundesland Mecklenburg-Vorpommern? Bild 1 Bild 2 Bild 3 Bild 4  Bild 1  Bild 2  Bild 3  Bild 4",
       "choices": []
     },
     {
@@ -3167,8 +3337,25 @@
       "section": "state",
       "state": "MV",
       "number": 5,
-      "text": "Seite 148 von 191 Welche Farben hat die Landesflagge von Mecklenburg-Vorpommern?  schwarz-rot-gold  blau-weiß-gelb-rot  grün-weiß-rot  schwarz-gelb",
-      "choices": []
+      "text": "Seite 148 von 191 Welche Farben hat die Landesflagge von Mecklenburg",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Vorpommern?  schwarz"
+        },
+        {
+          "id": "B",
+          "text": "rot"
+        },
+        {
+          "id": "C",
+          "text": "gold  blau"
+        },
+        {
+          "id": "D",
+          "text": "weiß"
+        }
+      ]
     },
     {
       "id": "MV06",
@@ -3215,7 +3402,7 @@
       "section": "state",
       "state": "NI",
       "number": 1,
-      "text": "Welches Wappen gehört zum Bundesland Niedersachsen?    ",
+      "text": "Welches Wappen gehört zum Bundesland Niedersachsen? Bild 1 Bild 2 Bild 3 Bild 4  Bild 1  Bild 2  Bild 3  Bild 4",
       "choices": []
     },
     {
@@ -3247,8 +3434,25 @@
       "section": "state",
       "state": "NI",
       "number": 5,
-      "text": "Seite 153 von 191 Welche Farben hat die Landesflagge von Niedersachsen?  weiß-blau  schwarz-rot-gold  schwarz-gelb  blau-weiß-rot",
-      "choices": []
+      "text": "Seite 153 von 191 Welche Farben hat die Landesflagge von Niedersachsen?  weiß",
+      "choices": [
+        {
+          "id": "A",
+          "text": "blau  schwarz"
+        },
+        {
+          "id": "B",
+          "text": "rot"
+        },
+        {
+          "id": "C",
+          "text": "gold  schwarz"
+        },
+        {
+          "id": "D",
+          "text": "gelb  blau"
+        }
+      ]
     },
     {
       "id": "NI06",
@@ -3295,7 +3499,7 @@
       "section": "state",
       "state": "NW",
       "number": 1,
-      "text": "Welches Wappen gehört zum Bundesland Nordrhein-Westfalen?    ",
+      "text": "Welches Wappen gehört zum Bundesland Nordrhein-Westfalen? Bild 1 Bild 2 Bild 3 Bild 4  Bild 1  Bild 2  Bild 3  Bild 4",
       "choices": []
     },
     {
@@ -3327,8 +3531,25 @@
       "section": "state",
       "state": "NW",
       "number": 5,
-      "text": "Seite 158 von 191 Welche Farben hat die Landesflagge von Nordrhein-Westfalen?  rot-weiß  grün-weiß-rot  schwarz-gold  blau-weiß-rot",
-      "choices": []
+      "text": "Seite 158 von 191 Welche Farben hat die Landesflagge von Nordrhein",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Westfalen?  rot"
+        },
+        {
+          "id": "B",
+          "text": "weiß  grün"
+        },
+        {
+          "id": "C",
+          "text": "weiß"
+        },
+        {
+          "id": "D",
+          "text": "rot  schwarz"
+        }
+      ]
     },
     {
       "id": "NW06",
@@ -3375,7 +3596,7 @@
       "section": "state",
       "state": "RP",
       "number": 1,
-      "text": "Welches Wappen gehört zum Bundesland Rheinland-Pfalz?    ",
+      "text": "Welches Wappen gehört zum Bundesland Rheinland-Pfalz? Bild 1 Bild 2 Bild 3 Bild 4  Bild 1  Bild 2  Bild 3  Bild 4",
       "choices": []
     },
     {
@@ -3407,8 +3628,25 @@
       "section": "state",
       "state": "RP",
       "number": 5,
-      "text": "Seite 163 von 191 Welche Farben hat die Landesflagge von Rheinland-Pfalz?  weiß-rot  schwarz-rot-gold  schwarz-gelb  grün-weiß-rot",
-      "choices": []
+      "text": "Seite 163 von 191 Welche Farben hat die Landesflagge von Rheinland",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Pfalz?  weiß"
+        },
+        {
+          "id": "B",
+          "text": "rot  schwarz"
+        },
+        {
+          "id": "C",
+          "text": "rot"
+        },
+        {
+          "id": "D",
+          "text": "gold  schwarz"
+        }
+      ]
     },
     {
       "id": "RP06",
@@ -3455,7 +3693,7 @@
       "section": "state",
       "state": "SL",
       "number": 1,
-      "text": "Welches Wappen gehört zum Bundesland Saarland?    ",
+      "text": "Welches Wappen gehört zum Bundesland Saarland? Bild 1 Bild 2 Bild 3 Bild 4  Bild 1  Bild 2  Bild 3  Bild 4",
       "choices": []
     },
     {
@@ -3487,8 +3725,25 @@
       "section": "state",
       "state": "SL",
       "number": 5,
-      "text": "Seite 168 von 191 Welche Farben hat die Landesflagge des Saarlandes?  weiß-blau  schwarz-rot-gold  schwarz-gelb  grün-weiß-rot",
-      "choices": []
+      "text": "Seite 168 von 191 Welche Farben hat die Landesflagge des Saarlandes?  weiß",
+      "choices": [
+        {
+          "id": "A",
+          "text": "blau  schwarz"
+        },
+        {
+          "id": "B",
+          "text": "rot"
+        },
+        {
+          "id": "C",
+          "text": "gold  schwarz"
+        },
+        {
+          "id": "D",
+          "text": "gelb  grün"
+        }
+      ]
     },
     {
       "id": "SL06",
@@ -3535,7 +3790,7 @@
       "section": "state",
       "state": "SN",
       "number": 1,
-      "text": "Welches Wappen gehört zum Freistaat Sachsen?    ",
+      "text": "Welches Wappen gehört zum Freistaat Sachsen? Bild 1 Bild 2 Bild 3 Bild 4  Bild 1  Bild 2  Bild 3  Bild 4",
       "choices": []
     },
     {
@@ -3567,8 +3822,25 @@
       "section": "state",
       "state": "SN",
       "number": 5,
-      "text": "Seite 173 von 191 Welche Farben hat die Landesflagge von Sachsen?  blau-weiß-rot  weiß-grün  grün-weiß-rot  schwarz-gelb",
-      "choices": []
+      "text": "Seite 173 von 191 Welche Farben hat die Landesflagge von Sachsen?  blau",
+      "choices": [
+        {
+          "id": "A",
+          "text": "weiß"
+        },
+        {
+          "id": "B",
+          "text": "rot  weiß"
+        },
+        {
+          "id": "C",
+          "text": "grün  grün"
+        },
+        {
+          "id": "D",
+          "text": "weiß"
+        }
+      ]
     },
     {
       "id": "SN06",
@@ -3615,7 +3887,7 @@
       "section": "state",
       "state": "SN",
       "number": 1,
-      "text": "Welches Wappen gehört zum Bundesland Sachsen-Anhalt?    ",
+      "text": "Welches Wappen gehört zum Bundesland Sachsen-Anhalt? Bild 1 Bild 2 Bild 3 Bild 4  Bild 1  Bild 2  Bild 3  Bild 4",
       "choices": []
     },
     {
@@ -3647,8 +3919,25 @@
       "section": "state",
       "state": "SN",
       "number": 5,
-      "text": "Seite 178 von 191 Welche Farben hat die Landesflagge von Sachsen-Anhalt?  blau-weiß-rot  gelb-schwarz  grün-weiß-rot  weiß-rot",
-      "choices": []
+      "text": "Seite 178 von 191 Welche Farben hat die Landesflagge von Sachsen",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Anhalt?  blau"
+        },
+        {
+          "id": "B",
+          "text": "weiß"
+        },
+        {
+          "id": "C",
+          "text": "rot  gelb"
+        },
+        {
+          "id": "D",
+          "text": "schwarz  grün"
+        }
+      ]
     },
     {
       "id": "SN06",
@@ -3695,7 +3984,7 @@
       "section": "state",
       "state": "SH",
       "number": 1,
-      "text": "Welches Wappen gehört zum Bundesland Schleswig-Holstein?    ",
+      "text": "Welches Wappen gehört zum Bundesland Schleswig-Holstein? Bild 1 Bild 2 Bild 3 Bild 4  Bild 1  Bild 2  Bild 3  Bild 4",
       "choices": []
     },
     {
@@ -3727,8 +4016,25 @@
       "section": "state",
       "state": "SH",
       "number": 5,
-      "text": "Seite 183 von 191 Welche Farben hat die Landesflagge von Schleswig-Holstein?  weiß-blau  blau-weiß-rot  weiß-rot  grün-weiß-rot",
-      "choices": []
+      "text": "Seite 183 von 191 Welche Farben hat die Landesflagge von Schleswig",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Holstein?  weiß"
+        },
+        {
+          "id": "B",
+          "text": "blau  blau"
+        },
+        {
+          "id": "C",
+          "text": "weiß"
+        },
+        {
+          "id": "D",
+          "text": "rot  weiß"
+        }
+      ]
     },
     {
       "id": "SH06",
@@ -3775,7 +4081,7 @@
       "section": "state",
       "state": "TH",
       "number": 1,
-      "text": "Welches Wappen gehört zum Freistaat Thüringen?    ",
+      "text": "Welches Wappen gehört zum Freistaat Thüringen? Bild 1 Bild 2 Bild 3 Bild 4  Bild 1  Bild 2  Bild 3  Bild 4",
       "choices": []
     },
     {
@@ -3807,8 +4113,25 @@
       "section": "state",
       "state": "TH",
       "number": 5,
-      "text": "Seite 188 von 191 Welche Farben hat die Landesflagge von Thüringen?  blau-weiß-rot  weiß-rot  grün-weiß-rot  schwarz-gold",
-      "choices": []
+      "text": "Seite 188 von 191 Welche Farben hat die Landesflagge von Thüringen?  blau",
+      "choices": [
+        {
+          "id": "A",
+          "text": "weiß"
+        },
+        {
+          "id": "B",
+          "text": "rot  weiß"
+        },
+        {
+          "id": "C",
+          "text": "rot  grün"
+        },
+        {
+          "id": "D",
+          "text": "weiß"
+        }
+      ]
     },
     {
       "id": "TH06",
