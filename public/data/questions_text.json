@@ -53,17 +53,8 @@
       "section": "general",
       "state": null,
       "number": 7,
-      "text": "Welches Recht gehört zu den Grundrechten, die nach der deutschen Verfassung garantiert werden? Das Recht auf …  Glaubens",
-      "choices": [
-        {
-          "id": "A",
-          "text": "…  Glaubens"
-        },
-        {
-          "id": "B",
-          "text": "und Gewissensfreiheit  Unterhaltung  Arbeit  Wohnung"
-        }
-      ]
+      "text": "Welches Recht gehört zu den Grundrechten, die nach der deutschen Verfassung garantiert werden? Das Recht auf …  Glaubens- und Gewissensfreiheit  Unterhaltung  Arbeit  Wohnung",
+      "choices": []
     },
     {
       "id": "GEN008",
@@ -110,42 +101,16 @@
       "section": "general",
       "state": null,
       "number": 13,
-      "text": "Im Parlament steht der Begriff \"Opposition\" für …  die regierenden Parteien.  die Fraktion mit den meisten Abgeordneten.  alle Parteien, die bei der letzten Wahl die 5%",
-      "choices": [
-        {
-          "id": "A",
-          "text": "…  die regierenden Parteien.  die Fraktion mit den meisten Abgeordneten.  alle Parteien, die bei der letzten Wahl die 5%"
-        },
-        {
-          "id": "B",
-          "text": "Hürde erreichen konnten.  alle Abgeordneten, die nicht zu der Regierungspartei/den Regierungsparteien gehören"
-        }
-      ]
+      "text": "Im Parlament steht der Begriff \"Opposition\" für …  die regierenden Parteien.  die Fraktion mit den meisten Abgeordneten.  alle Parteien, die bei der letzten Wahl die 5%-Hürde erreichen konnten.  alle Abgeordneten, die nicht zu der Regierungspartei/den Regierungsparteien gehören.",
+      "choices": []
     },
     {
       "id": "GEN014",
       "section": "general",
       "state": null,
       "number": 14,
-      "text": "Meinungsfreiheit in Deutschland heißt, dass ich",
-      "choices": [
-        {
-          "id": "A",
-          "text": "    Passanten auf der Straße beschimpfen darf. meine Meinung im Internet äußern kann. Nazi"
-        },
-        {
-          "id": "B",
-          "text": ", Hamas"
-        },
-        {
-          "id": "C",
-          "text": "oder Islamischer Staat"
-        },
-        {
-          "id": "D",
-          "text": "Symbole öffentlich tragen darf. meine Meinung nur dann äußern darf, solange ich der Regierung nicht widerspreche."
-        }
-      ]
+      "text": "Meinungsfreiheit in Deutschland heißt, dass ich …     Passanten auf der Straße beschimpfen darf. meine Meinung im Internet äußern kann. Nazi-, Hamas- oder Islamischer Staat-Symbole öffentlich tragen darf. meine Meinung nur dann äußern darf, solange ich der Regierung nicht widerspreche.",
+      "choices": []
     },
     {
       "id": "GEN015",
@@ -232,25 +197,8 @@
       "section": "general",
       "state": null,
       "number": 25,
-      "text": "Seite 10 von 191 Was ist kein Bundesland der Bundesrepublik Deutschland?  Elsass",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Lothringen  Nordrhein"
-        },
-        {
-          "id": "B",
-          "text": "Westfalen  Mecklenburg"
-        },
-        {
-          "id": "C",
-          "text": "Vorpommern  Sachsen"
-        },
-        {
-          "id": "D",
-          "text": "Anhalt"
-        }
-      ]
+      "text": "Seite 10 von 191 Was ist kein Bundesland der Bundesrepublik Deutschland?  Elsass-Lothringen  Nordrhein-Westfalen  Mecklenburg-Vorpommern  Sachsen-Anhalt",
+      "choices": []
     },
     {
       "id": "GEN026",
@@ -683,17 +631,8 @@
       "section": "general",
       "state": null,
       "number": 75,
-      "text": "Wie heißt Deutschlands heutiges Staatsoberhaupt?  Frank",
-      "choices": [
-        {
-          "id": "A",
-          "text": "oberhaupt?  Frank"
-        },
-        {
-          "id": "B",
-          "text": "Walter Steinmeier  Bärbel Bas  Bodo Ramelow  Joachim Gauck"
-        }
-      ]
+      "text": "Wie heißt Deutschlands heutiges Staatsoberhaupt?  Frank-Walter Steinmeier  Bärbel Bas  Bodo Ramelow  Joachim Gauck",
+      "choices": []
     },
     {
       "id": "GEN076",
@@ -1103,34 +1042,16 @@
       "section": "general",
       "state": null,
       "number": 120,
-      "text": "Das Wahlsystem in Deutschland ist ein …  Zensuswahlrecht.  Dreiklassenwahlrecht.  Mehrheits",
-      "choices": [
-        {
-          "id": "A",
-          "text": "…  Zensuswahlrecht.  Dreiklassenwahlrecht.  Mehrheits"
-        },
-        {
-          "id": "B",
-          "text": "und Verhältniswahlrecht.  allgemeines Männerwahlrecht"
-        }
-      ]
+      "text": "Das Wahlsystem in Deutschland ist ein …  Zensuswahlrecht.  Dreiklassenwahlrecht.  Mehrheits- und Verhältniswahlrecht.  allgemeines Männerwahlrecht.",
+      "choices": []
     },
     {
       "id": "GEN121",
       "section": "general",
       "state": null,
       "number": 121,
-      "text": "Seite 44 von 191 Eine Partei möchte in den Deutschen Bundestag. Sie muss aber einen Mindestanteil an Wählerstimmen haben. Das heißt …  5%",
-      "choices": [
-        {
-          "id": "A",
-          "text": "…  5%"
-        },
-        {
-          "id": "B",
-          "text": "Hürde.  Zulassungsgrenze.  Basiswert.  Richtlinie"
-        }
-      ]
+      "text": "Seite 44 von 191 Eine Partei möchte in den Deutschen Bundestag. Sie muss aber einen Mindestanteil an Wählerstimmen haben. Das heißt …  5%-Hürde.  Zulassungsgrenze.  Basiswert.  Richtlinie.",
+      "choices": []
     },
     {
       "id": "GEN122",
@@ -1602,17 +1523,8 @@
       "section": "general",
       "state": null,
       "number": 178,
-      "text": "Vom Juni 1948 bis zum Mai 1949 wurden die Bürgerinnen und Bürger von West-Berlin durch eine Luftbrücke versorgt. Welcher Umstand war dafür verantwortlich?  Für Frankreich war eine Versorgung der West",
-      "choices": [
-        {
-          "id": "A",
-          "text": "wortlich?  Für Frankreich war eine Versorgung der West"
-        },
-        {
-          "id": "B",
-          "text": "Berliner Bevölkerung mit dem Flugzeug kostengünstiger.  Die amerikanischen Soldatinnen und Soldaten hatten beim Landtransport Angst vor Überfällen.  Für Großbritannien war die Versorgung über die Luftbrücke schneller.  Die Sowjetunion unterbrach den gesamten Verkehr auf dem Landwege"
-        }
-      ]
+      "text": "Vom Juni 1948 bis zum Mai 1949 wurden die Bürgerinnen und Bürger von West-Berlin durch eine Luftbrücke versorgt. Welcher Umstand war dafür verantwortlich?  Für Frankreich war eine Versorgung der West-Berliner Bevölkerung mit dem Flugzeug kostengünstiger.  Die amerikanischen Soldatinnen und Soldaten hatten beim Landtransport Angst vor Überfällen.  Für Großbritannien war die Versorgung über die Luftbrücke schneller.  Die Sowjetunion unterbrach den gesamten Verkehr auf dem Landwege.",
+      "choices": []
     },
     {
       "id": "GEN179",
@@ -1701,17 +1613,8 @@
       "section": "general",
       "state": null,
       "number": 185,
-      "text": "Wofür stand der Ausdruck \"Eiserner Vorhang\"? Für die Abschottung …  des Warschauer Pakts gegen den Westen  Norddeutschlands gegen Süddeutschland  Nazi",
-      "choices": [
-        {
-          "id": "A",
-          "text": "…  des Warschauer Pakts gegen den Westen  Norddeutschlands gegen Süddeutschland  Nazi"
-        },
-        {
-          "id": "B",
-          "text": "Deutschlands gegen die Alliierten  Europas gegen die USA"
-        }
-      ]
+      "text": "Wofür stand der Ausdruck \"Eiserner Vorhang\"? Für die Abschottung …  des Warschauer Pakts gegen den Westen  Norddeutschlands gegen Süddeutschland  Nazi-Deutschlands gegen die Alliierten  Europas gegen die USA",
+      "choices": []
     },
     {
       "id": "GEN186",
@@ -1838,25 +1741,8 @@
       "section": "general",
       "state": null,
       "number": 201,
-      "text": "Welche der folgenden Auflistungen enthält nur Bundesländer, die zum Gebiet der früheren DDR gehörten?  Niedersachsen, NordrheinWürttemberg, RheinlandPfalz, Thüringen, Sachsen  Sachsen, Thüringen, Hessen, Niedersachen, Brandenburg",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Westfalen, Hessen, Schleswig"
-        },
-        {
-          "id": "B",
-          "text": "Holstein, Brandenburg  Mecklenburg"
-        },
-        {
-          "id": "C",
-          "text": "Vorpommern, Brandenburg, Sachsen, Sachsen"
-        },
-        {
-          "id": "D",
-          "text": "Anhalt, Thüringen  Bayern, Baden"
-        }
-      ]
+      "text": "Welche der folgenden Auflistungen enthält nur Bundesländer, die zum Gebiet der früheren DDR gehörten?  Niedersachsen, Nordrhein-Westfalen, Hessen, Schleswig-Holstein, Brandenburg  Mecklenburg-Vorpommern, Brandenburg, Sachsen, Sachsen-Anhalt, Thüringen  Bayern, Baden-Württemberg, Rheinland-Pfalz, Thüringen, Sachsen  Sachsen, Thüringen, Hessen, Niedersachen, Brandenburg",
+      "choices": []
     },
     {
       "id": "GEN202",
@@ -1976,25 +1862,8 @@
       "section": "general",
       "state": null,
       "number": 214,
-      "text": "Welche Farben hat die deutsche Flagge?  schwarzgold  grün  schwarzgelb",
-      "choices": [
-        {
-          "id": "A",
-          "text": "rot"
-        },
-        {
-          "id": "B",
-          "text": "gold  rot"
-        },
-        {
-          "id": "C",
-          "text": "weiß"
-        },
-        {
-          "id": "D",
-          "text": "schwarz  schwarz"
-        }
-      ]
+      "text": "Welche Farben hat die deutsche Flagge?  schwarz-rot-gold  rot-weiß-schwarz  schwarz-rot-grün  schwarz-gelb-rot",
+      "choices": []
     },
     {
       "id": "GEN215",
@@ -2425,17 +2294,8 @@
       "section": "general",
       "state": null,
       "number": 268,
-      "text": "Seite 99 von 191 Eine junge Frau will den Führerschein machen. Sie hat Angst vor der Prüfung, weil ihre Muttersprache nicht Deutsch ist. Was ist richtig?  Sie muss mindestens zehn Jahre in Deutschland leben, bevor sie den Führerschein machen kann.  Wenn sie kein Deutsch kann, darf sie keinen Führerschein haben.  Sie muss den Führerschein in dem Land machen, in dem man ihre Sprache spricht.  Sie kann die Theorie",
-      "choices": [
-        {
-          "id": "A",
-          "text": "weil ihre Muttersprache nicht Deutsch ist. Was ist richtig?  Sie muss mindestens zehn Jahre in Deutschland leben, bevor sie den Führerschein machen kann.  Wenn sie kein Deutsch kann, darf sie keinen Führerschein haben.  Sie muss den Führerschein in dem Land machen, in dem man ihre Sprache spricht.  Sie kann die Theorie"
-        },
-        {
-          "id": "B",
-          "text": "Prüfung vielleicht in ihrer Muttersprache machen. Es gibt mehr als zehn Sprachen zur Auswahl"
-        }
-      ]
+      "text": "Seite 99 von 191 Eine junge Frau will den Führerschein machen. Sie hat Angst vor der Prüfung, weil ihre Muttersprache nicht Deutsch ist. Was ist richtig?  Sie muss mindestens zehn Jahre in Deutschland leben, bevor sie den Führerschein machen kann.  Wenn sie kein Deutsch kann, darf sie keinen Führerschein haben.  Sie muss den Führerschein in dem Land machen, in dem man ihre Sprache spricht.  Sie kann die Theorie-Prüfung vielleicht in ihrer Muttersprache machen. Es gibt mehr als zehn Sprachen zur Auswahl.",
+      "choices": []
     },
     {
       "id": "GEN269",
@@ -2675,17 +2535,8 @@
       "section": "general",
       "state": null,
       "number": 296,
-      "text": "In Deutschland nennt man die letzten vier Wochen vor Weihnachten …  den Buß",
-      "choices": [
-        {
-          "id": "A",
-          "text": "…  den Buß"
-        },
-        {
-          "id": "B",
-          "text": "und Bettag.  das Erntedankfest.  die Adventszeit.  Allerheiligen"
-        }
-      ]
+      "text": "In Deutschland nennt man die letzten vier Wochen vor Weihnachten …  den Buß- und Bettag.  das Erntedankfest.  die Adventszeit.  Allerheiligen.",
+      "choices": []
     },
     {
       "id": "GEN297",
@@ -2740,17 +2591,8 @@
       "section": "state",
       "state": "BW",
       "number": 3,
-      "text": "Für wie viele Jahre wird der Landtag in Baden",
-      "choices": [
-        {
-          "id": "A",
-          "text": "wie viele Jahre wird der Landtag in Baden"
-        },
-        {
-          "id": "B",
-          "text": "Württemberg gewählt?  3  4  5  6"
-        }
-      ]
+      "text": "Für wie viele Jahre wird der Landtag in Baden-Württemberg gewählt?  3  4  5  6",
+      "choices": []
     },
     {
       "id": "BW04",
@@ -2765,25 +2607,8 @@
       "section": "state",
       "state": "BW",
       "number": 5,
-      "text": "Seite 113 von 191 Welche Farben hat die Landesflagge von Badengold  blau  grünrot",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Württemberg?  blau"
-        },
-        {
-          "id": "B",
-          "text": "weiß"
-        },
-        {
-          "id": "C",
-          "text": "rot  schwarz"
-        },
-        {
-          "id": "D",
-          "text": "gold  weiß"
-        }
-      ]
+      "text": "Seite 113 von 191 Welche Farben hat die Landesflagge von Baden-Württemberg?  blau-weiß-rot  schwarz-gold  weiß-blau  grün-weiß-rot",
+      "choices": []
     },
     {
       "id": "BW06",
@@ -2862,25 +2687,8 @@
       "section": "state",
       "state": "BY",
       "number": 5,
-      "text": "Seite 118 von 191 Welche Farben hat die Landesflagge von Bayern?  blaurot  rot  schwarzgelb",
-      "choices": [
-        {
-          "id": "A",
-          "text": "weiß"
-        },
-        {
-          "id": "B",
-          "text": "rot  weiß"
-        },
-        {
-          "id": "C",
-          "text": "blau  grün"
-        },
-        {
-          "id": "D",
-          "text": "weiß"
-        }
-      ]
+      "text": "Seite 118 von 191 Welche Farben hat die Landesflagge von Bayern?  blau-weiß-rot  weiß-blau  grün-weiß-rot  schwarz-gelb",
+      "choices": []
     },
     {
       "id": "BY06",
@@ -2959,25 +2767,8 @@
       "section": "state",
       "state": "BE",
       "number": 5,
-      "text": "Seite 123 von 191 Welche Farben hat die Landesflagge von Berlin?  blaurot  rot  schwarzgold",
-      "choices": [
-        {
-          "id": "A",
-          "text": "weiß"
-        },
-        {
-          "id": "B",
-          "text": "rot  weiß"
-        },
-        {
-          "id": "C",
-          "text": "rot  grün"
-        },
-        {
-          "id": "D",
-          "text": "weiß"
-        }
-      ]
+      "text": "Seite 123 von 191 Welche Farben hat die Landesflagge von Berlin?  blau-weiß-rot  weiß-rot  grün-weiß-rot  schwarz-gold",
+      "choices": []
     },
     {
       "id": "BE06",
@@ -3056,25 +2847,8 @@
       "section": "state",
       "state": "BB",
       "number": 5,
-      "text": "Seite 128 von 191 Welche Farben hat die Landesflagge von Brandenburg?  blau grünrot  schwarzgelb",
-      "choices": [
-        {
-          "id": "A",
-          "text": "weiß"
-        },
-        {
-          "id": "B",
-          "text": "rot  rot"
-        },
-        {
-          "id": "C",
-          "text": "weiß  grün"
-        },
-        {
-          "id": "D",
-          "text": "weiß"
-        }
-      ]
+      "text": "Seite 128 von 191 Welche Farben hat die Landesflagge von Brandenburg?  blau-weiß-rot  rot-weiß  grün-weiß-rot  schwarz-gelb",
+      "choices": []
     },
     {
       "id": "BB06",
@@ -3153,25 +2927,8 @@
       "section": "state",
       "state": "HB",
       "number": 5,
-      "text": "Seite 133 von 191 Welche Farben hat die Landesflagge von Bremen?  blau grünrot  schwarzgold",
-      "choices": [
-        {
-          "id": "A",
-          "text": "weiß"
-        },
-        {
-          "id": "B",
-          "text": "rot  rot"
-        },
-        {
-          "id": "C",
-          "text": "weiß  grün"
-        },
-        {
-          "id": "D",
-          "text": "weiß"
-        }
-      ]
+      "text": "Seite 133 von 191 Welche Farben hat die Landesflagge von Bremen?  blau-weiß-rot  rot-weiß  grün-weiß-rot  schwarz-gold",
+      "choices": []
     },
     {
       "id": "HB06",
@@ -3250,25 +3007,8 @@
       "section": "state",
       "state": "HH",
       "number": 5,
-      "text": "Seite 138 von 191 Welche Farben hat die Landesflagge von Hamburg?  blaurot  rot  schwarzgelb",
-      "choices": [
-        {
-          "id": "A",
-          "text": "weiß"
-        },
-        {
-          "id": "B",
-          "text": "rot  weiß"
-        },
-        {
-          "id": "C",
-          "text": "rot  grün"
-        },
-        {
-          "id": "D",
-          "text": "weiß"
-        }
-      ]
+      "text": "Seite 138 von 191 Welche Farben hat die Landesflagge von Hamburg?  blau-weiß-rot  weiß-rot  grün-weiß-rot  schwarz-gelb",
+      "choices": []
     },
     {
       "id": "HH06",
@@ -3347,25 +3087,8 @@
       "section": "state",
       "state": "HE",
       "number": 5,
-      "text": "Seite 143 von 191 Welche Farben hat die Landesflagge von Hessen?  blau schwarzrot",
-      "choices": [
-        {
-          "id": "A",
-          "text": "weiß"
-        },
-        {
-          "id": "B",
-          "text": "rot  rot"
-        },
-        {
-          "id": "C",
-          "text": "weiß  schwarz"
-        },
-        {
-          "id": "D",
-          "text": "gold  grün"
-        }
-      ]
+      "text": "Seite 143 von 191 Welche Farben hat die Landesflagge von Hessen?  blau-weiß-rot  rot-weiß  schwarz-gold  grün-weiß-rot",
+      "choices": []
     },
     {
       "id": "HE06",
@@ -3428,17 +3151,8 @@
       "section": "state",
       "state": "MV",
       "number": 3,
-      "text": "Für wie viele Jahre wird der Landtag in Mecklenburg",
-      "choices": [
-        {
-          "id": "A",
-          "text": "wie viele Jahre wird der Landtag in Mecklenburg"
-        },
-        {
-          "id": "B",
-          "text": "Vorpommern gewählt?  3  4  5  6"
-        }
-      ]
+      "text": "Für wie viele Jahre wird der Landtag in Mecklenburg-Vorpommern gewählt?  3  4  5  6",
+      "choices": []
     },
     {
       "id": "MV04",
@@ -3453,25 +3167,8 @@
       "section": "state",
       "state": "MV",
       "number": 5,
-      "text": "Seite 148 von 191 Welche Farben hat die Landesflagge von Mecklenburggelb grün schwarzgelb",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Vorpommern?  schwarz"
-        },
-        {
-          "id": "B",
-          "text": "rot"
-        },
-        {
-          "id": "C",
-          "text": "gold  blau"
-        },
-        {
-          "id": "D",
-          "text": "weiß"
-        }
-      ]
+      "text": "Seite 148 von 191 Welche Farben hat die Landesflagge von Mecklenburg-Vorpommern?  schwarz-rot-gold  blau-weiß-gelb-rot  grün-weiß-rot  schwarz-gelb",
+      "choices": []
     },
     {
       "id": "MV06",
@@ -3550,25 +3247,8 @@
       "section": "state",
       "state": "NI",
       "number": 5,
-      "text": "Seite 153 von 191 Welche Farben hat die Landesflagge von Niedersachsen?  weißweiß",
-      "choices": [
-        {
-          "id": "A",
-          "text": "blau  schwarz"
-        },
-        {
-          "id": "B",
-          "text": "rot"
-        },
-        {
-          "id": "C",
-          "text": "gold  schwarz"
-        },
-        {
-          "id": "D",
-          "text": "gelb  blau"
-        }
-      ]
+      "text": "Seite 153 von 191 Welche Farben hat die Landesflagge von Niedersachsen?  weiß-blau  schwarz-rot-gold  schwarz-gelb  blau-weiß-rot",
+      "choices": []
     },
     {
       "id": "NI06",
@@ -3631,17 +3311,8 @@
       "section": "state",
       "state": "NW",
       "number": 3,
-      "text": "Für wie viele Jahre wird der Landtag in Nordrhein",
-      "choices": [
-        {
-          "id": "A",
-          "text": "wie viele Jahre wird der Landtag in Nordrhein"
-        },
-        {
-          "id": "B",
-          "text": "Westfalen gewählt?  3  4  5  6"
-        }
-      ]
+      "text": "Für wie viele Jahre wird der Landtag in Nordrhein-Westfalen gewählt?  3  4  5  6",
+      "choices": []
     },
     {
       "id": "NW04",
@@ -3656,25 +3327,8 @@
       "section": "state",
       "state": "NW",
       "number": 5,
-      "text": "Seite 158 von 191 Welche Farben hat die Landesflagge von Nordrheingold  blaurot",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Westfalen?  rot"
-        },
-        {
-          "id": "B",
-          "text": "weiß  grün"
-        },
-        {
-          "id": "C",
-          "text": "weiß"
-        },
-        {
-          "id": "D",
-          "text": "rot  schwarz"
-        }
-      ]
+      "text": "Seite 158 von 191 Welche Farben hat die Landesflagge von Nordrhein-Westfalen?  rot-weiß  grün-weiß-rot  schwarz-gold  blau-weiß-rot",
+      "choices": []
     },
     {
       "id": "NW06",
@@ -3737,17 +3391,8 @@
       "section": "state",
       "state": "RP",
       "number": 3,
-      "text": "Für wie viele Jahre wird der Landtag in Rheinland",
-      "choices": [
-        {
-          "id": "A",
-          "text": "wie viele Jahre wird der Landtag in Rheinland"
-        },
-        {
-          "id": "B",
-          "text": "Pfalz gewählt?  3  4  5  6"
-        }
-      ]
+      "text": "Für wie viele Jahre wird der Landtag in Rheinland-Pfalz gewählt?  3  4  5  6",
+      "choices": []
     },
     {
       "id": "RP04",
@@ -3762,25 +3407,8 @@
       "section": "state",
       "state": "RP",
       "number": 5,
-      "text": "Seite 163 von 191 Welche Farben hat die Landesflagge von Rheinlandgelb  grünweiß",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Pfalz?  weiß"
-        },
-        {
-          "id": "B",
-          "text": "rot  schwarz"
-        },
-        {
-          "id": "C",
-          "text": "rot"
-        },
-        {
-          "id": "D",
-          "text": "gold  schwarz"
-        }
-      ]
+      "text": "Seite 163 von 191 Welche Farben hat die Landesflagge von Rheinland-Pfalz?  weiß-rot  schwarz-rot-gold  schwarz-gelb  grün-weiß-rot",
+      "choices": []
     },
     {
       "id": "RP06",
@@ -3859,25 +3487,8 @@
       "section": "state",
       "state": "SL",
       "number": 5,
-      "text": "Seite 168 von 191 Welche Farben hat die Landesflagge des Saarlandes?  weißweiß",
-      "choices": [
-        {
-          "id": "A",
-          "text": "blau  schwarz"
-        },
-        {
-          "id": "B",
-          "text": "rot"
-        },
-        {
-          "id": "C",
-          "text": "gold  schwarz"
-        },
-        {
-          "id": "D",
-          "text": "gelb  grün"
-        }
-      ]
+      "text": "Seite 168 von 191 Welche Farben hat die Landesflagge des Saarlandes?  weiß-blau  schwarz-rot-gold  schwarz-gelb  grün-weiß-rot",
+      "choices": []
     },
     {
       "id": "SL06",
@@ -3956,25 +3567,8 @@
       "section": "state",
       "state": "SN",
       "number": 5,
-      "text": "Seite 173 von 191 Welche Farben hat die Landesflagge von Sachsen?  blaurot  rot  schwarzgelb",
-      "choices": [
-        {
-          "id": "A",
-          "text": "weiß"
-        },
-        {
-          "id": "B",
-          "text": "rot  weiß"
-        },
-        {
-          "id": "C",
-          "text": "grün  grün"
-        },
-        {
-          "id": "D",
-          "text": "weiß"
-        }
-      ]
+      "text": "Seite 173 von 191 Welche Farben hat die Landesflagge von Sachsen?  blau-weiß-rot  weiß-grün  grün-weiß-rot  schwarz-gelb",
+      "choices": []
     },
     {
       "id": "SN06",
@@ -4037,17 +3631,8 @@
       "section": "state",
       "state": "SN",
       "number": 3,
-      "text": "Für wie viele Jahre wird der Landtag in Sachsen",
-      "choices": [
-        {
-          "id": "A",
-          "text": "wie viele Jahre wird der Landtag in Sachsen"
-        },
-        {
-          "id": "B",
-          "text": "Anhalt gewählt?  3  4  5  6"
-        }
-      ]
+      "text": "Für wie viele Jahre wird der Landtag in Sachsen-Anhalt gewählt?  3  4  5  6",
+      "choices": []
     },
     {
       "id": "SN04",
@@ -4062,25 +3647,8 @@
       "section": "state",
       "state": "SN",
       "number": 5,
-      "text": "Seite 178 von 191 Welche Farben hat die Landesflagge von Sachsenrot  rot",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Anhalt?  blau"
-        },
-        {
-          "id": "B",
-          "text": "weiß"
-        },
-        {
-          "id": "C",
-          "text": "rot  gelb"
-        },
-        {
-          "id": "D",
-          "text": "schwarz  grün"
-        }
-      ]
+      "text": "Seite 178 von 191 Welche Farben hat die Landesflagge von Sachsen-Anhalt?  blau-weiß-rot  gelb-schwarz  grün-weiß-rot  weiß-rot",
+      "choices": []
     },
     {
       "id": "SN06",
@@ -4143,17 +3711,8 @@
       "section": "state",
       "state": "SH",
       "number": 3,
-      "text": "Für wie viele Jahre wird der Landtag in Schleswig",
-      "choices": [
-        {
-          "id": "A",
-          "text": "wie viele Jahre wird der Landtag in Schleswig"
-        },
-        {
-          "id": "B",
-          "text": "Holstein gewählt?  3  4  5  6"
-        }
-      ]
+      "text": "Für wie viele Jahre wird der Landtag in Schleswig-Holstein gewählt?  3  4  5  6",
+      "choices": []
     },
     {
       "id": "SH04",
@@ -4168,25 +3727,8 @@
       "section": "state",
       "state": "SH",
       "number": 5,
-      "text": "Seite 183 von 191 Welche Farben hat die Landesflagge von Schleswigrot  rot  grünrot",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Holstein?  weiß"
-        },
-        {
-          "id": "B",
-          "text": "blau  blau"
-        },
-        {
-          "id": "C",
-          "text": "weiß"
-        },
-        {
-          "id": "D",
-          "text": "rot  weiß"
-        }
-      ]
+      "text": "Seite 183 von 191 Welche Farben hat die Landesflagge von Schleswig-Holstein?  weiß-blau  blau-weiß-rot  weiß-rot  grün-weiß-rot",
+      "choices": []
     },
     {
       "id": "SH06",
@@ -4265,25 +3807,8 @@
       "section": "state",
       "state": "TH",
       "number": 5,
-      "text": "Seite 188 von 191 Welche Farben hat die Landesflagge von Thüringen?  blaurot  rot  schwarzgold",
-      "choices": [
-        {
-          "id": "A",
-          "text": "weiß"
-        },
-        {
-          "id": "B",
-          "text": "rot  weiß"
-        },
-        {
-          "id": "C",
-          "text": "rot  grün"
-        },
-        {
-          "id": "D",
-          "text": "weiß"
-        }
-      ]
+      "text": "Seite 188 von 191 Welche Farben hat die Landesflagge von Thüringen?  blau-weiß-rot  weiß-rot  grün-weiß-rot  schwarz-gold",
+      "choices": []
     },
     {
       "id": "TH06",
