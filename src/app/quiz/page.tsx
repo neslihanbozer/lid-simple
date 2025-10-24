@@ -531,9 +531,6 @@ export default function Quiz() {
                     <p className="text-gray-600 mb-4">{stateCount} Fragen</p>
                     
                     <div className="mb-4">
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Bundesland wählen
-                      </label>
                       <select
                         value={selectedState}
                         onChange={(e) => setSelectedState(e.target.value)}
