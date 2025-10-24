@@ -3,6 +3,14 @@ import path from "node:path";
 
 export default function Page() {
   const p = path.join(process.cwd(), "public", "data", "questions_with_assets.json");
+  if (!fs.existsSync(p)) {
+    return (
+      <div className="p-6 space-y-4">
+        <h1 className="text-2xl font-semibold">LiD test</h1>
+        <p className="text-sm text-neutral-600">questions_with_assets.json nicht gefunden. Diese Dev-Seite wird im Build übersprungen.</p>
+      </div>
+    )
+  }
   const data = JSON.parse(fs.readFileSync(p, "utf8"));
 
   const pick = (ids:string[]) =>
