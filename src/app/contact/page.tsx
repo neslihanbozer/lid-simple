@@ -163,11 +163,11 @@ export default function ContactPage() {
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <option value="">Bitte wählen Sie einen Betreff</option>
-                <option value="Hata Bildirimi">🐛 Hata Bildirimi</option>
-                <option value="Öneri">💡 Öneri</option>
-                <option value="Şikayet">😠 Şikayet</option>
-                <option value="Talep">📋 Talep</option>
-                <option value="Diğer">❓ Diğer</option>
+                <option value="Fehler melden">🐛 Fehler melden</option>
+                <option value="Vorschlag">💡 Vorschlag</option>
+                <option value="Beschwerde">😠 Beschwerde</option>
+                <option value="Anfrage">📋 Anfrage</option>
+                <option value="Sonstiges">❓ Sonstiges</option>
               </select>
             </div>
             <div>
